@@ -1,21 +1,21 @@
 {
-  "name": "tech-doc-hugo",
+  "name": "klts-io-hugo",
   "version": "0.0.1",
-  "description": "Hugo theme for technical documentation.",
+  "description": "The website for klts.io",
   "main": "none.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/google/docsy-example.git"
+    "url": "git+https://github.com/klts-io/website.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/google/docsy-example/issues"
+    "url": "https://github.com/klts-io/website/issues"
   },
-  "homepage": "https://github.com/google/docsy-example#readme",
+  "homepage": "https://github.com/klts-io/website#readme",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.6",
