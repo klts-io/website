@@ -20,13 +20,13 @@
 设置 KLTS 软件源 YUM DEB cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://raw.githubusercontent.com/DaoCloud-OpenSource/kubepatch/repos/deb stable main EOF apt-get update  安装 安装 安装指定版本  YUM DEB yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    YUM DEB # 搜索支持的版本 yum search kubeadm --showduplicates | grep kubeadm- # 安装 VERSION=1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/user-guide/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-19T19:26:59+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-08-19T19:31:12+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="安装">
 <meta itemprop=description content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
 安全前请确认已经完成了相关依赖的安装
 设置 KLTS 软件源 YUM DEB cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://raw.githubusercontent.com/DaoCloud-OpenSource/kubepatch/repos/deb stable main EOF apt-get update  安装 安装 安装指定版本  YUM DEB yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    YUM DEB # 搜索支持的版本 yum search kubeadm --showduplicates | grep kubeadm- # 安装 VERSION=1.">
-<meta itemprop=dateModified content="2021-08-19T19:26:59+08:00">
-<meta itemprop=wordCount content="115">
+<meta itemprop=dateModified content="2021-08-19T19:31:12+08:00">
+<meta itemprop=wordCount content="122">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="安装">
 <meta name=twitter:description content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
@@ -65,7 +65,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.1b4a04bf14930c12c6f8cbae3fa98e5d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.59bd1728ad0fc2a1b2a7ee16a1b95222.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -75,7 +75,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.1b4a04bf14930c12c6f8cbae3fa98e5d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.59bd1728ad0fc2a1b2a7ee16a1b95222.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -213,15 +213,16 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubepatch
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><h2 id=初始化控制面节点>初始化控制面节点</h2>
+</code></pre></div><p>后续对 kubeadm 的操作都需要加上 &ndash;image-repository, &ndash;kubernetes-version 主动指定镜像</p>
+<h2 id=初始化控制面节点>初始化控制面节点</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubepatch
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div>
+</code></pre></div><p><a href=https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>更多操作参考</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.08.19
-: <a href=https://github.com/klts-io/website/commit/eaed3eb12f5e5465d213ab68de59b55639ec480a>Update (eaed3eb)</a>
+: <a href=https://github.com/klts-io/website/commit/aacb90d17a1e48a5d48865db23bc60127135a66a>First commit klts.io (aacb90d)</a>
 </div>
 </div>
 </main>
