@@ -56,7 +56,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.fd5b8192d838a420a38306d056bcfb77.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.a6c460b549fb93a21b51237035c2dee3.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -111,25 +111,22 @@
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>setenforce <span style=color:#0000cf;font-weight:700>0</span>
 </code></pre></div><p>如需要永久关闭请编辑 <code>/etc/sysconfig/selinux</code> 把 <code>SELINUX=enforcing</code> 替换为 <code>SELINUX=disabled</code></p>
 <h2 id=安装容器运行时>安装容器运行时</h2>
-<ul class="nav nav-tabs" id=cri role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#cri-0 role=tab aria-controls=cri-0 aria-selected=true>Containerd</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#cri-1 role=tab aria-controls=cri-1>YUM-Docker</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#cri-2 role=tab aria-controls=cri-2>DEB-Docker</a></li></ul>
-<div class=tab-content id=cri><div id=cri-0 class="tab-pane show active" role=tabpanel aria-labelledby=cri-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
+<ul class="nav nav-tabs" id=tabset-zhdocsuser-guidepre-install-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guidepre-install-1-0 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-1-0 aria-selected=true>YUM-Docker</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepre-install-1-1 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-1-1>DEB-Docker</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepre-install-1-2 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-1-2>Containerd</a></li></ul>
+<div class=tab-content id=tabset-zhdocsuser-guidepre-install-1><div id=tabset-zhdocsuser-guidepre-install-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-1-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
+</code></pre></div></div>
+<div id=tabset-zhdocsuser-guidepre-install-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-1-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
+</code></pre></div></div>
+<div id=tabset-zhdocsuser-guidepre-install-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-1-2>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>/containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz
 tar xvf containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz -C /usr/local/
 mkdir /etc/containerd/ <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> containerd config default &gt; /etc/containerd/config.toml
 wget -c -O /etc/systemd/system/containerd.service https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
 systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> systemctl <span style=color:#204a87>enable</span> containerd
-</code></pre></div></div>
-<div id=cri-1 class=tab-pane role=tabpanel aria-labelledby=cri-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-yum install docker
-</code></pre></div></div>
-<div id=cri-2 class=tab-pane role=tabpanel aria-labelledby=cri-2>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-apt-get install docker.io
 </code></pre></div></div></div>
 <h2 id=最后在安装前还需确认>最后在安装前还需确认</h2>
 <ul>
@@ -143,11 +140,10 @@ apt-get install docker.io
 <p>KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式</p>
 <p>安全前请确认已经完成了<a href=/zh/documents/preinstall>相关依赖</a>的安装</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
-<ul class="nav nav-tabs" id=pkg role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#pkg-0 role=tab aria-controls=pkg-0 aria-selected=true>YUM</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#pkg-1 role=tab aria-controls=pkg-1>DEB</a></li></ul>
-<div class=tab-content id=pkg><div id=pkg-0 class="tab-pane show active" role=tabpanel aria-labelledby=pkg-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-1-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-1-0 aria-selected=true>YUM</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-1-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-1-1>DEB</a></li></ul>
+<div class=tab-content id=tabset-zhdocsuser-guideinstall-1><div id=tabset-zhdocsuser-guideinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-1-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
@@ -157,48 +153,41 @@ cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 
 yum makecache
 </code></pre></div></div>
-<div id=pkg-1 class=tab-pane role=tabpanel aria-labelledby=pkg-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+<div id=tabset-zhdocsuser-guideinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-1-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/DaoCloud-OpenSource/kubepatch/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div></div>
 <h2 id=安装>安装</h2>
-<ul class="nav nav-tabs" id=pkg role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#pkg-0 role=tab aria-controls=pkg-0 aria-selected=true>YUM</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#pkg-1 role=tab aria-controls=pkg-1>DEB</a></li></ul>
-<div class=tab-content id=pkg><div id=pkg-0 class="tab-pane show active" role=tabpanel aria-labelledby=pkg-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-yum install kubeadm kubelet kubectl
+<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-2-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-2-0 aria-selected=true>YUM</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-2-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-2-1>DEB</a></li></ul>
+<div class=tab-content id=tabset-zhdocsuser-guideinstall-2><div id=tabset-zhdocsuser-guideinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-2-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
 </code></pre></div></div>
-<div id=pkg-1 class=tab-pane role=tabpanel aria-labelledby=pkg-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-apt-get install kubeadm kubelet kubectl
+<div id=tabset-zhdocsuser-guideinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-2-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
 <h3 id=安装指定版本>安装指定版本</h3>
-<ul class="nav nav-tabs" id=pkg role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#pkg-0 role=tab aria-controls=pkg-0 aria-selected=true>YUM</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#pkg-1 role=tab aria-controls=pkg-1>DEB</a></li></ul>
-<div class=tab-content id=pkg><div id=pkg-0 class="tab-pane show active" role=tabpanel aria-labelledby=pkg-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-3-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-3-0 aria-selected=true>YUM</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-3-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-3-1>DEB</a></li></ul>
+<div class=tab-content id=tabset-zhdocsuser-guideinstall-3><div id=tabset-zhdocsuser-guideinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-3-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
-<div id=pkg-1 class=tab-pane role=tabpanel aria-labelledby=pkg-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div id=tabset-zhdocsuser-guideinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-3-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubelet</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubectl</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
 <h3 id=查看支持的版本>查看支持的版本</h3>
-<ul class="nav nav-tabs" id=pkg role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#pkg-0 role=tab aria-controls=pkg-0 aria-selected=true>YUM</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#pkg-1 role=tab aria-controls=pkg-1>DEB</a></li></ul>
-<div class=tab-content id=pkg><div id=pkg-0 class="tab-pane show active" role=tabpanel aria-labelledby=pkg-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
+<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-4-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-4-0 aria-selected=true>YUM</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-4-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-4-1>DEB</a></li></ul>
+<div class=tab-content id=tabset-zhdocsuser-guideinstall-4><div id=tabset-zhdocsuser-guideinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-4-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 </code></pre></div></div>
-<div id=pkg-1 class=tab-pane role=tabpanel aria-labelledby=pkg-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
+<div id=tabset-zhdocsuser-guideinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-4-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 </code></pre></div></div></div>
 <h2 id=拉取依赖镜像>拉取依赖镜像</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
@@ -213,16 +202,14 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-d38d0ee458a5907802e2ccbb188d8fbb>2.3 - 安装后续</h1>
 <h2 id=安装-cni-插件>安装 CNI 插件</h2>
-<ul class="nav nav-tabs" id=cni role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#cni-0 role=tab aria-controls=cni-0 aria-selected=true>Flannel</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#cni-1 role=tab aria-controls=cni-1>Calico</a></li></ul>
-<div class=tab-content id=cni><div id=cni-0 class="tab-pane show active" role=tabpanel aria-labelledby=cni-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-TODO
-</code></pre></div></div>
-<div id=cni-1 class=tab-pane role=tabpanel aria-labelledby=cni-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-TODO
-</code></pre></div></div></div>
+<ul class="nav nav-tabs" id=tabset-zhdocsuser-guidepost-install-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guidepost-install-1-0 role=tab aria-controls=tabset-zhdocsuser-guidepost-install-1-0 aria-selected=true>Flannel</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepost-install-1-1 role=tab aria-controls=tabset-zhdocsuser-guidepost-install-1-1>Calico</a></li></ul>
+<div class=tab-content id=tabset-zhdocsuser-guidepost-install-1><div id=tabset-zhdocsuser-guidepost-install-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepost-install-1-0>
+<p><p>TODO</p>
+</div>
+<div id=tabset-zhdocsuser-guidepost-install-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepost-install-1-1>
+<p><p>TODO</p>
+</div></div>
 </div>
 </main>
 </div>
