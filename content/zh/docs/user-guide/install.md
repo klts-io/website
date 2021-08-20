@@ -28,7 +28,7 @@ yum makecache
 {{% tab name="DEB" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/DaoCloud-OpenSource/kubepatch/repos/deb stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
 EOF
 
 apt-get update
