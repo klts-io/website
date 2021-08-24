@@ -1,5 +1,5 @@
 ---
-title: About Goldydocs
+title: About KLTS
 linkTitle: About
 menu:
   main:
@@ -7,22 +7,30 @@ menu:
 
 ---
 
+{{< blocks/cover title="About KLTS" image_anchor="bottom" height="min" >}}
 
-{{< blocks/cover title="About Goldydocs" image_anchor="bottom" height="min" >}}
-
-<p class="lead mt-5">A sample site using the Docsy Hugo theme.
+<p class="lead mt-5">KLTS (Kubernetes Long Term Support)
 </p>
 
 {{< /blocks/cover >}}
 
 {{% blocks/lead %}}
-Goldydocs is a sample site using the <a href="https://github.com/google/docsy">Docsy</a> Hugo theme that shows what it can do and provides you with a template site structure. It’s designed for you to clone and edit as much as you like. See the different sections of the documentation and site for more ideas.
+Kubernetes being an enterprise infrastructure, you should not use a version of Kubernetes that is no longer maintained.
+KLTS maintains the version that Kubernetes no longer maintains officially. You only need to upgrade to the KLTS patch
+version with minor fixes.
+To avoid bugs caused by upgrading your base to newer versions of Kubernetes, introducing features that are not currently
+available,
+Make Kubernetes more stable as your infrastructure.
+
 {{% /blocks/lead %}}
 
 
 {{< blocks/section >}}
 <div class="col-12">
-<h1 class="text-center">This is another section</h1>
+  <h1 class="text-center">The KLTS process is fully hosted on GitHub, and you can simply Fork the project and build your
+    own version of Kubernetes.
+    The build artifacts will all be stored on GitHub, the images will be stored in the GitHub Package, and the RPM and
+    Deb packages will be stored in the repos branch of the same repository.</h1>
 </div>
 
 {{< /blocks/section >}}
@@ -32,7 +40,8 @@ Goldydocs is a sample site using the <a href="https://github.com/google/docsy">D
 {{< blocks/section >}}
 
 <div class="col-12">
-<h1 class="text-center">This is another section</h1>
+  <h1 class="text-center">KLTS will maintain a release for at least 2 years after the official end of maintenance.
+    Mainly to patch CVE vulnerabilities and more serious bugs.</h1>
 </div>
 
 {{< /blocks/section >}}
