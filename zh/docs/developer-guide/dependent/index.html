@@ -13,21 +13,25 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>404 Page not found | KLTS.io</title>
-<meta name=description content="KLTS 的官网"><meta property="og:title" content="404 Page not found">
-<meta property="og:description" content="KLTS 的官网">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/zh/404.html"><meta property="og:site_name" content="KLTS.io">
-<meta itemprop=name content="404 Page not found">
-<meta itemprop=description content="KLTS 的官网"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="404 Page not found">
-<meta name=twitter:description content="KLTS 的官网">
+<title>依赖 | KLTS.io</title>
+<meta name=description content="KLTS 的官网"><meta property="og:title" content="依赖">
+<meta property="og:description" content="安装 yq MacOS 基于 Red Hat 的发行版 基于 Debian 的发行版 brew install jq python@3 # 安装 brew, 请看 https://brew.sh/ pip3 install yq  yum install -y epel-release yum install -y jq python3 pip3 install yq  apt-get install -y jq python3 python3-pip pip3 install yq  ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/zh/docs/developer-guide/dependent/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-08-27T14:57:21+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="依赖">
+<meta itemprop=description content="安装 yq MacOS 基于 Red Hat 的发行版 基于 Debian 的发行版 brew install jq python@3 # 安装 brew, 请看 https://brew.sh/ pip3 install yq  yum install -y epel-release yum install -y jq python3 pip3 install yq  apt-get install -y jq python3 python3-pip pip3 install yq  ">
+<meta itemprop=dateModified content="2021-08-27T14:57:21+08:00">
+<meta itemprop=wordCount content="43">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="依赖">
+<meta name=twitter:description content="安装 yq MacOS 基于 Red Hat 的发行版 基于 Debian 的发行版 brew install jq python@3 # 安装 brew, 请看 https://brew.sh/ pip3 install yq  yum install -y epel-release yum install -y jq python3 pip3 install yq  apt-get install -y jq python3 python3-pip pip3 install yq  ">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script src=https://unpkg.com/lunr@2.3.8/lunr.min.js integrity=sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY crossorigin=anonymous></script>
 </head>
-<body class=td-404>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/zh/>
@@ -39,14 +43,14 @@
 <a class=nav-link href=/zh/about/><span>关于</span></a>
 </li>
 <li class="nav-item mr-4 mb-2 mb-lg-0">
-<a class=nav-link href=/zh/docs/><span>文档</span></a>
+<a class="nav-link active" href=/zh/docs/><span class=active>文档</span></a>
 </li>
 <li class="nav-item dropdown mr-4 d-none d-lg-block">
 <a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
 中文 Chinese
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/>English</a>
+<a class=dropdown-item href=/docs/developer-guide/dependent/>English</a>
 </div>
 </li>
 </ul>
@@ -56,16 +60,110 @@
 </div>
 </nav>
 </header>
-<div class="container-fluid td-default td-outer">
-<main role=main class=td-main>
-<main id=main>
-<div>
-<h1 id=title>Not found</h1>
-<p>Oops! This page doesn't exist. Try going back to our <a href=/>home page</a>.</p>
-<p>You can learn how to make a 404 page like this in <a href=https://gohugo.io/templates/404/>Custom 404 Pages</a>.</p>
+<div class="container-fluid td-outer">
+<div class=td-main>
+<div class="row flex-xl-nowrap">
+<aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<div id=td-sidebar-menu class=td-sidebar__inner>
+<form class="td-sidebar__search d-flex align-items-center">
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.eaabfa30a624381887c24a6df958aa23.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
+</button>
+</form>
+<nav class="collapse td-sidebar-nav" id=td-section-nav>
+<div class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+中文 Chinese
+</a>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/docs/developer-guide/dependent/>English</a>
+</div>
+</div>
+<ul class="td-sidebar-nav__section pr-md-3 ul-0">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocs-li>
+<a href=/zh/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-zhdocs><span>文档</span></a>
+<ul class=ul-1>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocsdeveloper-guide-li>
+<a href=/zh/docs/developer-guide/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsdeveloper-guide><span>开发指南</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-zhdocsdeveloper-guidedependent-li>
+<a href=/zh/docs/developer-guide/dependent/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-zhdocsdeveloper-guidedependent><span class=td-sidebar-nav-active-item>依赖</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsdeveloper-guideclone-li>
+<a href=/zh/docs/developer-guide/clone/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsdeveloper-guideclone><span>克隆</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsuser-guide-li>
+<a href=/zh/docs/user-guide/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsuser-guide><span>终端用户指南</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsuser-guidepre-install-li>
+<a href=/zh/docs/user-guide/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsuser-guidepre-install><span>安装预备</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsuser-guideinstall-li>
+<a href=/zh/docs/user-guide/install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsuser-guideinstall><span>安装</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsuser-guidepost-install-li>
+<a href=/zh/docs/user-guide/post-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsuser-guidepost-install><span>安装后续</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href=https://github.com/klts-io/website/edit/master/content/zh/docs/developer-guide/dependent.md target=_blank><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/klts-io/website/new/master/content/zh/docs/developer-guide/dependent.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
+<a href="https://github.com/klts-io/website/issues/new?title=%e4%be%9d%e8%b5%96" target=_blank><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
+<a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> 提交项目问题</a>
+<a id=print href=/zh/docs/developer-guide/_print/><i class="fa fa-print fa-fw"></i> 整节打印</a>
+</div>
+</aside>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
+<ol class="breadcrumb spb-1">
+<li class=breadcrumb-item>
+<a href=/zh/docs/>文档</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/zh/docs/developer-guide/>开发指南</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=/zh/docs/developer-guide/dependent/>依赖</a>
+</li>
+</ol>
+</nav>
+<div class=td-content>
+<h1>依赖</h1>
+<header class=article-meta>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 分钟 阅读时间</p>
+</header>
+<h2 id=安装-yq>安装 yq</h2>
+<ul class="nav nav-tabs" id=tabset-zhdocsdeveloper-guidedependent-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsdeveloper-guidedependent-1-0 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-0 aria-selected=true>MacOS</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsdeveloper-guidedependent-1-1 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-1>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsdeveloper-guidedependent-1-2 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-2>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsdeveloper-guidedependent-1><div id=tabset-zhdocsdeveloper-guidedependent-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install jq python@3 <span style=color:#8f5902;font-style:italic># 安装 brew, 请看 https://brew.sh/</span>
+pip3 install yq
+</code></pre></div></div>
+<div id=tabset-zhdocsdeveloper-guidedependent-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install -y epel-release
+yum install -y jq python3
+pip3 install yq
+</code></pre></div></div>
+<div id=tabset-zhdocsdeveloper-guidedependent-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-2>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install -y jq python3 python3-pip
+pip3 install yq
+</code></pre></div></div></div>
+<div class="text-muted mt-5 pt-3 border-top">
+最后修改
+2021.08.27
+: <a href=https://github.com/klts-io/website/commit/d68bed6d8640e4272cdeb0ee729427bc294b7723>Add developer guide (d68bed6)</a>
+</div>
 </div>
 </main>
-</main>
+</div>
+</div>
 <footer class="bg-dark py-5 row d-print-none">
 <div class="container-fluid mx-sm-5">
 <div class=row>
