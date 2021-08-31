@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f732332129c7840cd122c8c56f42b239.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.a5e87a0131c54bc2cdbc5df2265c62bf.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -296,9 +296,11 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <p>KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式</p>
 <p>安装前请确认已经完成了<a href=/zh/documents/preinstall>相关依赖</a>的安装</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
-<ul class="nav nav-tabs" id=tabset-zhdocsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-1-0 role=tab aria-controls=tabset-zhdocsinstall-1-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-1 role=tab aria-controls=tabset-zhdocsinstall-1-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-2 role=tab aria-controls=tabset-zhdocsinstall-3-2>基于 Red Hat 的发行版, 国内加速 🚀</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-3 role=tab aria-controls=tabset-zhdocsinstall-3-3>基于 Debian 的发行版, 国内加速 🚀</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-3><div id=tabset-zhdocsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
@@ -309,32 +311,148 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 
 yum makecache
 </code></pre></div></div>
-<div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
+<div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
-</code></pre></div></div></div>
-<h2 id=安装>安装</h2>
-<ul class="nav nav-tabs" id=tabset-zhdocsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-4-0 role=tab aria-controls=tabset-zhdocsinstall-4-0 aria-selected=true>安装</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-4-1 role=tab aria-controls=tabset-zhdocsinstall-4-1>安装指定版本</a></li></ul>
-<div class=tab-content id=tabset-zhdocsinstall-4><div id=tabset-zhdocsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-0>
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-3-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-2>
 <p>
-<ul class="nav nav-tabs" id=tabset-zhdocsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-2-0 role=tab aria-controls=tabset-zhdocsinstall-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-1 role=tab aria-controls=tabset-zhdocsinstall-2-1>基于 Debian 的发行版</a></li></ul>
+<div class="pageinfo pageinfo-primary">
+⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️
+</div>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-1-0 role=tab aria-controls=tabset-zhdocsinstall-1-0 aria-selected=true>/etc/hosts</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-1 role=tab aria-controls=tabset-zhdocsinstall-1-1>hub.fastgit.org</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-2 role=tab aria-controls=tabset-zhdocsinstall-1-2>ghproxy.com</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-3 role=tab aria-controls=tabset-zhdocsinstall-1-3>raw.githubusercontents.com</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-4 role=tab aria-controls=tabset-zhdocsinstall-1-4>raw.staticdn.net</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
+
+cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+</span><span style=color:#4e9a06>[klts]
+</span><span style=color:#4e9a06>name=klts
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>EOF</span>
+
+yum makecache
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+</span><span style=color:#4e9a06>[klts]
+</span><span style=color:#4e9a06>name=klts
+</span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubepatch/raw/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>EOF</span>
+
+yum makecache
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-2>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+</span><span style=color:#4e9a06>[klts]
+</span><span style=color:#4e9a06>name=klts
+</span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>EOF</span>
+
+yum makecache
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-1-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-3>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+</span><span style=color:#4e9a06>[klts]
+</span><span style=color:#4e9a06>name=klts
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>EOF</span>
+
+yum makecache
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-1-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-4>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+</span><span style=color:#4e9a06>[klts]
+</span><span style=color:#4e9a06>name=klts
+</span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>EOF</span>
+
+yum makecache
+</code></pre></div></div></div>
+</div>
+<div id=tabset-zhdocsinstall-3-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-3>
+<p>
+<div class="pageinfo pageinfo-primary">
+⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️
+</div>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-2-0 role=tab aria-controls=tabset-zhdocsinstall-2-0 aria-selected=true>/etc/hosts</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-1 role=tab aria-controls=tabset-zhdocsinstall-2-1>hub.fastgit.org</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-2 role=tab aria-controls=tabset-zhdocsinstall-2-2>ghproxy.com</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-3 role=tab aria-controls=tabset-zhdocsinstall-2-3>raw.githubusercontents.com</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-4 role=tab aria-controls=tabset-zhdocsinstall-2-4>raw.staticdn.net</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-2><div id=tabset-zhdocsinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
+
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>EOF</span>
+
+apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/kubepatch/raw/repos/deb stable main
+</span><span style=color:#4e9a06>EOF</span>
+
+apt-get update
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-2-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-2>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>EOF</span>
+
+apt-get update
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-2-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-3>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>EOF</span>
+
+apt-get update
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-2-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-4>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>EOF</span>
+
+apt-get update
+</code></pre></div></div></div>
+</div></div>
+<h2 id=安装>安装</h2>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-6 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-6-0 role=tab aria-controls=tabset-zhdocsinstall-6-0 aria-selected=true>安装</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-6-1 role=tab aria-controls=tabset-zhdocsinstall-6-1>安装指定版本</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-6><div id=tabset-zhdocsinstall-6-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-6-0>
+<p>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-4-0 role=tab aria-controls=tabset-zhdocsinstall-4-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-4-1 role=tab aria-controls=tabset-zhdocsinstall-4-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-4><div id=tabset-zhdocsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
 </div>
-<div id=tabset-zhdocsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-1>
+<div id=tabset-zhdocsinstall-6-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-6-1>
 <p>
-<ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsinstall-3><div id=tabset-zhdocsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-0>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-5 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-5-0 role=tab aria-controls=tabset-zhdocsinstall-5-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-5-1 role=tab aria-controls=tabset-zhdocsinstall-5-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-5><div id=tabset-zhdocsinstall-5-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
@@ -342,7 +460,7 @@ yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</sp
 <span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
-<div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
+<div id=tabset-zhdocsinstall-5-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
