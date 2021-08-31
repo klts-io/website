@@ -16,7 +16,7 @@ KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
+baseurl=https://dl.klts.io/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -28,7 +28,7 @@ yum makecache
 {{% tab name="基于 Debian 的发行版" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
+deb [trusted=yes] https://dl.klts.io/deb stable main
 EOF
 
 apt-get update
@@ -50,7 +50,7 @@ curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/et
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
+baseurl=https://dl.klts.io/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -131,7 +131,7 @@ yum makecache
 curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/etc/hosts
 
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
+deb [trusted=yes] https://dl.klts.io/deb stable main
 EOF
 
 apt-get update

@@ -17,7 +17,7 @@ Before installation, ensure that [related dependencies](/docs/pre-install) has b
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
+baseurl=https://dl.klts.io/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -29,7 +29,7 @@ yum makecache
 {{% tab name="Debian-based distributions" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
+deb [trusted=yes] https://dl.klts.io/deb stable main
 EOF
 
 apt-get update
