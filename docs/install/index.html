@@ -20,12 +20,12 @@ Before installation, ensure that related dependencies has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-31T11:10:04+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-08-31T15:23:15+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Install">
 <meta itemprop=description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
 Before installation, ensure that related dependencies has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
-<meta itemprop=dateModified content="2021-08-31T11:10:04+08:00">
+<meta itemprop=dateModified content="2021-08-31T15:23:15+08:00">
 <meta itemprop=wordCount content="182">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Install">
@@ -147,7 +147,7 @@ English
 </header>
 <p>KLTS provides a way to install software sources based on Deb and RPM.
 You can choose the installation method that suits your system</p>
-<p>Before installation, ensure that <a href=/zh/documents/preinstall>related dependencies</a> has been installed</p>
+<p>Before installation, ensure that <a href=/docs/pre-install>related dependencies</a> has been installed</p>
 <h2 id=set-the-klts-software-source>Set the KLTS software source</h2>
 <ul class="nav nav-tabs" id=tabset-docsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-1-0 role=tab aria-controls=tabset-docsinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-1-1 role=tab aria-controls=tabset-docsinstall-1-1>Debian-based distributions</a></li></ul>
@@ -219,7 +219,7 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 August 31, 2021
-: <a href=https://github.com/klts-io/website/commit/f2ceec3cae0c1f5a3102e3f8ed8e2631e3b3fad0>Move user guide (f2ceec3)</a>
+: <a href=https://github.com/klts-io/website/commit/05287ac403a7dedd1ed2f4247caf5e78b3ea1a08>Fix broken link (05287ac)</a>
 </div>
 </div>
 </main>
