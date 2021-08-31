@@ -16,7 +16,7 @@ KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -28,7 +28,7 @@ yum makecache
 {{% tab name="基于 Debian 的发行版" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 EOF
 
 apt-get update
@@ -50,7 +50,7 @@ curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/et
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -65,7 +65,7 @@ yum makecache
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://hub.fastgit.org/klts-io/kubepatch/raw/repos/rpm/$basearch/
+baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -79,7 +79,7 @@ yum makecache
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -93,7 +93,7 @@ yum makecache
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontents.com/klts-io/kubepatch/repos/rpm/$basearch/
+baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -107,7 +107,7 @@ yum makecache
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.staticdn.net/klts-io/kubepatch/repos/rpm/$basearch/
+baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -131,7 +131,7 @@ yum makecache
 curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/etc/hosts
 
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 EOF
 
 apt-get update
@@ -141,7 +141,7 @@ apt-get update
 {{% tab name="hub.fastgit.org" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://hub.fastgit.org/klts-io/kubepatch/raw/repos/deb stable main
+deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/deb stable main
 EOF
 
 apt-get update
@@ -151,7 +151,7 @@ apt-get update
 {{% tab name="ghproxy.com" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 EOF
 
 apt-get update
@@ -161,7 +161,7 @@ apt-get update
 {{% tab name="raw.githubusercontents.com" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubepatch/repos/deb stable main
+deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/deb stable main
 EOF
 
 apt-get update
@@ -171,7 +171,7 @@ apt-get update
 {{% tab name="raw.staticdn.net" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.staticdn.net/klts-io/kubepatch/repos/deb stable main
+deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/repos/deb stable main
 EOF
 
 apt-get update
@@ -244,7 +244,7 @@ systemctl enable --now kubelet
 
 ``` bash
 VERSION=1.18.20-lts.0
-REPOS=ghcr.io/klts-io/kubepatch
+REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
@@ -254,7 +254,7 @@ kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${V
 
 ``` bash
 VERSION=1.18.20-lts.0
-REPOS=ghcr.io/klts-io/kubepatch
+REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 

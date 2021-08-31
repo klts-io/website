@@ -17,7 +17,7 @@ Before installation, ensure that [related dependencies](/docs/pre-install) has b
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -29,7 +29,7 @@ yum makecache
 {{% tab name="Debian-based distributions" %}}
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 EOF
 
 apt-get update
@@ -98,7 +98,7 @@ systemctl enable --now kubelet
 
 ``` bash
 VERSION=1.18.20-lts.0
-REPOS=ghcr.io/klts-io/kubepatch
+REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
@@ -108,7 +108,7 @@ All subsequent operations on Kubeadm need to include --image-repository, --kuber
 
 ``` bash
 VERSION=1.18.20-lts.0
-REPOS=ghcr.io/klts-io/kubepatch
+REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
