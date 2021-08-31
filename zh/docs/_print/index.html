@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.76d0ccf08398f04583b5fc2cabca1a38.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.a27205fcb4676d8aab0432a4c4275937.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -310,7 +310,7 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -319,7 +319,7 @@ yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -340,7 +340,7 @@ apt-get update
 cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -351,7 +351,7 @@ yum makecache
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubepatch/raw/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/rpm/$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -362,7 +362,7 @@ yum makecache
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -373,7 +373,7 @@ yum makecache
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -384,7 +384,7 @@ yum makecache
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubepatch/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/repos/rpm/$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -406,35 +406,35 @@ yum makecache
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
 
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/kubepatch/raw/repos/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-2>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-3>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-4>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubepatch/repos/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -479,12 +479,12 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <pre><code>systemctl enable --now kubelet
 </code></pre><h2 id=拉取依赖镜像>拉取依赖镜像</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
-<span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubepatch
+<span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div><p>后续对 kubeadm 的操作都需要加上 &ndash;image-repository, &ndash;kubernetes-version 主动指定镜像</p>
 <h2 id=初始化控制面节点>初始化控制面节点</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
-<span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubepatch
+<span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div><p><a href=https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>更多操作参考</a></p>
 </div>
@@ -519,7 +519,7 @@ pip3 install yq
 <h1 id=pg-79fcc7e024580df9da30cdb10805eada>4.2 - 克隆</h1>
 <h2 id=克隆主分支>克隆主分支</h2>
 <p>请尝试只克隆主分支, 由于 repos 仓库是作为 rpm 和 deb 的软件源的, 直接克隆全部的话会非常大</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubepatch
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
