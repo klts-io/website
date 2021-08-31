@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.a5e87a0131c54bc2cdbc5df2265c62bf.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.3eb453e47b106874af0ddc178aee1c06.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -83,6 +83,10 @@
 <ul>
 <li>4.1: <a href=#pg-8da562538e76378aaf2ff1c50166f299>依赖</a></li>
 <li>4.2: <a href=#pg-79fcc7e024580df9da30cdb10805eada>克隆</a></li>
+</ul>
+<li>5: <a href=#pg-cf1a7e96c5bc452942429f7b1a8d0306>补丁</a></li>
+<ul>
+<li>5.1: <a href=#pg-6a09ed81d747002d0e5d91b03323b7e4>CVE-2021-3121</a></li>
 </ul>
 </ul>
 <div class=content>
@@ -515,6 +519,49 @@ pip3 install yq
 <p>请尝试只克隆主分支, 由于 repos 仓库是作为 rpm 和 deb 的软件源的, 直接克隆全部的话会非常大</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubepatch
 </code></pre></div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-cf1a7e96c5bc452942429f7b1a8d0306>5 - 补丁</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-6a09ed81d747002d0e5d91b03323b7e4>5.1 - CVE-2021-3121</h1>
+<p><a href="https://www.cvedetails.com/cve-details.php?cve_id=CVE-2021-3121">详细信息</a></p>
+<p>Kubernetes 社区披露了编号为 CVE-2021-3121 的安全漏洞，存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 编译器版本过低，可能存在该漏洞。本文介绍该漏洞的影响和影响范围，以及防范措施。</p>
+<h2 id=漏洞影响>漏洞影响</h2>
+<p>Kubernetes 系统组件由于自身有应对崩溃的恢复机制，当遇到恶意提交的 Protobuf 消息时不会中断服务，所以不在该漏洞的影响范围内。</p>
+<p>在应用系统中程序接收处理 Protobuf 消息时，如果组件没有应对崩溃的恢复机制，那么这类程序都在该漏洞影响范围内，且被恶意攻击时服务可能会中断。</p>
+<h2 id=影响范围>影响范围</h2>
+<p>Kubernetes 社区经过测试验证 API Server 不受该漏洞的影响，但为了避免您受到该安全漏洞隐患的影响，社区对相关 Protobuf 文件进行了升级，具体修复版本如下:</p>
+<ul>
+<li>1.21: 1.21.0、1.21.1</li>
+<li>1.20: 1.20.6、1.20.7</li>
+<li>1.19: 1.19.10、1.19.11</li>
+<li>1.18: 1.18.18、1.18.19</li>
+</ul>
+<h3 id=官方不再维护的版本>官方不再维护的版本</h3>
+<blockquote>
+<p>(TODO 替换 lts.x 为正式版本号)</p>
+</blockquote>
+<ul>
+<li>1.17: v1.17.17-lts.x</li>
+<li>1.16: v1.16.15-lts.x</li>
+<li>1.15: v1.15.12-lts.x</li>
+<li>1.14: v1.14.10-lts.x</li>
+<li>1.13: v1.13.12-lts.x</li>
+<li>1.12: v1.12.10-lts.x</li>
+<li>1.11: v1.11.10-lts.x</li>
+<li>1.10: v1.10.13-lts.x</li>
+</ul>
+<h2 id=防范措施>防范措施</h2>
+<p>如果在您的应用系统代码中使用了自动生成的Protobuf消息，并且发现相关组件因为以下异常退出，则可能存在该漏洞。</p>
+<pre><code>panic: runtime error: index out of range [-9223372036854775804]
+
+goroutine 1 [running]:
+
+v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8, 0x1)
+
+        .../protofile.pb.go:250 +0xb86
+</code></pre><p>如果您使用了 Protobuf 消息的相关组件，推荐将 Gogo Protobuf 编译器升级到漏洞修复版本（v1.3.2或更高的版本），再基于升级后的Protobuf 编译器重新生成相关的 Protobuf 消息。</p>
 </div>
 </main>
 </div>
