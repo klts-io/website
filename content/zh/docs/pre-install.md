@@ -1,22 +1,21 @@
 ---
-title: "安装预备"
+title: "安装准备"
 weight: 20
 ---
 
-<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">本页面显示如何安装 `kubeadm` 工具箱。
-有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见
-[使用 kubeadm 创建集群](/zh/docs/install) 页面。
+<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">本页介绍如何安装 `kubeadm` 工具箱。
+有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见[使用 kubeadm 创建集群](/zh/docs/install)。
 
-## 准备开始
+## 准备工作
 
-* 一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
+* 准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
   发行版以及一些不提供包管理器的发行版提供通用的指令
-* 每台机器 2 GB 或更多的 RAM （如果少于这个数字将会影响你应用的运行内存)
-* 2 CPU 核或更多
-* 集群中的所有机器的网络彼此均能相互连接(公网和内网都可以)
-* 节点之中不可以有重复的主机名、MAC 地址或 product_uuid。请参见[这里](#verify-mac-address)了解更多详细信息。
-* 开启机器上的某些端口。请参见[这里](#check-required-ports) 了解更多详细信息。
-* 禁用交换分区。为了保证 kubelet 正常工作，你 **必须** 禁用交换分区。
+* 每台主机至少 2 GB 或更多的内存（如果内存太少将影响应用的运行）
+* CPU 2 核或更多
+* 集群中所有主机的网络连通（公网和内网）
+* 单个节点上不能有重复的主机名、MAC 地址或 product_uuid，请参阅[确保每个节点上 MAC 地址和 product_uuid 的唯一性](#verify-mac-address)。
+* 开启主机上的某些端口，请参阅[检查所需端口](#check-required-ports)。
+* 禁用交换分区。为了保证 kubelet 正常工作，您**必须**禁用交换分区。
 
 ## 确保每个节点上 MAC 地址和 product_uuid 的唯一性    {#verify-mac-address}
 
