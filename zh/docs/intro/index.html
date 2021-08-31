@@ -2,8 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.87.0"><link rel=alternate type=text/html href=/zh/docs/release-note/v1.18.20/_print/>
-<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<meta name=generator content="Hugo 0.87.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -14,21 +13,37 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>v1.18.20 | KLTS.io</title>
-<meta name=description content="KLTS 的官网"><meta property="og:title" content="v1.18.20">
-<meta property="og:description" content="KLTS 的官网">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/zh/docs/release-note/v1.18.20/"><meta property="og:site_name" content="KLTS.io">
-<meta itemprop=name content="v1.18.20">
-<meta itemprop=description content="KLTS 的官网"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="v1.18.20">
-<meta name=twitter:description content="KLTS 的官网">
+<title>简介 | KLTS.io</title>
+<meta name=description content="KLTS 的官网"><meta property="og:title" content="简介">
+<meta property="og:description" content="本页为您介绍 KLTS 的 Kubernetes 版本支持机制。
+如图所示，V1.16.15 是 Kubernetes 的完整发行版本号，其中 1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 的补丁版本号。
+上图以 2021 年 8 月 31 日的最新版本 1.22 为例，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。
+Kubernetes 社区一般每隔 4 个月左右发布一个大版本，KLTS 维护的 Kubernetes 版本也会随之变化。通常在 Kubernetes 社区停止维护某个版本后的一个月内，KLTS 将开始维护刚被社区停止维护的版本。
+例如，如果社区正式发布 1.23 版本，KLTS 维护的版本也会加一，达到 1.19，以此类推。KLTS 的补丁更新频率将根据实际解决的 bug 情况发布。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/zh/docs/intro/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-08-31T17:05:26+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="简介">
+<meta itemprop=description content="本页为您介绍 KLTS 的 Kubernetes 版本支持机制。
+如图所示，V1.16.15 是 Kubernetes 的完整发行版本号，其中 1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 的补丁版本号。
+上图以 2021 年 8 月 31 日的最新版本 1.22 为例，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。
+Kubernetes 社区一般每隔 4 个月左右发布一个大版本，KLTS 维护的 Kubernetes 版本也会随之变化。通常在 Kubernetes 社区停止维护某个版本后的一个月内，KLTS 将开始维护刚被社区停止维护的版本。
+例如，如果社区正式发布 1.23 版本，KLTS 维护的版本也会加一，达到 1.19，以此类推。KLTS 的补丁更新频率将根据实际解决的 bug 情况发布。">
+<meta itemprop=dateModified content="2021-08-31T17:05:26+08:00">
+<meta itemprop=wordCount content="64">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="简介">
+<meta name=twitter:description content="本页为您介绍 KLTS 的 Kubernetes 版本支持机制。
+如图所示，V1.16.15 是 Kubernetes 的完整发行版本号，其中 1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 的补丁版本号。
+上图以 2021 年 8 月 31 日的最新版本 1.22 为例，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。
+Kubernetes 社区一般每隔 4 个月左右发布一个大版本，KLTS 维护的 Kubernetes 版本也会随之变化。通常在 Kubernetes 社区停止维护某个版本后的一个月内，KLTS 将开始维护刚被社区停止维护的版本。
+例如，如果社区正式发布 1.23 版本，KLTS 维护的版本也会加一，达到 1.19，以此类推。KLTS 的补丁更新频率将根据实际解决的 bug 情况发布。">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script src=https://unpkg.com/lunr@2.3.8/lunr.min.js integrity=sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY crossorigin=anonymous></script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/zh/>
@@ -80,8 +95,8 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocs-li>
 <a href=/zh/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-zhdocs><span>文档</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsintro-li>
-<a href=/zh/docs/intro/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsintro><span>简介</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-zhdocsintro-li>
+<a href=/zh/docs/intro/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-zhdocsintro><span class=td-sidebar-nav-active-item>简介</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocspre-install-li>
 <a href=/zh/docs/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocspre-install><span>安装准备</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsinstall-li>
@@ -99,7 +114,7 @@
 <a href=/zh/docs/patches/nokmem/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocspatchesnokmem><span>nokmem</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocsrelease-note-li>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsrelease-note-li>
 <a href=/zh/docs/release-note/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsrelease-note><span>版本日志</span></a>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsrelease-notev11013-li>
@@ -158,8 +173,8 @@
 <a href=/zh/docs/release-note/v1.17.17/v1.17.17-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsrelease-notev11717v11717-lts1><span>v1.17.17-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocsrelease-notev11820-li>
-<a href=/zh/docs/release-note/v1.18.20/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-zhdocsrelease-notev11820><span class=td-sidebar-nav-active-item>v1.18.20</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsrelease-notev11820-li>
+<a href=/zh/docs/release-note/v1.18.20/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsrelease-notev11820><span>v1.18.20</span></a>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsrelease-notev11820v11820-lts1-li>
 <a href=/zh/docs/release-note/v1.18.20/v1.18.20-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsrelease-notev11820v11820-lts1><span>v1.18.20-lts.1</span></a>
@@ -185,11 +200,11 @@
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/klts-io/website/edit/master/content/zh/docs/release-note/v1.18.20/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
-<a href="https://github.com/klts-io/website/new/master/content/zh/docs/release-note/v1.18.20/_index.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
-<a href="https://github.com/klts-io/website/issues/new?title=v1.18.20" target=_blank><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
+<a href=https://github.com/klts-io/website/edit/master/content/zh/docs/Intro.md target=_blank><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/klts-io/website/new/master/content/zh/docs/Intro.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
+<a href="https://github.com/klts-io/website/issues/new?title=%e7%ae%80%e4%bb%8b" target=_blank><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
 <a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> 提交项目问题</a>
-<a id=print href=/zh/docs/release-note/v1.18.20/_print/><i class="fa fa-print fa-fw"></i> 整节打印</a>
+<a id=print href=/zh/docs/_print/><i class="fa fa-print fa-fw"></i> 整节打印</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
@@ -198,32 +213,27 @@
 <li class=breadcrumb-item>
 <a href=/zh/docs/>文档</a>
 </li>
-<li class=breadcrumb-item>
-<a href=/zh/docs/release-note/>版本日志</a>
-</li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/zh/docs/release-note/v1.18.20/>v1.18.20</a>
+<a href=/zh/docs/intro/>简介</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>v1.18.20</h1>
+<h1>简介</h1>
 <header class=article-meta>
-<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 0 分钟 阅读时间</p>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 分钟 阅读时间</p>
 </header>
-<div class=section-index>
-<hr class=panel-line>
-<div class=entry>
-<h5>
-<a href=/zh/docs/release-note/v1.18.20/v1.18.20-lts.1/>v1.18.20-lts.1</a>
-</h5>
-<p></p>
-</div>
-</div>
+<p>本页为您介绍 KLTS 的 Kubernetes 版本支持机制。<br>
+<img src=../klts_ver.png width=300></p>
+<p>如图所示，V1.16.15 是 Kubernetes 的完整发行版本号，其中 1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 的补丁版本号。</p>
+<img src=../klts_job.png width=750>
+<p>上图以 2021 年 8 月 31 日的最新版本 1.22 为例，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。</p>
+<p>Kubernetes 社区一般每隔 4 个月左右发布一个大版本，KLTS 维护的 Kubernetes 版本也会随之变化。通常在 Kubernetes 社区停止维护某个版本后的一个月内，KLTS 将开始维护刚被社区停止维护的版本。</p>
+<p>例如，如果社区正式发布 1.23 版本，KLTS 维护的版本也会加一，达到 1.19，以此类推。KLTS 的补丁更新频率将根据实际解决的 bug 情况发布。</p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.08.31
-: <a href=https://github.com/klts-io/website/commit/a6bc52ef7d8c783669481b0fd58d1831ad478aa0>First commit release note (a6bc52e)</a>
+: <a href=https://github.com/klts-io/website/commit/3a3eb837f93f6e422fc29bff1a345f6c03fc9f8f>added intro page, updated index and pre-install pages (3a3eb83)</a>
 </div>
 </div>
 </main>
