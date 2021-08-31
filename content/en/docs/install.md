@@ -6,7 +6,7 @@ weight: 30
 KLTS provides a way to install software sources based on Deb and RPM. 
 You can choose the installation method that suits your system
 
-Before installation, ensure that [related dependencies](/zh/documents/preinstall) has been installed
+Before installation, ensure that [related dependencies](/docs/pre-install) has been installed
 
 ## Set the KLTS software source
 

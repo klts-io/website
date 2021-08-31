@@ -5,7 +5,7 @@ weight: 30
 
 KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
 
-安装前请确认已经完成了[相关依赖](/zh/documents/preinstall)的安装
+安装前请确认已经完成了[相关依赖](/zh/docs/pre-install)的安装
 
 ## 设置 KLTS 软件源
 

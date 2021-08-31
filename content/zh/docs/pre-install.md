@@ -5,7 +5,7 @@ weight: 20
 
 <img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">本页面显示如何安装 `kubeadm` 工具箱。
 有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见
-[使用 kubeadm 创建集群](/zh/docs/user-guide/install/) 页面。
+[使用 kubeadm 创建集群](/zh/docs/install) 页面。
 
 ## 准备开始
 
