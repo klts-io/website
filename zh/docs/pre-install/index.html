@@ -24,7 +24,7 @@
 <meta itemprop=description content="本页介绍如何安装 kubeadm 工具箱。 有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见使用 kubeadm 创建集群。
 准备工作  准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux 发行版以及一些不提供包管理器的发行版提供通用的指令 每台主机至少 2 GB 或更多的内存（如果内存太少将影响应用的运行） CPU 2 核或更多 集群中所有主机的网络连通（公网和内网） 单个节点上不能有重复的主机名、MAC 地址或 product_uuid，请参阅确保每个节点上 MAC 地址和 product_uuid 的唯一性。 开启主机上的某些端口，请参阅检查所需端口。 禁用交换分区。为了保证 kubelet 正常工作，您必须禁用交换分区。  确保每个节点上 MAC 地址和 product_uuid 的唯一性   你可以使用命令 ip link 或 ifconfig -a 来获取网络接口的 MAC 地址 可以使用 sudo cat /sys/class/dmi/id/product_uuid 命令对 product_uuid 校验  一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。 Kubernetes 使用这些值来唯一确定集群中的节点。 如果这些值在每个节点上不唯一，可能会导致安装 失败。">
 <meta itemprop=dateModified content="2021-08-31T17:05:26+08:00">
-<meta itemprop=wordCount content="346">
+<meta itemprop=wordCount content="367">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="安装准备">
 <meta name=twitter:description content="本页介绍如何安装 kubeadm 工具箱。 有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见使用 kubeadm 创建集群。
@@ -59,7 +59,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.47e1d1b2c7a3fe2c3a81cfa952e342d7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.85c5d1c1ab3e95ff1d7297c7e8f3ee22.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -69,7 +69,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.47e1d1b2c7a3fe2c3a81cfa952e342d7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.85c5d1c1ab3e95ff1d7297c7e8f3ee22.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -440,7 +440,11 @@ kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</
 </code></pre></div></div></div>
 </div>
 <div id=tabset-zhdocspre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
+<p><p>containerd 官方默认只提供了 amd64 架构的下载包，如果你是其他基础架构的机器，
+可以从官方 Docker 仓库安装 <code>containerd.io</code> 软件包。可以在 <a href=https://docs.docker.com/engine/install/#server>安装 Docker 引擎</a> 中
+找到有关为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的说明。
+也可以使用源代码构建。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>/containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz
 tar xvf containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz -C /usr/local/
 mkdir /etc/containerd/ <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> containerd config default &gt; /etc/containerd/config.toml
