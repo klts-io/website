@@ -20,7 +20,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 
 k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 ([opencontainers/runc#2840](https://github.com/opencontainers/runc/pull/2840)) 修复(直接移除了)
 
-## 防范错误
+## 防范措施
 
 - 升级系统内核
 - k8s 1.14 及以上
