@@ -19,13 +19,13 @@
 Before installation, ensure that related dependencies has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/docs/user-guide/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-24T18:00:01+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-08-31T11:10:04+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Install">
 <meta itemprop=description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
 Before installation, ensure that related dependencies has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubepatch/repos/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
-<meta itemprop=dateModified content="2021-08-24T18:00:01+08:00">
+<meta itemprop=dateModified content="2021-08-31T11:10:04+08:00">
 <meta itemprop=wordCount content="182">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Install">
@@ -56,13 +56,13 @@ Set the KLTS software source Red Hat-based distributions Debian-based distributi
 English
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/zh/docs/user-guide/install/>中文 Chinese</a>
+<a class=dropdown-item href=/zh/docs/install/>中文 Chinese</a>
 </div>
 </li>
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.b2e1aac4085b2bf31fad0e6e680a785d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f732332129c7840cd122c8c56f42b239.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -72,7 +72,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.b2e1aac4085b2bf31fad0e6e680a785d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f732332129c7840cd122c8c56f42b239.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -82,31 +82,26 @@ English
 English
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/zh/docs/user-guide/install/>中文 Chinese</a>
+<a class=dropdown-item href=/zh/docs/install/>中文 Chinese</a>
 </div>
 </div>
 <ul class="td-sidebar-nav__section pr-md-3 ul-0">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docs-li>
 <a href=/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-docs><span>Document</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsdeveloper-guide-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docspre-install-li>
+<a href=/docs/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docspre-install><span>Pre Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsinstall-li>
+<a href=/docs/install/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsinstall><span class=td-sidebar-nav-active-item>Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docspost-install-li>
+<a href=/docs/post-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docspost-install><span>Post Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsdeveloper-guide-li>
 <a href=/docs/developer-guide/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsdeveloper-guide><span>Developer Guide</span></a>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdeveloper-guideclone-li>
 <a href=/docs/developer-guide/clone/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdeveloper-guideclone><span>Clone</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdeveloper-guidedependent-li>
 <a href=/docs/developer-guide/dependent/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdeveloper-guidedependent><span>Dependent</span></a>
-</li>
-</ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docsuser-guide-li>
-<a href=/docs/user-guide/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsuser-guide><span>User Guige</span></a>
-<ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsuser-guidepre-install-li>
-<a href=/docs/user-guide/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsuser-guidepre-install><span>Pre Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsuser-guideinstall-li>
-<a href=/docs/user-guide/install/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsuser-guideinstall><span class=td-sidebar-nav-active-item>Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsuser-guidepost-install-li>
-<a href=/docs/user-guide/post-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsuser-guidepost-install><span>Post Install</span></a>
 </li>
 </ul>
 </li>
@@ -118,11 +113,11 @@ English
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/klts-io/website/edit/master/content/en/docs/user-guide/install.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/klts-io/website/new/master/content/en/docs/user-guide/install.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href=https://github.com/klts-io/website/edit/master/content/en/docs/install.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/klts-io/website/new/master/content/en/docs/install.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
 <a href="https://github.com/klts-io/website/issues/new?title=Install" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 <a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
-<a id=print href=/docs/user-guide/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+<a id=print href=/docs/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
 <div class=td-toc><nav id=TableOfContents>
 <ul>
@@ -140,11 +135,8 @@ English
 <li class=breadcrumb-item>
 <a href=/docs/>Document</a>
 </li>
-<li class=breadcrumb-item>
-<a href=/docs/user-guide/>User Guige</a>
-</li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/docs/user-guide/install/>Install</a>
+<a href=/docs/install/>Install</a>
 </li>
 </ol>
 </nav>
@@ -157,9 +149,9 @@ English
 You can choose the installation method that suits your system</p>
 <p>Before installation, ensure that <a href=/zh/documents/preinstall>related dependencies</a> has been installed</p>
 <h2 id=set-the-klts-software-source>Set the KLTS software source</h2>
-<ul class="nav nav-tabs" id=tabset-docsuser-guideinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsuser-guideinstall-1-0 role=tab aria-controls=tabset-docsuser-guideinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsuser-guideinstall-1-1 role=tab aria-controls=tabset-docsuser-guideinstall-1-1>Debian-based distributions</a></li></ul>
-<div class=tab-content id=tabset-docsuser-guideinstall-1><div id=tabset-docsuser-guideinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-1-0>
+<ul class="nav nav-tabs" id=tabset-docsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-1-0 role=tab aria-controls=tabset-docsinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-1-1 role=tab aria-controls=tabset-docsinstall-1-1>Debian-based distributions</a></li></ul>
+<div class=tab-content id=tabset-docsinstall-1><div id=tabset-docsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-1-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
@@ -170,7 +162,7 @@ You can choose the installation method that suits your system</p>
 
 yum makecache
 </code></pre></div></div>
-<div id=tabset-docsuser-guideinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-1-1>
+<div id=tabset-docsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-1-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
@@ -178,24 +170,24 @@ yum makecache
 apt-get update
 </code></pre></div></div></div>
 <h2 id=install>Install</h2>
-<ul class="nav nav-tabs" id=tabset-docsuser-guideinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsuser-guideinstall-4-0 role=tab aria-controls=tabset-docsuser-guideinstall-4-0 aria-selected=true>Install</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsuser-guideinstall-4-1 role=tab aria-controls=tabset-docsuser-guideinstall-4-1>Install the specified releases</a></li></ul>
-<div class=tab-content id=tabset-docsuser-guideinstall-4><div id=tabset-docsuser-guideinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-4-0>
+<ul class="nav nav-tabs" id=tabset-docsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-4-0 role=tab aria-controls=tabset-docsinstall-4-0 aria-selected=true>Install</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-4-1 role=tab aria-controls=tabset-docsinstall-4-1>Install the specified releases</a></li></ul>
+<div class=tab-content id=tabset-docsinstall-4><div id=tabset-docsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-4-0>
 <p>
-<ul class="nav nav-tabs" id=tabset-docsuser-guideinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsuser-guideinstall-2-0 role=tab aria-controls=tabset-docsuser-guideinstall-2-0 aria-selected=true>Red Hat-based distributions</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsuser-guideinstall-2-1 role=tab aria-controls=tabset-docsuser-guideinstall-2-1>Debian-based distributions</a></li></ul>
-<div class=tab-content id=tabset-docsuser-guideinstall-2><div id=tabset-docsuser-guideinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-2-0>
+<ul class="nav nav-tabs" id=tabset-docsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-2-0 role=tab aria-controls=tabset-docsinstall-2-0 aria-selected=true>Red Hat-based distributions</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-2-1 role=tab aria-controls=tabset-docsinstall-2-1>Debian-based distributions</a></li></ul>
+<div class=tab-content id=tabset-docsinstall-2><div id=tabset-docsinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-2-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
 </code></pre></div></div>
-<div id=tabset-docsuser-guideinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-2-1>
+<div id=tabset-docsinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-2-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
 </div>
-<div id=tabset-docsuser-guideinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-4-1>
+<div id=tabset-docsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-4-1>
 <p>
-<ul class="nav nav-tabs" id=tabset-docsuser-guideinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsuser-guideinstall-3-0 role=tab aria-controls=tabset-docsuser-guideinstall-3-0 aria-selected=true>Red Hat-based distributions</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsuser-guideinstall-3-1 role=tab aria-controls=tabset-docsuser-guideinstall-3-1>Debian-based distributions</a></li></ul>
-<div class=tab-content id=tabset-docsuser-guideinstall-3><div id=tabset-docsuser-guideinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-3-0>
+<ul class="nav nav-tabs" id=tabset-docsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-3-0 role=tab aria-controls=tabset-docsinstall-3-0 aria-selected=true>Red Hat-based distributions</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-3-1 role=tab aria-controls=tabset-docsinstall-3-1>Debian-based distributions</a></li></ul>
+<div class=tab-content id=tabset-docsinstall-3><div id=tabset-docsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-3-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># Search for supported releases</span>
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
@@ -203,7 +195,7 @@ yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</sp
 <span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
-<div id=tabset-docsuser-guideinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsuser-guideinstall-3-1>
+<div id=tabset-docsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-3-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># Search for supported releases</span>
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
@@ -226,8 +218,8 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 </code></pre></div><p><a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>More Reference</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-August 24, 2021
-: <a href=https://github.com/klts-io/website/commit/4fcffa1e2f06038b677f57a759b62e683645b611>First commit klts.io (4fcffa1)</a>
+August 31, 2021
+: <a href=https://github.com/klts-io/website/commit/f2ceec3cae0c1f5a3102e3f8ed8e2631e3b3fad0>Move user guide (f2ceec3)</a>
 </div>
 </div>
 </main>

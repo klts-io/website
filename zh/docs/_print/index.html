@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.b2e1aac4085b2bf31fad0e6e680a785d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f732332129c7840cd122c8c56f42b239.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -76,56 +76,20 @@
 </div>
 <h1 class=title>文档</h1>
 <ul>
-<li>1: <a href=#pg-a7c9e10a31abdecaec5a338462a220a8>开发指南</a></li>
+<li>1: <a href=#pg-50ddcb3cdb08fbe2ad5d04311c273b4c>安装预备</a></li>
+<li>2: <a href=#pg-64407d3e6d5ef382426bdfbcae040c6a>安装</a></li>
+<li>3: <a href=#pg-c258a50dfe331dfdf852330040bd8f14>安装后续</a></li>
+<li>4: <a href=#pg-a7c9e10a31abdecaec5a338462a220a8>开发指南</a></li>
 <ul>
-<li>1.1: <a href=#pg-8da562538e76378aaf2ff1c50166f299>依赖</a></li>
-<li>1.2: <a href=#pg-79fcc7e024580df9da30cdb10805eada>克隆</a></li>
-</ul>
-<li>2: <a href=#pg-ecf7e357d2a131135219db95eddda49c>终端用户指南</a></li>
-<ul>
-<li>2.1: <a href=#pg-3d0ac265422d3881fe72f6e78d5c8c9e>安装预备</a></li>
-<li>2.2: <a href=#pg-d91c9bc00bf6167e14af3a6b3d1f887b>安装</a></li>
-<li>2.3: <a href=#pg-d38d0ee458a5907802e2ccbb188d8fbb>安装后续</a></li>
+<li>4.1: <a href=#pg-8da562538e76378aaf2ff1c50166f299>依赖</a></li>
+<li>4.2: <a href=#pg-79fcc7e024580df9da30cdb10805eada>克隆</a></li>
 </ul>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-a7c9e10a31abdecaec5a338462a220a8>1 - 开发指南</h1>
-</div>
-<div class=td-content>
-<h1 id=pg-8da562538e76378aaf2ff1c50166f299>1.1 - 依赖</h1>
-<h2 id=安装-yq>安装 yq</h2>
-<ul class="nav nav-tabs" id=tabset-zhdocsdeveloper-guidedependent-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsdeveloper-guidedependent-1-0 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-0 aria-selected=true>MacOS</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsdeveloper-guidedependent-1-1 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-1>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsdeveloper-guidedependent-1-2 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-2>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsdeveloper-guidedependent-1><div id=tabset-zhdocsdeveloper-guidedependent-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install jq python@3 <span style=color:#8f5902;font-style:italic># 安装 brew, 请看 https://brew.sh/</span>
-pip3 install yq
-</code></pre></div></div>
-<div id=tabset-zhdocsdeveloper-guidedependent-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install -y epel-release
-yum install -y jq python3
-pip3 install yq
-</code></pre></div></div>
-<div id=tabset-zhdocsdeveloper-guidedependent-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-2>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install -y jq python3 python3-pip
-pip3 install yq
-</code></pre></div></div></div>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-79fcc7e024580df9da30cdb10805eada>1.2 - 克隆</h1>
-<h2 id=克隆主分支>克隆主分支</h2>
-<p>请尝试只克隆主分支, 由于 repos 仓库是作为 rpm 和 deb 的软件源的, 直接克隆全部的话会非常大</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubepatch
-</code></pre></div>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-ecf7e357d2a131135219db95eddda49c>2 - 终端用户指南</h1>
-</div>
-<div class=td-content>
-<h1 id=pg-3d0ac265422d3881fe72f6e78d5c8c9e>2.1 - 安装预备</h1>
+<h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>1 - 安装预备</h1>
 <p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>本页面显示如何安装 <code>kubeadm</code> 工具箱。
 有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见
 <a href=/zh/docs/user-guide/install/>使用 kubeadm 创建集群</a> 页面。</p>
@@ -303,20 +267,20 @@ sudo sysctl --system
 <p><p>默认情况下， kubeadm 使用 docker 作为容器运行时。
 kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</p>
 </div></div>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guidepre-install-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guidepre-install-3-0 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-3-0 aria-selected=true>Docker</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepre-install-3-1 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-3-1>Containerd</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guidepre-install-3><div id=tabset-zhdocsuser-guidepre-install-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-3-0>
+<ul class="nav nav-tabs" id=tabset-zhdocspre-install-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocspre-install-3-0 role=tab aria-controls=tabset-zhdocspre-install-3-0 aria-selected=true>Docker</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocspre-install-3-1 role=tab aria-controls=tabset-zhdocspre-install-3-1>Containerd</a></li></ul>
+<div class=tab-content id=tabset-zhdocspre-install-3><div id=tabset-zhdocspre-install-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-0>
 <p>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guidepre-install-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guidepre-install-2-0 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepre-install-2-1 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-2-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guidepre-install-2><div id=tabset-zhdocsuser-guidepre-install-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-2-0>
+<ul class="nav nav-tabs" id=tabset-zhdocspre-install-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocspre-install-2-0 role=tab aria-controls=tabset-zhdocspre-install-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocspre-install-2-1 role=tab aria-controls=tabset-zhdocspre-install-2-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocspre-install-2><div id=tabset-zhdocspre-install-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocspre-install-2-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
 </code></pre></div></div>
-<div id=tabset-zhdocsuser-guidepre-install-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-2-1>
+<div id=tabset-zhdocspre-install-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-2-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
 </code></pre></div></div></div>
 </div>
-<div id=tabset-zhdocsuser-guidepre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-3-1>
+<div id=tabset-zhdocspre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>/containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz
 tar xvf containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz -C /usr/local/
@@ -328,13 +292,13 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 以了解更多信息。</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-d91c9bc00bf6167e14af3a6b3d1f887b>2.2 - 安装</h1>
+<h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>2 - 安装</h1>
 <p>KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式</p>
 <p>安装前请确认已经完成了<a href=/zh/documents/preinstall>相关依赖</a>的安装</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-1-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-1-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-1-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-1-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guideinstall-1><div id=tabset-zhdocsuser-guideinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-1-0>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-1-0 role=tab aria-controls=tabset-zhdocsinstall-1-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-1 role=tab aria-controls=tabset-zhdocsinstall-1-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
@@ -345,7 +309,7 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 
 yum makecache
 </code></pre></div></div>
-<div id=tabset-zhdocsuser-guideinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-1-1>
+<div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubepatch/repos/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
@@ -353,24 +317,24 @@ yum makecache
 apt-get update
 </code></pre></div></div></div>
 <h2 id=安装>安装</h2>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-4-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-4-0 aria-selected=true>安装</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-4-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-4-1>安装指定版本</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guideinstall-4><div id=tabset-zhdocsuser-guideinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-4-0>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-4-0 role=tab aria-controls=tabset-zhdocsinstall-4-0 aria-selected=true>安装</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-4-1 role=tab aria-controls=tabset-zhdocsinstall-4-1>安装指定版本</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-4><div id=tabset-zhdocsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-0>
 <p>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-2-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-2-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-2-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guideinstall-2><div id=tabset-zhdocsuser-guideinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-2-0>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-2-0 role=tab aria-controls=tabset-zhdocsinstall-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-1 role=tab aria-controls=tabset-zhdocsinstall-2-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-2><div id=tabset-zhdocsinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
 </code></pre></div></div>
-<div id=tabset-zhdocsuser-guideinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-2-1>
+<div id=tabset-zhdocsinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
 </div>
-<div id=tabset-zhdocsuser-guideinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-4-1>
+<div id=tabset-zhdocsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-1>
 <p>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guideinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guideinstall-3-0 role=tab aria-controls=tabset-zhdocsuser-guideinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guideinstall-3-1 role=tab aria-controls=tabset-zhdocsuser-guideinstall-3-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guideinstall-3><div id=tabset-zhdocsuser-guideinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-3-0>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-3><div id=tabset-zhdocsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
@@ -378,7 +342,7 @@ yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</sp
 <span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
-<div id=tabset-zhdocsuser-guideinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guideinstall-3-1>
+<div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
@@ -401,8 +365,38 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 </code></pre></div><p><a href=https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>更多操作参考</a></p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-d38d0ee458a5907802e2ccbb188d8fbb>2.3 - 安装后续</h1>
+<h1 id=pg-c258a50dfe331dfdf852330040bd8f14>3 - 安装后续</h1>
 <p>TODO</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-a7c9e10a31abdecaec5a338462a220a8>4 - 开发指南</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-8da562538e76378aaf2ff1c50166f299>4.1 - 依赖</h1>
+<h2 id=安装-yq>安装 yq</h2>
+<ul class="nav nav-tabs" id=tabset-zhdocsdeveloper-guidedependent-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsdeveloper-guidedependent-1-0 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-0 aria-selected=true>MacOS</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsdeveloper-guidedependent-1-1 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-1>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsdeveloper-guidedependent-1-2 role=tab aria-controls=tabset-zhdocsdeveloper-guidedependent-1-2>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocsdeveloper-guidedependent-1><div id=tabset-zhdocsdeveloper-guidedependent-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-0>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install jq python@3 <span style=color:#8f5902;font-style:italic># 安装 brew, 请看 https://brew.sh/</span>
+pip3 install yq
+</code></pre></div></div>
+<div id=tabset-zhdocsdeveloper-guidedependent-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-1>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install -y epel-release
+yum install -y jq python3
+pip3 install yq
+</code></pre></div></div>
+<div id=tabset-zhdocsdeveloper-guidedependent-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsdeveloper-guidedependent-1-2>
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install -y jq python3 python3-pip
+pip3 install yq
+</code></pre></div></div></div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-79fcc7e024580df9da30cdb10805eada>4.2 - 克隆</h1>
+<h2 id=克隆主分支>克隆主分支</h2>
+<p>请尝试只克隆主分支, 由于 repos 仓库是作为 rpm 和 deb 的软件源的, 直接克隆全部的话会非常大</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubepatch
+</code></pre></div>
 </div>
 </main>
 </div>

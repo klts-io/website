@@ -18,12 +18,12 @@
 <meta property="og:description" content="本页面显示如何安装 kubeadm 工具箱。 有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见 使用 kubeadm 创建集群 页面。
 准备开始  一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux 发行版以及一些不提供包管理器的发行版提供通用的指令 每台机器 2 GB 或更多的 RAM （如果少于这个数字将会影响你应用的运行内存) 2 CPU 核或更多 集群中的所有机器的网络彼此均能相互连接(公网和内网都可以) 节点之中不可以有重复的主机名、MAC 地址或 product_uuid。请参见这里了解更多详细信息。 开启机器上的某些端口。请参见这里 了解更多详细信息。 禁用交换分区。为了保证 kubelet 正常工作，你 必须 禁用交换分区。  确保每个节点上 MAC 地址和 product_uuid 的唯一性   你可以使用命令 ip link 或 ifconfig -a 来获取网络接口的 MAC 地址 可以使用 sudo cat /sys/class/dmi/id/product_uuid 命令对 product_uuid 校验  一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。 Kubernetes 使用这些值来唯一确定集群中的节点。 如果这些值在每个节点上不唯一，可能会导致安装 失败。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/zh/docs/user-guide/pre-install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-24T18:00:01+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="og:url" content="/zh/docs/pre-install/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-08-31T11:10:04+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="安装预备">
 <meta itemprop=description content="本页面显示如何安装 kubeadm 工具箱。 有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见 使用 kubeadm 创建集群 页面。
 准备开始  一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux 发行版以及一些不提供包管理器的发行版提供通用的指令 每台机器 2 GB 或更多的 RAM （如果少于这个数字将会影响你应用的运行内存) 2 CPU 核或更多 集群中的所有机器的网络彼此均能相互连接(公网和内网都可以) 节点之中不可以有重复的主机名、MAC 地址或 product_uuid。请参见这里了解更多详细信息。 开启机器上的某些端口。请参见这里 了解更多详细信息。 禁用交换分区。为了保证 kubelet 正常工作，你 必须 禁用交换分区。  确保每个节点上 MAC 地址和 product_uuid 的唯一性   你可以使用命令 ip link 或 ifconfig -a 来获取网络接口的 MAC 地址 可以使用 sudo cat /sys/class/dmi/id/product_uuid 命令对 product_uuid 校验  一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。 Kubernetes 使用这些值来唯一确定集群中的节点。 如果这些值在每个节点上不唯一，可能会导致安装 失败。">
-<meta itemprop=dateModified content="2021-08-24T18:00:01+08:00">
+<meta itemprop=dateModified content="2021-08-31T11:10:04+08:00">
 <meta itemprop=wordCount content="349">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="安装预备">
@@ -53,13 +53,13 @@
 中文 Chinese
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/docs/user-guide/pre-install/>English</a>
+<a class=dropdown-item href=/docs/pre-install/>English</a>
 </div>
 </li>
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.b2e1aac4085b2bf31fad0e6e680a785d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f732332129c7840cd122c8c56f42b239.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -69,7 +69,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.b2e1aac4085b2bf31fad0e6e680a785d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f732332129c7840cd122c8c56f42b239.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -79,31 +79,26 @@
 中文 Chinese
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/docs/user-guide/pre-install/>English</a>
+<a class=dropdown-item href=/docs/pre-install/>English</a>
 </div>
 </div>
 <ul class="td-sidebar-nav__section pr-md-3 ul-0">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocs-li>
 <a href=/zh/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-zhdocs><span>文档</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsdeveloper-guide-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-zhdocspre-install-li>
+<a href=/zh/docs/pre-install/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-zhdocspre-install><span class=td-sidebar-nav-active-item>安装预备</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsinstall-li>
+<a href=/zh/docs/install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsinstall><span>安装</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocspost-install-li>
+<a href=/zh/docs/post-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocspost-install><span>安装后续</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsdeveloper-guide-li>
 <a href=/zh/docs/developer-guide/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsdeveloper-guide><span>开发指南</span></a>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsdeveloper-guidedependent-li>
 <a href=/zh/docs/developer-guide/dependent/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsdeveloper-guidedependent><span>依赖</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsdeveloper-guideclone-li>
 <a href=/zh/docs/developer-guide/clone/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsdeveloper-guideclone><span>克隆</span></a>
-</li>
-</ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhdocsuser-guide-li>
-<a href=/zh/docs/user-guide/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsuser-guide><span>终端用户指南</span></a>
-<ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-zhdocsuser-guidepre-install-li>
-<a href=/zh/docs/user-guide/pre-install/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-zhdocsuser-guidepre-install><span class=td-sidebar-nav-active-item>安装预备</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsuser-guideinstall-li>
-<a href=/zh/docs/user-guide/install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsuser-guideinstall><span>安装</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsuser-guidepost-install-li>
-<a href=/zh/docs/user-guide/post-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsuser-guidepost-install><span>安装后续</span></a>
 </li>
 </ul>
 </li>
@@ -115,11 +110,11 @@
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/klts-io/website/edit/master/content/zh/docs/user-guide/pre-install.md target=_blank><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
-<a href="https://github.com/klts-io/website/new/master/content/zh/docs/user-guide/pre-install.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
+<a href=https://github.com/klts-io/website/edit/master/content/zh/docs/pre-install.md target=_blank><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/klts-io/website/new/master/content/zh/docs/pre-install.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
 <a href="https://github.com/klts-io/website/issues/new?title=%e5%ae%89%e8%a3%85%e9%a2%84%e5%a4%87" target=_blank><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
 <a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> 提交项目问题</a>
-<a id=print href=/zh/docs/user-guide/_print/><i class="fa fa-print fa-fw"></i> 整节打印</a>
+<a id=print href=/zh/docs/_print/><i class="fa fa-print fa-fw"></i> 整节打印</a>
 </div>
 <div class=td-toc><nav id=TableOfContents>
 <ul>
@@ -146,11 +141,8 @@
 <li class=breadcrumb-item>
 <a href=/zh/docs/>文档</a>
 </li>
-<li class=breadcrumb-item>
-<a href=/zh/docs/user-guide/>终端用户指南</a>
-</li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/zh/docs/user-guide/pre-install/>安装预备</a>
+<a href=/zh/docs/pre-install/>安装预备</a>
 </li>
 </ol>
 </nav>
@@ -336,20 +328,20 @@ sudo sysctl --system
 <p><p>默认情况下， kubeadm 使用 docker 作为容器运行时。
 kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</p>
 </div></div>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guidepre-install-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guidepre-install-3-0 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-3-0 aria-selected=true>Docker</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepre-install-3-1 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-3-1>Containerd</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guidepre-install-3><div id=tabset-zhdocsuser-guidepre-install-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-3-0>
+<ul class="nav nav-tabs" id=tabset-zhdocspre-install-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocspre-install-3-0 role=tab aria-controls=tabset-zhdocspre-install-3-0 aria-selected=true>Docker</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocspre-install-3-1 role=tab aria-controls=tabset-zhdocspre-install-3-1>Containerd</a></li></ul>
+<div class=tab-content id=tabset-zhdocspre-install-3><div id=tabset-zhdocspre-install-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-0>
 <p>
-<ul class="nav nav-tabs" id=tabset-zhdocsuser-guidepre-install-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsuser-guidepre-install-2-0 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsuser-guidepre-install-2-1 role=tab aria-controls=tabset-zhdocsuser-guidepre-install-2-1>基于 Debian 的发行版</a></li></ul>
-<div class=tab-content id=tabset-zhdocsuser-guidepre-install-2><div id=tabset-zhdocsuser-guidepre-install-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-2-0>
+<ul class="nav nav-tabs" id=tabset-zhdocspre-install-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocspre-install-2-0 role=tab aria-controls=tabset-zhdocspre-install-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocspre-install-2-1 role=tab aria-controls=tabset-zhdocspre-install-2-1>基于 Debian 的发行版</a></li></ul>
+<div class=tab-content id=tabset-zhdocspre-install-2><div id=tabset-zhdocspre-install-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocspre-install-2-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
 </code></pre></div></div>
-<div id=tabset-zhdocsuser-guidepre-install-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-2-1>
+<div id=tabset-zhdocspre-install-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-2-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
 </code></pre></div></div></div>
 </div>
-<div id=tabset-zhdocsuser-guidepre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsuser-guidepre-install-3-1>
+<div id=tabset-zhdocspre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-1>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>/containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz
 tar xvf containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz -C /usr/local/
@@ -361,8 +353,8 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 以了解更多信息。</p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.08.24
-: <a href=https://github.com/klts-io/website/commit/4fcffa1e2f06038b677f57a759b62e683645b611>First commit klts.io (4fcffa1)</a>
+2021.08.31
+: <a href=https://github.com/klts-io/website/commit/f2ceec3cae0c1f5a3102e3f8ed8e2631e3b3fad0>Move user guide (f2ceec3)</a>
 </div>
 </div>
 </main>
