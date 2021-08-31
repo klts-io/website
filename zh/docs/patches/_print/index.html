@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.a27205fcb4676d8aab0432a4c4275937.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.9c8f538212f857e904b28133c9dc64a9.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -119,16 +119,13 @@
 </span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#34;NET_RAW&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></code></pre></div><p>通过 <code>PodSecurityPolicy</code> 策略限制部署特权或共享主机网络容器，另外可以通过在策略中配置 <code>requiredDropCapabilities</code> 强制容器部署关闭 <code>CAP_NET_RAW</code> 能力。</p>
 <h2 id=klts-修复的版本>KLTS 修复的版本</h2>
-<blockquote>
-<p>(TODO 替换 lts.x 为正式版本号)</p>
-</blockquote>
 <ul>
-<li>1.15: v1.15.12-lts.x <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch>kubernetes/kubernetes#92040</a></li>
-<li>1.14: v1.14.10-lts.x <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch>kubernetes/kubernetes#92040</a></li>
-<li>1.13: v1.13.12-lts.x <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch>kubernetes/kubernetes#92040</a></li>
-<li>1.12: v1.12.10-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/CVE-2020-8558.1.12.patch>CVE-2020-8558.1.12.patch</a></li>
-<li>1.11: v1.11.10-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/CVE-2020-8558.1.12.patch>CVE-2020-8558.1.12.patch</a></li>
-<li>1.10: v1.10.13-lts.x TODO</li>
+<li>1.15: v1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch>kubernetes/kubernetes#92040</a></li>
+<li>1.14: v1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch>kubernetes/kubernetes#92040</a></li>
+<li>1.13: v1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch>kubernetes/kubernetes#92040</a></li>
+<li>1.12: v1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/cve-2020-8558.1.12.patch>CVE-2020-8558.1.12.patch</a></li>
+<li>1.11: v1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/cve-2020-8558.1.12.patch>CVE-2020-8558.1.12.patch</a></li>
+<li>1.10: v1.10.13-lts.1 TODO</li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -157,9 +154,6 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
         .../protofile.pb.go:250 +0xb86
 </code></pre><p>如果您使用了 <code>Protobuf</code> 消息的相关组件，推荐将 <code>Gogo Protobuf</code> 编译器升级到漏洞修复版本（v1.3.2或更高的版本），再基于升级后的Protobuf<code>编译器重新生成相关的</code>Protobuf` 消息。</p>
 <h2 id=klts-修复的版本>KLTS 修复的版本</h2>
-<blockquote>
-<p>(TODO 替换 lts.x 为正式版本号)</p>
-</blockquote>
 <ul>
 <li>1.17: v1.17.17-lts.x <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch>kubernetes/kubernetes#101327</a></li>
 <li>1.16: v1.16.15-lts.x <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch>kubernetes/kubernetes#101327</a></li>
@@ -200,15 +194,15 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <p>(TODO 替换 lts.x 为正式版本号)</p>
 </blockquote>
 <ul>
-<li>1.18: v1.18.20-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
-<li>1.17: v1.17.17-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
-<li>1.16: v1.16.15-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
-<li>1.15: v1.15.12-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
-<li>1.14: v1.14.10-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
-<li>1.13: v1.13.12-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
-<li>1.12: v1.12.10-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
-<li>1.11: v1.11.10-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
-<li>1.10: v1.10.13-lts.x <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
+<li>1.18: v1.18.20-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
+<li>1.17: v1.17.17-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
+<li>1.16: v1.16.15-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
+<li>1.15: v1.15.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
+<li>1.14: v1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch>nokmem.1.18.patch</a></li>
+<li>1.13: v1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
+<li>1.12: v1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
+<li>1.11: v1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
+<li>1.10: v1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch>nokmem.1.13.patch</a></li>
 </ul>
 </div>
 </main>
