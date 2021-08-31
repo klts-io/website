@@ -167,6 +167,10 @@ apt-get install docker.io
     {{< /tab >}}
 
 {{% tab name="Containerd" %}}
+containerd 官方默认只提供了 amd64 架构的下载包，如果你是其他基础架构的机器，
+可以从官方 Docker 仓库安装 `containerd.io` 软件包。可以在 [安装 Docker 引擎](https://docs.docker.com/engine/install/#server) 中
+找到有关为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的说明。
+也可以使用源代码构建。
 ``` bash
 VERSION=1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v${VERSION}/containerd-${VERSION}-linux-amd64.tar.gz
