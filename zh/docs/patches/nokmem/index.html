@@ -20,20 +20,20 @@ Bug 影响 节点长期使用的时候提示剩余空间不足的错误，具体
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device 节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
 影响范围 所有使用低版本内核的环境
 k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/runc#2840) 修复(直接移除了)
-防范错误  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  (TODO 替换 lts.x 为正式版本号)
+防范措施  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  (TODO 替换 lts.x 为正式版本号)
   1.18: v1.18.20-lts.x nokmem.1.18.patch 1.17: v1.17.17-lts.x nokmem.1.18.patch 1.16: v1.16.15-lts.x nokmem.1.18.patch 1.15: v1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/patches/nokmem/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-31T16:41:28+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-08-31T17:08:23+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="nokmem">
 <meta itemprop=description content="详细信息
 Bug 影响 节点长期使用的时候提示剩余空间不足的错误，具体如下所示：
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device 节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
 影响范围 所有使用低版本内核的环境
 k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/runc#2840) 修复(直接移除了)
-防范错误  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  (TODO 替换 lts.x 为正式版本号)
+防范措施  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  (TODO 替换 lts.x 为正式版本号)
   1.18: v1.18.20-lts.x nokmem.1.18.patch 1.17: v1.17.17-lts.x nokmem.1.18.patch 1.16: v1.16.15-lts.x nokmem.1.18.patch 1.15: v1.">
-<meta itemprop=dateModified content="2021-08-31T16:41:28+08:00">
+<meta itemprop=dateModified content="2021-08-31T17:08:23+08:00">
 <meta itemprop=wordCount content="76">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="nokmem">
@@ -42,7 +42,7 @@ Bug 影响 节点长期使用的时候提示剩余空间不足的错误，具体
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device 节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
 影响范围 所有使用低版本内核的环境
 k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/runc#2840) 修复(直接移除了)
-防范错误  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  (TODO 替换 lts.x 为正式版本号)
+防范措施  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  (TODO 替换 lts.x 为正式版本号)
   1.18: v1.18.20-lts.x nokmem.1.18.patch 1.17: v1.17.17-lts.x nokmem.1.18.patch 1.16: v1.16.15-lts.x nokmem.1.18.patch 1.15: v1.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -74,7 +74,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.8653e04a0c31460a9fa83bd038ee70b4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.3b209453e6db1c76cada4829bd18990a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -84,7 +84,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.8653e04a0c31460a9fa83bd038ee70b4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.3b209453e6db1c76cada4829bd18990a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -146,7 +146,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 <ul>
 <li><a href=#bug-影响>Bug 影响</a></li>
 <li><a href=#影响范围>影响范围</a></li>
-<li><a href=#防范错误>防范错误</a>
+<li><a href=#防范措施>防范措施</a>
 <ul>
 <li><a href=#klts-修复的版本>KLTS 修复的版本</a></li>
 </ul>
@@ -181,7 +181,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 <h2 id=影响范围>影响范围</h2>
 <p>所有使用低版本内核的环境</p>
 <p>k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840>opencontainers/runc#2840</a>) 修复(直接移除了)</p>
-<h2 id=防范错误>防范错误</h2>
+<h2 id=防范措施>防范措施</h2>
 <ul>
 <li>升级系统内核</li>
 <li>k8s 1.14 及以上
@@ -213,7 +213,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.08.31
-: <a href=https://github.com/klts-io/website/commit/552641ecf544cc64b8a46b9c580e9c112f366c7f>Add patches/nokmem (552641e)</a>
+: <a href=https://github.com/klts-io/website/commit/6102cc22ee2010796d167e3194650f73f5a27f9f>Fix typo (6102cc2)</a>
 </div>
 </div>
 </main>
