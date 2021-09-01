@@ -26,17 +26,17 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 ([opencontainers/ru
 - k8s 1.14 及以上
   - 重新构建 Kubelet 带上 `-tags=nokmem`
 - k8s 1.14 以下
-  - 硬编码, 可以参考 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch)
+  - 硬编码, 可以参考 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch)
 
 
 ### KLTS 修复的版本
 
-- 1.18: v1.18.20-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
-- 1.17: v1.17.17-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
-- 1.16: v1.16.15-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
-- 1.15: v1.15.12-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
-- 1.14: v1.14.10-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
-- 1.13: v1.13.12-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch)
-- 1.12: v1.12.10-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch)
-- 1.11: v1.11.10-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch)
-- 1.10: v1.10.13-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.13.patch)
+- 1.18: v1.18.20-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch)
+- 1.17: v1.17.17-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch)
+- 1.16: v1.16.15-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch)
+- 1.15: v1.15.12-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch)
+- 1.14: v1.14.10-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch)
+- 1.13: v1.13.12-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch)
+- 1.12: v1.12.10-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch)
+- 1.11: v1.11.10-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch)
+- 1.10: v1.10.13-lts.1 [nokmem.1.13.patch](https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch)
