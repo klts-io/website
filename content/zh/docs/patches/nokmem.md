@@ -30,7 +30,6 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 ([opencontainers/ru
 
 
 ### KLTS 修复的版本
-> (TODO 替换 lts.x 为正式版本号)
 
 - 1.18: v1.18.20-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
 - 1.17: v1.17.17-lts.1 [nokmem.1.18.patch](https://github.com/klts-io/kubernetes-lts/blob/master/patches/nokmem.1.18.patch)
