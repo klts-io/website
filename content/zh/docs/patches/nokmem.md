@@ -1,8 +1,12 @@
 ---
 title: nokmem
+short_description: |
+  节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
 ---
 
 {{< link text="详细信息" url="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" >}}
+
+节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
 
 ## Bug 影响
 
@@ -12,7 +16,7 @@ title: nokmem
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
 ```
 
-节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
+节点磁盘充足但是一直报和这个错误, 并且创建 `Pod` 总是失败，这是一个潜在的“定时炸弹”。
 
 ## 影响范围
 
