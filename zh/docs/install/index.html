@@ -16,21 +16,21 @@
 <title>安装步骤 | KLTS.io</title>
 <meta name=description content="KLTS 的官网"><meta property="og:title" content="安装步骤">
 <meta property="og:description" content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
-安装前请确认已经完成了相关依赖的安装
+安装前请确认已经完成了安装准备的安装
 设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  /etc/hosts hub.fastgit.org ghproxy.com raw.githubusercontents.com raw.staticdn.net curl https://raw.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-31T19:17:41+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-01T19:29:31+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="安装步骤">
 <meta itemprop=description content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
-安装前请确认已经完成了相关依赖的安装
+安装前请确认已经完成了安装准备的安装
 设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  /etc/hosts hub.fastgit.org ghproxy.com raw.githubusercontents.com raw.staticdn.net curl https://raw.">
-<meta itemprop=dateModified content="2021-08-31T19:17:41+08:00">
+<meta itemprop=dateModified content="2021-09-01T19:29:31+08:00">
 <meta itemprop=wordCount content="304">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="安装步骤">
 <meta name=twitter:description content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
-安装前请确认已经完成了相关依赖的安装
+安装前请确认已经完成了安装准备的安装
 设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  /etc/hosts hub.fastgit.org ghproxy.com raw.githubusercontents.com raw.staticdn.net curl https://raw.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -62,7 +62,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.643624db0a73f82240781d594cc66e07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.578c8bf05f3fc7dbdbbffd93d6272ea7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -72,7 +72,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.643624db0a73f82240781d594cc66e07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.578c8bf05f3fc7dbdbbffd93d6272ea7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -245,7 +245,7 @@
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 2 分钟 阅读时间</p>
 </header>
 <p>KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式</p>
-<p>安装前请确认已经完成了<a href=/zh/docs/pre-install>相关依赖</a>的安装</p>
+<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target=_blank>安装准备</a>的安装</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li>
@@ -431,11 +431,11 @@ kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p><a href=https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>更多操作参考</a></p>
+</code></pre></div><a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>更多操作参考</a>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.08.31
-: <a href=https://github.com/klts-io/website/commit/0f07127630a74ab87ed69a58f1d65d12cc475ec1>Update repos base url to dl.klts.io (0f07127)</a>
+2021.09.01
+: <a href=https://github.com/klts-io/website/commit/e1e1fef52cac14e40469e0bbf638e5a3595b0b7c>Update link (e1e1fef)</a>
 </div>
 </div>
 </main>

@@ -16,21 +16,21 @@
 <title>Install | KLTS.io</title>
 <meta name=description content="KLTS.io website"><meta property="og:title" content="Install">
 <meta property="og:description" content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
-Before installation, ensure that related dependencies has been installed
+Before installation, ensure that Pre Install has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-31T19:17:41+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-01T19:29:31+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Install">
 <meta itemprop=description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
-Before installation, ensure that related dependencies has been installed
+Before installation, ensure that Pre Install has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
-<meta itemprop=dateModified content="2021-08-31T19:17:41+08:00">
+<meta itemprop=dateModified content="2021-09-01T19:29:31+08:00">
 <meta itemprop=wordCount content="182">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Install">
 <meta name=twitter:description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
-Before installation, ensure that related dependencies has been installed
+Before installation, ensure that Pre Install has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -62,7 +62,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.643624db0a73f82240781d594cc66e07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.578c8bf05f3fc7dbdbbffd93d6272ea7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -72,7 +72,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.643624db0a73f82240781d594cc66e07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.578c8bf05f3fc7dbdbbffd93d6272ea7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -147,7 +147,7 @@ English
 </header>
 <p>KLTS provides a way to install software sources based on Deb and RPM.
 You can choose the installation method that suits your system</p>
-<p>Before installation, ensure that <a href=/docs/pre-install>related dependencies</a> has been installed</p>
+<p>Before installation, ensure that <a href=/docs/pre-install target=_blank>Pre Install</a> has been installed</p>
 <h2 id=set-the-klts-software-source>Set the KLTS software source</h2>
 <ul class="nav nav-tabs" id=tabset-docsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-1-0 role=tab aria-controls=tabset-docsinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-1-1 role=tab aria-controls=tabset-docsinstall-1-1>Debian-based distributions</a></li></ul>
@@ -215,11 +215,11 @@ kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p><a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>More Reference</a></p>
+</code></pre></div><a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>More Reference</a>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-August 31, 2021
-: <a href=https://github.com/klts-io/website/commit/0f07127630a74ab87ed69a58f1d65d12cc475ec1>Update repos base url to dl.klts.io (0f07127)</a>
+September 1, 2021
+: <a href=https://github.com/klts-io/website/commit/e1e1fef52cac14e40469e0bbf638e5a3595b0b7c>Update link (e1e1fef)</a>
 </div>
 </div>
 </main>
