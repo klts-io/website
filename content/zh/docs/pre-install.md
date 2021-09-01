@@ -4,7 +4,7 @@ weight: 20
 ---
 
 <img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">本页介绍如何安装 `kubeadm` 工具箱。
-有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见[使用 kubeadm 创建集群](/zh/docs/install)。
+有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见{{< link url="/docs/install" >}}。
 
 ## 准备工作
 
@@ -13,8 +13,8 @@ weight: 20
 * 每台主机至少 2 GB 或更多的内存（如果内存太少将影响应用的运行）
 * CPU 2 核或更多
 * 集群中所有主机的网络连通（公网和内网）
-* 单个节点上不能有重复的主机名、MAC 地址或 product_uuid，请参阅[确保每个节点上 MAC 地址和 product_uuid 的唯一性](#verify-mac-address)。
-* 开启主机上的某些端口，请参阅[检查所需端口](#check-required-ports)。
+* 单个节点上不能有重复的主机名、MAC 地址或 product_uuid，请参阅{{< link text="确保每个节点上 MAC 地址和 product_uuid 的唯一性" url="#verify-mac-address" >}}。
+* 开启主机上的某些端口，请参阅{{< link text="检查所需端口" url="#check-required-ports" >}}。
 * 禁用交换分区。为了保证 kubelet 正常工作，您**必须**禁用交换分区。
 
 ## 确保每个节点上 MAC 地址和 product_uuid 的唯一性    {#verify-mac-address}
@@ -25,7 +25,7 @@ weight: 20
 一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。
 Kubernetes 使用这些值来唯一确定集群中的节点。
 如果这些值在每个节点上不唯一，可能会导致安装
-[失败](https://github.com/kubernetes/kubeadm/issues/31)。
+{{< link text="失败" url="https://github.com/kubernetes/kubeadm/issues/31" >}}。
 
 ## 检查网络适配器
 
@@ -51,7 +51,7 @@ EOF
 sudo sysctl --system
 ```
 
-更多的相关细节可查看[网络插件需求](https://kubernetes.io/zh/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements)页面。
+更多的相关细节可查看{{< link text="网络插件需求" url="https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements" >}}页面。
 
 ## 检查所需端口{#check-required-ports}
 
@@ -72,7 +72,7 @@ sudo sysctl --system
 | TCP  | 入站 | 10250       | Kubelet API    | kubelet 自身、控制平面组件 |
 | TCP  | 入站 | 30000-32767 | NodePort 服务† | 所有组件                   |
 
-[NodePort 服务](https://kubernetes.io/zh/docs/concepts/services-networking/service/) 的默认端口范围。
+{{< link text="NodePort 服务" url="https://kubernetes.io/docs/concepts/services-networking/service/" >}} 的默认端口范围。
 
 使用 * 标记的任意端口号都可以被覆盖，所以你需要保证所定制的端口是开放的。
 
@@ -168,7 +168,7 @@ apt-get install docker.io
 
 {{% tab name="Containerd" %}}
 containerd 官方默认只提供了 amd64 架构的下载包，如果你是其他基础架构的机器，
-可以从官方 Docker 仓库安装 `containerd.io` 软件包。可以在 [安装 Docker 引擎](https://docs.docker.com/engine/install/#server) 中
+可以从官方 Docker 仓库安装 `containerd.io` 软件包。可以在 {{< link text="安装 Docker 引擎" url="https://docs.docker.com/engine/install/#server" >}} 中
 找到有关为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的说明。
 也可以使用源代码构建。
 ``` bash
@@ -183,5 +183,5 @@ systemctl start containerd && systemctl enable containerd
 
 {{< /tabs >}}
 
-参阅[容器运行时](https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/)
+参阅{{< link text="容器运行时" url="https://kubernetes.io/docs/setup/production-environment/container-runtimes/" >}}
 以了解更多信息。

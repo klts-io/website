@@ -4,7 +4,7 @@ weight: 20
 ---
 
 <img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page shows how to install the `kubeadm` toolbox.
-For information on how to create a cluster with kubeadm once you have performed this installation process, see the [Using kubeadm to Create a Cluster](/docs/install) page.
+For information on how to create a cluster with kubeadm once you have performed this installation process, see the {{< link url="/docs/install" >}} page.
 
 ## Before you begin
 
@@ -12,8 +12,8 @@ For information on how to create a cluster with kubeadm once you have performed 
 * 2 GB or more of RAM per machine (any less will leave little room for your apps).
 * 2 CPUs or more.
 * Full network connectivity between all machines in the cluster (public or private network is fine).
-* Unique hostname, MAC address, and product_uuid for every node. See [here](#verify-mac-address) for more details.
-* Certain ports are open on your machines. See [here](#check-required-ports) for more details.
+* Unique hostname, MAC address, and product_uuid for every node. See {{< link text="here" url="#verify-mac-address" >}} for more details.
+* Certain ports are open on your machines. See {{< link text="here" url="#check-required-ports" >}} for more details.
 * Swap disabled. You **MUST** disable swap in order for the kubelet to work properly.
 
 ## Verify the MAC address and product_uuid are unique for every node {#verify-mac-address}
@@ -24,7 +24,7 @@ For information on how to create a cluster with kubeadm once you have performed 
 It is very likely that hardware devices will have unique addresses, although some virtual machines may have
 identical values. Kubernetes uses these values to uniquely identify the nodes in the cluster.
 If these values are not unique to each node, the installation process
-may [fail](https://github.com/kubernetes/kubeadm/issues/31).
+may {{< link text="fail" url="https://github.com/kubernetes/kubeadm/issues/31" >}}.
 
 ## Check network adapters
 
@@ -49,7 +49,7 @@ EOF
 sudo sysctl --system
 ```
 
-For more details please see the [Network Plugin Requirements](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements) page.
+For more details please see the {{< link text="Network Plugin Requirements" url="https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements" >}} page.
 
 ## Check required ports
 
@@ -70,7 +70,7 @@ For more details please see the [Network Plugin Requirements](https://kubernetes
 | TCP      | Inbound   | 10250       | kubelet API        | Self, Control plane |
 | TCP      | Inbound   | 30000-32767 | NodePort Services† | All                 |
 
-† Default port range for [NodePort Services](https://kubernetes.io/docs/concepts/services-networking/service/).
+† Default port range for {{< link text="NodePort Services" url="https://kubernetes.io/docs/concepts/services-networking/service/" >}}.
 
 Any port numbers marked with * are overridable, so you will need to ensure any
 custom ports you provide are also open.
@@ -174,5 +174,5 @@ systemctl start containerd && systemctl enable containerd
 
 {{< /tabs >}}
 
-See [container runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
+See {{< link text="container runtimes" url="https://kubernetes.io/docs/setup/production-environment/container-runtimes/" >}}
 for more information.

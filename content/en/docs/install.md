@@ -6,7 +6,7 @@ weight: 30
 KLTS provides a way to install software sources based on Deb and RPM. 
 You can choose the installation method that suits your system
 
-Before installation, ensure that [related dependencies](/docs/pre-install) has been installed
+Before installation, ensure that {{< link url="/docs/pre-install" >}} has been installed
 
 ## Set the KLTS software source
 
@@ -112,4 +112,4 @@ REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
-[More Reference](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+{{< link text="More Reference" url="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" >}}

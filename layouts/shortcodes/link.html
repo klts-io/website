@@ -1,0 +1,19 @@
+{{- $url := .Get "url" -}}
+
+{{- $file := (strings.TrimSuffix "/" $url ) -}}
+{{- $page := .Site.GetPage $file -}}
+
+{{- $text := .Get "text" | default $page.Params.title | default $url -}}
+{{- $target := .Get "target" | default "_blank" -}}
+{{- $class := .Get "class" -}}
+
+{{- if hasPrefix $url "/" -}}
+    {{- $url = (path.Join .Page.Site.LanguagePrefix $url) -}}
+{{- end -}}
+
+{{- $description :=  $page.Params.short_description -}}
+{{- if $description -}}
+    <a href="{{ $url }}" title='{{- $description -}}' data-toggle='tooltip' data-placement='top' target="{{ $target }}" {{ with $class }}class="{{ . }}" {{ end }}>{{ $text }}</a>
+{{- else -}}
+    <a href="{{ $url }}" target="{{ $target }}" {{ with $class }}class="{{ . }}" {{ end }}>{{ $text }}</a>
+{{- end -}}
