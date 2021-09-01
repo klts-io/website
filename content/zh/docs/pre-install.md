@@ -9,7 +9,7 @@ weight: 20
 ## 准备工作
 
 * 准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
-  发行版以及一些不提供包管理器的发行版提供通用的指令
+  发行版以及一些不提供包管理器的发行版提供通用的指令。
 * 每台主机至少 2 GB 或更多的内存（如果内存太少将影响应用的运行）
 * CPU 2 核或更多
 * 集群中所有主机的网络连通（公网和内网）
@@ -19,24 +19,23 @@ weight: 20
 
 ## 确保每个节点上 MAC 地址和 product_uuid 的唯一性    {#verify-mac-address}
 
-* 你可以使用命令 `ip link` 或 `ifconfig -a` 来获取网络接口的 MAC 地址
-* 可以使用 `sudo cat /sys/class/dmi/id/product_uuid` 命令对 product_uuid 校验
+* 使用命令 `ip link` 或 `ifconfig -a` 来获取网络接口的 MAC 地址
+* 使用 `sudo cat /sys/class/dmi/id/product_uuid` 命令来校验 product_uuid
 
-一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。
-Kubernetes 使用这些值来唯一确定集群中的节点。
-如果这些值在每个节点上不唯一，可能会导致安装
-{{< link text="失败" url="https://github.com/kubernetes/kubeadm/issues/31" >}}。
+一般来讲，硬件设备拥有唯一的地址，但是有些虚拟机的地址可能会重复。
+Kubernetes 使用 MAC 地址和 product_uuid 来确定集群中的唯一节点。
+如果这些值在每个节点上不唯一，可能会导致安装{{< link text="失败" url="https://github.com/kubernetes/kubeadm/issues/31" >}}。
 
 ## 检查网络适配器
 
-如果你有一个以上的网络适配器，同时你的 Kubernetes 组件通过默认路由不可达，我们建议你预先添加 IP 路由规则，这样 Kubernetes 集群就可以通过对应的适配器完成连接。
+如果您有一个以上的网络适配器，同时您的 Kubernetes 组件通过默认路由不可达，我们建议您预先添加 IP 路由规则，这样 Kubernetes 集群就可以通过对应的适配器完成连接。
 
 ## 允许 iptables 检查桥接流量
 
 确保 `br_netfilter` 模块被加载。这一操作可以通过运行 `lsmod | grep br_netfilter`
-来完成。若要显式加载该模块，可执行 `sudo modprobe br_netfilter`。
+来完成。若要显式加载该模块，可执行命令 `sudo modprobe br_netfilter`。
 
-为了让你的 Linux 节点上的 iptables 能够正确地查看桥接流量，你需要确保在你的
+为了让您的 Linux 节点上的 iptables 能够正确地查看桥接流量，您需要确保在
 `sysctl` 配置中将 `net.bridge.bridge-nf-call-iptables` 设置为 1。例如：
 
 ```bash
@@ -51,7 +50,7 @@ EOF
 sudo sysctl --system
 ```
 
-更多的相关细节可查看{{< link text="网络插件需求" url="https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements" >}}页面。
+更多细节请查阅{{< link text="网络插件需求" url="https://kubernetes.io/zh/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements" >}}页面。
 
 ## 检查所需端口{#check-required-ports}
 
@@ -60,7 +59,7 @@ sudo sysctl --system
 | 协议 | 方向 | 端口范围  | 作用                    | 使用者                       |
 | ---- | ---- | --------- | ----------------------- | ---------------------------- |
 | TCP  | 入站 | 6443      | Kubernetes API 服务器   | 所有组件                     |
-| TCP  | 入站 | 2379-2380 | etcd 服务器客户端 API   | kube-apiserver, etcd         |
+| TCP  | 入站 | 2379-2380 | etcd 服务器客户端 API   | kube-apiserver、etcd         |
 | TCP  | 入站 | 10250     | Kubelet API             | kubelet 自身、控制平面组件   |
 | TCP  | 入站 | 10251     | kube-scheduler          | kube-scheduler 自身          |
 | TCP  | 入站 | 10252     | kube-controller-manager | kube-controller-manager 自身 |
@@ -70,19 +69,18 @@ sudo sysctl --system
 | 协议 | 方向 | 端口范围    | 作用           | 使用者                     |
 | ---- | ---- | ----------- | -------------- | -------------------------- |
 | TCP  | 入站 | 10250       | Kubelet API    | kubelet 自身、控制平面组件 |
-| TCP  | 入站 | 30000-32767 | NodePort 服务† | 所有组件                   |
+| TCP  | 入站 | 30000-32767 | NodePort 服务 | 所有组件                   |
 
-{{< link text="NodePort 服务" url="https://kubernetes.io/docs/concepts/services-networking/service/" >}} 的默认端口范围。
+以上是 {{< link text="NodePort 服务" url="https://kubernetes.io/zh/docs/concepts/services-networking/service/" >}}的默认端口范围。
 
-使用 * 标记的任意端口号都可以被覆盖，所以你需要保证所定制的端口是开放的。
+使用 * 标记的任意端口号都可以被覆盖，所以您需要保证定制的端口是开放的。
 
-虽然控制平面节点已经包含了 etcd 的端口，你也可以使用自定义的外部 etcd 集群，或是指定自定义端口。
+虽然控制平面节点已经包含了 etcd 的端口，您也可以使用自定义的外部 etcd 集群，或指定自定义端口。
 
-你使用的 Pod 网络插件 (见下) 也可能需要某些特定端口开启。由于各个 Pod 网络插件都有所不同，
-请参阅他们各自文档中对端口的要求。
+您使用的 Pod 网络插件 (见下) 也可能需要某些特定端口开启。由于各个 Pod 网络插件都有所不同，请参阅相应文档中的端口要求。
 
 ## 设置节点名字
-
+命令的语法格式如下：
 ``` bash
 hostnamectl set-hostname your-new-host-name
 echo "127.0.0.1 $(hostname)" >> /etc/hosts
@@ -90,35 +88,34 @@ echo "::1       $(hostname)" >> /etc/hosts
 ```
 
 ## 关闭 Swap
+执行以下命令关闭 Swap：
 
 ``` bash
 swapoff -a
 ```
 
-如需要永久关闭请编辑 `/etc/fstab` 文件注释掉 swap 的挂载
+如果需要永久关闭，请编辑 `/etc/fstab` 文件，将 swap 的挂载路径改为注释。
 
 ## 关闭 Selinux
+执行以下命令关闭 Selinux：
 
 ``` bash
 setenforce 0
 ```
 
-如需要永久关闭请编辑 `/etc/sysconfig/selinux` 把 `SELINUX=enforcing` 替换为 `SELINUX=disabled`
+如果需要永久关闭，请编辑 `/etc/sysconfig/selinux` 将 `SELINUX=enforcing` 替换为 `SELINUX=disabled`。
 
 ## 安装 runtime{#installing-runtime}
 
-为了在 Pod 中运行容器，Kubernetes 使用 
-容器运行时（Container Runtime）
-
+为了在 Pod 中运行容器，Kubernetes 使用容器运行时（Container Runtime）。
 
 {{< tabs name="container-runtimes" >}}
 {{% tab name="Linux 节点" %}}
 
-默认情况下，Kubernetes 使用 容器运行时接口（Container Runtime Interface，CRI）
-来与你所选择的容器运行时交互。
+默认情况下，Kubernetes 使用容器运行时接口（Container Runtime Interface，CRI）来与您所选择的容器运行时交互。
 
-如果你不指定运行时，则 kubeadm 会自动尝试检测到系统上已经安装的运行时，
-方法是扫描一组众所周知的 Unix 域套接字。
+如果您不指定运行时，则 kubeadm 会自动尝试检测系统上已经安装的运行时，方法是扫描一组众所周知的 Unix 域套接字。
+
 下面的表格列举了一些容器运行时及其对应的套接字路径：
 
 | 运行时     | 域套接字                        |
@@ -129,18 +126,16 @@ setenforce 0
 
 
 <br/>
-如果同时检测到 Docker 和 containerd，则优先选择 Docker。
-这是必然的，因为 Docker 18.09 附带了 containerd 并且两者都是可以检测到的，
-即使你仅安装了 Docker。
-如果检测到其他两个或多个运行时，kubeadm 输出错误信息并退出。
+如果同时检测到 Docker 和 Containerd，则优先选择 Docker。
+这是必然的，即使您仅安装了 Docker，因为 Docker 18.09 附带了 Containerd，所以两者都是可以检测到的。
+如果检测到其他两个或多个运行时，则 kubeadm 输出错误信息并退出。  
 
 kubelet 通过内置的 `dockershim` CRI 实现与 Docker 集成。
 
 
 {{% /tab %}}
 {{% tab name="其它操作系统" %}}
-默认情况下， kubeadm 使用 docker 作为容器运行时。
-kubelet 通过内置的 `dockershim` CRI 实现与 Docker 集成。
+默认情况下， kubeadm 使用 docker 作为容器运行时。kubelet 通过内置的 `dockershim` CRI 实现与 Docker 集成。
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -151,6 +146,7 @@ kubelet 通过内置的 `dockershim` CRI 实现与 Docker 集成。
         {{< tabs >}}
 
 {{% tab name="基于 Red Hat 的发行版" %}}
+执行以下命令安装基于 Red Hat 发行版的 Docker：
 ``` bash
 yum install docker
 ```
@@ -158,6 +154,7 @@ yum install docker
 
 
 {{% tab name="基于 Debian 的发行版" %}}
+执行以下命令安装基于 Debian 发行版的 Docker：
 ``` bash
 apt-get install docker.io
 ```
@@ -167,10 +164,11 @@ apt-get install docker.io
     {{< /tab >}}
 
 {{% tab name="Containerd" %}}
-containerd 官方默认只提供了 amd64 架构的下载包，如果你是其他基础架构的机器，
-可以从官方 Docker 仓库安装 `containerd.io` 软件包。可以在 {{< link text="安装 Docker 引擎" url="https://docs.docker.com/engine/install/#server" >}} 中
-找到有关为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的说明。
-也可以使用源代码构建。
+Containerd 官方默认只提供 amd64 架构的下载包，如果您采用的是其他基础架构，
+可以从 Docker 官方仓库安装 `containerd.io` 软件包。在{{< link text="安装 Docker 引擎" url="https://docs.docker.com/engine/install/#server" >}}中
+找到为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的有关说明。
+
+也可以使用以下源代码构建。
 ``` bash
 VERSION=1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v${VERSION}/containerd-${VERSION}-linux-amd64.tar.gz
@@ -183,5 +181,4 @@ systemctl start containerd && systemctl enable containerd
 
 {{< /tabs >}}
 
-参阅{{< link text="容器运行时" url="https://kubernetes.io/docs/setup/production-environment/container-runtimes/" >}}
-以了解更多信息。
+参阅{{< link text="容器运行时" url="https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/" >}}以了解更多信息。

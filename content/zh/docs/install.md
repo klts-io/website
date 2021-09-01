@@ -3,15 +3,16 @@ title: "安装步骤"
 weight: 30
 ---
 
-KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
+KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
 
-安装前请确认已经完成了{{< link url="/docs/pre-install" >}}的安装
+安装前请确认已经完成了{{< link url="/docs/pre-install" >}}的安装。
 
 ## 设置 KLTS 软件源
 
 {{< tabs >}}
 
 {{% tab name="基于 Red Hat 的发行版" %}}
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -26,6 +27,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="基于 Debian 的发行版" %}}
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 cat << EOF > /etc/apt/sources.list.d/klts.list
 deb [trusted=yes] https://dl.klts.io/deb stable main
@@ -38,12 +40,15 @@ apt-get update
 
 {{< tab name="基于 Red Hat 的发行版, 国内加速 🚀" >}}
 
-{{% pageinfo %}} ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ {{% /pageinfo %}}
+<blockquote class="note callout">
+  <div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+</blockquote>
+
 
     {{< tabs >}}
 
 {{% tab name="/etc/hosts" %}}
-
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/etc/hosts
 
@@ -60,7 +65,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="hub.fastgit.org" %}}
-
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -75,6 +80,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="ghproxy.com" %}}
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -89,6 +95,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="raw.githubusercontents.com" %}}
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -103,6 +110,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="raw.staticdn.net" %}}
+执行以下代码设置下载 KLTS 的软件源：
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -121,8 +129,10 @@ yum makecache
 {{< /tab >}}
 
 {{< tab name="基于 Debian 的发行版, 国内加速 🚀" >}}
-
-{{% pageinfo %}} ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ {{% /pageinfo %}}
+执行以下代码设置下载 KLTS 的软件源：
+<blockquote class="note callout">
+  <div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+</blockquote>
 
     {{< tabs >}}
 
