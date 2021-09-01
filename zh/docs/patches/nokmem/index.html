@@ -23,7 +23,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 防范措施  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  1.18: 1.18.20-lts.1 nokmem.1.18.patch 1.17: 1.17.17-lts.1 nokmem.1.18.patch 1.16: 1.16.15-lts.1 nokmem.1.18.patch 1.15: 1.15.12-lts.1 nokmem.1.18.patch 1.14: 1.14.10-lts.1 nokmem.1.18.patch 1.13: 1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/patches/nokmem/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-01T16:17:49+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-01T16:37:48+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="nokmem">
 <meta itemprop=description content="详细信息
 Bug 影响 节点长期使用的时候提示剩余空间不足的错误，具体如下所示：
@@ -31,7 +31,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 影响范围 所有使用低版本内核的环境
 k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/runc#2840) 修复(直接移除了)
 防范措施  升级系统内核 k8s 1.14 及以上  重新构建 Kubelet 带上 -tags=nokmem   k8s 1.14 以下  硬编码, 可以参考 nokmem.1.13.patch    KLTS 修复的版本  1.18: 1.18.20-lts.1 nokmem.1.18.patch 1.17: 1.17.17-lts.1 nokmem.1.18.patch 1.16: 1.16.15-lts.1 nokmem.1.18.patch 1.15: 1.15.12-lts.1 nokmem.1.18.patch 1.14: 1.14.10-lts.1 nokmem.1.18.patch 1.13: 1.">
-<meta itemprop=dateModified content="2021-09-01T16:17:49+08:00">
+<meta itemprop=dateModified content="2021-09-01T16:37:48+08:00">
 <meta itemprop=wordCount content="72">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="nokmem">
@@ -71,7 +71,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.c550f3db11e2217807085d7a34289da7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.643624db0a73f82240781d594cc66e07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -81,7 +81,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.c550f3db11e2217807085d7a34289da7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.643624db0a73f82240781d594cc66e07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -295,7 +295,7 @@ k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (opencontainers/run
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.09.01
-: <a href=https://github.com/klts-io/website/commit/ca1e0cc2230d92cc1b5aebde3ff61ad94cf326cf>remove prefix 'v' (ca1e0cc)</a>
+: <a href=https://github.com/klts-io/website/commit/c22d089fc76f3b0f51b5bf721414c3a69be657e3>Remove prefix 'v' (c22d089)</a>
 </div>
 </div>
 </main>
