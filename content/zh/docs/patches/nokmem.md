@@ -31,12 +31,12 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 
 ## KLTS 修复的版本 {#klts-fixed}
 
-- 1.18: 1.18.20-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
-- 1.17: 1.17.17-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
-- 1.16: 1.16.15-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
-- 1.15: 1.15.12-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
-- 1.14: 1.14.10-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
-- 1.13: 1.13.12-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
-- 1.12: 1.12.10-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
-- 1.11: 1.11.10-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
-- 1.10: 1.10.13-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
+- 1.18.20-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
+- 1.17.17-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
+- 1.16.15-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
+- 1.15.12-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
+- 1.14.10-lts.1 {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch" >}}
+- 1.13.12-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
+- 1.12.10-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
+- 1.11.10-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
+- 1.10.13-lts.1 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
