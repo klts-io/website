@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.cd9035b5c13e1aaf7be594788f232e6d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.e7f44d320472ce601bd8b8611f71ba72.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -100,14 +100,14 @@
 <p><code>kubectl cp</code> 命令允许用户在容器和用户机器之间拷贝文件，攻击者可能通过在镜像或运行容器中植入带有符号链接（symbolic links）头的恶意 <code>tar</code> 包，在 <code>cp</code> 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14: 1.14.1</li>
-<li>1.13: 1.13.6</li>
-<li>1.12: 1.12.8</li>
-<li>1.11: 1.11.10</li>
+<li>1.14.1</li>
+<li>1.13.6</li>
+<li>1.12.8</li>
+<li>1.11.10</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-1002101.1.10.patch target=_blank>CVE-2019-1002101.1.10.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-1002101.1.10.patch target=_blank>CVE-2019-1002101.1.10.patch</a></li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -120,14 +120,14 @@
 <p>为 <code>Pod</code> 指定 <code>mustRunAsNonRoot: true</code></p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14: 1.14.3</li>
-<li>1.13: 1.13.7</li>
+<li>1.14.3</li>
+<li>1.13.7</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.12: 1.12.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -141,14 +141,14 @@
 <p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历(Path Traversal)。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14: 1.14.3</li>
-<li>1.13: 1.13.7</li>
-<li>1.12: 1.12.10</li>
+<li>1.14.3</li>
+<li>1.13.7</li>
+<li>1.12.10</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11246.1.11.patch target=_blank>CVE-2019-11246.1.11.patch</a></li>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11246.1.10.patch target=_blank>CVE-2019-11246.1.10.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11246.1.11.patch target=_blank>CVE-2019-11246.1.11.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11246.1.10.patch target=_blank>CVE-2019-11246.1.10.patch</a></li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -163,8 +163,8 @@
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11247.1.11.patch target=_blank>CVE-2019-11247.1.11.patch</a></li>
-<li>1.10: 1.10.13-lts.1 TODO</li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11247.1.11.patch target=_blank>CVE-2019-11247.1.11.patch</a></li>
+<li>1.10.13-lts.1 TODO</li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -181,14 +181,32 @@
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11248.1.11.patch target=_blank>CVE-2019-11248.1.11.patch</a></li>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11248.1.11.patch target=_blank>CVE-2019-11248.1.11.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11248.1.11.patch target=_blank>CVE-2019-11248.1.11.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11248.1.11.patch target=_blank>CVE-2019-11248.1.11.patch</a></li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-9677918ea7ce2b1d4116bfb9d4d31512>6 - CVE-2019-11249</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11249 target=_blank>详细信息</a>
-<p>TODO</p>
+<p>此漏洞可能允许恶意攻击者利用目录遍历（Directory Traversal）的方式将容器TAR包中的恶意文件写入或替换至所在主机上目标路径之外的其他位置，该过程仅受本地用户的系统权限限制。</p>
+<h2 id=scope>漏洞影响</h2>
+<p>该漏洞与不久前的 <a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。
+" data-toggle=tooltip data-placement=top target=_blank>CVE-2019-1002101</a>, <a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
+" data-toggle=tooltip data-placement=top target=_blank>CVE-2019-11246</a> 漏洞影响相似，由于之前的相关漏洞修复。</p>
+<p><code>kubectl cp</code> 命令用于用户容器和主机之间的文件拷贝，当从容器中拷贝文件时，<code>Kubernetes</code> 会首先在容器中执行 <code>tar</code> 命令创建相应的归档文件，然后发送给客户端，<code>Kubectl</code> 会在用户主机上进行相应解压操作。</p>
+<p>如果容器 <code>TAR</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用目录遍历(Directory Traversal)。</p>
+<h2 id=official-fixed>官方修复的版本</h2>
+<ul>
+<li>1.15.2</li>
+<li>1.14.5</li>
+<li>1.13.9</li>
+</ul>
+<h2 id=klts-fixed>KLTS 修复的版本</h2>
+<ul>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11249.1.12.patch target=_blank>CVE-2019-11249.1.12.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11249.1.12.patch target=_blank>CVE-2019-11249.1.12.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2019-11249.1.10.patch target=_blank>CVE-2019-11249.1.10.patch</a></li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-3bb42a6493fbd1d3d06aad85c3d8d1e7>7 - CVE-2019-11251</h1>
@@ -255,18 +273,18 @@
 </ul>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.18: 1.18.6</li>
-<li>1.17: 1.17.9</li>
-<li>1.16: 1.16.13</li>
+<li>1.18.6</li>
+<li>1.17.9</li>
+<li>1.16.13</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.15: 1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92971.patch target=_blank>kubernetes/kubernetes#92971</a></li>
-<li>1.14: 1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92971.patch target=_blank>kubernetes/kubernetes#92971</a></li>
-<li>1.13: 1.13.12-lts.1 TODO</li>
-<li>1.12: 1.12.10-lts.1 TODO</li>
-<li>1.11: 1.11.10-lts.1 TODO</li>
-<li>1.10: 1.10.13-lts.1 TODO</li>
+<li>1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92971.patch target=_blank>kubernetes/kubernetes#92971</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92971.patch target=_blank>kubernetes/kubernetes#92971</a></li>
+<li>1.13.12-lts.1 TODO</li>
+<li>1.12.10-lts.1 TODO</li>
+<li>1.11.10-lts.1 TODO</li>
+<li>1.10.13-lts.1 TODO</li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -331,15 +349,15 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.18: 1.18.20-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.17: 1.17.17-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.16: 1.16.15-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.15: 1.15.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.14: 1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.13: 1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
-<li>1.12: 1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>1.18.20-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
+<li>1.17.17-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
+<li>1.16.15-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
+<li>1.15.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 </ul>
 </div>
 </main>
