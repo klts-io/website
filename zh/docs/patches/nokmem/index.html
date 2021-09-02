@@ -251,13 +251,13 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 <header class=article-meta>
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 分钟 阅读时间</p>
 </header>
-<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" target=_blank>详细信息</a>
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" target>详细信息</a>
 <p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code></p>
 <h2 id=scope>Bug 影响</h2>
 <p>节点长期使用的时候提示剩余空间不足的错误，具体如下所示：</p>
 <pre><code>mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
 </code></pre><p>节点磁盘充足但是一直报和这个错误, 并且创建 <code>Pod</code> 总是失败，这是一个潜在的“定时炸弹”。</p>
-<p>所有使用低版本内核的环境，k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) 修复(直接移除了)</p>
+<p>所有使用低版本内核的环境，k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840 target>opencontainers/runc#2840</a>) 修复(直接移除了)</p>
 <h2 id=prevention>防范措施</h2>
 <ul>
 <li>升级系统内核</li>
@@ -268,21 +268,21 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 </li>
 <li>k8s 1.14 以下
 <ul>
-<li>硬编码, 可以参考 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>硬编码, 可以参考 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target>nokmem.1.13.patch</a></li>
 </ul>
 </li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.18.20-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.17.17-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.16.15-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.15.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li>1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
-<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
-<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
-<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>1.18.20-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target>nokmem.1.18.patch</a></li>
+<li>1.17.17-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target>nokmem.1.18.patch</a></li>
+<li>1.16.15-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target>nokmem.1.18.patch</a></li>
+<li>1.15.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target>nokmem.1.18.patch</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.18.patch target>nokmem.1.18.patch</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target>nokmem.1.13.patch</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target>nokmem.1.13.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target>nokmem.1.13.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target>nokmem.1.13.patch</a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改

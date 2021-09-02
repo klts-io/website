@@ -251,7 +251,7 @@
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 2 分钟 阅读时间</p>
 </header>
 <p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>本页介绍如何安装 <code>kubeadm</code> 工具箱。
-有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见<a href=/zh/docs/install target=_blank>安装步骤</a>。</p>
+有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见<a href=/zh/docs/install target>安装步骤</a>。</p>
 <h2 id=准备工作>准备工作</h2>
 <ul>
 <li>准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
@@ -259,8 +259,8 @@
 <li>每台主机至少 2 GB 或更多的内存（如果内存太少将影响应用的运行）</li>
 <li>CPU 2 核或更多</li>
 <li>集群中所有主机的网络连通（公网和内网）</li>
-<li>单个节点上不能有重复的主机名、MAC 地址或 product_uuid，请参阅<a href=#verify-mac-address target=_blank>确保每个节点上 MAC 地址和 product_uuid 的唯一性</a>。</li>
-<li>开启主机上的某些端口，请参阅<a href=#check-required-ports target=_blank>检查所需端口</a>。</li>
+<li>单个节点上不能有重复的主机名、MAC 地址或 product_uuid，请参阅<a href=#verify-mac-address target>确保每个节点上 MAC 地址和 product_uuid 的唯一性</a>。</li>
+<li>开启主机上的某些端口，请参阅<a href=#check-required-ports target>检查所需端口</a>。</li>
 <li>禁用交换分区。为了保证 kubelet 正常工作，您<strong>必须</strong>禁用交换分区。</li>
 </ul>
 <h2 id=verify-mac-address>确保每个节点上 MAC 地址和 product_uuid 的唯一性 </h2>
@@ -270,7 +270,7 @@
 </ul>
 <p>一般来讲，硬件设备拥有唯一的地址，但是有些虚拟机的地址可能会重复。
 Kubernetes 使用 MAC 地址和 product_uuid 来确定集群中的唯一节点。
-如果这些值在每个节点上不唯一，可能会导致安装<a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>失败</a>。</p>
+如果这些值在每个节点上不唯一，可能会导致安装<a href=https://github.com/kubernetes/kubeadm/issues/31 target>失败</a>。</p>
 <h2 id=检查网络适配器>检查网络适配器</h2>
 <p>如果您有一个以上的网络适配器，同时您的 Kubernetes 组件通过默认路由不可达，我们建议您预先添加 IP 路由规则，这样 Kubernetes 集群就可以通过对应的适配器完成连接。</p>
 <h2 id=允许-iptables-检查桥接流量>允许 iptables 检查桥接流量</h2>
@@ -287,7 +287,7 @@ cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
 </span><span style=color:#4e9a06>net.bridge.bridge-nf-call-iptables = 1
 </span><span style=color:#4e9a06>EOF</span>
 sudo sysctl --system
-</code></pre></div><p>更多细节请查阅<a href=https://kubernetes.io/zh/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements target=_blank>网络插件需求</a>页面。</p>
+</code></pre></div><p>更多细节请查阅<a href=https://kubernetes.io/zh/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements target>网络插件需求</a>页面。</p>
 <h2 id=check-required-ports>检查所需端口</h2>
 <h3 id=控制平面节点>控制平面节点</h3>
 <table>
@@ -366,7 +366,7 @@ sudo sysctl --system
 </tr>
 </tbody>
 </table>
-<p>以上是 <a href=https://kubernetes.io/zh/docs/concepts/services-networking/service/ target=_blank>NodePort 服务</a>的默认端口范围。</p>
+<p>以上是 <a href=https://kubernetes.io/zh/docs/concepts/services-networking/service/ target>NodePort 服务</a>的默认端口范围。</p>
 <p>使用 * 标记的任意端口号都可以被覆盖，所以您需要保证定制的端口是开放的。</p>
 <p>虽然控制平面节点已经包含了 etcd 的端口，您也可以使用自定义的外部 etcd 集群，或指定自定义端口。</p>
 <p>您使用的 Pod 网络插件 (见下) 也可能需要某些特定端口开启。由于各个 Pod 网络插件都有所不同，请参阅相应文档中的端口要求。</p>
@@ -439,7 +439,7 @@ sudo sysctl --system
 </div>
 <div id=tabset-zhdocspre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-1>
 <p><p>Containerd 官方默认只提供 amd64 架构的下载包，如果您采用的是其他基础架构，
-可以从 Docker 官方仓库安装 <code>containerd.io</code> 软件包。在<a href=https://docs.docker.com/engine/install/#server target=_blank>安装 Docker 引擎</a>中
+可以从 Docker 官方仓库安装 <code>containerd.io</code> 软件包。在<a href=https://docs.docker.com/engine/install/#server target>安装 Docker 引擎</a>中
 找到为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的有关说明。</p>
 <p>也可以使用以下源代码构建。</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
@@ -449,7 +449,7 @@ mkdir /etc/containerd/ <span style=color:#ce5c00;font-weight:700>&amp;&amp;</spa
 wget -c -O /etc/systemd/system/containerd.service https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
 systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> systemctl <span style=color:#204a87>enable</span> containerd
 </code></pre></div></div></div>
-<p>参阅<a href=https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/ target=_blank>容器运行时</a>以了解更多信息。</p>
+<p>参阅<a href=https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/ target>容器运行时</a>以了解更多信息。</p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.09.01
