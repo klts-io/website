@@ -40,15 +40,13 @@ apt-get update
 
 {{< tab name="基于 Red Hat 的发行版, 国内加速 🚀" >}}
 
-<blockquote class="note callout">
-  <div><strong>说明：</strong>以下加速均来自第三方， 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
-</blockquote>
-
+<strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  <br><br>
+执行以下代码设置下载 KLTS 的软件源：
 
     {{< tabs >}}
 
 {{% tab name="/etc/hosts" %}}
-执行以下代码设置下载 KLTS 的软件源：
+
 ``` bash
 curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/etc/hosts
 
@@ -65,7 +63,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="hub.fastgit.org" %}}
-执行以下代码设置下载 KLTS 的软件源：
+
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -80,7 +78,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="ghproxy.com" %}}
-执行以下代码设置下载 KLTS 的软件源：
+
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -95,7 +93,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="raw.githubusercontents.com" %}}
-执行以下代码设置下载 KLTS 的软件源：
+
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -110,7 +108,7 @@ yum makecache
 {{% /tab %}}}
 
 {{% tab name="raw.staticdn.net" %}}
-执行以下代码设置下载 KLTS 的软件源：
+
 ``` bash
 cat << \EOF > /etc/yum.repos.d/klts.repo
 [klts]
@@ -129,10 +127,8 @@ yum makecache
 {{< /tab >}}
 
 {{< tab name="基于 Debian 的发行版, 国内加速 🚀" >}}
+<strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️<br><br>
 执行以下代码设置下载 KLTS 的软件源：
-<blockquote class="note callout">
-  <div><strong>说明：</strong>以下加速均来自第三方， 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
-</blockquote>
 
     {{< tabs >}}
 
@@ -198,16 +194,19 @@ apt-get update
 ## 安装
 
 {{< tabs >}}
-    {{< tab name="安装" >}}
+    {{< tab name="安装最高版本" >}}
+<br>这里的最高版本指的是 KLTS 维护的最高版本。
         {{< tabs >}}
 
 {{% tab name="基于 Red Hat 的发行版" %}}
+执行以下命令开始安装：
 ``` bash
 yum install kubeadm kubelet kubectl
 ```
 {{% /tab %}}}
 
 {{% tab name="基于 Debian 的发行版" %}}
+执行以下命令开始安装：
 ``` bash
 apt-get install kubeadm kubelet kubectl
 ```
@@ -220,6 +219,7 @@ apt-get install kubeadm kubelet kubectl
 
 > 查看支持的版本
 {{% tab name="基于 Red Hat 的发行版" %}}
+执行以下命令进行安装：
 ``` bash
 # 搜索支持的版本
 yum search kubeadm --showduplicates | grep kubeadm-
@@ -231,6 +231,7 @@ yum install kubeadm-v${VERSION} kubelet-v${VERSION} kubectl-v${VERSION}
 {{% /tab %}}}
 
 {{% tab name="基于 Debian 的发行版" %}}
+执行以下命令进行安装：
 ``` bash
 # 搜索支持的版本
 apt-cache show kubeadm | grep Version
@@ -245,13 +246,13 @@ apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
 {{< /tabs >}}
 
 ## 开机自动启动 Kubelet
-
+执行以下命令开机自动启动 Kubelet：
 ```
 systemctl enable kubelet
 ```
 
 ## 拉取依赖镜像
-
+执行以下命令 pull 依赖的镜像：
 ``` bash
 VERSION=1.18.20-lts.0
 REPOS=ghcr.io/klts-io/kubernetes-lts
@@ -261,11 +262,11 @@ kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${V
 后续对 kubeadm 的操作都需要加上 `--image-repository`，`--kubernetes-version` 主动指定镜像。
 
 ## 初始化控制面节点
-
+执行以下命令初始化控制面的节点：
 ``` bash
 VERSION=1.18.20-lts.0
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
-{{< link text="更多操作参考" url="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" >}}
+有关更多安装说明，请参阅{{< link text="Kubernetes 操作指南" url="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" >}}。
