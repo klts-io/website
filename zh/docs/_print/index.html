@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.e7f44d320472ce601bd8b8611f71ba72.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.072cf543d6696bdfac96c5e34134e630.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -387,17 +387,15 @@ apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-2>
 <p>
-<blockquote class="note callout">
-<div><strong>说明：</strong>以下加速均来自第三方， 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
-</blockquote>
+<strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ <br><br>
+执行以下代码设置下载 KLTS 的软件源：
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-1-0 role=tab aria-controls=tabset-zhdocsinstall-1-0 aria-selected=true>/etc/hosts</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-1 role=tab aria-controls=tabset-zhdocsinstall-1-1>hub.fastgit.org</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-2 role=tab aria-controls=tabset-zhdocsinstall-1-2>ghproxy.com</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-3 role=tab aria-controls=tabset-zhdocsinstall-1-3>raw.githubusercontents.com</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-4 role=tab aria-controls=tabset-zhdocsinstall-1-4>raw.staticdn.net</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
-<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
 
 cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
@@ -410,8 +408,7 @@ cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
-<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/rpm/$basearch/
@@ -422,8 +419,7 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-2>
-<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -434,8 +430,7 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-3>
-<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -446,8 +441,7 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-4>
-<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -460,10 +454,8 @@ yum makecache
 </div>
 <div id=tabset-zhdocsinstall-3-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-3>
 <p>
+<strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️<br><br>
 执行以下代码设置下载 KLTS 的软件源：
-<blockquote class="note callout">
-<div><strong>说明：</strong>以下加速均来自第三方， 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
-</blockquote>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-2-0 role=tab aria-controls=tabset-zhdocsinstall-2-0 aria-selected=true>/etc/hosts</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-1 role=tab aria-controls=tabset-zhdocsinstall-2-1>hub.fastgit.org</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-2 role=tab aria-controls=tabset-zhdocsinstall-2-2>ghproxy.com</a></li>
@@ -508,17 +500,20 @@ apt-get update
 </code></pre></div></div></div>
 </div></div>
 <h2 id=安装>安装</h2>
-<ul class="nav nav-tabs" id=tabset-zhdocsinstall-6 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-6-0 role=tab aria-controls=tabset-zhdocsinstall-6-0 aria-selected=true>安装</a></li>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-6 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-6-0 role=tab aria-controls=tabset-zhdocsinstall-6-0 aria-selected=true>安装最高版本</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-6-1 role=tab aria-controls=tabset-zhdocsinstall-6-1>安装指定版本</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-6><div id=tabset-zhdocsinstall-6-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-6-0>
 <p>
+<br>这里的最高版本指的是 KLTS 维护的最高版本。
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-4-0 role=tab aria-controls=tabset-zhdocsinstall-4-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-4-1 role=tab aria-controls=tabset-zhdocsinstall-4-1>基于 Debian 的发行版</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-4><div id=tabset-zhdocsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
+<p><p>执行以下命令开始安装：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
+<p><p>执行以下命令开始安装：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
 </div>
 <div id=tabset-zhdocsinstall-6-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-6-1>
@@ -526,7 +521,8 @@ apt-get update
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-5 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-5-0 role=tab aria-controls=tabset-zhdocsinstall-5-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-5-1 role=tab aria-controls=tabset-zhdocsinstall-5-1>基于 Debian 的发行版</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-5><div id=tabset-zhdocsinstall-5-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
+<p><p>执行以下命令进行安装：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
 <span style=color:#8f5902;font-style:italic># 安装</span>
@@ -534,7 +530,8 @@ yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</sp
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-5-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
+<p><p>执行以下命令进行安装：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
 <span style=color:#8f5902;font-style:italic># 安装</span>
@@ -543,17 +540,20 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 </code></pre></div></div></div>
 </div></div>
 <h2 id=开机自动启动-kubelet>开机自动启动 Kubelet</h2>
+<p>执行以下命令开机自动启动 Kubelet：</p>
 <pre><code>systemctl enable kubelet
 </code></pre><h2 id=拉取依赖镜像>拉取依赖镜像</h2>
+<p>执行以下命令 pull 依赖的镜像：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div><p>后续对 kubeadm 的操作都需要加上 <code>--image-repository</code>，<code>--kubernetes-version</code> 主动指定镜像。</p>
 <h2 id=初始化控制面节点>初始化控制面节点</h2>
+<p>执行以下命令初始化控制面的节点：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target>更多操作参考</a>
+</code></pre></div><p>有关更多安装说明，请参阅<a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target>Kubernetes 操作指南</a>。</p>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-c258a50dfe331dfdf852330040bd8f14>4 - 安装之后</h1>
