@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.6916d927a38cbefba6a100c8329c3d2e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.d823c29860be0d78e4f4aef4e047f503.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -705,7 +705,23 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-c1ec3633b18a80bee04f17816082420b>5.8 - CVE-2020-8552</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8552 target>详细信息</a>
-<p>TODO</p>
+<p>此漏洞可能使 <code>API Server</code> 容易受到来自成功API请求的DoS(拒绝服务攻击)。</p>
+<h2 id=scope>漏洞影响</h2>
+<p><code>API Server</code> 容易受到来自成功API请求的DoS(拒绝服务攻击)。</p>
+<h2 id=official-fixed>官方修复的版本</h2>
+<ul>
+<li>1.17.3</li>
+<li>1.16.7</li>
+<li>1.15.10</li>
+</ul>
+<h2 id=klts-fixed>KLTS 修复的版本</h2>
+<ul>
+<li>1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.14.patch target>CVE-2020-8552.1.14.patch</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.13.patch target>CVE-2020-8552.1.13.patch</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.13.patch target>CVE-2020-8552.1.13.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.11.patch target>CVE-2020-8552.1.11.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.11.patch target>CVE-2020-8552.1.11.patch</a></li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-5aa68ad2e414f83fec8b9beb2250fdd3>5.9 - CVE-2020-8558</h1>
@@ -732,18 +748,18 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 </span></code></pre></div><p>通过 <code>PodSecurityPolicy</code> 策略限制部署特权或共享主机网络容器，另外可以通过在策略中配置 <code>requiredDropCapabilities</code> 强制容器部署关闭 <code>CAP_NET_RAW</code> 能力。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.18: 1.18.4</li>
-<li>1.17: 1.17.7</li>
-<li>1.16: 1.16.11</li>
+<li>1.18.4</li>
+<li>1.17.7</li>
+<li>1.16.11</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.15: 1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
-<li>1.14: 1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
-<li>1.13: 1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
-<li>1.12: 1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
-<li>1.10: 1.10.13-lts.1 TODO</li>
+<li>1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
+<li>1.10.13-lts.1 TODO</li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -799,18 +815,18 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <li>1.21: 1.21.1</li>
 <li>1.20: 1.20.7</li>
 <li>1.19: 1.19.11</li>
-<li>1.18: 1.18.19</li>
+<li>1.18.19</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.17: 1.17.17-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.16: 1.16.15-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.15: 1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.14: 1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.13: 1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.12: 1.12.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.17.17-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.16.15-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -873,7 +889,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 " data-toggle=tooltip data-placement=top target>CVE-2019-11249</a></li>
 <li><a href=/zh/docs/patches/cve-2019-11251 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
 " data-toggle=tooltip data-placement=top target>CVE-2019-11251</a></li>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="TODO
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 `API Server` 容易受到来自成功API请求的DoS(拒绝服务攻击)。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8552</a></li>
 <li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8558</a> TODO</li>
@@ -904,7 +920,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 " data-toggle=tooltip data-placement=top target>CVE-2019-11249</a></li>
 <li><a href=/zh/docs/patches/cve-2019-11251 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
 " data-toggle=tooltip data-placement=top target>CVE-2019-11251</a></li>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="TODO
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 `API Server` 容易受到来自成功API请求的DoS(拒绝服务攻击)。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8552</a></li>
 <li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8558</a></li>
@@ -931,7 +947,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 " data-toggle=tooltip data-placement=top target>CVE-2019-11249</a></li>
 <li><a href=/zh/docs/patches/cve-2019-11251 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
 " data-toggle=tooltip data-placement=top target>CVE-2019-11251</a></li>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="TODO
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 `API Server` 容易受到来自成功API请求的DoS(拒绝服务攻击)。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8552</a></li>
 <li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8558</a></li>
@@ -950,7 +966,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <h1 id=pg-d881df1610b2ecdebb624461d03f23c9>6.4.1 - v1.13.12-lts.1</h1>
 <h2 id=补丁>补丁</h2>
 <ul>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="TODO
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 `API Server` 容易受到来自成功API请求的DoS(拒绝服务攻击)。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8552</a></li>
 <li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8558</a></li>
@@ -969,7 +985,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <h1 id=pg-a0f1f487ff86a6e928f7e5c357ff4b08>6.5.1 - v1.14.10-lts.1</h1>
 <h2 id=补丁>补丁</h2>
 <ul>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="TODO
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 `API Server` 容易受到来自成功API请求的DoS(拒绝服务攻击)。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8552</a></li>
 <li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
 " data-toggle=tooltip data-placement=top target>CVE-2020-8558</a></li>

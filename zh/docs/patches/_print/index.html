@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.6916d927a38cbefba6a100c8329c3d2e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.d823c29860be0d78e4f4aef4e047f503.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -235,7 +235,23 @@
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-c1ec3633b18a80bee04f17816082420b>8 - CVE-2020-8552</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8552 target>详细信息</a>
-<p>TODO</p>
+<p>此漏洞可能使 <code>API Server</code> 容易受到来自成功API请求的DoS(拒绝服务攻击)。</p>
+<h2 id=scope>漏洞影响</h2>
+<p><code>API Server</code> 容易受到来自成功API请求的DoS(拒绝服务攻击)。</p>
+<h2 id=official-fixed>官方修复的版本</h2>
+<ul>
+<li>1.17.3</li>
+<li>1.16.7</li>
+<li>1.15.10</li>
+</ul>
+<h2 id=klts-fixed>KLTS 修复的版本</h2>
+<ul>
+<li>1.14.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.14.patch target>CVE-2020-8552.1.14.patch</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.13.patch target>CVE-2020-8552.1.13.patch</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.13.patch target>CVE-2020-8552.1.13.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.11.patch target>CVE-2020-8552.1.11.patch</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8552.1.11.patch target>CVE-2020-8552.1.11.patch</a></li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-5aa68ad2e414f83fec8b9beb2250fdd3>9 - CVE-2020-8558</h1>
@@ -262,18 +278,18 @@
 </span></code></pre></div><p>通过 <code>PodSecurityPolicy</code> 策略限制部署特权或共享主机网络容器，另外可以通过在策略中配置 <code>requiredDropCapabilities</code> 强制容器部署关闭 <code>CAP_NET_RAW</code> 能力。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.18: 1.18.4</li>
-<li>1.17: 1.17.7</li>
-<li>1.16: 1.16.11</li>
+<li>1.18.4</li>
+<li>1.17.7</li>
+<li>1.16.11</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.15: 1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
-<li>1.14: 1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
-<li>1.13: 1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
-<li>1.12: 1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
-<li>1.10: 1.10.13-lts.1 TODO</li>
+<li>1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/92040.patch target>kubernetes/kubernetes#92040</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/CVE-2020-8558.1.12.patch target>CVE-2020-8558.1.12.patch</a></li>
+<li>1.10.13-lts.1 TODO</li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
@@ -329,18 +345,18 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <li>1.21: 1.21.1</li>
 <li>1.20: 1.20.7</li>
 <li>1.19: 1.19.11</li>
-<li>1.18: 1.18.19</li>
+<li>1.18.19</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
-<li>1.17: 1.17.17-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.16: 1.16.15-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.15: 1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.14: 1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.13: 1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.12: 1.12.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.11: 1.11.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
-<li>1.10: 1.10.13-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.17.17-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.16.15-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.15.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.14.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.13.12-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.12.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.11.10-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
+<li>1.10.13-lts.1 <a href=https://github.com/kubernetes/kubernetes/pull/101327.patch target>kubernetes/kubernetes#101327</a></li>
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
