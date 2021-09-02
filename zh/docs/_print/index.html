@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.12f7dd33a72d22330c5c5c0bc1c61c61.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.369b6af8a18776e23ba0a800a2a3f6d4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -149,7 +149,7 @@
 <img src=../klts_ver.png width=300></p>
 <p>如图所示，V1.16.15 是 Kubernetes 的完整发行版本号，其中 1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 的补丁版本号。</p>
 <img src=../klts_job.png width=750>
-<p>上图以 2021 年 8 月 31 日的最新版本 1.22 为例，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。</p>
+<p>上图以 2021 年 8 月 31 日为例，当时的最新版本为 1.22，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。</p>
 <p>Kubernetes 社区一般每隔 4 个月左右发布一个大版本，KLTS 维护的 Kubernetes 版本也会随之变化。通常在 Kubernetes 社区停止维护某个版本后的一个月内，KLTS 将开始维护刚被社区停止维护的版本。</p>
 <p>例如，如果社区正式发布 1.23 版本，KLTS 维护的版本也会加一，达到 1.19，以此类推。KLTS 的补丁更新频率将根据实际解决的 bug 情况发布。</p>
 </div>
@@ -160,7 +160,7 @@
 <h2 id=准备工作>准备工作</h2>
 <ul>
 <li>准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
-发行版以及一些不提供包管理器的发行版提供通用的指令</li>
+发行版以及一些不提供包管理器的发行版提供通用的指令。</li>
 <li>每台主机至少 2 GB 或更多的内存（如果内存太少将影响应用的运行）</li>
 <li>CPU 2 核或更多</li>
 <li>集群中所有主机的网络连通（公网和内网）</li>
@@ -170,19 +170,18 @@
 </ul>
 <h2 id=verify-mac-address>确保每个节点上 MAC 地址和 product_uuid 的唯一性 </h2>
 <ul>
-<li>你可以使用命令 <code>ip link</code> 或 <code>ifconfig -a</code> 来获取网络接口的 MAC 地址</li>
-<li>可以使用 <code>sudo cat /sys/class/dmi/id/product_uuid</code> 命令对 product_uuid 校验</li>
+<li>使用命令 <code>ip link</code> 或 <code>ifconfig -a</code> 来获取网络接口的 MAC 地址</li>
+<li>使用 <code>sudo cat /sys/class/dmi/id/product_uuid</code> 命令来校验 product_uuid</li>
 </ul>
-<p>一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。
-Kubernetes 使用这些值来唯一确定集群中的节点。
-如果这些值在每个节点上不唯一，可能会导致安装
-<a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>失败</a>。</p>
+<p>一般来讲，硬件设备拥有唯一的地址，但是有些虚拟机的地址可能会重复。
+Kubernetes 使用 MAC 地址和 product_uuid 来确定集群中的唯一节点。
+如果这些值在每个节点上不唯一，可能会导致安装<a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>失败</a>。</p>
 <h2 id=检查网络适配器>检查网络适配器</h2>
-<p>如果你有一个以上的网络适配器，同时你的 Kubernetes 组件通过默认路由不可达，我们建议你预先添加 IP 路由规则，这样 Kubernetes 集群就可以通过对应的适配器完成连接。</p>
+<p>如果您有一个以上的网络适配器，同时您的 Kubernetes 组件通过默认路由不可达，我们建议您预先添加 IP 路由规则，这样 Kubernetes 集群就可以通过对应的适配器完成连接。</p>
 <h2 id=允许-iptables-检查桥接流量>允许 iptables 检查桥接流量</h2>
 <p>确保 <code>br_netfilter</code> 模块被加载。这一操作可以通过运行 <code>lsmod | grep br_netfilter</code>
-来完成。若要显式加载该模块，可执行 <code>sudo modprobe br_netfilter</code>。</p>
-<p>为了让你的 Linux 节点上的 iptables 能够正确地查看桥接流量，你需要确保在你的
+来完成。若要显式加载该模块，可执行命令 <code>sudo modprobe br_netfilter</code>。</p>
+<p>为了让您的 Linux 节点上的 iptables 能够正确地查看桥接流量，您需要确保在
 <code>sysctl</code> 配置中将 <code>net.bridge.bridge-nf-call-iptables</code> 设置为 1。例如：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
 </span><span style=color:#4e9a06>br_netfilter
@@ -193,7 +192,7 @@ cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
 </span><span style=color:#4e9a06>net.bridge.bridge-nf-call-iptables = 1
 </span><span style=color:#4e9a06>EOF</span>
 sudo sysctl --system
-</code></pre></div><p>更多的相关细节可查看<a href=https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements target=_blank>网络插件需求</a>页面。</p>
+</code></pre></div><p>更多细节请查阅<a href=https://kubernetes.io/zh/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements target=_blank>网络插件需求</a>页面。</p>
 <h2 id=check-required-ports>检查所需端口</h2>
 <h3 id=控制平面节点>控制平面节点</h3>
 <table>
@@ -219,7 +218,7 @@ sudo sysctl --system
 <td>入站</td>
 <td>2379-2380</td>
 <td>etcd 服务器客户端 API</td>
-<td>kube-apiserver, etcd</td>
+<td>kube-apiserver、etcd</td>
 </tr>
 <tr>
 <td>TCP</td>
@@ -267,37 +266,36 @@ sudo sysctl --system
 <td>TCP</td>
 <td>入站</td>
 <td>30000-32767</td>
-<td>NodePort 服务†</td>
+<td>NodePort 服务</td>
 <td>所有组件</td>
 </tr>
 </tbody>
 </table>
-<p><a href=https://kubernetes.io/docs/concepts/services-networking/service/ target=_blank>NodePort 服务</a> 的默认端口范围。</p>
-<p>使用 * 标记的任意端口号都可以被覆盖，所以你需要保证所定制的端口是开放的。</p>
-<p>虽然控制平面节点已经包含了 etcd 的端口，你也可以使用自定义的外部 etcd 集群，或是指定自定义端口。</p>
-<p>你使用的 Pod 网络插件 (见下) 也可能需要某些特定端口开启。由于各个 Pod 网络插件都有所不同，
-请参阅他们各自文档中对端口的要求。</p>
+<p>以上是 <a href=https://kubernetes.io/zh/docs/concepts/services-networking/service/ target=_blank>NodePort 服务</a>的默认端口范围。</p>
+<p>使用 * 标记的任意端口号都可以被覆盖，所以您需要保证定制的端口是开放的。</p>
+<p>虽然控制平面节点已经包含了 etcd 的端口，您也可以使用自定义的外部 etcd 集群，或指定自定义端口。</p>
+<p>您使用的 Pod 网络插件 (见下) 也可能需要某些特定端口开启。由于各个 Pod 网络插件都有所不同，请参阅相应文档中的端口要求。</p>
 <h2 id=设置节点名字>设置节点名字</h2>
+<p>命令的语法格式如下：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hostnamectl set-hostname your-new-host-name
 <span style=color:#204a87>echo</span> <span style=color:#4e9a06>&#34;127.0.0.1 </span><span style=color:#204a87;font-weight:700>$(</span>hostname<span style=color:#204a87;font-weight:700>)</span><span style=color:#4e9a06>&#34;</span> &gt;&gt; /etc/hosts
 <span style=color:#204a87>echo</span> <span style=color:#4e9a06>&#34;::1       </span><span style=color:#204a87;font-weight:700>$(</span>hostname<span style=color:#204a87;font-weight:700>)</span><span style=color:#4e9a06>&#34;</span> &gt;&gt; /etc/hosts
 </code></pre></div><h2 id=关闭-swap>关闭 Swap</h2>
+<p>执行以下命令关闭 Swap：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>swapoff -a
-</code></pre></div><p>如需要永久关闭请编辑 <code>/etc/fstab</code> 文件注释掉 swap 的挂载</p>
+</code></pre></div><p>如果需要永久关闭，请编辑 <code>/etc/fstab</code> 文件，将 swap 的挂载路径改为注释。</p>
 <h2 id=关闭-selinux>关闭 Selinux</h2>
+<p>执行以下命令关闭 Selinux：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>setenforce <span style=color:#0000cf;font-weight:700>0</span>
-</code></pre></div><p>如需要永久关闭请编辑 <code>/etc/sysconfig/selinux</code> 把 <code>SELINUX=enforcing</code> 替换为 <code>SELINUX=disabled</code></p>
+</code></pre></div><p>如果需要永久关闭，请编辑 <code>/etc/sysconfig/selinux</code> 将 <code>SELINUX=enforcing</code> 替换为 <code>SELINUX=disabled</code>。</p>
 <h2 id=installing-runtime>安装 runtime</h2>
-<p>为了在 Pod 中运行容器，Kubernetes 使用
-容器运行时（Container Runtime）</p>
+<p>为了在 Pod 中运行容器，Kubernetes 使用容器运行时（Container Runtime）。</p>
 <ul class="nav nav-tabs" id=container-runtimes role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#container-runtimes-0 role=tab aria-controls=container-runtimes-0 aria-selected=true>Linux 节点</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#container-runtimes-1 role=tab aria-controls=container-runtimes-1>其它操作系统</a></li></ul>
 <div class=tab-content id=container-runtimes><div id=container-runtimes-0 class="tab-pane show active" role=tabpanel aria-labelledby=container-runtimes-0>
-<p><p>默认情况下，Kubernetes 使用 容器运行时接口（Container Runtime Interface，CRI）
-来与你所选择的容器运行时交互。</p>
-<p>如果你不指定运行时，则 kubeadm 会自动尝试检测到系统上已经安装的运行时，
-方法是扫描一组众所周知的 Unix 域套接字。
-下面的表格列举了一些容器运行时及其对应的套接字路径：</p>
+<p><p>默认情况下，Kubernetes 使用容器运行时接口（Container Runtime Interface，CRI）来与您所选择的容器运行时交互。</p>
+<p>如果您不指定运行时，则 kubeadm 会自动尝试检测系统上已经安装的运行时，方法是扫描一组众所周知的 Unix 域套接字。</p>
+<p>下面的表格列举了一些容器运行时及其对应的套接字路径：</p>
 <table>
 <thead>
 <tr>
@@ -321,15 +319,13 @@ sudo sysctl --system
 </tbody>
 </table>
 <br>
-如果同时检测到 Docker 和 containerd，则优先选择 Docker。
-这是必然的，因为 Docker 18.09 附带了 containerd 并且两者都是可以检测到的，
-即使你仅安装了 Docker。
-如果检测到其他两个或多个运行时，kubeadm 输出错误信息并退出。
+如果同时检测到 Docker 和 Containerd，则优先选择 Docker。
+这是必然的，即使您仅安装了 Docker，因为 Docker 18.09 附带了 Containerd，所以两者都是可以检测到的。
+如果检测到其他两个或多个运行时，则 kubeadm 输出错误信息并退出。
 <p>kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</p>
 </div>
 <div id=container-runtimes-1 class=tab-pane role=tabpanel aria-labelledby=container-runtimes-1>
-<p><p>默认情况下， kubeadm 使用 docker 作为容器运行时。
-kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</p>
+<p><p>默认情况下， kubeadm 使用 docker 作为容器运行时。kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</p>
 </div></div>
 <ul class="nav nav-tabs" id=tabset-zhdocspre-install-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocspre-install-3-0 role=tab aria-controls=tabset-zhdocspre-install-3-0 aria-selected=true>Docker</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocspre-install-3-1 role=tab aria-controls=tabset-zhdocspre-install-3-1>Containerd</a></li></ul>
@@ -338,17 +334,19 @@ kubelet 通过内置的 <code>dockershim</code> CRI 实现与 Docker 集成。</
 <ul class="nav nav-tabs" id=tabset-zhdocspre-install-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocspre-install-2-0 role=tab aria-controls=tabset-zhdocspre-install-2-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocspre-install-2-1 role=tab aria-controls=tabset-zhdocspre-install-2-1>基于 Debian 的发行版</a></li></ul>
 <div class=tab-content id=tabset-zhdocspre-install-2><div id=tabset-zhdocspre-install-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocspre-install-2-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
+<p><p>执行以下命令安装基于 Red Hat 发行版的 Docker：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
 </code></pre></div></div>
 <div id=tabset-zhdocspre-install-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-2-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
+<p><p>执行以下命令安装基于 Debian 发行版的 Docker：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
 </code></pre></div></div></div>
 </div>
 <div id=tabset-zhdocspre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocspre-install-3-1>
-<p><p>containerd 官方默认只提供了 amd64 架构的下载包，如果你是其他基础架构的机器，
-可以从官方 Docker 仓库安装 <code>containerd.io</code> 软件包。可以在 <a href=https://docs.docker.com/engine/install/#server target=_blank>安装 Docker 引擎</a> 中
-找到有关为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的说明。
-也可以使用源代码构建。</p>
+<p><p>Containerd 官方默认只提供 amd64 架构的下载包，如果您采用的是其他基础架构，
+可以从 Docker 官方仓库安装 <code>containerd.io</code> 软件包。在<a href=https://docs.docker.com/engine/install/#server target=_blank>安装 Docker 引擎</a>中
+找到为各自的 Linux 发行版设置 Docker 存储库和安装 containerd.io 软件包的有关说明。</p>
+<p>也可以使用以下源代码构建。</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>/containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz
 tar xvf containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz -C /usr/local/
@@ -356,20 +354,20 @@ mkdir /etc/containerd/ <span style=color:#ce5c00;font-weight:700>&amp;&amp;</spa
 wget -c -O /etc/systemd/system/containerd.service https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
 systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> systemctl <span style=color:#204a87>enable</span> containerd
 </code></pre></div></div></div>
-<p>参阅<a href=https://kubernetes.io/docs/setup/production-environment/container-runtimes/ target=_blank>容器运行时</a>
-以了解更多信息。</p>
+<p>参阅<a href=https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/ target=_blank>容器运行时</a>以了解更多信息。</p>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>3 - 安装步骤</h1>
-<p>KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式</p>
-<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target=_blank>安装准备</a>的安装</p>
+<p>KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。</p>
+<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target=_blank>安装准备</a>的安装。</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-2 role=tab aria-controls=tabset-zhdocsinstall-3-2>基于 Red Hat 的发行版, 国内加速 🚀</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-3 role=tab aria-controls=tabset-zhdocsinstall-3-3>基于 Debian 的发行版, 国内加速 🚀</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-3><div id=tabset-zhdocsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://dl.klts.io/rpm/$basearch/
@@ -380,7 +378,8 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://dl.klts.io/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
@@ -388,16 +387,17 @@ apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-2>
 <p>
-<div class="pageinfo pageinfo-primary">
-⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️
-</div>
+<blockquote class="note callout">
+<div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+</blockquote>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-1-0 role=tab aria-controls=tabset-zhdocsinstall-1-0 aria-selected=true>/etc/hosts</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-1 role=tab aria-controls=tabset-zhdocsinstall-1-1>hub.fastgit.org</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-2 role=tab aria-controls=tabset-zhdocsinstall-1-2>ghproxy.com</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-3 role=tab aria-controls=tabset-zhdocsinstall-1-3>raw.githubusercontents.com</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-4 role=tab aria-controls=tabset-zhdocsinstall-1-4>raw.staticdn.net</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
 
 cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
@@ -410,7 +410,8 @@ cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/rpm/$basearch/
@@ -421,7 +422,8 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-2>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -432,7 +434,8 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-3>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -443,7 +446,8 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-4>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -456,9 +460,10 @@ yum makecache
 </div>
 <div id=tabset-zhdocsinstall-3-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-3>
 <p>
-<div class="pageinfo pageinfo-primary">
-⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️
-</div>
+执行以下代码设置下载 KLTS 的软件源：
+<blockquote class="note callout">
+<div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+</blockquote>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-2-0 role=tab aria-controls=tabset-zhdocsinstall-2-0 aria-selected=true>/etc/hosts</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-1 role=tab aria-controls=tabset-zhdocsinstall-2-1>hub.fastgit.org</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-2 role=tab aria-controls=tabset-zhdocsinstall-2-2>ghproxy.com</a></li>

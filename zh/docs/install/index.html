@@ -15,23 +15,29 @@
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
 <title>安装步骤 | KLTS.io</title>
 <meta name=description content="KLTS 的官网"><meta property="og:title" content="安装步骤">
-<meta property="og:description" content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
-安装前请确认已经完成了安装准备的安装
-设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  /etc/hosts hub.fastgit.org ghproxy.com raw.githubusercontents.com raw.staticdn.net curl https://raw.">
+<meta property="og:description" content="KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
+安装前请确认已经完成了安装准备的安装。
+设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 执行以下代码设置下载 KLTS 的软件源：
+cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  执行以下代码设置下载 KLTS 的软件源：
+cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️   /etc/hosts hub.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-01T19:29:31+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-01T17:53:17+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="安装步骤">
-<meta itemprop=description content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
-安装前请确认已经完成了安装准备的安装
-设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  /etc/hosts hub.fastgit.org ghproxy.com raw.githubusercontents.com raw.staticdn.net curl https://raw.">
-<meta itemprop=dateModified content="2021-09-01T19:29:31+08:00">
-<meta itemprop=wordCount content="304">
+<meta itemprop=description content="KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
+安装前请确认已经完成了安装准备的安装。
+设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 执行以下代码设置下载 KLTS 的软件源：
+cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  执行以下代码设置下载 KLTS 的软件源：
+cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️   /etc/hosts hub.">
+<meta itemprop=dateModified content="2021-09-01T17:53:17+08:00">
+<meta itemprop=wordCount content="325">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="安装步骤">
-<meta name=twitter:description content="KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式
-安装前请确认已经完成了安装准备的安装
-设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   ⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️  /etc/hosts hub.fastgit.org ghproxy.com raw.githubusercontents.com raw.staticdn.net curl https://raw.">
+<meta name=twitter:description content="KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
+安装前请确认已经完成了安装准备的安装。
+设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 执行以下代码设置下载 KLTS 的软件源：
+cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  执行以下代码设置下载 KLTS 的软件源：
+cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️   /etc/hosts hub.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -62,7 +68,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.12f7dd33a72d22330c5c5c0bc1c61c61.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.369b6af8a18776e23ba0a800a2a3f6d4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -72,7 +78,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.12f7dd33a72d22330c5c5c0bc1c61c61.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.369b6af8a18776e23ba0a800a2a3f6d4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -244,15 +250,16 @@
 <header class=article-meta>
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 2 分钟 阅读时间</p>
 </header>
-<p>KLTS 提供了基于 deb 和 rpm 的软件源的安装方式. 您可以选择适合自己系统的安装安装方式</p>
-<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target=_blank>安装准备</a>的安装</p>
+<p>KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。</p>
+<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target=_blank>安装准备</a>的安装。</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-2 role=tab aria-controls=tabset-zhdocsinstall-3-2>基于 Red Hat 的发行版, 国内加速 🚀</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-3 role=tab aria-controls=tabset-zhdocsinstall-3-3>基于 Debian 的发行版, 国内加速 🚀</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-3><div id=tabset-zhdocsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://dl.klts.io/rpm/$basearch/
@@ -263,7 +270,8 @@
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://dl.klts.io/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
@@ -271,16 +279,17 @@ apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-2>
 <p>
-<div class="pageinfo pageinfo-primary">
-⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️
-</div>
+<blockquote class="note callout">
+<div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+</blockquote>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-1-0 role=tab aria-controls=tabset-zhdocsinstall-1-0 aria-selected=true>/etc/hosts</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-1 role=tab aria-controls=tabset-zhdocsinstall-1-1>hub.fastgit.org</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-2 role=tab aria-controls=tabset-zhdocsinstall-1-2>ghproxy.com</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-3 role=tab aria-controls=tabset-zhdocsinstall-1-3>raw.githubusercontents.com</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-1-4 role=tab aria-controls=tabset-zhdocsinstall-1-4>raw.staticdn.net</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
 
 cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
@@ -293,7 +302,8 @@ cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/rpm/$basearch/
@@ -304,7 +314,8 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-2>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -315,7 +326,8 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-3>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -326,7 +338,8 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-4>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><p>执行以下代码设置下载 KLTS 的软件源：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/repos/rpm/$basearch/
@@ -339,9 +352,10 @@ yum makecache
 </div>
 <div id=tabset-zhdocsinstall-3-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-3>
 <p>
-<div class="pageinfo pageinfo-primary">
-⚠️ 以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️
-</div>
+执行以下代码设置下载 KLTS 的软件源：
+<blockquote class="note callout">
+<div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+</blockquote>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-2-0 role=tab aria-controls=tabset-zhdocsinstall-2-0 aria-selected=true>/etc/hosts</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-1 role=tab aria-controls=tabset-zhdocsinstall-2-1>hub.fastgit.org</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-2-2 role=tab aria-controls=tabset-zhdocsinstall-2-2>ghproxy.com</a></li>
@@ -435,7 +449,7 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.09.01
-: <a href=https://github.com/klts-io/website/commit/e1e1fef52cac14e40469e0bbf638e5a3595b0b7c>Update link (e1e1fef)</a>
+: <a href=https://github.com/klts-io/website/commit/6c1c19c097ab58b657c8b2431c18caefeca81e36>changed on Sep 1 (6c1c19c)</a>
 </div>
 </div>
 </main>
