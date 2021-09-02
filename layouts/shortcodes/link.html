@@ -4,7 +4,7 @@
 {{- $page := .Site.GetPage $file -}}
 
 {{- $text := .Get "text" | default $page.Params.title | default $url -}}
-{{- $target := .Get "target" | default "_blank" -}}
+{{- $target := .Get "target" | default "" -}}
 {{- $class := .Get "class" -}}
 
 {{- if hasPrefix $url "/" -}}
