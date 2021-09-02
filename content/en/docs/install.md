@@ -88,10 +88,10 @@ apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
     {{< /tab >}}
 {{< /tabs >}}
 
-## Start Kubelet
+## Auto-start Kubelet on boot
 
 ```
-systemctl enable --now kubelet
+systemctl enable kubelet
 ```
 
 ## Pull the dependency image
@@ -102,7 +102,7 @@ REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
-All subsequent operations on Kubeadm need to include --image-repository, --kubernetes-version actively specifying the image
+All subsequent operations on Kubeadm need to include `--image-repository`, `--kubernetes-version` actively specifying the image
 
 ## Initialize the control plane node
 

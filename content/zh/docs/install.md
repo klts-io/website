@@ -244,10 +244,10 @@ apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
     {{< /tab >}}
 {{< /tabs >}}
 
-## 启动 Kubelet
+## 开机自动启动 Kubelet
 
 ```
-systemctl enable --now kubelet
+systemctl enable kubelet
 ```
 
 ## 拉取依赖镜像
@@ -258,7 +258,7 @@ REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
-后续对 kubeadm 的操作都需要加上 --image-repository, --kubernetes-version 主动指定镜像
+后续对 kubeadm 的操作都需要加上 `--image-repository`, `--kubernetes-version` 主动指定镜像
 
 ## 初始化控制面节点
 
