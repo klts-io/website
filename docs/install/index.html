@@ -20,13 +20,13 @@ Before installation, ensure that Pre Install has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-01T19:29:31+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-02T11:00:05+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Install">
 <meta itemprop=description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
 Before installation, ensure that Pre Install has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
-<meta itemprop=dateModified content="2021-09-01T19:29:31+08:00">
-<meta itemprop=wordCount content="182">
+<meta itemprop=dateModified content="2021-09-02T11:00:05+08:00">
+<meta itemprop=wordCount content="183">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Install">
 <meta name=twitter:description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
@@ -62,7 +62,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.6ab4fc586156e1050924e59ab57817ce.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.7df95aec28ad5b1fc9385829a55a2f3a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -72,7 +72,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.6ab4fc586156e1050924e59ab57817ce.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.7df95aec28ad5b1fc9385829a55a2f3a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -123,7 +123,7 @@ English
 <ul>
 <li><a href=#set-the-klts-software-source>Set the KLTS software source</a></li>
 <li><a href=#install>Install</a></li>
-<li><a href=#start-kubelet>Start Kubelet</a></li>
+<li><a href=#auto-start-kubelet-on-boot>Auto-start Kubelet on boot</a></li>
 <li><a href=#pull-the-dependency-image>Pull the dependency image</a></li>
 <li><a href=#initialize-the-control-plane-node>Initialize the control plane node</a></li>
 </ul>
@@ -204,13 +204,13 @@ apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Vers
 apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubelet</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubectl</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
 </div></div>
-<h2 id=start-kubelet>Start Kubelet</h2>
-<pre><code>systemctl enable --now kubelet
+<h2 id=auto-start-kubelet-on-boot>Auto-start Kubelet on boot</h2>
+<pre><code>systemctl enable kubelet
 </code></pre><h2 id=pull-the-dependency-image>Pull the dependency image</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p>All subsequent operations on Kubeadm need to include &ndash;image-repository, &ndash;kubernetes-version actively specifying the image</p>
+</code></pre></div><p>All subsequent operations on Kubeadm need to include <code>--image-repository</code>, <code>--kubernetes-version</code> actively specifying the image</p>
 <h2 id=initialize-the-control-plane-node>Initialize the control plane node</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
@@ -218,8 +218,8 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 </code></pre></div><a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>More Reference</a>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-September 1, 2021
-: <a href=https://github.com/klts-io/website/commit/e1e1fef52cac14e40469e0bbf638e5a3595b0b7c>Update link (e1e1fef)</a>
+September 2, 2021
+: <a href=https://github.com/klts-io/website/commit/ae762a517bd1808ad62103ce59c04853d0e932ae>update install page: kubelet and kubeadm flags display (ae762a5)</a>
 </div>
 </div>
 </main>
