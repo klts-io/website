@@ -41,7 +41,7 @@ apt-get update
 {{< tab name="基于 Red Hat 的发行版, 国内加速 🚀" >}}
 
 <blockquote class="note callout">
-  <div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+  <div><strong>说明：</strong>以下加速均来自第三方， 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
 </blockquote>
 
 
@@ -131,7 +131,7 @@ yum makecache
 {{< tab name="基于 Debian 的发行版, 国内加速 🚀" >}}
 执行以下代码设置下载 KLTS 的软件源：
 <blockquote class="note callout">
-  <div><strong>说明：</strong>以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
+  <div><strong>说明：</strong>以下加速均来自第三方， 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ </div>
 </blockquote>
 
     {{< tabs >}}
@@ -244,10 +244,10 @@ apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
     {{< /tab >}}
 {{< /tabs >}}
 
-## 启动 Kubelet
+## 开机自动启动 Kubelet
 
 ```
-systemctl enable --now kubelet
+systemctl enable kubelet
 ```
 
 ## 拉取依赖镜像
@@ -258,7 +258,7 @@ REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
-后续对 kubeadm 的操作都需要加上 --image-repository, --kubernetes-version 主动指定镜像
+后续对 kubeadm 的操作都需要加上 `--image-repository`，`--kubernetes-version` 主动指定镜像。
 
 ## 初始化控制面节点
 
