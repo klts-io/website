@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.0620a1decb4a850b6ed4057be4b12cac.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.30181bad75f56ab00716d02850eadf07.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -85,30 +85,18 @@
 <h1 id=pg-11f4f5c9a4be3821c253586ecc555cbb>1 - v1.10.13-lts.1</h1>
 <h2 id=补丁>补丁</h2>
 <ul>
-<li><a href=/zh/docs/patches/cve-2019-11245 title="这是一个提权漏洞，在通常情况下以容器 `Dockerfile` 中指定的 `USER` 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 `root`(uid 0) 身份运行
-" data-toggle=tooltip data-placement=top target>CVE-2019-11245</a></li>
-<li><a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。
-" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a></li>
-<li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
-" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a></li>
-<li><a href=/zh/docs/patches/cve-2019-11247 title="`API Server` 允许通过错误的范围访问自定义的资源
-" data-toggle=tooltip data-placement=top target>CVE-2019-11247</a> TODO</li>
-<li><a href=/zh/docs/patches/cve-2019-11248 title="可以用过健康检查的端口访问 `/debug/pprof`
-" data-toggle=tooltip data-placement=top target>CVE-2019-11248</a></li>
-<li><a href=/zh/docs/patches/cve-2019-11249 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
-" data-toggle=tooltip data-placement=top target>CVE-2019-11249</a></li>
-<li><a href=/zh/docs/patches/cve-2019-11251 title="此漏洞可能允许攻击者利用 `kubectl cp` 命令，采用路径遍历(Path Traversal)的方式将容器 `tar` 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
-" data-toggle=tooltip data-placement=top target>CVE-2019-11251</a></li>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 `API Server` 容易受到来自成功 `API` 请求的 `DoS`(拒绝服务攻击)。
-" data-toggle=tooltip data-placement=top target>CVE-2020-8552</a></li>
-<li><a href=/zh/docs/patches/cve-2020-8558 title="`kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
-" data-toggle=tooltip data-placement=top target>CVE-2020-8558</a> TODO</li>
-<li><a href=/zh/docs/patches/cve-2020-8559 title="`kube-apiserver` 组件的安全漏洞，攻击者可以通过截取某些发送至节点 `kubelet` 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。
-" data-toggle=tooltip data-placement=top target>CVE-2020-8559</a> TODO</li>
-<li><a href=/zh/docs/patches/cve-2021-3121 title="存在该漏洞的程序可能会因为处理了包含恶意 `Protobuf` 消息而崩溃。如果您使用的 `Gogo Protobuf` 版本过低，可能存在该漏洞。
-" data-toggle=tooltip data-placement=top target>CVE-2021-3121</a></li>
-<li><a href=/zh/docs/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
-" data-toggle=tooltip data-placement=top target>nokmem</a></li>
+<li><a href=/zh/docs/patches/cve-2019-11245 title="这是一个提权漏洞，在通常情况下以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行" data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>这是一个提权漏洞，在通常情况下以容器 <code>Dockerfile</code> 中指定的 <code>USER</code> 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 <code>root</code>(uid 0) 身份运行</p></li>
+<li><a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。</p></li>
+<li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
+<li>TODO <a href=/zh/docs/patches/cve-2019-11247 title="API Server 允许通过错误的范围访问自定义的资源" data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> 允许通过错误的范围访问自定义的资源</p></li>
+<li><a href=/zh/docs/patches/cve-2019-11248 title="可以用过健康检查的端口访问 /debug/pprof" data-toggle=tooltip data-placement=top target>CVE-2019-11248</a><p>可以用过健康检查的端口访问 <code>/debug/pprof</code></p></li>
+<li><a href=/zh/docs/patches/cve-2019-11249 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11249</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
+<li><a href=/zh/docs/patches/cve-2019-11251 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11251</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 API Server 容易受到来自成功 API 请求的 DoS(拒绝服务攻击)。" data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>此漏洞可能使 <code>API Server</code> 容易受到来自成功 <code>API</code> 请求的 <code>DoS</code>(拒绝服务攻击)。</p></li>
+<li>TODO <a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy 组件在 iptables 和 ipvs 模式下均需要设置内核参数 net.ipv4.conf.all.route_localnet=1， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。" data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p><code>kube-proxy</code> 组件在 <code>iptables</code> 和 <code>ipvs</code> 模式下均需要设置内核参数 <code>net.ipv4.conf.all.route_localnet=1</code>， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 <code>127.0.0.1</code> 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。</p></li>
+<li>TODO <a href=/zh/docs/patches/cve-2020-8559 title="kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。" data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p><code>kube-apiserver</code> 组件的安全漏洞，攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。</p></li>
+<li><a href=/zh/docs/patches/cve-2021-3121 title="存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。" data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>存在该漏洞的程序可能会因为处理了包含恶意 <code>Protobuf</code> 消息而崩溃。如果您使用的 <code>Gogo Protobuf</code> 版本过低，可能存在该漏洞。</p></li>
+<li><a href=/zh/docs/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 Pod" data-toggle=tooltip data-placement=top target>nokmem</a><p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code></p></li>
 </ul>
 </div>
 </main>
