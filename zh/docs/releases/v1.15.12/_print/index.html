@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.b788a337a111bc7644cec9c9ea50d4eb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.0620a1decb4a850b6ed4057be4b12cac.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -85,9 +85,12 @@
 <h1 id=pg-0de2d52a18da527606a4cafd2f9c2964>1 - v1.15.12-lts.1</h1>
 <h2 id=补丁>补丁</h2>
 <ul>
-<li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy 组件在 iptables 和 ipvs 模式下均需要设置内核参数 net.ipv4.conf.all.route_localnet=1， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。" data-toggle=tooltip data-placement=top target>CVE-2020-8558</a></li>
-<li><a href=/zh/docs/patches/cve-2021-3121 title="存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。" data-toggle=tooltip data-placement=top target>CVE-2021-3121</a></li>
-<li><a href=/zh/docs/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 Pod" data-toggle=tooltip data-placement=top target>nokmem</a></li>
+<li><a href=/zh/docs/patches/cve-2020-8558 title="`kube-proxy` 组件在 `iptables` 和 `ipvs` 模式下均需要设置内核参数 `net.ipv4.conf.all.route_localnet=1`， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 `127.0.0.1` 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
+" data-toggle=tooltip data-placement=top target>CVE-2020-8558</a></li>
+<li><a href=/zh/docs/patches/cve-2021-3121 title="存在该漏洞的程序可能会因为处理了包含恶意 `Protobuf` 消息而崩溃。如果您使用的 `Gogo Protobuf` 版本过低，可能存在该漏洞。
+" data-toggle=tooltip data-placement=top target>CVE-2021-3121</a></li>
+<li><a href=/zh/docs/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
+" data-toggle=tooltip data-placement=top target>nokmem</a></li>
 </ul>
 </div>
 </main>
