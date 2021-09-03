@@ -1,6 +1,6 @@
 {{- $url := .Get "url" -}}
 
-{{- $file := (strings.TrimSuffix "/" $url ) -}}
+{{- $file := printf "%s.md" (strings.TrimSuffix "/" $url ) -}}
 {{- $page := .Site.GetPage $file -}}
 
 {{- $text := .Get "text" | default $page.Params.title | default $url -}}
