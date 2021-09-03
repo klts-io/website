@@ -13,7 +13,11 @@
 
 {{- $description :=  $page.Params.short_description -}}
 {{- if $description -}}
+    {{- $description = $description | markdownify | safeHTML -}}
     <a href="{{ $url }}" title='{{- $description -}}' data-toggle='tooltip' data-placement='top' target="{{ $target }}" {{ with $class }}class="{{ . }}" {{ end }}>{{ $text }}</a>
+    {{- if .Get "display" | default "" -}}
+        <p>{{ $description }}</p>
+    {{- end -}}
 {{- else -}}
     <a href="{{ $url }}" target="{{ $target }}" {{ with $class }}class="{{ . }}" {{ end }}>{{ $text }}</a>
 {{- end -}}
