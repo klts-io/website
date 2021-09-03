@@ -4,12 +4,16 @@
 {{- $page := .Site.GetPage $file -}}
 
 {{- $text := .Get "text" | default $page.Params.title | default $url -}}
-{{- $target := .Get "target" | default "" -}}
 {{- $class := .Get "class" -}}
 
+{{- $target := "" -}}
 {{- if hasPrefix $url "/" -}}
     {{- $url = (path.Join .Page.Site.LanguagePrefix $url) -}}
+{{- else -}}
+    {{- $target = "_blank" -}}
 {{- end -}}
+
+{{- $target = .Get "target" | default $target -}}
 
 {{- $description :=  $page.Params.short_description -}}
 {{- if $description -}}
