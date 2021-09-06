@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.a02bb4bf161df5f7be19dc23855070ec.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.ea550c8e16001b9f85979fffe6eec329.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -170,9 +170,9 @@
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-da5de8654ce647927106ce1dae3b6382>5 - CVE-2019-11248</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11248 target=_blank>漏洞详情</a>
-<p>可以用过健康检查的端口访问 <code>/debug/pprof</code></p>
+<p>可以通过健康检查的端口访问 <code>/debug/pprof</code>。</p>
 <h2 id=scope>漏洞影响</h2>
-<p>该漏洞存在于 <code>Kubelet</code> 中，由于用于性能调试的 <code>/debug/pprof</code> 跟健康检查端口 <code>/healthz</code> 绑定在一起 <code>/debug/pprof</code> 会进行安全认证，但 <code>/healthz</code>接口是不认证鉴权的。所以，如果 <code>Kubelet</code> 的 <code>healthz</code> 地址不是使用 <code>localhost</code>，会存在泄露机器敏感信息的风险。</p>
+<p>该漏洞存在于 <code>Kubelet</code> 中，用于性能调试的 <code>/debug/pprof</code> 跟健康检查端口 <code>/healthz</code> 绑定在一起，其中 <code>/debug/pprof</code> 会进行安全认证，但 <code>/healthz</code> 接口并不进行认证鉴权。所以如果 <code>Kubelet</code> 的 <code>healthz</code> 地址未使用 <code>localhost</code>，则会存在泄露机器敏感信息的风险。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
 <li>1.14.4</li>
