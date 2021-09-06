@@ -16,7 +16,7 @@
 <title>v1.10.13-lts.1 | KLTS.io</title>
 <meta name=description content="KLTS 的官网"><meta property="og:title" content="v1.10.13-lts.1">
 <meta property="og:description" content="这是 KLTS 发布的第一个 v1.10.13 修复版本。
-补丁  CVE-2019-11245这是一个提权漏洞，在通常情况下以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行
+补丁  CVE-2019-11245这是一个提权漏洞，通常以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行。
  CVE-2019-1002101此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。
  CVE-2019-11246此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
  TODO CVE-2019-11247API Server 允许通过错误的范围访问自定义的资源
@@ -30,7 +30,7 @@
 <meta property="article:modified_time" content="2021-09-03T13:34:02+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="v1.10.13-lts.1">
 <meta itemprop=description content="这是 KLTS 发布的第一个 v1.10.13 修复版本。
-补丁  CVE-2019-11245这是一个提权漏洞，在通常情况下以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行
+补丁  CVE-2019-11245这是一个提权漏洞，通常以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行。
  CVE-2019-1002101此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。
  CVE-2019-11246此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
  TODO CVE-2019-11247API Server 允许通过错误的范围访问自定义的资源
@@ -44,7 +44,7 @@
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="v1.10.13-lts.1">
 <meta name=twitter:description content="这是 KLTS 发布的第一个 v1.10.13 修复版本。
-补丁  CVE-2019-11245这是一个提权漏洞，在通常情况下以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行
+补丁  CVE-2019-11245这是一个提权漏洞，通常以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行。
  CVE-2019-1002101此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。
  CVE-2019-11246此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。
  TODO CVE-2019-11247API Server 允许通过错误的范围访问自定义的资源
@@ -83,7 +83,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.1ccaea5ce6859689b0012f4f716593a9.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.7ed3b471fb558864f753a363fe356077.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -93,7 +93,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.1ccaea5ce6859689b0012f4f716593a9.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.7ed3b471fb558864f753a363fe356077.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -265,7 +265,7 @@
 <p>这是 KLTS 发布的第一个 v1.10.13 修复版本。</p>
 <h2 id=补丁>补丁</h2>
 <ul>
-<li><a href=/zh/docs/patches/cve-2019-11245 title="这是一个提权漏洞，在通常情况下以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行" data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>这是一个提权漏洞，在通常情况下以容器 <code>Dockerfile</code> 中指定的 <code>USER</code> 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 <code>root</code>(uid 0) 身份运行</p></li>
+<li><a href=/zh/docs/patches/cve-2019-11245 title="这是一个提权漏洞，通常以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行。" data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>这是一个提权漏洞，通常以容器 <code>Dockerfile</code> 中指定的 <code>USER</code> 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 <code>root</code>(uid 0) 身份运行。</p></li>
 <li><a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。</p></li>
 <li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
 <li>TODO <a href=/zh/docs/patches/cve-2019-11247 title="API Server 允许通过错误的范围访问自定义的资源" data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> 允许通过错误的范围访问自定义的资源</p></li>
