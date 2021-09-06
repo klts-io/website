@@ -4,7 +4,7 @@ short_description: |
   节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
 ---
 
-{{< link text="详细信息" url="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" >}}
+{{< link text="Bug 详情" url="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" >}}
 
 节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
 
