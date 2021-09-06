@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.7ed3b471fb558864f753a363fe356077.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.0c1901825168098cc652eab13e0a6748.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -603,11 +603,11 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-17adf9e532c044f0bc96bf2fe6fabb70>5.3 - CVE-2019-11246</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11246 target=_blank>漏洞详情</a>
-<p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p>
+<p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历 (Path Traversal) 的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p>
 <h2 id=scope>漏洞影响</h2>
 <p>该漏洞与不久前的 <a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a> 漏洞影响相似。</p>
-<p><code>kubectl cp</code> 命令用于用户容器和主机之间的文件拷贝，当从容器中拷贝文件时，<code>Kubernetes</code> 会首先在容器中执行 <code>tar</code> 命令创建相应的归档文件，然后发送给客户端，<code>kubectl</code> 会在用户主机上进行相应解压操作。</p>
-<p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历(Path Traversal)。</p>
+<p><code>kubectl cp</code> 命令用于用户容器和主机之间的文件拷贝。当从容器中拷贝文件时，<code>Kubernetes</code> 首先会在容器中执行 <code>tar</code> 命令创建相应的归档文件，然后发送给客户端，<code>kubectl</code> 会在用户主机上进行相应解压操作。</p>
+<p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历 (Path Traversal) 方式将恶意文件写入任意路径。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
 <li>1.14.3</li>
@@ -659,7 +659,7 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <a href=https://www.cvedetails.com/cve/CVE-2019-11249 target=_blank>漏洞详情</a>
 <p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p>
 <h2 id=scope>漏洞影响</h2>
-<p>该漏洞与不久前的 <a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a>, <a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a> 漏洞影响相似。</p>
+<p>该漏洞与不久前的 <a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a>, <a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历 (Path Traversal) 的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a> 漏洞影响相似。</p>
 <p><code>kubectl cp</code> 命令用于用户容器和主机之间的文件拷贝，当从容器中拷贝文件时，<code>Kubernetes</code> 会首先在容器中执行 <code>tar</code> 命令创建相应的归档文件，然后发送给客户端，<code>kubectl</code> 会在用户主机上进行相应解压操作。</p>
 <p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历(Path Traversal)。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
@@ -680,7 +680,7 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <a href=https://www.cvedetails.com/cve/CVE-2019-11251 target=_blank>漏洞详情</a>
 <p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p>
 <h2 id=scope>漏洞影响</h2>
-<p>该漏洞与不久前的 <a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a>, <a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a>, <a href=/zh/docs/patches/cve-2019-11249 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11249</a> 漏洞影响相似。</p>
+<p>该漏洞与不久前的 <a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a>, <a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历 (Path Traversal) 的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a>, <a href=/zh/docs/patches/cve-2019-11249 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11249</a> 漏洞影响相似。</p>
 <p><code>kubectl cp</code> 命令用于用户容器和主机之间的文件拷贝，当从容器中拷贝文件时，<code>Kubernetes</code> 会首先在容器中执行 <code>tar</code> 命令创建相应的归档文件，然后发送给客户端，<code>kubectl</code> 会在用户主机上进行相应解压操作。</p>
 <p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历(Path Traversal)。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
@@ -872,7 +872,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <ul>
 <li><a href=/zh/docs/patches/cve-2019-11245 title="这是一个提权漏洞，通常以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行。" data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>这是一个提权漏洞，通常以容器 <code>Dockerfile</code> 中指定的 <code>USER</code> 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 <code>root</code>(uid 0) 身份运行。</p></li>
 <li><a href=/zh/docs/patches/cve-2019-1002101 title="此漏洞可能允许攻击者利用 kubectl cp 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。" data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件造成破坏。</p></li>
-<li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
+<li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历 (Path Traversal) 的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历 (Path Traversal) 的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
 <li>TODO <a href=/zh/docs/patches/cve-2019-11247 title="API Server 允许通过错误的范围访问自定义的资源" data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> 允许通过错误的范围访问自定义的资源</p></li>
 <li><a href=/zh/docs/patches/cve-2019-11248 title="可以用过健康检查的端口访问 /debug/pprof" data-toggle=tooltip data-placement=top target>CVE-2019-11248</a><p>可以用过健康检查的端口访问 <code>/debug/pprof</code></p></li>
 <li><a href=/zh/docs/patches/cve-2019-11249 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11249</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
@@ -893,7 +893,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <h2 id=补丁>补丁</h2>
 <ul>
 <li><a href=/zh/docs/patches/cve-2019-11245 title="这是一个提权漏洞，通常以容器 Dockerfile 中指定的 USER 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 root(uid 0) 身份运行。" data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>这是一个提权漏洞，通常以容器 <code>Dockerfile</code> 中指定的 <code>USER</code> 运行的容器，在容器重启时或者如果镜像先前被拉到节点时，都将以 <code>root</code>(uid 0) 身份运行。</p></li>
-<li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
+<li><a href=/zh/docs/patches/cve-2019-11246 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历 (Path Traversal) 的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历 (Path Traversal) 的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
 <li><a href=/zh/docs/patches/cve-2019-11247 title="API Server 允许通过错误的范围访问自定义的资源" data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> 允许通过错误的范围访问自定义的资源</p></li>
 <li><a href=/zh/docs/patches/cve-2019-11248 title="可以用过健康检查的端口访问 /debug/pprof" data-toggle=tooltip data-placement=top target>CVE-2019-11248</a><p>可以用过健康检查的端口访问 <code>/debug/pprof</code></p></li>
 <li><a href=/zh/docs/patches/cve-2019-11249 title="此漏洞可能允许攻击者利用 kubectl cp 命令，采用路径遍历(Path Traversal)的方式将容器 tar 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。" data-toggle=tooltip data-placement=top target>CVE-2019-11249</a><p>此漏洞可能允许攻击者利用 <code>kubectl cp</code> 命令，采用路径遍历(Path Traversal)的方式将容器 <code>tar</code> 包中的恶意文件写入所在主机上的任何路径，该过程仅受本地用户的系统权限限制。</p></li>
