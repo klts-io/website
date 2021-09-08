@@ -5,7 +5,7 @@ weight: 30
 
 KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
 
-安装前请确认已经完成了{{< link url="/docs/pre-install" >}}的安装。
+安装前请确认已经完成了{{< link url="/docs/pre-install" >}}工作。
 
 ## 设置 KLTS 软件源
 
@@ -269,4 +269,4 @@ REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
 
-有关更多安装说明，请参阅{{< link text="Kubernetes 操作指南" url="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" >}}。
+有关更多安装说明，请参阅 {{< link text="Kubernetes 操作指南" url="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" >}}。
