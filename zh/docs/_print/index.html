@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.98ef8c3194dad83e999e097262ebdfe5.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.5a258787510734e1e8063ed0dd7b3625.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -77,7 +77,7 @@
 <h1 class=title>文档</h1>
 <ul>
 <li>1: <a href=#pg-18d58d2666f9af2b2086e0baa55f315d>简介</a></li>
-<li>2: <a href=#pg-50ddcb3cdb08fbe2ad5d04311c273b4c>安装准备</a></li>
+<li>2: <a href=#pg-50ddcb3cdb08fbe2ad5d04311c273b4c>准备</a></li>
 <li>3: <a href=#pg-64407d3e6d5ef382426bdfbcae040c6a>安装步骤</a></li>
 <li>4: <a href=#pg-c258a50dfe331dfdf852330040bd8f14>安装之后</a></li>
 <li>5: <a href=#pg-cf1a7e96c5bc452942429f7b1a8d0306>补丁</a></li>
@@ -156,9 +156,8 @@
 <p>例如，如果社区正式发布 1.23 版本，KLTS 维护的版本也会加一，达到 1.19，以此类推。KLTS 的补丁更新频率将根据实际解决的 bug 情况发布。</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - 安装准备</h1>
-<p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>本页介绍如何安装 <code>kubeadm</code> 工具箱。
-有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见<a href=/zh/docs/install target>安装步骤</a>。</p>
+<h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - 准备</h1>
+<p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>本页介绍安装 Kubernetes 之前需要做好的一些准备工作，例如先要安装 <code>kubeadm</code> 工具箱。有关在安装此工具箱后如何用其创建集群，请参阅<a href=/zh/docs/install target>安装步骤</a>。</p>
 <h2 id=准备工作>准备工作</h2>
 <ul>
 <li>准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
@@ -361,7 +360,7 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>3 - 安装步骤</h1>
 <p>KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。</p>
-<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target>安装准备</a>工作。</p>
+<p>安装前请确认已经完成了<a href=/zh/docs/pre-install target>准备</a>工作。</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-3-0 role=tab aria-controls=tabset-zhdocsinstall-3-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-1 role=tab aria-controls=tabset-zhdocsinstall-3-1>基于 Debian 的发行版</a></li>
@@ -510,11 +509,11 @@ apt-get update
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-4-0 role=tab aria-controls=tabset-zhdocsinstall-4-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-4-1 role=tab aria-controls=tabset-zhdocsinstall-4-1>基于 Debian 的发行版</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-4><div id=tabset-zhdocsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-0>
-<p><p>执行以下命令开始安装：</p>
+<p><p>执行以下命令安装 KLTS 当前维护的最高版本的 Kubernetes：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-4-1>
-<p><p>执行以下命令开始安装：</p>
+<p><p>执行以下命令安装 KLTS 当前维护的最高版本的 Kubernetes：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
 </div>
@@ -523,7 +522,7 @@ apt-get update
 <ul class="nav nav-tabs" id=tabset-zhdocsinstall-5 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-5-0 role=tab aria-controls=tabset-zhdocsinstall-5-0 aria-selected=true>基于 Red Hat 的发行版</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-5-1 role=tab aria-controls=tabset-zhdocsinstall-5-1>基于 Debian 的发行版</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-5><div id=tabset-zhdocsinstall-5-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-0>
-<p><p>执行以下命令进行安装：</p>
+<p><p>执行以下命令安装指定版本的 Kubernetes：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
@@ -532,7 +531,7 @@ yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</sp
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-5-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-1>
-<p><p>执行以下命令进行安装：</p>
+<p><p>执行以下命令安装指定版本的 Kubernetes：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># 搜索支持的版本</span>
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
