@@ -1,5 +1,5 @@
 ---
-title: 补丁
+title: 修复的漏洞
 weight: 90
 ---
 
