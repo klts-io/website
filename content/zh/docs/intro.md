@@ -2,11 +2,13 @@
 title: "简介"
 weight: 10
 ---
+## 版本说明 {#klts-ver}
 本页为您介绍 KLTS 的 Kubernetes 版本支持机制。   
 <img src="../klts_ver.png" width="300">
 
 如图所示，V1.16.15 是 Kubernetes 的完整发行版本号，其中 1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 的补丁版本号。 
 
+## KLTS 维护哪些版本？ {#klts-job}
 <img src="../klts_job.png" width="750">
 
 上图以 2021 年 8 月 31 日为例，当时的最新版本为 1.22，Kubernetes 社区仅维护 1.19 – 1.22 四个版本。而 KLTS 则提供从 1.10 到 1.18 的版本维护，每个版本的支持周期至少两年。其中 Kubernetes 1.10 是 DaoCloud Enterprise 3.0 的生产内核，其维护周期会相对更长。我们会将修复 bug 后的稳定版本上传至 KLTS，供社区下载使用。
