@@ -1,10 +1,9 @@
 ---
-title: "安装准备"
+title: "准备"
 weight: 20
 ---
 
-<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">本页介绍如何安装 `kubeadm` 工具箱。
-有关在执行此安装过程后如何使用 kubeadm 创建集群的信息，请参见{{< link url="/docs/install" >}}。
+<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">本页介绍安装 Kubernetes 之前需要做好的一些准备工作，例如先要安装 `kubeadm` 工具箱。有关在安装此工具箱后如何用其创建集群，请参阅{{< link url="/docs/install" >}}。
 
 ## 准备工作
 

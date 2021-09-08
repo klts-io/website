@@ -199,14 +199,14 @@ apt-get update
         {{< tabs >}}
 
 {{% tab name="基于 Red Hat 的发行版" %}}
-执行以下命令开始安装：
+执行以下命令安装 KLTS 当前维护的最高版本的 Kubernetes：
 ``` bash
 yum install kubeadm kubelet kubectl
 ```
 {{% /tab %}}}
 
 {{% tab name="基于 Debian 的发行版" %}}
-执行以下命令开始安装：
+执行以下命令安装 KLTS 当前维护的最高版本的 Kubernetes：
 ``` bash
 apt-get install kubeadm kubelet kubectl
 ```
@@ -219,7 +219,7 @@ apt-get install kubeadm kubelet kubectl
 
 > 查看支持的版本
 {{% tab name="基于 Red Hat 的发行版" %}}
-执行以下命令进行安装：
+执行以下命令安装指定版本的 Kubernetes：
 ``` bash
 # 搜索支持的版本
 yum search kubeadm --showduplicates | grep kubeadm-
@@ -231,7 +231,7 @@ yum install kubeadm-v${VERSION} kubelet-v${VERSION} kubectl-v${VERSION}
 {{% /tab %}}}
 
 {{% tab name="基于 Debian 的发行版" %}}
-执行以下命令进行安装：
+执行以下命令安装指定版本的 Kubernetes：
 ``` bash
 # 搜索支持的版本
 apt-cache show kubeadm | grep Version
