@@ -12,7 +12,7 @@ weight: 20
 * 2 CPUs or more.
 * Good network connectivity between all nodes in the cluster (either public or on-premise network).
 * The hostname, MAC address, and product_uuid shall be unique for every node. See {{< link text="here" url="#verify-mac-address" >}} for more details.
-* Open the required ports on the host. See {{< link text="here" url="#check-required-ports" >}} for more details.
+* Open the required ports on the host. See {{< link text="Check required ports" url="#check-required-ports" >}} for more details.
 * Disable the swap partition. You **MUST** disable the swap partition to keep the kubelet working properly.
 
 ## Verify the MAC address and product_uuid are unique for every node {#verify-mac-address}
@@ -20,11 +20,11 @@ weight: 20
 * Get the MAC address of the network interfaces using the command `ip link` or `ifconfig -a`
 * Check the product_uuid using the command `sudo cat /sys/class/dmi/id/product_uuid`
 
-It is very likely that hardware devices have unique addresses, although some virtual machines may use identical addresses. Kubernetes uses these values to uniquely identify the nodes in the cluster. If these values are not unique to each node, the installation process may {{< link text="fail" url="https://github.com/kubernetes/kubeadm/issues/31" >}}.
+It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may {{< link text="fail" url="https://github.com/kubernetes/kubeadm/issues/31" >}}.
 
 ## Check network adapters
 
-If you have more than one network adapter, and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster addresses go via the appropriate adapter.
+If you have more than one network adapter and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster can set up proper connections via the appropriate adapter.
 
 ## Letting iptables see bridged traffic
 
