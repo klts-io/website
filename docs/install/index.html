@@ -16,21 +16,21 @@
 <title>Install | KLTS.io</title>
 <meta name=description content="KLTS.io website"><meta property="og:title" content="Install">
 <meta property="og:description" content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
-Before installation, ensure that Pre Install has been installed
+Before installation, ensure that Preparation has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
 <meta property="article:modified_time" content="2021-09-02T11:00:05+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Install">
 <meta itemprop=description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
-Before installation, ensure that Pre Install has been installed
+Before installation, ensure that Preparation has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <meta itemprop=dateModified content="2021-09-02T11:00:05+08:00">
-<meta itemprop=wordCount content="183">
+<meta itemprop=wordCount content="182">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Install">
 <meta name=twitter:description content="KLTS provides a way to install software sources based on Deb and RPM. You can choose the installation method that suits your system
-Before installation, ensure that Pre Install has been installed
+Before installation, ensure that Preparation has been installed
 Set the KLTS software source Red Hat-based distributions Debian-based distributions cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update  Install Install Install the specified releases  Red Hat-based distributions Debian-based distributions yum install kubeadm kubelet kubectl  apt-get install kubeadm kubelet kubectl    Red Hat-based distributions Debian-based distributions # Search for supported releases yum search kubeadm --showduplicates | grep kubeadm- # Install VERSION=1.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -62,7 +62,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.68accee22304491fdfee6f02f17c50be.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.91ba917da2b0917644e28bd9f6a85d0e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -72,7 +72,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.68accee22304491fdfee6f02f17c50be.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.91ba917da2b0917644e28bd9f6a85d0e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -92,7 +92,7 @@ English
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsintro-li>
 <a href=/docs/intro/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsintro><span>Introduction</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docspre-install-li>
-<a href=/docs/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docspre-install><span>Pre Install</span></a>
+<a href=/docs/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docspre-install><span>Preparation</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsinstall-li>
 <a href=/docs/install/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsinstall><span class=td-sidebar-nav-active-item>Install</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docspost-install-li>
@@ -149,7 +149,7 @@ English
 </header>
 <p>KLTS provides a way to install software sources based on Deb and RPM.
 You can choose the installation method that suits your system</p>
-<p>Before installation, ensure that <a href=/docs/pre-install target>Pre Install</a> has been installed</p>
+<p>Before installation, ensure that <a href=/docs/pre-install target>Preparation</a> has been installed</p>
 <h2 id=set-the-klts-software-source>Set the KLTS software source</h2>
 <ul class="nav nav-tabs" id=tabset-docsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-1-0 role=tab aria-controls=tabset-docsinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-1-1 role=tab aria-controls=tabset-docsinstall-1-1>Debian-based distributions</a></li></ul>
