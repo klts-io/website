@@ -53,7 +53,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.509396544b39095765bd16fcd27b1e4e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.b3af7a44a23d7ea04391cbe6314e78fa.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -107,33 +107,28 @@ This the multi-page printable view of this section.
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - Preparation</h1>
-<p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>This page shows how to install the <code>kubeadm</code> toolbox.
-For information on how to create a cluster with kubeadm once you have performed this installation process, see the <a href=/docs/install target>Install</a> page.</p>
+<p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>This page introduces some pareparation before instalaltion. For example, it is required to firstly install the <code>kubeadm</code> toolbox. For information on how to create a cluster with kubeadm, see the <a href=/docs/install target>Install</a> page.</p>
 <h2 id=before-you-begin>Before you begin</h2>
 <ul>
 <li>A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.</li>
 <li>2 GB or more of RAM per machine (any less will leave little room for your apps).</li>
 <li>2 CPUs or more.</li>
-<li>Full network connectivity between all machines in the cluster (public or private network is fine).</li>
-<li>Unique hostname, MAC address, and product_uuid for every node. See <a href=#verify-mac-address target=_blank>here</a> for more details.</li>
-<li>Certain ports are open on your machines. See <a href=#check-required-ports target=_blank>here</a> for more details.</li>
-<li>Swap disabled. You <strong>MUST</strong> disable swap in order for the kubelet to work properly.</li>
+<li>Good network connectivity between all nodes in the cluster (either public or on-premise network).</li>
+<li>The hostname, MAC address, and product_uuid shall be unique for every node. See <a href=#verify-mac-address target=_blank>here</a> for more details.</li>
+<li>Open the required ports on the host. See <a href=#check-required-ports target=_blank>here</a> for more details.</li>
+<li>Disable the swap partition. You <strong>MUST</strong> disable the swap partition to keep the kubelet working properly.</li>
 </ul>
 <h2 id=verify-mac-address>Verify the MAC address and product_uuid are unique for every node</h2>
 <ul>
-<li>You can get the MAC address of the network interfaces using the command <code>ip link</code> or <code>ifconfig -a</code></li>
-<li>The product_uuid can be checked by using the command <code>sudo cat /sys/class/dmi/id/product_uuid</code></li>
+<li>Get the MAC address of the network interfaces using the command <code>ip link</code> or <code>ifconfig -a</code></li>
+<li>Check the product_uuid using the command <code>sudo cat /sys/class/dmi/id/product_uuid</code></li>
 </ul>
-<p>It is very likely that hardware devices will have unique addresses, although some virtual machines may have
-identical values. Kubernetes uses these values to uniquely identify the nodes in the cluster.
-If these values are not unique to each node, the installation process
-may <a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>fail</a>.</p>
+<p>It is very likely that hardware devices have unique addresses, although some virtual machines may use identical addresses. Kubernetes uses these values to uniquely identify the nodes in the cluster. If these values are not unique to each node, the installation process may <a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>fail</a>.</p>
 <h2 id=check-network-adapters>Check network adapters</h2>
-<p>If you have more than one network adapter, and your Kubernetes components are not reachable on the default
-route, we recommend you add IP route(s) so Kubernetes cluster addresses go via the appropriate adapter.</p>
+<p>If you have more than one network adapter, and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster addresses go via the appropriate adapter.</p>
 <h2 id=letting-iptables-see-bridged-traffic>Letting iptables see bridged traffic</h2>
-<p>Make sure that the <code>br_netfilter</code> module is loaded. This can be done by running <code>lsmod | grep br_netfilter</code>. To load it explicitly call <code>sudo modprobe br_netfilter</code>.</p>
-<p>As a requirement for your Linux Node&rsquo;s iptables to correctly see bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config, e.g.</p>
+<p>Make sure that the <code>br_netfilter</code> module is loaded. This can be done by running <code>lsmod | grep br_netfilter</code>. To load it explicitly, you can run the command <code>sudo modprobe br_netfilter</code>.</p>
+<p>To enable the iptables on your Linux node to correctly see bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config, e.g.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
 </span><span style=color:#4e9a06>br_netfilter
 </span><span style=color:#4e9a06>EOF</span>
@@ -143,8 +138,9 @@ cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
 </span><span style=color:#4e9a06>net.bridge.bridge-nf-call-iptables = 1
 </span><span style=color:#4e9a06>EOF</span>
 sudo sysctl --system
-</code></pre></div><p>For more details please see the <a href=https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements target=_blank>Network Plugin Requirements</a> page.</p>
+</code></pre></div><p>For more details see the <a href=https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements target=_blank>Network Plugin Requirements</a> page.</p>
 <h2 id=check-required-ports>Check required ports</h2>
+<p>This section lists all ports that you may use on your nodes.</p>
 <h3 id=control-plane-nodes>Control-plane node(s)</h3>
 <table>
 <thead>
@@ -222,32 +218,30 @@ sudo sysctl --system
 </tr>
 </tbody>
 </table>
-<p>† Default port range for <a href=https://kubernetes.io/docs/concepts/services-networking/service/ target=_blank>NodePort Services</a>.</p>
-<p>Any port numbers marked with * are overridable, so you will need to ensure any
-custom ports you provide are also open.</p>
-<p>Although etcd ports are included in control-plane nodes, you can also host your own
-etcd cluster externally or on custom ports.</p>
-<p>The pod network plugin you use (see below) may also require certain ports to be
-open. Since this differs with each pod network plugin, please see the
+<p>Above is the default port range for <a href=https://kubernetes.io/docs/concepts/services-networking/service/ target=_blank>NodePort Services</a>.</p>
+<p>Any port numbers marked with * are overridable, so you will need to ensure any custom ports you provide are also open.</p>
+<p>Although etcd ports are included in control-plane nodes, you can also host your own etcd cluster externally or on custom ports.</p>
+<p>The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the
 documentation for the plugins about what port(s) those need.</p>
-<h2 id=setting-node-name>Setting node name</h2>
+<h2 id=setting-a-host-name>Setting a host name</h2>
+<p>Set a hostname for your host by using the following command:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hostnamectl set-hostname your-new-host-name
 <span style=color:#204a87>echo</span> <span style=color:#4e9a06>&#34;127.0.0.1 </span><span style=color:#204a87;font-weight:700>$(</span>hostname<span style=color:#204a87;font-weight:700>)</span><span style=color:#4e9a06>&#34;</span> &gt;&gt; /etc/hosts
 <span style=color:#204a87>echo</span> <span style=color:#4e9a06>&#34;::1       </span><span style=color:#204a87;font-weight:700>$(</span>hostname<span style=color:#204a87;font-weight:700>)</span><span style=color:#4e9a06>&#34;</span> &gt;&gt; /etc/hosts
 </code></pre></div><h2 id=disable-swap>Disable Swap</h2>
+<p>Run the following command to disable the partition swap:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>swapoff -a
-</code></pre></div><p>If you want to disable swap permanently, edit the <code>/etc/fstab</code> file to comment out the swap mount</p>
+</code></pre></div><p>If you want to disable swap permanently, edit the <code>/etc/fstab</code> file to comment out the swap mount.</p>
 <h2 id=disable-selinux>Disable Selinux</h2>
+<p>Run the following command to disable the selinux:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>setenforce <span style=color:#0000cf;font-weight:700>0</span>
-</code></pre></div><p>If you want to disable selinux permanently, edit <code>/etc/sysconfig/selinux</code> and replace <code>SELINUX=enforcing</code> with <code>SELINUX=disabled</code></p>
+</code></pre></div><p>If you want to disable selinux permanently, edit <code>/etc/sysconfig/selinux</code> and replace <code>SELINUX=enforcing</code> with <code>SELINUX=disabled</code>.</p>
 <h2 id=installing-runtime>Install Runtime</h2>
-<p>To run containers in Pods, Kubernetes uses a
-Container Runtime Interface (Container Runtime)</p>
+<p>To run containers in Pods, Kubernetes uses a Container Runtime Interface (CRI).</p>
 <ul class="nav nav-tabs" id=container-runtimes role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#container-runtimes-0 role=tab aria-controls=container-runtimes-0 aria-selected=true>Linux Node</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#container-runtimes-1 role=tab aria-controls=container-runtimes-1>其它操作系统</a></li></ul>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#container-runtimes-1 role=tab aria-controls=container-runtimes-1>Other OS</a></li></ul>
 <div class=tab-content id=container-runtimes><div id=container-runtimes-0 class="tab-pane show active" role=tabpanel aria-labelledby=container-runtimes-0>
-<p><p>By default, Kubernetes uses the Container Runtime Interface (CRI)
-to interface with your chosen container runtime.</p>
+<p><p>By default, Kubernetes uses a CRI to interface with your chosen container runtime.</p>
 <p>If you don&rsquo;t specify a runtime, kubeadm automatically tries to detect an installed container runtime by scanning through a list of well known Unix domain sockets. The following table lists container runtimes and their associated socket paths:</p>
 <table>
 <thead>
@@ -272,12 +266,11 @@ to interface with your chosen container runtime.</p>
 </tbody>
 </table>
 <br>
-If both Docker and containerd are detected, Docker takes precedence. This is needed because Docker 18.09 ships with containerd and both are detectable even if you only installed Docker. If any other two or more runtimes are detected, kubeadm exits with an error.
+If both Docker and Containerd are detected, Docker takes precedence. This is inevitable because Docker 18.09 ships with Containerd and both are detectable even if you only installed Docker. If any other two or more runtimes are detected, kubeadm exits with an error.
 <p>The kubelet integrates with Docker through the built-in <code>dockershim</code> CRI implementation.</p>
 </div>
 <div id=container-runtimes-1 class=tab-pane role=tabpanel aria-labelledby=container-runtimes-1>
-<p><p>By default, kubeadm uses Docker as the container runtime.
-The kubelet integrates with Docker through the built-in <code>dockershim</code> CRI implementation.</p>
+<p><p>By default, kubeadm uses Docker as the container runtime. The kubelet integrates with Docker through the built-in <code>dockershim</code> CRI implementation.</p>
 </div></div>
 <ul class="nav nav-tabs" id=tabset-docspre-install-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docspre-install-3-0 role=tab aria-controls=tabset-docspre-install-3-0 aria-selected=true>Docker</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docspre-install-3-1 role=tab aria-controls=tabset-docspre-install-3-1>Containerd</a></li></ul>
@@ -286,22 +279,25 @@ The kubelet integrates with Docker through the built-in <code>dockershim</code> 
 <ul class="nav nav-tabs" id=tabset-docspre-install-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docspre-install-2-0 role=tab aria-controls=tabset-docspre-install-2-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docspre-install-2-1 role=tab aria-controls=tabset-docspre-install-2-1>Debian-based distributions</a></li></ul>
 <div class=tab-content id=tabset-docspre-install-2><div id=tabset-docspre-install-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docspre-install-2-0>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
+<p><p>Run the following command to install a Red Hat-based distribution:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install docker
 </code></pre></div></div>
 <div id=tabset-docspre-install-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docspre-install-2-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
+<p><p>Run the following command to install a Debian-based distribution:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install docker.io
 </code></pre></div></div></div>
 </div>
 <div id=tabset-docspre-install-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docspre-install-3-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
+<p><p>By default, Containerd only provides download packages for the amd64 architecture. If you are using a different architecture, you can install the <code>containerd.io</code> package from the official Docker repository. Instructions for setting up the Docker repository and installing the <code>containerd.io</code> package for your respective Linux distribution can be found in <a href=https://docs.docker.com/engine/install/#server target=_blank>Installing the Docker Engine</a>.</p>
+<p>You can also use the following source code to build.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.5.4
 wget -c https://github.com/containerd/containerd/releases/download/v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>/containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz
 tar xvf containerd-<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>-linux-amd64.tar.gz -C /usr/local/
 mkdir /etc/containerd/ <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> containerd config default &gt; /etc/containerd/config.toml
 wget -c -O /etc/systemd/system/containerd.service https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
 systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> systemctl <span style=color:#204a87>enable</span> containerd
 </code></pre></div></div></div>
-<p>See <a href=https://kubernetes.io/docs/setup/production-environment/container-runtimes/ target=_blank>container runtimes</a>
-for more information.</p>
+<p>See <a href=https://kubernetes.io/docs/setup/production-environment/container-runtimes/ target=_blank>container runtimes</a> for more information.</p>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>3 - Install</h1>
