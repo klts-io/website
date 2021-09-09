@@ -3,7 +3,7 @@ title: "Preparation"
 weight: 20
 ---
 
-<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page introduces some preparations before installation. For example, it is required to firstly install the `kubeadm` toolbox. For information on how to create a cluster with kubeadm, see the {{< link url="/docs/install" >}} page.
+<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page introduces some preparations before installation. For example, it is required to install the `kubeadm` toolbox to get started. For information on how to create a cluster with kubeadm, see the {{< link url="/docs/install" >}} page.
 
 ## Before you begin
 
