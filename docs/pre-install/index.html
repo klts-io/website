@@ -19,12 +19,12 @@
 Before you begin  A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager. 2 GB or more of RAM per machine (any less will leave little room for your apps).">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/pre-install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-09T14:58:08+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-09T15:34:34+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Preparation">
 <meta itemprop=description content="This page introduces some preparations before installation. For example, it is required to install the kubeadm toolbox to get started. For information on how to create a cluster with kubeadm, see the Install page.
 Before you begin  A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager. 2 GB or more of RAM per machine (any less will leave little room for your apps).">
-<meta itemprop=dateModified content="2021-09-09T14:58:08+08:00">
-<meta itemprop=wordCount content="892">
+<meta itemprop=dateModified content="2021-09-09T15:34:34+08:00">
+<meta itemprop=wordCount content="897">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Preparation">
 <meta name=twitter:description content="This page introduces some preparations before installation. For example, it is required to install the kubeadm toolbox to get started. For information on how to create a cluster with kubeadm, see the Install page.
@@ -59,7 +59,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.cd134684696baf7936daad2fe13cb6cb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.21fa5c8c86facb5bd787f448cf9726c7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -69,7 +69,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.cd134684696baf7936daad2fe13cb6cb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.21fa5c8c86facb5bd787f448cf9726c7.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -161,7 +161,7 @@ English
 <li>2 CPUs or more.</li>
 <li>Good network connectivity between all nodes in the cluster (either public or on-premise network).</li>
 <li>The hostname, MAC address, and product_uuid shall be unique for every node. See <a href=#verify-mac-address target=_blank>here</a> for more details.</li>
-<li>Open the required ports on the host. See <a href=#check-required-ports target=_blank>here</a> for more details.</li>
+<li>Open the required ports on the host. See <a href=#check-required-ports target=_blank>Check required ports</a> for more details.</li>
 <li>Disable the swap partition. You <strong>MUST</strong> disable the swap partition to keep the kubelet working properly.</li>
 </ul>
 <h2 id=verify-mac-address>Verify the MAC address and product_uuid are unique for every node</h2>
@@ -169,9 +169,9 @@ English
 <li>Get the MAC address of the network interfaces using the command <code>ip link</code> or <code>ifconfig -a</code></li>
 <li>Check the product_uuid using the command <code>sudo cat /sys/class/dmi/id/product_uuid</code></li>
 </ul>
-<p>It is very likely that hardware devices have unique addresses, although some virtual machines may use identical addresses. Kubernetes uses these values to uniquely identify the nodes in the cluster. If these values are not unique to each node, the installation process may <a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>fail</a>.</p>
+<p>It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may <a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>fail</a>.</p>
 <h2 id=check-network-adapters>Check network adapters</h2>
-<p>If you have more than one network adapter, and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster addresses go via the appropriate adapter.</p>
+<p>If you have more than one network adapter and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster can set up proper connections via the appropriate adapter.</p>
 <h2 id=letting-iptables-see-bridged-traffic>Letting iptables see bridged traffic</h2>
 <p>Make sure that the <code>br_netfilter</code> module is loaded. This can be done by running <code>lsmod | grep br_netfilter</code>. To load it explicitly, you can run the command <code>sudo modprobe br_netfilter</code>.</p>
 <p>To enable the iptables on your Linux node to correctly see bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config, e.g.</p>
@@ -347,7 +347,7 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 September 9, 2021
-: <a href=https://github.com/klts-io/website/commit/f16683d67908c211945fe8356a397526002906b9>minor text (f16683d)</a>
+: <a href=https://github.com/klts-io/website/commit/1bb26acdce0483e70f48f5c7343929eb198199b5>minor text changes (1bb26ac)</a>
 </div>
 </div>
 </main>
