@@ -3,7 +3,7 @@ title: "Preparation"
 weight: 20
 ---
 
-<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page introduces some pareparation before instalaltion. For example, it is required to firstly install the `kubeadm` toolbox. For information on how to create a cluster with kubeadm, see the {{< link url="/docs/install" >}} page.
+<img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page introduces some preparations before installation. For example, it is required to firstly install the `kubeadm` toolbox. For information on how to create a cluster with kubeadm, see the {{< link url="/docs/install" >}} page.
 
 ## Before you begin
 
@@ -113,7 +113,7 @@ To run containers in Pods, Kubernetes uses a Container Runtime Interface (CRI).
 
 By default, Kubernetes uses a CRI to interface with your chosen container runtime.
 
-If you don't specify a runtime, kubeadm automatically tries to detect an installed container runtime by scanning through a list of well known Unix domain sockets. The following table lists container runtimes and their associated socket paths:
+If you don't specify a runtime, kubeadm automatically tries to detect an installed container runtime by scanning through a list of well-known Unix domain sockets. The following table lists container runtimes and their associated socket paths:
 
 | Runtime    | Path to Unix domain socket      |
 | ---------- | ------------------------------- |
