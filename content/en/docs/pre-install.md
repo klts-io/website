@@ -1,5 +1,5 @@
 ---
-title: "Pre Install"
+title: "Preparation"
 weight: 20
 ---
 
