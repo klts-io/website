@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.1bd35a5c6302ddfe03bc0ff044fe475f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.c491dadeb3fb6e2fd6a5c27a3f31e61f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -357,23 +357,23 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-66481705776642cc7da302c2a84c2907>12 - nokmem</h1>
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" target=_blank>Bug 详情</a>
-<p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code></p>
+<p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code>。</p>
 <h2 id=scope>Bug 影响</h2>
-<p>节点长期使用的时候提示剩余空间不足的错误，具体如下所示：</p>
+<p>节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：</p>
 <pre><code>mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
 </code></pre><p>节点磁盘充足但是一直报和这个错误, 并且创建 <code>Pod</code> 总是失败，这是一个潜在的“定时炸弹”。</p>
-<p>所有使用低版本内核的环境，k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) 修复(直接移除了)</p>
+<p>所有使用低版本内核的环境，Kubernetes 1.22 之前的版本都会受到影响, 在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) 修复(直接移除了)</p>
 <h2 id=prevention>防范措施</h2>
 <ul>
 <li>升级系统内核</li>
-<li>k8s 1.14 及以上
+<li>Kubernetes 1.14 及以上
 <ul>
 <li>重新构建 Kubelet 带上 <code>-tags=nokmem</code></li>
 </ul>
 </li>
-<li>k8s 1.14 以下
+<li>Kubernetes 1.14 以下
 <ul>
-<li>硬编码, 可以参考 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>硬编码, 请参考 <a href=https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 </ul>
 </li>
 </ul>
