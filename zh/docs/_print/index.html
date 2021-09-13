@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.c491dadeb3fb6e2fd6a5c27a3f31e61f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.e06ccc3bc78cb587f8d69bc2a3b1d2bb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -722,21 +722,21 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-5aa68ad2e414f83fec8b9beb2250fdd3>5.9 - CVE-2020-8558</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8558 target=_blank>漏洞详情</a>
-<p><code>kube-proxy</code> 组件在 <code>iptables</code> 和 <code>ipvs</code> 模式下均需要设置内核参数 <code>net.ipv4.conf.all.route_localnet=1</code>， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个LAN或二层网络下的相邻节点上绑定监听了本地 <code>127.0.0.1</code> 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。</p>
+<p><code>kube-proxy</code> 组件在 <code>iptables</code> 和 <code>ipvs</code> 模式下均需要设置内核参数 <code>net.ipv4.conf.all.route_localnet=1</code>， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听本地 <code>127.0.0.1</code> 端口的 TCP/UDP 服务，从而获取接口信息。如果您的服务没有设置必要的安全认证，可能会造成信息泄露风险。</p>
 <h2 id=scope>漏洞影响</h2>
-<p>当攻击者拥有主机网络配置能力或运行在一个具备了 <code>CAP_NET_RAW</code> 能力的容器实例时，就可以获取在目标节点上监听了 <code>127.0.0.1</code> 的服务 <code>socket</code> 信息。如果在目标主机上存在 <code>127.0.0.1</code> 可以访问到且不需要任何认证鉴权的暴露服务，那么该服务信息就能被攻击者获取。</p>
+<p>当攻击者拥有主机网络配置能力或运行在一个具备了 <code>CAP_NET_RAW</code> 能力的容器实例时，就可以获取在目标节点上监听 <code>127.0.0.1</code> 的服务 <code>socket</code> 信息。如果在目标主机上存在 <code>127.0.0.1</code> 可以访问且不需要任何认证鉴权的暴露服务，那么该服务信息就能被攻击者获取。</p>
 <h3 id=cvss>漏洞评分</h3>
 <ul>
-<li>如果集群 <code>API Server</code> 开启了非认证端口（默认8080），那么攻击者可能获取到 <code>API Server</code> 接口相关信息，威胁等级为高危漏洞，评分为8.8分。</li>
-<li>如果集群 <code>API Server</code> 默认关闭了非认证端口，威胁等级为中危漏洞，评分为5.4分。</li>
+<li>如果集群 <code>API Server</code> 开启了非认证端口（默认 8080），那么攻击者可能获取到 <code>API Server</code> 接口相关信息，威胁等级为高危漏洞，评分为 8.8 分。</li>
+<li>如果集群 <code>API Server</code> 默认关闭了非认证端口，威胁等级为中危漏洞，评分为 5.4 分。</li>
 </ul>
 <h2 id=prevention>防范措施</h2>
 <p>建议您采取以下安全防范措施：</p>
-<p>如果业务容器需使用主机网络模式且又监听在非安全端口上，可以通过在节点上手动添加 <code>iptables</code> 规则来缓解此漏洞。
-执行以下命令，在集群中配置 <code>iptables</code> 规则，用于拒绝非本地对 <code>127.0.0.1</code> 的访问流量：</p>
+<p>如果业务容器需使用主机网络模式且又在非安全端口上监听，则可以通过在节点上手动添加 <code>iptables</code> 规则来缓解此漏洞。
+执行以下命令在集群中配置 <code>iptables</code> 规则，用于拒绝非本地对 <code>127.0.0.1</code> 的访问流量：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>iptables -I INPUT --dst 127.0.0.0/8 ! --src 127.0.0.0/8 -m conntrack ! --ctstate RELATED,ESTABLISHED,DNAT -j DROP
-</code></pre></div><p>如果集群不需要开启API Server 不安全端口，可以将 &ndash;insecure-port=0 添加到 kubernetes API 服务器命令行来禁用端口。</p>
-<p>如集群内运行有不受信的容器，可以禁止 <code>Container</code> 开启 <code>CAP_NET_RAW</code> 能力，可以在 <code>pod spec</code> 中关闭 <code>Container</code> 的 <code>CAP_NET_RAW</code> 能力。</p>
+</code></pre></div><p>如果集群不需要开启 API Server 不安全端口，可以将 &ndash;insecure-port=0 添加到 kubernetes API 服务器命令行来禁用端口。</p>
+<p>如集群内运行不受信任的容器，可以禁止 <code>Container</code> 开启 <code>CAP_NET_RAW</code> 能力，在 <code>pod spec</code> 中关闭 <code>Container</code> 的 <code>CAP_NET_RAW</code> 能力。</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>securityContext</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>capabilities</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>drop</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> 
