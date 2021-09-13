@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.e06ccc3bc78cb587f8d69bc2a3b1d2bb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.314ca4bb7ac9a70608ca63f00d539bd8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -761,16 +761,16 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-ce240d314dc85c8ab698d26f1466e5a2>5.10 - CVE-2020-8559</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8559 target=_blank>漏洞详情</a>
-<p><code>kube-apiserver</code> 组件的安全漏洞，攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。</p>
+<p>这是 <code>kube-apiserver</code> 组件的安全漏洞，攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点权限提升的漏洞。</p>
 <h2 id=scope>漏洞影响</h2>
-<p>由于 <code>kube-apiserver</code> 中在升级请求的代理后端中允许将请求传播回源客户端，攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成被攻击节点的权限提升漏洞。</p>
+<p>由于 <code>kube-apiserver</code> 在升级请求的代理后端中允许将请求传播回源客户端，所以攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，然后利用请求中原有的访问凭据转发请求至其他目标节点，从而造成被攻击节点出现权限提升的漏洞。</p>
 <h3 id=cvss>漏洞评分</h3>
-<p>该漏洞为中危漏洞， <code>CVSS</code> 评分为6.4。
+<p>该漏洞为中危漏洞， <code>CVSS</code> 评分为 6.4。
 如果有多个集群共享使用了相同的 <code>CA</code> 和认证凭证，攻击者可以利用此漏洞攻击其他集群，这种情况下该漏洞为高危漏洞。</p>
 <h2 id=prevention>防范措施</h2>
 <p>对于集群内跨节点的攻击，建议您采取以下安全防范措施：</p>
 <ul>
-<li>及时吊销可能泄露的 <code>kubeconfig</code> 凭证，并且遵循权限最小化原则，收敛子账号不必要的 <code>pods/exec</code>、<code>pods/attach</code>、<code>pods/portforward</code>和 <code>proxy</code> 类型的资源模型 <code>RBAC</code> 权限。</li>
+<li>及时吊销可能泄露的 <code>kubeconfig</code> 凭证，并且遵循权限最小化原则，收敛子账号不必要的 <code>pods/exec</code>、<code>pods/attach</code>、<code>pods/portforward</code> 和 <code>proxy</code> 类型的资源模型 <code>RBAC</code> 权限。</li>
 </ul>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
