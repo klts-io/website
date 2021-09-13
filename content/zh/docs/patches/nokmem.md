@@ -1,16 +1,16 @@
 ---
 title: nokmem
 short_description: |
-  节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
+  节点磁盘充足但是一直报磁盘不足无法创建 `Pod`。
 ---
 
 {{< link text="Bug 详情" url="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" >}}
 
-节点磁盘充足但是一直报磁盘不足无法创建 `Pod`
+节点磁盘充足但是一直报磁盘不足无法创建 `Pod`。
 
 ## Bug 影响 {#scope}
 
-节点长期使用的时候提示剩余空间不足的错误，具体如下所示：
+节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：
 
 ```
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
@@ -18,15 +18,15 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 
 节点磁盘充足但是一直报和这个错误, 并且创建 `Pod` 总是失败，这是一个潜在的“定时炸弹”。
 
-所有使用低版本内核的环境，k8s 1.22 之前的版本都受到影响, 在 runc 1.0.0-rc94 ({{< link text="opencontainers/runc#2840" url="https://github.com/opencontainers/runc/pull/2840" >}}) 修复(直接移除了)
+所有使用低版本内核的环境，Kubernetes 1.22 之前的版本都会受到影响, 在 runc 1.0.0-rc94 ({{< link text="opencontainers/runc#2840" url="https://github.com/opencontainers/runc/pull/2840" >}}) 修复(直接移除了)
 
 ## 防范措施 {#prevention}
 
 - 升级系统内核
-- k8s 1.14 及以上
+- Kubernetes 1.14 及以上
   - 重新构建 Kubelet 带上 `-tags=nokmem`
-- k8s 1.14 以下
-  - 硬编码, 可以参考 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
+- Kubernetes 1.14 以下
+  - 硬编码, 请参考 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/master/patches/nokmem.1.13.patch" >}}
 
 
 ## KLTS 修复的版本 {#klts-fixed}
