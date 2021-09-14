@@ -252,21 +252,45 @@ systemctl enable kubelet
 ```
 
 ## 拉取依赖镜像
+{{< tabs >}}
+{{% tab name="默认" %}}
 执行以下命令 pull 依赖的镜像：
 ``` bash
 VERSION=1.18.20-lts.0
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
+{{% /tab %}}}
+{{% tab name="国内加速 🚀" %}}
+执行以下命令 pull 依赖的镜像：
+``` bash
+VERSION=1.18.20-lts.0
+REPOS=ghcr.m.daocloud.io/klts-io/kubernetes-lts
+kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 后续对 kubeadm 的操作都需要加上 `--image-repository`，`--kubernetes-version` 主动指定镜像。
 
 ## 初始化控制面节点
+{{< tabs >}}
+{{% tab name="默认" %}}
 执行以下命令初始化控制面的节点：
 ``` bash
 VERSION=1.18.20-lts.0
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
+{{% /tab %}}}
+{{% tab name="国内加速 🚀" %}}
+执行以下命令初始化控制面的节点：
+``` bash
+VERSION=1.18.20-lts.0
+REPOS=ghcr.m.daocloud.io/klts-io/kubernetes-lts
+kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 有关更多安装说明，请参阅 {{< link text="Kubernetes 操作指南" url="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" >}}。
