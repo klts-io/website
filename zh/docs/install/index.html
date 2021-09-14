@@ -22,15 +22,15 @@ cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klt
 cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ 执行以下代码设置下载 KLTS 的软件源： /etc/hosts hub.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-08T15:55:49+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-09-14T16:57:40+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="安装步骤">
 <meta itemprop=description content="KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
 安装前请确认已经完成了准备工作。
 设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 执行以下代码设置下载 KLTS 的软件源：
 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  执行以下代码设置下载 KLTS 的软件源：
 cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ 执行以下代码设置下载 KLTS 的软件源： /etc/hosts hub.">
-<meta itemprop=dateModified content="2021-09-08T15:55:49+08:00">
-<meta itemprop=wordCount content="334">
+<meta itemprop=dateModified content="2021-09-14T16:57:40+08:00">
+<meta itemprop=wordCount content="362">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="安装步骤">
 <meta name=twitter:description content="KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
@@ -68,7 +68,7 @@ cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.314ca4bb7ac9a70608ca63f00d539bd8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.d5e5b5a7e2b7ad341e3899a2e3d2b957.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -78,7 +78,7 @@ cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.314ca4bb7ac9a70608ca63f00d539bd8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.d5e5b5a7e2b7ad341e3899a2e3d2b957.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -435,21 +435,41 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <p>执行以下命令开机自动启动 Kubelet：</p>
 <pre><code>systemctl enable kubelet
 </code></pre><h2 id=拉取依赖镜像>拉取依赖镜像</h2>
-<p>执行以下命令 pull 依赖的镜像：</p>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-7 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-7-0 role=tab aria-controls=tabset-zhdocsinstall-7-0 aria-selected=true>默认</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-7-1 role=tab aria-controls=tabset-zhdocsinstall-7-1>国内加速 🚀</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-7><div id=tabset-zhdocsinstall-7-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-7-0>
+<p><p>执行以下命令 pull 依赖的镜像：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p>后续对 kubeadm 的操作都需要加上 <code>--image-repository</code>，<code>--kubernetes-version</code> 主动指定镜像。</p>
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-7-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-7-1>
+<p><p>执行以下命令 pull 依赖的镜像：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.m.daocloud.io/klts-io/kubernetes-lts
+kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
+</code></pre></div></div></div>
+<p>后续对 kubeadm 的操作都需要加上 <code>--image-repository</code>，<code>--kubernetes-version</code> 主动指定镜像。</p>
 <h2 id=初始化控制面节点>初始化控制面节点</h2>
-<p>执行以下命令初始化控制面的节点：</p>
+<ul class="nav nav-tabs" id=tabset-zhdocsinstall-8 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-zhdocsinstall-8-0 role=tab aria-controls=tabset-zhdocsinstall-8-0 aria-selected=true>默认</a></li>
+<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-8-1 role=tab aria-controls=tabset-zhdocsinstall-8-1>国内加速 🚀</a></li></ul>
+<div class=tab-content id=tabset-zhdocsinstall-8><div id=tabset-zhdocsinstall-8-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-8-0>
+<p><p>执行以下命令初始化控制面的节点：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p>有关更多安装说明，请参阅 <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Kubernetes 操作指南</a>。</p>
+</code></pre></div></div>
+<div id=tabset-zhdocsinstall-8-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-8-1>
+<p><p>执行以下命令初始化控制面的节点：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.m.daocloud.io/klts-io/kubernetes-lts
+kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
+</code></pre></div></div></div>
+<p>有关更多安装说明，请参阅 <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Kubernetes 操作指南</a>。</p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.09.08
-: <a href=https://github.com/klts-io/website/commit/570b59e23ab26cf37ce73ff4977e373ae4f8a7e9>minor changes (570b59e)</a>
+2021.09.14
+: <a href=https://github.com/klts-io/website/commit/90702481f10eb00009b11a12c83e3d38230ece89>Add mirror image for cn (9070248)</a>
 </div>
 </div>
 </main>
