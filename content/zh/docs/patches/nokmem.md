@@ -1,5 +1,6 @@
 ---
 title: nokmem
+weight: -100
 short_description: |
   节点磁盘充足但是一直报磁盘不足无法创建 `Pod`。
 ---
