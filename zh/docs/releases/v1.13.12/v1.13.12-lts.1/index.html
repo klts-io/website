@@ -16,9 +16,9 @@
 <title>v1.13.12-lts.1 | KLTS.io</title>
 <meta name=description content="KLTS 的官网"><meta property="og:title" content="v1.13.12-lts.1">
 <meta property="og:description" content="这是 KLTS 发布的第一个 v1.13.12 修复版本。
-补丁  CVE-2020-8552此漏洞可能使 API Server 容易受到来自成功 API 请求的 DoS(拒绝服务攻击)。
- CVE-2020-8558kube-proxy 组件在 iptables 和 ipvs 模式下均需设置内核参数 net.ipv4.conf.all.route_localnet=1，从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听了本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
- TODO CVE-2020-8559kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。
+补丁  CVE-2020-8552此漏洞可能使 API Server 易于遭受 API 请求成功造成的 DoS（拒绝服务攻击）。
+ CVE-2020-8558kube-proxy 组件在 iptables 和 ipvs 模式下均需要设置内核参数 net.ipv4.conf.all.route_localnet=1， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果您的服务没有设置必要的安全认证，可能会造成信息泄露风险。
+ TODO CVE-2020-8559这是 kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点权限提升的漏洞。
  CVE-2021-3121存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。
  nokmem节点磁盘充足但是一直报磁盘不足无法创建 Pod。
   ">
@@ -27,20 +27,20 @@
 <meta property="article:modified_time" content="2021-09-03T13:34:02+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="v1.13.12-lts.1">
 <meta itemprop=description content="这是 KLTS 发布的第一个 v1.13.12 修复版本。
-补丁  CVE-2020-8552此漏洞可能使 API Server 容易受到来自成功 API 请求的 DoS(拒绝服务攻击)。
- CVE-2020-8558kube-proxy 组件在 iptables 和 ipvs 模式下均需设置内核参数 net.ipv4.conf.all.route_localnet=1，从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听了本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
- TODO CVE-2020-8559kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。
+补丁  CVE-2020-8552此漏洞可能使 API Server 易于遭受 API 请求成功造成的 DoS（拒绝服务攻击）。
+ CVE-2020-8558kube-proxy 组件在 iptables 和 ipvs 模式下均需要设置内核参数 net.ipv4.conf.all.route_localnet=1， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果您的服务没有设置必要的安全认证，可能会造成信息泄露风险。
+ TODO CVE-2020-8559这是 kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点权限提升的漏洞。
  CVE-2021-3121存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。
  nokmem节点磁盘充足但是一直报磁盘不足无法创建 Pod。
   ">
 <meta itemprop=dateModified content="2021-09-03T13:34:02+08:00">
-<meta itemprop=wordCount content="39">
+<meta itemprop=wordCount content="41">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="v1.13.12-lts.1">
 <meta name=twitter:description content="这是 KLTS 发布的第一个 v1.13.12 修复版本。
-补丁  CVE-2020-8552此漏洞可能使 API Server 容易受到来自成功 API 请求的 DoS(拒绝服务攻击)。
- CVE-2020-8558kube-proxy 组件在 iptables 和 ipvs 模式下均需设置内核参数 net.ipv4.conf.all.route_localnet=1，从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听了本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。
- TODO CVE-2020-8559kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。
+补丁  CVE-2020-8552此漏洞可能使 API Server 易于遭受 API 请求成功造成的 DoS（拒绝服务攻击）。
+ CVE-2020-8558kube-proxy 组件在 iptables 和 ipvs 模式下均需要设置内核参数 net.ipv4.conf.all.route_localnet=1， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果您的服务没有设置必要的安全认证，可能会造成信息泄露风险。
+ TODO CVE-2020-8559这是 kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点权限提升的漏洞。
  CVE-2021-3121存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。
  nokmem节点磁盘充足但是一直报磁盘不足无法创建 Pod。
   ">
@@ -74,7 +74,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.5a7447ac4961acf802dedf0c3c700c67.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4d319fe05ea809a96c7d55c12e7ef202.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -84,7 +84,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.5a7447ac4961acf802dedf0c3c700c67.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4d319fe05ea809a96c7d55c12e7ef202.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -256,9 +256,9 @@
 <p>这是 KLTS 发布的第一个 v1.13.12 修复版本。</p>
 <h2 id=补丁>补丁</h2>
 <ul>
-<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 API Server 容易受到来自成功 API 请求的 DoS(拒绝服务攻击)。" data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>此漏洞可能使 <code>API Server</code> 容易受到来自成功 <code>API</code> 请求的 <code>DoS</code>(拒绝服务攻击)。</p></li>
-<li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy 组件在 iptables 和 ipvs 模式下均需设置内核参数 net.ipv4.conf.all.route_localnet=1，从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听了本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。" data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p><code>kube-proxy</code> 组件在 <code>iptables</code> 和 <code>ipvs</code> 模式下均需设置内核参数 <code>net.ipv4.conf.all.route_localnet=1</code>，从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听了本地 <code>127.0.0.1</code> 端口的 TCP/UDP 服务，从而获取接口信息。如果服务没有设置必要的安全认证，可能会造成信息泄露风险。</p></li>
-<li>TODO <a href=/zh/docs/patches/cve-2020-8559 title="kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。" data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p><code>kube-apiserver</code> 组件的安全漏洞，攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点的权限提升漏洞。</p></li>
+<li><a href=/zh/docs/patches/cve-2020-8552 title="此漏洞可能使 API Server 易于遭受 API 请求成功造成的 DoS（拒绝服务攻击）。" data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>此漏洞可能使 <code>API Server</code> 易于遭受 <code>API</code> 请求成功造成的 <code>DoS</code>（拒绝服务攻击）。</p></li>
+<li><a href=/zh/docs/patches/cve-2020-8558 title="kube-proxy 组件在 iptables 和 ipvs 模式下均需要设置内核参数 net.ipv4.conf.all.route_localnet=1， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听本地 127.0.0.1 端口的 TCP/UDP 服务，从而获取接口信息。如果您的服务没有设置必要的安全认证，可能会造成信息泄露风险。" data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p><code>kube-proxy</code> 组件在 <code>iptables</code> 和 <code>ipvs</code> 模式下均需要设置内核参数 <code>net.ipv4.conf.all.route_localnet=1</code>， 从而允许本地回环访问。攻击者可能通过共享主机网络的容器，或在集群节点访问同一个 LAN 或二层网络下的相邻节点上绑定监听本地 <code>127.0.0.1</code> 端口的 TCP/UDP 服务，从而获取接口信息。如果您的服务没有设置必要的安全认证，可能会造成信息泄露风险。</p></li>
+<li>TODO <a href=/zh/docs/patches/cve-2020-8559 title="这是 kube-apiserver 组件的安全漏洞，攻击者可以通过截取某些发送至节点 kubelet 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点权限提升的漏洞。" data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>这是 <code>kube-apiserver</code> 组件的安全漏洞，攻击者可以通过截取某些发送至节点 <code>kubelet</code> 的升级请求，通过请求中原有的访问凭据转发请求至其他目标节点，从而造成节点权限提升的漏洞。</p></li>
 <li><a href=/zh/docs/patches/cve-2021-3121 title="存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。" data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>存在该漏洞的程序可能会因为处理了包含恶意 <code>Protobuf</code> 消息而崩溃。如果您使用的 <code>Gogo Protobuf</code> 版本过低，可能存在该漏洞。</p></li>
 <li><a href=/zh/docs/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 Pod。" data-toggle=tooltip data-placement=top target>nokmem</a><p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code>。</p></li>
 </ul>
