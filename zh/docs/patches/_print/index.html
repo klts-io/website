@@ -53,7 +53,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4d319fe05ea809a96c7d55c12e7ef202.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.49d0e41344c56bdf4cc9923078d2eb17.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -100,10 +100,10 @@
 <p><code>kubectl cp</code> 命令允许用户在容器和用户机器之间拷贝文件，攻击者可能通过在镜像或运行容器中植入带有符号链接（symbolic links）头的恶意 <code>tar</code> 包，在 <code>cp</code> 命令执行解压过程中修改或监控符号链接头同名目录下的任意文件，从而造成破坏。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14.1</li>
-<li>1.13.6</li>
-<li>1.12.8</li>
-<li>1.11.10</li>
+<li>v1.14.1</li>
+<li>v1.13.6</li>
+<li>v1.12.8</li>
+<li>v1.11.10</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -120,8 +120,8 @@
 <p>为 <code>Pod</code> 指定 <code>mustRunAsNonRoot: true</code>。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14.3</li>
-<li>1.13.7</li>
+<li>v1.14.3</li>
+<li>v1.13.7</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -140,9 +140,9 @@
 <p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历 (Path Traversal) 方式将恶意文件写入任意路径。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14.3</li>
-<li>1.13.7</li>
-<li>1.12.10</li>
+<li>v1.14.3</li>
+<li>v1.13.7</li>
+<li>v1.12.10</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -159,7 +159,7 @@
 <p>以这种方式访问资源将等同于授予命名空间内所有角色及其权限，这意味着本来只能访问命名空间中一个资源的用户将能够创建、查看、更新或删除整个集群范围的资源（具体取决于其命名空间角色权限）。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.12.12</li>
+<li>v1.12.12</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -175,9 +175,9 @@
 <p>该漏洞存在于 <code>Kubelet</code> 中，用于性能调试的 <code>/debug/pprof</code> 跟健康检查端口 <code>/healthz</code> 绑定在一起，其中 <code>/debug/pprof</code> 会进行安全认证，但 <code>/healthz</code> 接口并不进行认证鉴权。所以如果 <code>Kubelet</code> 的 <code>healthz</code> 地址未使用 <code>localhost</code>，则会存在泄露机器敏感信息的风险。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.14.4</li>
-<li>1.13.8</li>
-<li>1.12.10</li>
+<li>v1.14.4</li>
+<li>v1.13.8</li>
+<li>v1.12.10</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -195,9 +195,9 @@
 <p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历 (Path Traversal)。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.15.2</li>
-<li>1.14.5</li>
-<li>1.13.9</li>
+<li>v1.15.2</li>
+<li>v1.14.5</li>
+<li>v1.13.9</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -216,9 +216,9 @@
 <p>如果容器 <code>tar</code> 包中包含恶意文件，当攻击者具有 <code>kubectl cp</code> 命令的执行权限时，可以利用路径遍历(Path Traversal)。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.15.4</li>
-<li>1.14.7</li>
-<li>1.13.11</li>
+<li>v1.15.4</li>
+<li>v1.14.7</li>
+<li>v1.13.11</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -303,9 +303,9 @@
 </ul>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.18.6</li>
-<li>1.17.9</li>
-<li>1.16.13</li>
+<li>v1.18.6</li>
+<li>v1.17.9</li>
+<li>v1.16.13</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
@@ -337,10 +337,10 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </code></pre><p>如果您使用了 <code>Protobuf</code> 消息的相关组件，推荐将 <code>Gogo Protobuf</code> 编译器升级到漏洞修复版本（v1.3.2 或更高的版本），再基于升级后的 <code>Protobuf</code> 编译器重新生成相关的 <code>Protobuf</code> 消息。</p>
 <h2 id=official-fixed>官方修复的版本</h2>
 <ul>
-<li>1.21: 1.21.1</li>
-<li>1.20: 1.20.7</li>
-<li>1.19: 1.19.11</li>
-<li>1.18.19</li>
+<li>v1.21.1</li>
+<li>v1.20.7</li>
+<li>v1.19.11</li>
+<li>v1.18.19</li>
 </ul>
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
