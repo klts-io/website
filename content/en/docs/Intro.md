@@ -16,7 +16,7 @@ This section describes the kubernetes versions that KLTS can support.
 
 <img src="../klts_job.png" width="750">
 
-The figure above shows the latest version of kubernetes as of August 31, 2021 was 1.22. In a normal case, the Kubernetes community only maintains four recent versions, such as 1.19 to 1.22. 
+The figure above shows the latest version of kubernetes as of August 31, 2021 was 1.22. In a normal case, the Kubernetes community only maintains four recent versions such as 1.19 to 1.22. 
 
 
 How and where can you get the earlier versions that the Kubernetes community does not maintain but your company is still using in a production or equivalent environment? This is one of the main reasons why KLTS is set up here. 
