@@ -19,13 +19,13 @@ This section describes the kubernetes versions that KLTS can support.
 The figure above shows the latest version of kubernetes as of August 31, 2021 was 1.22. In a normal case, the Kubernetes community only maintains four recent versions, such as 1.19 to 1.22. 
 
 
-How and where can you get the earlier versions that the Kubernetes community does not maintain but your company is still using the verions in a production or equivalent environment? This is one of the reason why KLTS is set up here. 
+How and where can you get the earlier versions that the Kubernetes community does not maintain but your company is still using in a production or equivalent environment? This is one of the main reasons why KLTS is set up here. 
 
 
-As of August 31, 2021, KLTS maintains those earlier versions from 1.10 to 1.18. We promise to maintain each earlier version at least two years. Kubernetes 1.10 is the production kernel built in DaoCloud Enterprise 3.0, a PaaS platform developed by daocloud.io, and may be maintained for a relatively longer period. 
+As of August 31, 2021, KLTS maintains those earlier versions from 1.10 to 1.18. We hereby promise to maintain each earlier version at least two years. Especially, Kubernetes 1.10 is the production kernel built in DaoCloud Enterprise 3.0, a PaaS platform developed by {{< link text="daocloud.io" url="https://www.daocloud.io/" >}}, and may be maintained for a relatively longer period. 
 
 
-The Kubernetes community generally releases a major version every 4 months or so, and the Kubernetes versions maintained by KLTS will change accordingly. Typically, if the Kubernetes community stops to maintain a version, KLTS will take over to maintain it in a month.
+The Kubernetes community generally releases a major version every four months or so, and the Kubernetes versions maintained by KLTS will change accordingly. Typically, if the Kubernetes community stops to maintain a version, KLTS will take over to maintain it in a month.
 
 
 If some bugs or critical vulnerables are fixed by the KLTS team, we will upload the fixed version here for the community members to download and use it freely.
