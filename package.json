@@ -18,7 +18,7 @@
   "homepage": "https://github.com/klts-io/website#readme",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.3.7",
     "postcss-cli": "^7.1.2"
   }
 }
