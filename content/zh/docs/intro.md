@@ -35,7 +35,7 @@ KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10. 1.13.12, 1.1
 
 如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这 9 个版本的维护周期如下：
 
-![KLTS 维护版本](images/whatKLTSdoes.png)
+![KLTS 维护版本](../images/whatKLTSdoes.png)
 
 从上图可看出，Kubernetes 社区对某个版本的维护周期通常在一年左右，而 KLTS 可以在接下来的三年内提供长期维护，直至代码无法兼容，才会将相应版本淘汰。
 ## 漏洞修复 {#bug-fix}
@@ -45,7 +45,7 @@ KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10. 1.13.12, 1.1
 - 宣称“所有早期版本均有这个安全漏洞，建议用户立即停止使用早期版本”
 - 拒绝[修复早期版本漏洞的要求](https://github.com/kubernetes/kubernetes/issues/101435)
 
-![CVE-2021-3121](images/cve2021.png)
+![CVE-2021-3121](../images/cve2021.png)
 
  KLTS 针对这一现状，默默修复了深受 [CVE-2021-3121](https://www.cvedetails.com/cve/CVE-2021-3121) 安全漏洞影响的 8 个早期版本：
 
