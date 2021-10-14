@@ -20,12 +20,12 @@
    K8s 版本 初次发布日期 稳定版本日期     1.10 2018-03-27 2019-02-13   1.11 2018-07-28 2019-05-01   1.12 2018-09-28 2019-07-08   1.13 2018-12-04 2019-10-15   1.14 2019-03-25 2019-12-11   1.15 2019-07-20 2020-05-06   1.16 2019-09-18 2020-09-02   1.17 2019-12-08 2021-01-13   1.18 2020-03-25 2021-06-18   1.19 2020-08-26 2021-10-28   1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/intro/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-10-14T14:15:41+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-10-14T14:16:45+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="简介">
 <meta itemprop=description content="KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
 之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。如下表所示，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本。
    K8s 版本 初次发布日期 稳定版本日期     1.10 2018-03-27 2019-02-13   1.11 2018-07-28 2019-05-01   1.12 2018-09-28 2019-07-08   1.13 2018-12-04 2019-10-15   1.14 2019-03-25 2019-12-11   1.15 2019-07-20 2020-05-06   1.16 2019-09-18 2020-09-02   1.17 2019-12-08 2021-01-13   1.18 2020-03-25 2021-06-18   1.19 2020-08-26 2021-10-28   1.">
-<meta itemprop=dateModified content="2021-10-14T14:15:41+08:00">
+<meta itemprop=dateModified content="2021-10-14T14:16:45+08:00">
 <meta itemprop=wordCount content="201">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="简介">
@@ -329,7 +329,7 @@
 <h2 id=maint-cycle>KLTS 维护周期</h2>
 <p>KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10. 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20。</p>
 <p>如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这 9 个版本的维护周期如下：</p>
-<p><img src=images/whatKLTSdoes.png alt="KLTS 维护版本"></p>
+<p><img src=../images/whatKLTSdoes.png alt="KLTS 维护版本"></p>
 <p>从上图可看出，Kubernetes 社区对某个版本的维护周期通常在一年左右，而 KLTS 可以在接下来的三年内提供长期维护，直至代码无法兼容，才会将相应版本淘汰。</p>
 <h2 id=bug-fix>漏洞修复</h2>
 <p>以 2021 年 1 月发现的 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞为例，CVSS 危急分数高达 7.5。但截止 2021 年 9 月 Kubernetes 社区：</p>
@@ -338,7 +338,7 @@
 <li>宣称“所有早期版本均有这个安全漏洞，建议用户立即停止使用早期版本”</li>
 <li>拒绝<a href=https://github.com/kubernetes/kubernetes/issues/101435>修复早期版本漏洞的要求</a></li>
 </ul>
-<p><img src=images/cve2021.png alt=CVE-2021-3121></p>
+<p><img src=../images/cve2021.png alt=CVE-2021-3121></p>
 <p>KLTS 针对这一现状，默默修复了深受 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞影响的 8 个早期版本：</p>
 <ul>
 <li>v1.17.17</li>
@@ -358,7 +358,7 @@
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.10.14
-: <a href=https://github.com/klts-io/website/commit/e7a3c9a644a379206d9a86efd62372a74ecb9e50>Update intro.md (e7a3c9a)</a>
+: <a href=https://github.com/klts-io/website/commit/b17273dd154b6e8c046fe1d6771432be4632d9ac>Update intro.md (b17273d)</a>
 </div>
 </div>
 </main>
