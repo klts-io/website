@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ $pages := .Pages }}
+{{ with site.Params.language_alternatives }}
+{{ range . }}
+       {{ with (where $.Translations ".Lang" . ) }}
+       {{ $p := index . 0 }}
+       {{ $pages = $pages | lang.Merge $p.Pages }}
+       {{ end }}
+{{ end }}
+{{ end }}
+
+<section class="row">
+	<div class="container text-center">
+		<h3>{{ .Title }}</h3>
+		<div>
+			{{ range $pages.ByTitle }}
+			{{ $logo := .Resources.GetMatch "**{feature,logo}*.svg" }}
+			{{ if not $logo }}
+				{{ $logo = .Resources.GetMatch "**logo*.png" }}
+			{{ end }}
+			{{ $p := . }}
+			<a target="_blank" href="{{ with $p.Params.content_url }}{{ . | safeURL }}{{ else }}{{ .RelPermalink }}{{ end }}">
+			{{ with $logo }}
+				<img src="{{ .RelPermalink }}" alt="{{ $p.LinkTitle }}">
+			{{ else }}
+				{{ errorf "Case Studies: Missing logo for %s. Put a PNG or SVG with the word 'logo' in the filename into %q" $p.LinkTitle $p.File.Dir }}
+			{{ end }}
+			</a>
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{ .Content }}
+{{ end }}
