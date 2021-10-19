@@ -1,5 +1,5 @@
 ---
-title: "安装步骤"
+title: "安装"
 weight: 30
 ---
 
