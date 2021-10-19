@@ -59,7 +59,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.14f5f31c4c81c36da9ef9790df20bb6b.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.75c0364f75087b3d10e298cf49510883.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -776,7 +776,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <p>如果业务容器需使用主机网络模式且又在非安全端口上监听，则可以通过在节点上手动添加 <code>iptables</code> 规则来缓解此漏洞。
 执行以下命令在集群中配置 <code>iptables</code> 规则，用于拒绝非本地对 <code>127.0.0.1</code> 的访问流量：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>iptables -I INPUT --dst 127.0.0.0/8 ! --src 127.0.0.0/8 -m conntrack ! --ctstate RELATED,ESTABLISHED,DNAT -j DROP
-</code></pre></div><p>如果集群不需要开启 API Server 不安全端口，可以将 &ndash;insecure-port=0 添加到 kubernetes API 服务器命令行来禁用端口。</p>
+</code></pre></div><p>如果集群不需要开启 API Server 不安全端口，可以将 <code>--insecure-port=0</code> 添加到 kubernetes API 服务器命令行来禁用端口。</p>
 <p>如集群内运行不受信任的容器，可以禁止 <code>Container</code> 开启 <code>CAP_NET_RAW</code> 能力，在 <code>pod spec</code> 中关闭 <code>Container</code> 的 <code>CAP_NET_RAW</code> 能力。</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>securityContext</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
 </span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>capabilities</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
