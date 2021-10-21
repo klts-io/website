@@ -42,7 +42,7 @@ KLTS currently maintains nine stable releases: 1.10.13, 1.11.10, 1.12.10. 1.13.1
 
 If the Kubernetes community finds new CVE vulnerabilities or bugs, the KLTS team will take over those releases that the community has abandoned for maintenance and keep them in a continuous maintenance state. The current maintenance cycle for these 9 releases is as follows.
 
-![maintained by KLTS](../images/whatKLTSdoes.png)
+![maintained by KLTS](../whatKLTSdoes.png)
 
 As shown above, the Kubernetes community typically has a maintenance cycle of about one year for a minor version, while KLTS can provide long-term maintenance for the next three years until the code becomes obviously incompatible and the version will be phased out.
 ## Bug fix {#bug-fix}
@@ -52,7 +52,7 @@ As an example, the [CVE-2021-3121](https://www.cvedetails.com/cve/CVE-2021-3121)
 - Announced that “all prior versions remain exposed and users should stop using them immediately”
 - [Requests to fix earlier versions](https://github.com/kubernetes/kubernetes/issues/101435) are denied:
 
-![CVE-2021-3121](../images/cve2021.png)
+![CVE-2021-3121](../cve2021.png)
 
  KLTS addresses this situation by diligently fixing eight earlier versions that were heavily affected by the [CVE-2021-3121](https://www.cvedetails.com/cve/CVE-2021-3121) vulnerability. No complaints, no demands!
 
