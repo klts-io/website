@@ -6,7 +6,7 @@ KLTS, known as Kubernetes Long Term Support, has a primary mission to provide fr
 
 Kubernetes versions are expressed as **x.y.z**, where **x** is the major version, **y** is the minor version, and **z** is the patch version. For the versions maintained by KLTS, it is followed by a string beginning with **lts**.  
 
- One of the reasons to maintain earlier versions is the fact that in a real production environment, the latest release is not necessarily the best or the most stable. As shown in the table below, a stable release of Kubernetes is not available until one year after the initial release of a particular version.
+ One of the reasons to maintain earlier versions is the fact that in a real production environment, the latest release is not the best or the most stable. As shown in the table below, a stable release of Kubernetes is not available until one year after the initial release of a particular version.
 
 
 | **Ver.** | **Initial release date** | **Stable release date** |
