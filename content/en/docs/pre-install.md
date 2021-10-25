@@ -4,9 +4,7 @@ weight: 20
 ---
 
 <img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page introduces some preparations before installation. For example, it is required to install the `kubeadm` toolbox to get started. For information on how to create a cluster with kubeadm, see the {{< link url="/docs/install" >}} page.
-
 ## Before you begin
-
 * A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.
 * 2 GB or more of RAM per machine (any less will leave little room for your apps).
 * 2 CPUs or more.
@@ -14,20 +12,15 @@ weight: 20
 * The hostname, MAC address, and product_uuid shall be unique for every node. See {{< link text="here" url="#verify-mac-address" >}} for more details.
 * Open the required ports on the host. See {{< link text="Check required ports" url="#check-required-ports" >}} for more details.
 * Disable the swap partition. You **MUST** disable the swap partition to keep the kubelet working properly.
-
 ## Verify the MAC address and product_uuid are unique for every node {#verify-mac-address}
 
 * Get the MAC address of the network interfaces using the command `ip link` or `ifconfig -a`
 * Check the product_uuid using the command `sudo cat /sys/class/dmi/id/product_uuid`
 
 It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may {{< link text="fail" url="https://github.com/kubernetes/kubeadm/issues/31" >}}.
-
 ## Check network adapters
-
 If you have more than one network adapter and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster can set up proper connections via the appropriate adapter.
-
 ## Letting iptables see bridged traffic
-
 Make sure that the `br_netfilter` module is loaded. This can be done by running `lsmod | grep br_netfilter`. To load it explicitly, you can run the command `sudo modprobe br_netfilter`.
 
 To enable the iptables on your Linux node to correctly see bridged traffic, you should ensure `net.bridge.bridge-nf-call-iptables` is set to 1 in your `sysctl` config, e.g.
@@ -45,11 +38,9 @@ sudo sysctl --system
 ```
 
 For more details see the {{< link text="Network Plugin Requirements" url="https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements" >}} page.
-
 ## Check required ports
 This section lists all ports that you may use on your nodes.
 ### Control-plane node(s)
-
 | Protocol | Direction | Port Range | Purpose                 | Used By              |
 | -------- | --------- | ---------- | ----------------------- | -------------------- |
 | TCP      | Inbound   | 6443\*     | Kubernetes API server   | All                  |
@@ -57,9 +48,7 @@ This section lists all ports that you may use on your nodes.
 | TCP      | Inbound   | 10250      | kubelet API             | Self, Control plane  |
 | TCP      | Inbound   | 10251      | kube-scheduler          | Self                 |
 | TCP      | Inbound   | 10252      | kube-controller-manager | Self                 |
-
 ### Worker node(s)
-
 | Protocol | Direction | Port Range  | Purpose            | Used By             |
 | -------- | --------- | ----------- | ------------------ | ------------------- |
 | TCP      | Inbound   | 10250       | kubelet API        | Self, Control plane |
@@ -71,11 +60,8 @@ Any port numbers marked with * are overridable, so you will need to ensure any c
 
 Although etcd ports are included in control-plane nodes, you can also host your own etcd cluster externally or on custom ports.
 
-The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the
-documentation for the plugins about what port(s) those need.
-
+The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the documentation for the plugins about what port(s) those need.
 ## Setting a host name
-
 Set a hostname for your host by using the following command:
 
 ``` bash
@@ -83,9 +69,7 @@ hostnamectl set-hostname your-new-host-name
 echo "127.0.0.1 $(hostname)" >> /etc/hosts
 echo "::1       $(hostname)" >> /etc/hosts
 ```
-
 ## Disable Swap
-
 Run the following command to disable the partition swap:
 
 ``` bash
@@ -93,9 +77,7 @@ swapoff -a
 ```
 
 If you want to disable swap permanently, edit the `/etc/fstab` file to comment out the swap mount.
-
 ## Disable Selinux
-
 Run the following command to disable the selinux:
 
 ``` bash
@@ -103,9 +85,7 @@ setenforce 0
 ```
 
 If you want to disable selinux permanently, edit `/etc/sysconfig/selinux` and replace `SELINUX=enforcing` with `SELINUX=disabled`.
-
 ## Install Runtime{#installing-runtime}
-
 To run containers in Pods, Kubernetes uses a Container Runtime Interface (CRI).
 
 {{< tabs name="container-runtimes" >}}
