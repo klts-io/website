@@ -4,7 +4,7 @@ weight: 10
 ---
 KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
 
-之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 [Kubernetes 版本发行周期](#kubernetes-版本发行周期-release-cycle)。
+之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 [Kubernetes 版本发行周期](#release-cycle)。
 
 如下图所示，目前 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区维护的版本，具体请参阅[社区版本维护声明](https://kubernetes.io/releases/version-skew-policy/#supported-versions)。
 
@@ -13,7 +13,6 @@ KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早�
 以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。
 
 现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。  
-
 ## KLTS 维护周期 {#maint-cycle}
 KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10, 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20。
 
@@ -48,7 +47,6 @@ KLTS 提供的 Kubernetes 常见版本号如下：
 <img src="../klts_ver.png" width="300">
 
 其中 V1.16.15 是 Kubernetes 的完整发行版本号，1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 提供的补丁版本号。 
-
 ## Kubernetes 版本发行周期 {#release-cycle}
 Kubernetes 社区最近 12 个版本的发布时间统计如下：
 
