@@ -15,19 +15,22 @@
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
 <title>Clone | KLTS.io</title>
 <meta name=description content="KLTS.io website"><meta property="og:title" content="Clone">
-<meta property="og:description" content="Clone single branch Since the repos branch is used as a software source for RPM and DEB, direct cloning is very large So try cloning only the single branch
+<meta property="og:description" content="This page describes how you can clone a Kubernetes master branch to your local computer.
+Clone single branch Since the repos branch is used as a software source for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.
 git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/developer-guide/clone/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-08-31T17:23:47+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-10-25T15:44:05+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Clone">
-<meta itemprop=description content="Clone single branch Since the repos branch is used as a software source for RPM and DEB, direct cloning is very large So try cloning only the single branch
+<meta itemprop=description content="This page describes how you can clone a Kubernetes master branch to your local computer.
+Clone single branch Since the repos branch is used as a software source for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.
 git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts ">
-<meta itemprop=dateModified content="2021-08-31T17:23:47+08:00">
-<meta itemprop=wordCount content="35">
+<meta itemprop=dateModified content="2021-10-25T15:44:05+08:00">
+<meta itemprop=wordCount content="57">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Clone">
-<meta name=twitter:description content="Clone single branch Since the repos branch is used as a software source for RPM and DEB, direct cloning is very large So try cloning only the single branch
+<meta name=twitter:description content="This page describes how you can clone a Kubernetes master branch to your local computer.
+Clone single branch Since the repos branch is used as a software source for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.
 git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts ">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -65,7 +68,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.403f98a9282297264e52ee7f4611b460.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.2d8fcd2d38b4487f5143f27deed4d906.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -75,7 +78,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.403f98a9282297264e52ee7f4611b460.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.2d8fcd2d38b4487f5143f27deed4d906.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -106,7 +109,7 @@ English
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsdeveloper-guideclone-li>
 <a href=/docs/developer-guide/clone/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsdeveloper-guideclone><span class=td-sidebar-nav-active-item>Clone</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsdeveloper-guidedependent-li>
-<a href=/docs/developer-guide/dependent/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdeveloper-guidedependent><span>Dependent</span></a>
+<a href=/docs/developer-guide/dependent/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdeveloper-guidedependent><span>Dependencies</span></a>
 </li>
 </ul>
 </li>
@@ -144,14 +147,15 @@ English
 <header class=article-meta>
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 minute read</p>
 </header>
+<p>This page describes how you can clone a Kubernetes master branch to your local computer.</p>
 <h2 id=clone-single-branch>Clone single branch</h2>
-<p>Since the <code>repos</code> branch is used as a software source for RPM and DEB, direct cloning is very large So try cloning only the single branch</p>
+<p>Since the <code>repos</code> branch is used as a software source for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts
 </code></pre></div>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-August 31, 2021
-: <a href=https://github.com/klts-io/website/commit/01c31059cd0e68779acdc7efab1ea20cd244e7ce>Rename kubepath to kubernetes-lts (01c31059)</a>
+October 25, 2021
+: <a href=https://github.com/klts-io/website/commit/4d3640ce9f0145c7722b5933906e821ef4e96e65>minor text changes (4d3640ce)</a>
 </div>
 </div>
 </main>
