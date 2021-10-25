@@ -16,22 +16,31 @@
 <title>简介 | KLTS.io</title>
 <meta name=description content="KLTS 的官网"><meta property="og:title" content="简介">
 <meta property="og:description" content="KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
-之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。如下表所示，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本。
-   K8s 版本 初次发布日期 稳定版本日期     1.10 2018-03-27 2019-02-13   1.11 2018-07-28 2019-05-01   1.12 2018-09-28 2019-07-08   1.13 2018-12-04 2019-10-15   1.14 2019-03-25 2019-12-11   1.15 2019-07-20 2020-05-06   1.16 2019-09-18 2020-09-02   1.17 2019-12-08 2021-01-13   1.18 2020-03-25 2021-06-18   1.19 2020-08-26 2021-10-28   1.">
+之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 Kubernetes 版本发行周期。
+如下图所示，目前 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区维护的版本，具体请参阅社区版本维护声明。
+以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。
+现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。
+KLTS 维护周期 KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10, 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/intro/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-10-14T14:16:45+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-10-25T11:40:25+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="简介">
 <meta itemprop=description content="KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
-之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。如下表所示，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本。
-   K8s 版本 初次发布日期 稳定版本日期     1.10 2018-03-27 2019-02-13   1.11 2018-07-28 2019-05-01   1.12 2018-09-28 2019-07-08   1.13 2018-12-04 2019-10-15   1.14 2019-03-25 2019-12-11   1.15 2019-07-20 2020-05-06   1.16 2019-09-18 2020-09-02   1.17 2019-12-08 2021-01-13   1.18 2020-03-25 2021-06-18   1.19 2020-08-26 2021-10-28   1.">
-<meta itemprop=dateModified content="2021-10-14T14:16:45+08:00">
-<meta itemprop=wordCount content="201">
+之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 Kubernetes 版本发行周期。
+如下图所示，目前 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区维护的版本，具体请参阅社区版本维护声明。
+以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。
+现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。
+KLTS 维护周期 KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10, 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.">
+<meta itemprop=dateModified content="2021-10-25T11:40:25+08:00">
+<meta itemprop=wordCount content="209">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="简介">
 <meta name=twitter:description content="KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
-之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。如下表所示，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本。
-   K8s 版本 初次发布日期 稳定版本日期     1.10 2018-03-27 2019-02-13   1.11 2018-07-28 2019-05-01   1.12 2018-09-28 2019-07-08   1.13 2018-12-04 2019-10-15   1.14 2019-03-25 2019-12-11   1.15 2019-07-20 2020-05-06   1.16 2019-09-18 2020-09-02   1.17 2019-12-08 2021-01-13   1.18 2020-03-25 2021-06-18   1.19 2020-08-26 2021-10-28   1.">
+之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 Kubernetes 版本发行周期。
+如下图所示，目前 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区维护的版本，具体请参阅社区版本维护声明。
+以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。
+现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。
+KLTS 维护周期 KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10, 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -68,7 +77,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.812b9c6a2beca200b861b073253caa53.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.403f98a9282297264e52ee7f4611b460.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -78,7 +87,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.812b9c6a2beca200b861b073253caa53.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.403f98a9282297264e52ee7f4611b460.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -229,6 +238,7 @@
 <li><a href=#maint-cycle>KLTS 维护周期</a></li>
 <li><a href=#bug-fix>漏洞修复</a></li>
 <li><a href=#klts-ver>版本说明</a></li>
+<li><a href=#release-cycle>Kubernetes 版本发行周期</a></li>
 </ul>
 </nav></div>
 </aside>
@@ -249,7 +259,42 @@
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 分钟 阅读时间</p>
 </header>
 <p>KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。</p>
-<p>之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。如下表所示，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本。</p>
+<p>之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 <a href=#kubernetes-%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E5%91%A8%E6%9C%9F-release-cycle>Kubernetes 版本发行周期</a>。</p>
+<p>如下图所示，目前 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区维护的版本，具体请参阅<a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>社区版本维护声明</a>。</p>
+<img src=../klts_job.png width=750>
+<p>以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。</p>
+<p>现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。</p>
+<h2 id=maint-cycle>KLTS 维护周期</h2>
+<p>KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10, 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20。</p>
+<p>如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这 9 个版本的维护周期如下：</p>
+<p><img src=../images/whatKLTSdoes.png alt="KLTS 维护版本"></p>
+<p>从上图可看出，Kubernetes 社区对某个版本的维护周期通常在一年左右，而 KLTS 可以在接下来的三年内提供长期维护，直至代码无法兼容，才会将相应版本淘汰。</p>
+<h2 id=bug-fix>漏洞修复</h2>
+<p>以 2021 年 1 月发现的 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞为例，CVSS 危急分数高达 7.5。但截止 2021 年 9 月 Kubernetes 社区：</p>
+<ul>
+<li>仅修复了 4 个版本：1.18、1.19、1.20、1.21</li>
+<li>宣称“所有早期版本均有这个安全漏洞，建议用户立即停止使用早期版本”</li>
+<li>拒绝<a href=https://github.com/kubernetes/kubernetes/issues/101435>修复早期版本漏洞的要求</a></li>
+</ul>
+<p><img src=../images/cve2021.png alt=CVE-2021-3121></p>
+<p>KLTS 针对这一现状，默默修复了深受 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞影响的 8 个早期版本：</p>
+<ul>
+<li>v1.17.17</li>
+<li>v1.16.15</li>
+<li>v1.15.12</li>
+<li>v1.14.10</li>
+<li>v1.13.12</li>
+<li>v1.12.10</li>
+<li>v1.11.10</li>
+<li>v1.10.13</li>
+</ul>
+<p>如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 <a href=https://github.com/klts-io>KLTS 社区</a>交流并做出贡献。</p>
+<h2 id=klts-ver>版本说明</h2>
+<p>KLTS 提供的 Kubernetes 常见版本号如下：<br>
+<img src=../klts_ver.png width=300></p>
+<p>其中 V1.16.15 是 Kubernetes 的完整发行版本号，1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 提供的补丁版本号。</p>
+<h2 id=release-cycle>Kubernetes 版本发行周期</h2>
+<p>Kubernetes 社区最近 12 个版本的发布时间统计如下：</p>
 <table>
 <thead>
 <tr>
@@ -328,43 +373,10 @@
 </table>
 <p>初次发布：指的是 Kubernetes 初次发布的 0 号版本，即 1.10.0、1.11.0 &mldr; 1.22.0 等。</p>
 <p>稳定版本：通常是初次发布大约 1 年后的最后一个 bug fix 版本，然后这个版本 End Of Life (EOL)，即社区从此放弃维护。</p>
-<p>如下图所示，其中 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区目前正在维护的版本，具体请参阅<a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>社区版本维护声明</a>。</p>
-<img src=../klts_job.png width=750>
-<p>以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。</p>
-<p>现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。</p>
-<h2 id=maint-cycle>KLTS 维护周期</h2>
-<p>KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10. 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20。</p>
-<p>如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这 9 个版本的维护周期如下：</p>
-<p><img src=../images/whatKLTSdoes.png alt="KLTS 维护版本"></p>
-<p>从上图可看出，Kubernetes 社区对某个版本的维护周期通常在一年左右，而 KLTS 可以在接下来的三年内提供长期维护，直至代码无法兼容，才会将相应版本淘汰。</p>
-<h2 id=bug-fix>漏洞修复</h2>
-<p>以 2021 年 1 月发现的 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞为例，CVSS 危急分数高达 7.5。但截止 2021 年 9 月 Kubernetes 社区：</p>
-<ul>
-<li>仅修复了 4 个版本：1.18、1.19、1.20、1.21</li>
-<li>宣称“所有早期版本均有这个安全漏洞，建议用户立即停止使用早期版本”</li>
-<li>拒绝<a href=https://github.com/kubernetes/kubernetes/issues/101435>修复早期版本漏洞的要求</a></li>
-</ul>
-<p><img src=../images/cve2021.png alt=CVE-2021-3121></p>
-<p>KLTS 针对这一现状，默默修复了深受 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞影响的 8 个早期版本：</p>
-<ul>
-<li>v1.17.17</li>
-<li>v1.16.15</li>
-<li>v1.15.12</li>
-<li>v1.14.10</li>
-<li>v1.13.12</li>
-<li>v1.12.10</li>
-<li>v1.11.10</li>
-<li>v1.10.13</li>
-</ul>
-<p>如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 <a href=https://github.com/klts-io>KLTS 社区</a>交流并做出贡献。</p>
-<h2 id=klts-ver>版本说明</h2>
-<p>KLTS 提供的 Kubernetes 常见版本号如下：<br>
-<img src=../klts_ver.png width=300></p>
-<p>其中 V1.16.15 是 Kubernetes 的完整发行版本号，1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 提供的补丁版本号。</p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.10.14
-: <a href=https://github.com/klts-io/website/commit/b17273dd154b6e8c046fe1d6771432be4632d9ac>Update intro.md (b17273dd)</a>
+2021.10.25
+: <a href=https://github.com/klts-io/website/commit/e083f4f8bc35dc8cf35ce922d6caf186955b43c2>minor text changes (e083f4f8)</a>
 </div>
 </div>
 </main>

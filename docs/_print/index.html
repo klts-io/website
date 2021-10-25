@@ -59,7 +59,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.812b9c6a2beca200b861b073253caa53.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.403f98a9282297264e52ee7f4611b460.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -98,8 +98,38 @@ This the multi-page printable view of this section.
 <div class=td-content>
 <h1 id=pg-583fb1d89ccf082c48164b7b3e179cf3>1 - Overview</h1>
 <p>KLTS, known as Kubernetes Long Term Support, has a primary mission to provide free long-term maintenance support for earlier versions of Kubernetes.</p>
-<p>Kubernetes versions are expressed as x.y.z, where x is the major version, y is the minor version, and z is the patch version. For the versions maintained by KLTS, it is followed by a string beginning with lts.</p>
-<p>The reason to maintain earlier versions is the fact that in a real production environment, the latest release is not necessarily the best or the most stable. As shown in the table below, a stable release of Kubernetes is not available until one year after the initial release of a particular version.</p>
+<p>Kubernetes versions are expressed as <strong>x.y.z</strong>, where <strong>x</strong> is the major version, <strong>y</strong> is the minor version, and <strong>z</strong> is the patch version. For the versions maintained by KLTS, it is followed by a string beginning with <strong>lts</strong>.</p>
+<p>One of the reasons to maintain earlier versions is the fact that in a real production environment, the latest release is not the best or the most stable. In a normal case, As shown in the table below, a stable release of Kubernetes is not available until one year after the initial release of a particular version. For details see <a href=#kubernetes-release-cycle-release-cycle>Kubernetes release cycle</a>.</p>
+<p>As shown below, 1.10 - 1.18 are the versions being maintained by KLTS, while 1.19 - 1.22 are the versions currently being maintained by the Kubernetes community, as described in the <a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>Version Skew Policy</a>。</p>
+<img src=../klts_job.png width=750>
+<p>Take 1.19 as an example, its stable release is expected to be available on October 28, 2021, but the stable release of 1.19 is not fully compatible with many features of 1.10 to 1.18, and there are countless iterations of development in between. If an enterprise rashly upgrades its kernel to 1.19, it is likely to cause production accidents. Other new versions such as 1.20 - 1.22 have similar problems.</p>
+<p>The choice of most enterprises today is to stay with earlier versions and not rush to upgrade. But the Kubernetes community only maintains the most recent four releases, how can you keep earlier versions safe from the CVE bugs and vulnerabilities that the community may discover from time to time? That&rsquo;s where KLTS comes in! We provide free maintenance support for earlier versions for up to three years.</p>
+<h2 id=maint-cycle>KLTS release cycle</h2>
+<p>KLTS currently maintains nine stable releases: 1.10.13, 1.11.10, 1.12.10. 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20.</p>
+<p>If the Kubernetes community finds new CVE vulnerabilities or bugs, the KLTS team will take over those releases that the community has abandoned for maintenance and keep them in a continuous maintenance state. The current maintenance cycle for these nine releases is as follows.</p>
+<p><img src=../whatKLTSdoes.png alt="maintained by KLTS"></p>
+<p>As shown above, the Kubernetes community typically has a maintenance cycle of about one year for a minor version, while KLTS can provide long-term maintenance for the next three years until the code becomes obviously incompatible and the version will be phased out.</p>
+<h2 id=bug-fix>Bug fix</h2>
+<p>As an example, the <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> vulnerability discovered in January 2021 has a CVSS score of 7.5. However, as of September 2021 the Kubernetes community:</p>
+<ul>
+<li>Only fixed four versions: 1.18, 1.19, 1.20, 1.21</li>
+<li>Announced that “all prior versions remain exposed and users should stop using them immediately”</li>
+<li><a href=https://github.com/kubernetes/kubernetes/issues/101435>Requests to fix earlier versions</a> are denied:</li>
+</ul>
+<p><img src=../cve2021.png alt=CVE-2021-3121></p>
+<p>KLTS addresses this situation by diligently fixing eight earlier versions that were heavily affected by the <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> vulnerability. No complaints, no demands!</p>
+<ul>
+<li>v1.17.17</li>
+<li>v1.16.15</li>
+<li>v1.15.12</li>
+<li>v1.14.10</li>
+<li>v1.13.12</li>
+<li>v1.12.10</li>
+<li>v1.11.10</li>
+<li>v1.10.13</li>
+</ul>
+<p>If you feel that the KLTS team&rsquo;s efforts are valuable and interesting to you, don’t hesitate to join the <a href=https://github.com/klts-io>KLTS community</a> to talk and contribute.</p>
+<h2 id=release-cycle>Kubernetes release cycle</h2>
 <table>
 <thead>
 <tr>
@@ -176,37 +206,8 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>An initial release refers to the first official release of Kubernetes such as 1.10.0, 1.11.0 &mldr; 1.22.0, etc.</p>
+<p>An initial release refers to the first official release of a minor version such as 1.10.0, 1.11.0 &mldr; 1.22.0, etc.</p>
 <p>A stable release is usually the final bug-fix release about one year after the initial release. It refers to the release of End Of Life (EOL), i.e., the community will not maintain this version from then on.</p>
-<p>As shown below, 1.10 - 1.18 are the versions being maintained by KLTS, while 1.19 - 1.22 are the versions currently being maintained by the Kubernetes community, as described in the <a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>Version Skew Policy</a>。</p>
-<img src=../klts_job.png width=750>
-<p>Take 1.19 as an example, its stable release is expected to be available on October 28, 2021, but the stable release of 1.19 is not fully compatible with many features of 1.10 to 1.18, and there are countless iterations of development in between. If an enterprise rashly upgrades its kernel to 1.19, it is likely to cause production accidents. Other new versions such as 1.20 - 1.22 have similar problems.</p>
-<p>The choice of most enterprises today is to stay with earlier versions and not rush to upgrade. But the Kubernetes community only maintains the most recent four releases, how can you keep earlier versions safe from the CVE bugs and vulnerabilities that the community may discover from time to time? That&rsquo;s where KLTS comes in! We provide free maintenance support for earlier versions for up to 3 years.</p>
-<h2 id=maint-cycle>KLTS release cycle</h2>
-<p>KLTS currently maintains nine stable releases: 1.10.13, 1.11.10, 1.12.10. 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20.</p>
-<p>If the Kubernetes community finds new CVE vulnerabilities or bugs, the KLTS team will take over those releases that the community has abandoned for maintenance and keep them in a continuous maintenance state. The current maintenance cycle for these 9 releases is as follows.</p>
-<p><img src=../whatKLTSdoes.png alt="maintained by KLTS"></p>
-<p>As shown above, the Kubernetes community typically has a maintenance cycle of about one year for a minor version, while KLTS can provide long-term maintenance for the next three years until the code becomes obviously incompatible and the version will be phased out.</p>
-<h2 id=bug-fix>Bug fix</h2>
-<p>As an example, the <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> vulnerability discovered in January 2021 has a CVSS score of 7.5. However, as of September 2021 the Kubernetes community:</p>
-<ul>
-<li>Only fixed four versions: 1.18, 1.19, 1.20, 1.21</li>
-<li>Announced that “all prior versions remain exposed and users should stop using them immediately”</li>
-<li><a href=https://github.com/kubernetes/kubernetes/issues/101435>Requests to fix earlier versions</a> are denied:</li>
-</ul>
-<p><img src=../cve2021.png alt=CVE-2021-3121></p>
-<p>KLTS addresses this situation by diligently fixing eight earlier versions that were heavily affected by the <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> vulnerability. No complaints, no demands!</p>
-<ul>
-<li>v1.17.17</li>
-<li>v1.16.15</li>
-<li>v1.15.12</li>
-<li>v1.14.10</li>
-<li>v1.13.12</li>
-<li>v1.12.10</li>
-<li>v1.11.10</li>
-<li>v1.10.13</li>
-</ul>
-<p>If you feel that the KLTS team&rsquo;s efforts are valuable and interesting to you, don’t hesitate to join the <a href=https://github.com/klts-io>KLTS community</a> to talk and contribute.</p>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - Preparation</h1>
