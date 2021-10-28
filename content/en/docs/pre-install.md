@@ -4,26 +4,29 @@ weight: 20
 ---
 
 <img src="https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png" align="right" width="150px">This page introduces some preparations before installation. For example, it is required to install the `kubeadm` toolbox to get started. For information on how to create a cluster with kubeadm, see the {{< link url="/docs/install" >}} page.
-## Before you begin
+## Before you start
+You should prepare or perform the following actions:  
+
 * A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.
-* 2 GB or more of RAM per machine (any less will leave little room for your apps).
-* 2 CPUs or more.
+* 2 GB or more of RAM per host (any less will leave little room for your apps.)
+* 2 CPUs or more per host.
 * Good network connectivity between all nodes in the cluster (either public or on-premise network).
 * The hostname, MAC address, and product_uuid shall be unique for every node. See {{< link text="here" url="#verify-mac-address" >}} for more details.
 * Open the required ports on the host. See {{< link text="Check required ports" url="#check-required-ports" >}} for more details.
 * Disable the swap partition. You **MUST** disable the swap partition to keep the kubelet working properly.
-## Verify the MAC address and product_uuid are unique for every node {#verify-mac-address}
+## Verify the MAC address and product_uuid {#verify-mac-address}
+Verify the MAC address and product_uuid are unique for every node. Perform the following actions:  
 
 * Get the MAC address of the network interfaces using the command `ip link` or `ifconfig -a`
 * Check the product_uuid using the command `sudo cat /sys/class/dmi/id/product_uuid`
 
-It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may {{< link text="fail" url="https://github.com/kubernetes/kubeadm/issues/31" >}}.
+It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may fail due to {{< link text="some issues" url="https://github.com/kubernetes/kubeadm/issues/31" >}}.
 ## Check network adapters
 If you have more than one network adapter and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster can set up proper connections via the appropriate adapter.
-## Letting iptables see bridged traffic
+## Enable iptables discover the bridged traffic
 Make sure that the `br_netfilter` module is loaded. This can be done by running `lsmod | grep br_netfilter`. To load it explicitly, you can run the command `sudo modprobe br_netfilter`.
 
-To enable the iptables on your Linux node to correctly see bridged traffic, you should ensure `net.bridge.bridge-nf-call-iptables` is set to 1 in your `sysctl` config, e.g.
+To enable the iptables on your Linux node to correctly discover the bridged traffic, you should ensure `net.bridge.bridge-nf-call-iptables` is set to 1 in your `sysctl` config file, e.g.
 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -52,7 +55,7 @@ This section lists all ports that you may use on your nodes.
 | Protocol | Direction | Port Range  | Purpose            | Used By             |
 | -------- | --------- | ----------- | ------------------ | ------------------- |
 | TCP      | Inbound   | 10250       | kubelet API        | Self, Control plane |
-| TCP      | Inbound   | 30000-32767 | NodePort Services† | All                 |
+| TCP      | Inbound   | 30000-32767 | NodePort Services  | All                 |
 
 Above is the default port range for {{< link text="NodePort Services" url="https://kubernetes.io/docs/concepts/services-networking/service/" >}}.
 
@@ -60,8 +63,8 @@ Any port numbers marked with * are overridable, so you will need to ensure any c
 
 Although etcd ports are included in control-plane nodes, you can also host your own etcd cluster externally or on custom ports.
 
-The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the documentation for the plugins about what port(s) those need.
-## Setting a host name
+The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the documentation for the plugins about what port(s) they need.
+## Set a host name
 Set a hostname for your host by using the following command:
 
 ``` bash
