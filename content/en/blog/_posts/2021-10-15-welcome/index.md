@@ -4,8 +4,10 @@ title: "Welcome to the KLTS Blog!"
 date: 2021-10-15
 ---
 
-Welcome to the new KLTS Blog. Follow this blog to learn about the KLTS Open Source project. 
+Welcome to the new KLTS blog space.  
 
-We plan to post release notes, how-to articles, events, and maybe even some off topic fun here from time to time.
+Here you can keep up with the progress of the KLTS open source project and recent hot topics.
 
-If you are using KLTS or contributing to the project and would like to do a guest post, please let me know.
+We also plan to include release notes for major releases, guidance articles, community-related events, and possibly some development tips, and interesting topics within the team.
+
+If you are using a version of k8s provided by KLTS or are interested in contributing to this open source project and would like to join the discussion or make some guest blog posts, please contact us.
