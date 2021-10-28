@@ -59,7 +59,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.d012a0cde4973cb684c87b14631b77af.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.a8e432c7a266fe9bddca14af7a2d959e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -406,10 +406,9 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>3 - Install</h1>
-<p>KLTS provides a way to install software sources based on Deb and RPM.
-You can choose the installation method that suits your system.</p>
+<p>KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.</p>
 <p>Before installation, ensure that your <a href=/docs/pre-install target>Preparation</a> is good enough.</p>
-<h2 id=set-the-klts-software-source>Set the KLTS software source</h2>
+<h2 id=set-the-klts-source-package>Set the KLTS source package</h2>
 <ul class="nav nav-tabs" id=tabset-docsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-1-0 role=tab aria-controls=tabset-docsinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-1-1 role=tab aria-controls=tabset-docsinstall-1-1>Debian-based distributions</a></li></ul>
 <div class=tab-content id=tabset-docsinstall-1><div id=tabset-docsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-1-0>
@@ -479,7 +478,7 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p>All subsequent operations on Kubeadm need to include <code>--image-repository</code>, <code>--kubernetes-version</code> actively specifying the image</p>
+</code></pre></div><p>All subsequent operations on Kubeadm need to include <code>--image-repository</code> and <code>--kubernetes-version</code> to actively specify the image.</p>
 <h2 id=initialize-the-control-plane-node>Initialize the control plane node</h2>
 <p>Run the following code to initialize the control plane node:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
