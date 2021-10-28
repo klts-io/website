@@ -59,7 +59,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.a8e432c7a266fe9bddca14af7a2d959e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.9008271363bcad9c4f937e04bdd21edd.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -218,7 +218,7 @@ This the multi-page printable view of this section.
 <li>A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.</li>
 <li>2 GB or more of RAM per host (any less will leave little room for your apps.)</li>
 <li>2 CPUs or more per host.</li>
-<li>Good network connectivity between all nodes in the cluster (either public or on-premise network).</li>
+<li>Good network connectivity between all nodes in the cluster (either public or on-premise network.)</li>
 <li>The hostname, MAC address, and product_uuid shall be unique for every node. See <a href=#verify-mac-address target=_blank>here</a> for more details.</li>
 <li>Open the required ports on the host. See <a href=#check-required-ports target=_blank>Check required ports</a> for more details.</li>
 <li>Disable the swap partition. You <strong>MUST</strong> disable the swap partition to keep the kubelet working properly.</li>
@@ -234,7 +234,7 @@ This the multi-page printable view of this section.
 <p>If you have more than one network adapter and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster can set up proper connections via the appropriate adapter.</p>
 <h2 id=enable-iptables-discover-the-bridged-traffic>Enable iptables discover the bridged traffic</h2>
 <p>Make sure that the <code>br_netfilter</code> module is loaded. This can be done by running <code>lsmod | grep br_netfilter</code>. To load it explicitly, you can run the command <code>sudo modprobe br_netfilter</code>.</p>
-<p>To enable the iptables on your Linux node to correctly discover the bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config file, e.g.</p>
+<p>To enable the iptables on your Linux node to correctly discover the bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config file, for example:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
 </span><span style=color:#4e9a06>br_netfilter
 </span><span style=color:#4e9a06>EOF</span>
