@@ -271,7 +271,7 @@ kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${V
 {{% /tab %}}
 {{< /tabs >}}
 
-后续对 kubeadm 的操作都需要加上 `--image-repository`，`--kubernetes-version` 主动指定镜像。
+后续对 kubeadm 的操作都需要加上 `--image-repository` 和 `--kubernetes-version` 以主动指定镜像。
 
 ## 初始化控制面节点
 {{< tabs >}}

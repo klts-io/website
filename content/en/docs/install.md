@@ -3,11 +3,10 @@ title: Install
 weight: 30
 ---
 
-KLTS provides a way to install software sources based on Deb and RPM. 
-You can choose the installation method that suits your system.
+KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
 
 Before installation, ensure that your {{< link url="/docs/pre-install" >}} is good enough.
-## Set the KLTS software source
+## Set the KLTS source package
 
 {{< tabs >}}
 
@@ -104,7 +103,7 @@ VERSION=1.18.20-lts.0
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
-All subsequent operations on Kubeadm need to include `--image-repository`, `--kubernetes-version` actively specifying the image
+All subsequent operations on Kubeadm need to include `--image-repository` and `--kubernetes-version` to actively specify the image.
 ## Initialize the control plane node
 Run the following code to initialize the control plane node:
 ``` bash
