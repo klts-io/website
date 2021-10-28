@@ -10,7 +10,7 @@ You should prepare or perform the following actions:
 * A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.
 * 2 GB or more of RAM per host (any less will leave little room for your apps.)
 * 2 CPUs or more per host.
-* Good network connectivity between all nodes in the cluster (either public or on-premise network).
+* Good network connectivity between all nodes in the cluster (either public or on-premise network.)
 * The hostname, MAC address, and product_uuid shall be unique for every node. See {{< link text="here" url="#verify-mac-address" >}} for more details.
 * Open the required ports on the host. See {{< link text="Check required ports" url="#check-required-ports" >}} for more details.
 * Disable the swap partition. You **MUST** disable the swap partition to keep the kubelet working properly.
@@ -26,7 +26,7 @@ If you have more than one network adapter and your Kubernetes components are not
 ## Enable iptables discover the bridged traffic
 Make sure that the `br_netfilter` module is loaded. This can be done by running `lsmod | grep br_netfilter`. To load it explicitly, you can run the command `sudo modprobe br_netfilter`.
 
-To enable the iptables on your Linux node to correctly discover the bridged traffic, you should ensure `net.bridge.bridge-nf-call-iptables` is set to 1 in your `sysctl` config file, e.g.
+To enable the iptables on your Linux node to correctly discover the bridged traffic, you should ensure `net.bridge.bridge-nf-call-iptables` is set to 1 in your `sysctl` config file, for example:
 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -106,10 +106,9 @@ If you don't specify a runtime, kubeadm automatically tries to detect an install
 
 
 <br/>
-If both Docker and Containerd are detected, Docker takes precedence. This is inevitable because Docker 18.09 ships with Containerd and both are detectable even if you only installed Docker. If any other two or more runtimes are detected, kubeadm exits with an error.
+If both Docker and Containerd are detected, Docker takes precedence. This is inevitable because Docker 18.09 ships with Containerd and both are detectable even if you only installed Docker. If any other two or more runtimes are detected, kubeadm exits with an error.  
 
 The kubelet integrates with Docker through the built-in `dockershim` CRI implementation.
-
 
 {{% /tab %}}
 {{% tab name="Other OS" %}}
