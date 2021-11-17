@@ -17,20 +17,23 @@
 <meta name=description content="KLTS 的官网"><meta property="og:title" content="v1.18.20-lts.1">
 <meta property="og:description" content="这是 KLTS 发布的第一个 v1.18.20 修复版本。
 补丁  nokmem节点磁盘充足但是一直报磁盘不足无法创建 Pod。
+ CVE-2021-25741这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 subpath 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。
   ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/releases/v1.18.20/v1.18.20-lts.1/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-16T17:52:40+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-11-17T15:56:12+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="v1.18.20-lts.1">
 <meta itemprop=description content="这是 KLTS 发布的第一个 v1.18.20 修复版本。
 补丁  nokmem节点磁盘充足但是一直报磁盘不足无法创建 Pod。
+ CVE-2021-25741这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 subpath 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。
   ">
-<meta itemprop=dateModified content="2021-09-16T17:52:40+08:00">
-<meta itemprop=wordCount content="8">
+<meta itemprop=dateModified content="2021-11-17T15:56:12+08:00">
+<meta itemprop=wordCount content="11">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="v1.18.20-lts.1">
 <meta name=twitter:description content="这是 KLTS 发布的第一个 v1.18.20 修复版本。
 补丁  nokmem节点磁盘充足但是一直报磁盘不足无法创建 Pod。
+ CVE-2021-25741这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 subpath 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。
   ">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -65,7 +68,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.08529c04f259500470bcae1b07013329.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4ac33d2492d954bc7c19ea9723c418fc.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -75,7 +78,7 @@
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.08529c04f259500470bcae1b07013329.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4ac33d2492d954bc7c19ea9723c418fc.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -252,11 +255,12 @@
 <h2 id=补丁>补丁</h2>
 <ul>
 <li><a href=/zh/docs/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 Pod。" data-toggle=tooltip data-placement=top target>nokmem</a><p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code>。</p></li>
+<li><a href=/zh/docs/patches/cve-2021-25741 title="这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 subpath 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。" data-toggle=tooltip data-placement=top target>CVE-2021-25741</a><p>这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 <code>subpath</code> 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。</p></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.09.16
-: <a href=https://github.com/klts-io/website/commit/42baa000881ec3e39e6b32ba79d3f6cb27e6cb46>Sorted order (42baa000)</a>
+2021.11.17
+: <a href=https://github.com/klts-io/website/commit/1c4dc14de5ef6a91e8316892af6bcc01eb8b9e27>Update v1.18.20-lts.1.md (1c4dc14d)</a>
 </div>
 </div>
 </main>
