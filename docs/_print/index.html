@@ -55,7 +55,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.4ac33d2492d954bc7c19ea9723c418fc.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.6d3e225adeafa923883207a02149bbb1.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -209,27 +209,29 @@ This the multi-page printable view of this section.
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - Preparation</h1>
 <p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>This page introduces some preparations before installation. For example, it is required to install the <code>kubeadm</code> toolbox to get started. For information on how to create a cluster with kubeadm, see the <a href=/docs/install target>Install</a> page.</p>
-<h2 id=before-you-begin>Before you begin</h2>
+<h2 id=before-you-start>Before you start</h2>
+<p>You should prepare or perform the following actions:</p>
 <ul>
 <li>A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.</li>
-<li>2 GB or more of RAM per machine (any less will leave little room for your apps).</li>
-<li>2 CPUs or more.</li>
-<li>Good network connectivity between all nodes in the cluster (either public or on-premise network).</li>
+<li>2 GB or more of RAM per host (any less will leave little room for your apps.)</li>
+<li>2 CPUs or more per host.</li>
+<li>Good network connectivity between all nodes in the cluster (either public or on-premise network.)</li>
 <li>The hostname, MAC address, and product_uuid shall be unique for every node. See <a href=#verify-mac-address target=_blank>here</a> for more details.</li>
 <li>Open the required ports on the host. See <a href=#check-required-ports target=_blank>Check required ports</a> for more details.</li>
 <li>Disable the swap partition. You <strong>MUST</strong> disable the swap partition to keep the kubelet working properly.</li>
 </ul>
-<h2 id=verify-mac-address>Verify the MAC address and product_uuid are unique for every node</h2>
+<h2 id=verify-mac-address>Verify the MAC address and product_uuid</h2>
+<p>Verify the MAC address and product_uuid are unique for every node. Perform the following actions:</p>
 <ul>
 <li>Get the MAC address of the network interfaces using the command <code>ip link</code> or <code>ifconfig -a</code></li>
 <li>Check the product_uuid using the command <code>sudo cat /sys/class/dmi/id/product_uuid</code></li>
 </ul>
-<p>It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may <a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>fail</a>.</p>
+<p>It is very likely that hardware devices have unique addresses although some virtual machines may use identical addresses. Kubernetes uses these addresses to uniquely identify the nodes in the cluster. If these addresses are not unique to each node, the installation process may fail due to <a href=https://github.com/kubernetes/kubeadm/issues/31 target=_blank>some issues</a>.</p>
 <h2 id=check-network-adapters>Check network adapters</h2>
 <p>If you have more than one network adapter and your Kubernetes components are not reachable via the default route, it is recommended to add IP route(s) so the Kubernetes cluster can set up proper connections via the appropriate adapter.</p>
-<h2 id=letting-iptables-see-bridged-traffic>Letting iptables see bridged traffic</h2>
+<h2 id=enable-iptables-discover-the-bridged-traffic>Enable iptables discover the bridged traffic</h2>
 <p>Make sure that the <code>br_netfilter</code> module is loaded. This can be done by running <code>lsmod | grep br_netfilter</code>. To load it explicitly, you can run the command <code>sudo modprobe br_netfilter</code>.</p>
-<p>To enable the iptables on your Linux node to correctly see bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config, e.g.</p>
+<p>To enable the iptables on your Linux node to correctly discover the bridged traffic, you should ensure <code>net.bridge.bridge-nf-call-iptables</code> is set to 1 in your <code>sysctl</code> config file, for example:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
 </span><span style=color:#4e9a06>br_netfilter
 </span><span style=color:#4e9a06>EOF</span>
@@ -314,7 +316,7 @@ sudo sysctl --system
 <td>TCP</td>
 <td>Inbound</td>
 <td>30000-32767</td>
-<td>NodePort Services†</td>
+<td>NodePort Services</td>
 <td>All</td>
 </tr>
 </tbody>
@@ -322,8 +324,8 @@ sudo sysctl --system
 <p>Above is the default port range for <a href=https://kubernetes.io/docs/concepts/services-networking/service/ target=_blank>NodePort Services</a>.</p>
 <p>Any port numbers marked with * are overridable, so you will need to ensure any custom ports you provide are also open.</p>
 <p>Although etcd ports are included in control-plane nodes, you can also host your own etcd cluster externally or on custom ports.</p>
-<p>The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the documentation for the plugins about what port(s) those need.</p>
-<h2 id=setting-a-host-name>Setting a host name</h2>
+<p>The pod network plugin you use (see below) may also require certain ports to be open. Since this differs with each pod network plugin, see the documentation for the plugins about what port(s) they need.</p>
+<h2 id=set-a-host-name>Set a host name</h2>
 <p>Set a hostname for your host by using the following command:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hostnamectl set-hostname your-new-host-name
 <span style=color:#204a87>echo</span> <span style=color:#4e9a06>&#34;127.0.0.1 </span><span style=color:#204a87;font-weight:700>$(</span>hostname<span style=color:#204a87;font-weight:700>)</span><span style=color:#4e9a06>&#34;</span> &gt;&gt; /etc/hosts
@@ -410,10 +412,9 @@ chmod +x install.sh
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>4 - Install</h1>
-<p>KLTS provides a way to install software sources based on Deb and RPM.
-You can choose the installation method that suits your system.</p>
+<p>KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.</p>
 <p>Before installation, ensure that your <a href=/docs/pre-install target>Preparation</a> is good enough.</p>
-<h2 id=set-the-klts-software-source>Set the KLTS software source</h2>
+<h2 id=set-the-klts-source-package>Set the KLTS source package</h2>
 <ul class="nav nav-tabs" id=tabset-docsinstall-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-1-0 role=tab aria-controls=tabset-docsinstall-1-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-1-1 role=tab aria-controls=tabset-docsinstall-1-1>Debian-based distributions</a></li></ul>
 <div class=tab-content id=tabset-docsinstall-1><div id=tabset-docsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-1-0>
@@ -483,7 +484,7 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div><p>All subsequent operations on Kubeadm need to include <code>--image-repository</code>, <code>--kubernetes-version</code> actively specifying the image</p>
+</code></pre></div><p>All subsequent operations on Kubeadm need to include <code>--image-repository</code> and <code>--kubernetes-version</code> to actively specify the image.</p>
 <h2 id=initialize-the-control-plane-node>Initialize the control plane node</h2>
 <p>Run the following code to initialize the control plane node:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
@@ -502,7 +503,7 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <h1 id=pg-79fcc7e024580df9da30cdb10805eada>6.1 - Clone</h1>
 <p>This page describes how you can clone a Kubernetes master branch to your local computer.</p>
 <h2 id=clone-single-branch>Clone single branch</h2>
-<p>Since the <code>repos</code> branch is used as a software source for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.</p>
+<p>Since the <code>repos</code> branch is used as a source package for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts
 </code></pre></div>
 </div>
@@ -514,18 +515,18 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsdeveloper-guidedependent-1-1 role=tab aria-controls=tabset-docsdeveloper-guidedependent-1-1>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsdeveloper-guidedependent-1-2 role=tab aria-controls=tabset-docsdeveloper-guidedependent-1-2>Debian-based distributions</a></li></ul>
 <div class=tab-content id=tabset-docsdeveloper-guidedependent-1><div id=tabset-docsdeveloper-guidedependent-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsdeveloper-guidedependent-1-0>
-<p><p>Run the following code to install the dependencies:</p>
+<p><p>Run the following code to install dependencies:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install jq git python@3 <span style=color:#8f5902;font-style:italic># Install brew, See https://brew.sh/</span>
 pip3 install yq
 </code></pre></div></div>
 <div id=tabset-docsdeveloper-guidedependent-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsdeveloper-guidedependent-1-1>
-<p><p>Run the following code to install the dependencies:</p>
+<p><p>Run the following code to install dependencies:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install -y epel-release
 yum install -y jq git python3
 pip3 install yq
 </code></pre></div></div>
 <div id=tabset-docsdeveloper-guidedependent-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-docsdeveloper-guidedependent-1-2>
-<p><p>Run the following code to install the dependencies:</p>
+<p><p>Run the following code to install dependencies:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install -y jq git python3 python3-pip
 pip3 install yq
 </code></pre></div></div></div>

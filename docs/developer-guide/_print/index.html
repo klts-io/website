@@ -55,7 +55,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.4ac33d2492d954bc7c19ea9723c418fc.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.6d3e225adeafa923883207a02149bbb1.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -88,7 +88,7 @@ This the multi-page printable view of this section.
 <h1 id=pg-79fcc7e024580df9da30cdb10805eada>1 - Clone</h1>
 <p>This page describes how you can clone a Kubernetes master branch to your local computer.</p>
 <h2 id=clone-single-branch>Clone single branch</h2>
-<p>Since the <code>repos</code> branch is used as a software source for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.</p>
+<p>Since the <code>repos</code> branch is used as a source package for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts
 </code></pre></div>
 </div>
@@ -100,18 +100,18 @@ This the multi-page printable view of this section.
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsdeveloper-guidedependent-1-1 role=tab aria-controls=tabset-docsdeveloper-guidedependent-1-1>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsdeveloper-guidedependent-1-2 role=tab aria-controls=tabset-docsdeveloper-guidedependent-1-2>Debian-based distributions</a></li></ul>
 <div class=tab-content id=tabset-docsdeveloper-guidedependent-1><div id=tabset-docsdeveloper-guidedependent-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsdeveloper-guidedependent-1-0>
-<p><p>Run the following code to install the dependencies:</p>
+<p><p>Run the following code to install dependencies:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install jq git python@3 <span style=color:#8f5902;font-style:italic># Install brew, See https://brew.sh/</span>
 pip3 install yq
 </code></pre></div></div>
 <div id=tabset-docsdeveloper-guidedependent-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsdeveloper-guidedependent-1-1>
-<p><p>Run the following code to install the dependencies:</p>
+<p><p>Run the following code to install dependencies:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install -y epel-release
 yum install -y jq git python3
 pip3 install yq
 </code></pre></div></div>
 <div id=tabset-docsdeveloper-guidedependent-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-docsdeveloper-guidedependent-1-2>
-<p><p>Run the following code to install the dependencies:</p>
+<p><p>Run the following code to install dependencies:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install -y jq git python3 python3-pip
 pip3 install yq
 </code></pre></div></div></div>
