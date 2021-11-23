@@ -1,11 +1,9 @@
 ---
-title: "使用安装脚本安装"
-weight: 30
+title: "脚本一键安装"
+weight: 31
 ---
 
-KLTS 提供了一个脚本, 可以自动化的完成安装流程
-
-## 安装
+KLTS 提供了以下脚本自动完成安装流程。
 
 ```
 wget https://github.com/klts-io/klts/raw/main/install.sh

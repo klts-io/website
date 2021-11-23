@@ -1,5 +1,5 @@
 ---
-title: "安装"
+title: "正常安装"
 weight: 30
 ---
 
