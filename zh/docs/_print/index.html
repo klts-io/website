@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.6d3e225adeafa923883207a02149bbb1.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.54eba28e263554872a728cb8d716240c.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -150,17 +150,21 @@
 <div class=td-content>
 <h1 id=pg-18d58d2666f9af2b2086e0baa55f315d>1 - 简介</h1>
 <p>KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。</p>
-<p>之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 的某个版本在初次发布后一年，才能提供稳定版本，请参阅 <a href=#release-cycle>Kubernetes 版本发行周期</a>。</p>
-<p>如下图所示，目前 1.10 - 1.18 是 KLTS 正在维护的版本，而 1.19 - 1.22 是 Kubernetes 社区维护的版本，具体请参阅<a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>社区版本维护声明</a>。</p>
-<img src=../klts_job.png width=750>
-<p>以 1.19 为例，其稳定版本预计在 2021 年 10 月 28 日提供，但 1.19 稳定版本并不能完全兼容 1.10 到 1.18 的诸多功能，中间有无数次的版本迭代开发，如果企业贸然升级到 1.19，很可能会引发生产事故。而其他 1.20 - 1.22 等新版本也有类似的问题。</p>
-<p>现在大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 4 个版本，如何才能保证早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。</p>
+<p>之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 社区版本的维护周期只有一年左右，请参阅 <a href=#release-cycle>Kubernetes 版本发行周期</a>。</p>
+<p>在实际生产中，大多数企业采用早期的 Kubernetes 版本管控集群，这是为什么呢？</p>
+<p>首先，升级频率高会带来变更风险，每次升级必须进行充分验证。特别是金融行业的平台层变更周期通常比较长，一旦新版本存在 bug，还需要快速响应升级至更新的版本。</p>
+<p>其次，Kubernetes 升级后部分功能的替代方案还没有完全生产就绪，常会出现不兼容的状况。</p>
+<p>最后，Kubernetes 社区仅支持小版本 +1 升级，不支持跨版本升级，因为跨版本升级经常会出现一些不可控的因素，造成更大的生产问题。</p>
+<p>所以大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 3 到 4 个版本，如何才能保证这些早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持。</p>
 <h2 id=maint-cycle>KLTS 维护周期</h2>
-<p>KLTS 目前维护了 9 个稳定版本：1.10.13, 1.11.10, 1.12.10, 1.13.12, 1.14.10, 1.15.12, 1.16.15, 1.17.17, 1.18.20。</p>
-<p>如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这 9 个版本的维护周期如下：</p>
+<p>Kubernetes 社区版本表示为 x.y.z，其中 x 是大版本号，y 是小版本号，z 是补丁版本，KLTS 提供的补丁版本号通常以 lts0、lts1…ltsn 表示。为了方便表述，本节用前两位 x.y 描述 Kubernetes 版本号。</p>
+<p>假设社区发布的最新 Kubernetes 版本为 x.y，根据<a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>社区版本维护声明</a>，社区仅维护最近的三个版本，而 KLTS 维护从 1.10 起的近十个早期版本，如下图所示。</p>
+<img src=../klts_job.png width=750>
+<p>如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这些早期版本的维护周期如下：</p>
 <p><img src=../images/whatKLTSdoes.png alt="KLTS 维护版本"></p>
 <p>从上图可看出，Kubernetes 社区对某个版本的维护周期通常在一年左右，而 KLTS 可以在接下来的三年内提供长期维护，直至代码无法兼容，才会将相应版本淘汰。</p>
-<h2 id=bug-fix>漏洞修复</h2>
+<h2 id=bug-fix>KLTS 修复范围</h2>
+<p>有些高优先级的 CVE 或严重 Bug 存在于生产环境中会造成较大的安全隐患。CVE 安全问题是集群的生命线，KLTS 会优先修复中高级别的 CVE，其次会修复重大 Bug，确保生产环境稳定运行。</p>
 <p>以 2021 年 1 月发现的 <a href=https://www.cvedetails.com/cve/CVE-2021-3121>CVE-2021-3121</a> 安全漏洞为例，CVSS 危急分数高达 7.5。但截止 2021 年 9 月 Kubernetes 社区：</p>
 <ul>
 <li>仅修复了 4 个版本：1.18、1.19、1.20、1.21</li>
@@ -180,12 +184,20 @@
 <li>v1.10.13</li>
 </ul>
 <p>如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 <a href=https://github.com/klts-io>KLTS 社区</a>交流并做出贡献。</p>
-<h2 id=klts-ver>版本说明</h2>
-<p>KLTS 提供的 Kubernetes 常见版本号如下：<br>
-<img src=../klts_ver.png width=300></p>
-<p>其中 V1.16.15 是 Kubernetes 的完整发行版本号，1.16 是大版本号，15 是社区补丁版本，而 lts.0 是 KLTS 提供的补丁版本号。</p>
+<h2 id=klts-benefits>KLTS 优势</h2>
+<p><strong>维护周期长</strong></p>
+<p>Kubernetes 社区对每个版本提供一年左右的维护，而 KLTS 接下来会为该版本提供长达 3 年的持续维护。</p>
+<p><strong>安全稳定</strong></p>
+<p>小版本升级更安全，兼容性高</p>
+<p>渐进式升级稳定性更好。譬如最新版本的新功能也许很有吸引力，但是不一定能达到生产可用的标准，需要较长时间的积累。</p>
+<p><strong>易于安装</strong></p>
+<p>结合国内镜像加速，原生支持 Kubeadm，支持 CentOS、Ubuntu、openSUSE，还提供了一键安装脚本。</p>
+<p><strong>公开透明</strong></p>
+<p>GitHub 托管开源项目，全流程公开。</p>
+<p><strong>全链路规划</strong></p>
+<p>后续会添加 Containerd 及其他组件的长期维护。</p>
 <h2 id=release-cycle>Kubernetes 版本发行周期</h2>
-<p>Kubernetes 社区最近 12 个版本的发布时间统计如下：</p>
+<p>Kubernetes 社区最近十多个版本的发布时间统计如下：</p>
 <table>
 <thead>
 <tr>
