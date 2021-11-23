@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f3800880e27e08be5a22c1a36ee44a26.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.371eb28c656371ce9e8302b8c8a352f1.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -80,8 +80,8 @@
 <ul>
 <li>1: <a href=#pg-18d58d2666f9af2b2086e0baa55f315d>简介</a></li>
 <li>2: <a href=#pg-50ddcb3cdb08fbe2ad5d04311c273b4c>准备</a></li>
-<li>3: <a href=#pg-c170895d2a643e556fcae1338dee8dce>使用安装脚本安装</a></li>
-<li>4: <a href=#pg-64407d3e6d5ef382426bdfbcae040c6a>安装</a></li>
+<li>3: <a href=#pg-64407d3e6d5ef382426bdfbcae040c6a>正常安装</a></li>
+<li>4: <a href=#pg-c170895d2a643e556fcae1338dee8dce>脚本一键安装</a></li>
 <li>5: <a href=#pg-c258a50dfe331dfdf852330040bd8f14>后续工作</a></li>
 <li>6: <a href=#pg-cf1a7e96c5bc452942429f7b1a8d0306>修复的漏洞</a></li>
 <ul>
@@ -279,7 +279,7 @@
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - 准备</h1>
-<p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>本页介绍安装 Kubernetes 之前需要做好的一些准备工作，例如先要安装 <code>kubeadm</code> 工具箱。有关在安装此工具箱后如何用其创建集群，请参阅<a href=/zh/docs/install target>安装</a>。</p>
+<p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>本页介绍安装 Kubernetes 之前需要做好的一些准备工作，例如先要安装 <code>kubeadm</code> 工具箱。有关在安装此工具箱后如何用其创建集群，请参阅<a href=/zh/docs/install target>正常安装</a>。</p>
 <h2 id=准备工作>准备工作</h2>
 <ul>
 <li>准备一台兼容的 Linux 主机。Kubernetes 项目为基于 Debian 和 Red Hat 的 Linux
@@ -480,16 +480,7 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <p>参阅<a href=https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/ target=_blank>容器运行时</a>以了解更多信息。</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c170895d2a643e556fcae1338dee8dce>3 - 使用安装脚本安装</h1>
-<p>KLTS 提供了一个脚本, 可以自动化的完成安装流程</p>
-<h2 id=安装>安装</h2>
-<pre><code>wget https://github.com/klts-io/klts/raw/main/install.sh
-chmod +x install.sh
-./install.sh
-</code></pre>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>4 - 安装</h1>
+<h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>3 - 正常安装</h1>
 <p>KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。</p>
 <p>安装前请确认已经完成了<a href=/zh/docs/pre-install target>准备</a>工作。</p>
 <h2 id=设置-klts-软件源>设置 KLTS 软件源</h2>
@@ -706,6 +697,14 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
 <p>有关更多安装说明，请参阅 <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Kubernetes 操作指南</a>。</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-c170895d2a643e556fcae1338dee8dce>4 - 脚本一键安装</h1>
+<p>KLTS 提供了以下脚本自动完成安装流程。</p>
+<pre><code>wget https://github.com/klts-io/klts/raw/main/install.sh
+chmod +x install.sh
+./install.sh
+</code></pre>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-c258a50dfe331dfdf852330040bd8f14>5 - 后续工作</h1>
