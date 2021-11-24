@@ -16,7 +16,7 @@ KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早�
 
 所以大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 3 到 4 个版本，如何才能保证这些早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持，积极修复早期版本的 CVE 安全漏洞和重大 bug。  
 ## KLTS 维护周期 {#maint-cycle}
-Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号，y 是小版本号，z 是补丁版本，KLTS 提供的补丁版本号通常以 lts0、lts1…ltsn 表示。为了方便表述，本节用前两位 x.y 描述 Kubernetes 版本号。  
+Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号，y 是小版本号，z 是补丁版本，KLTS 提供的补丁版本号通常以 lts1、lts2 … ltsn 表示。为了方便表述，本节用前两位 x.y 描述 Kubernetes 版本号。  
 
 假设社区发布的最新 Kubernetes 版本为 x.y，根据[社区版本维护声明](https://kubernetes.io/releases/version-skew-policy/#supported-versions)，社区仅维护最近的三个版本，而 KLTS 目前维护从 1.10 起的近十个早期版本，如下图所示。  
 
@@ -50,7 +50,9 @@ KLTS 针对这一现状，默默修复了深受 [CVE-2021-3121](https://www.cved
 - v1.10.13
 
 如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 [KLTS 社区](https://github.com/klts-io)交流并做出贡献。
-## KLTS 优势 {#klts-benefits}
+## 欢迎携手培育硕果 {#klts-benefits}
+辛勤的耕耘，最终收获的是美丽花朵和累累硕果。经过开发者精心的维护支持，KLTS 为这些早期版本带来了以下成果：  
+
 **三年维护期**  
 
 Kubernetes 社区对每个版本提供一年左右的维护，而 KLTS 接下来会为该版本提供长达三年的持续维护。  
@@ -71,7 +73,13 @@ Kubernetes 社区对每个版本提供一年左右的维护，而 KLTS 接下来
 
 **全链路规划**  
 
-后续会添加 Containerd 及其他组件的长期维护。
+后续会添加 Containerd 及其他组件的长期维护。  
+
+在此也向广大的开发者，再次发出邀请，如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 KLTS 社区交流并贡献，期待您的任何意见、建议或解决方案。  
+
+- 加入 [KLTS 社区](https://github.com/klts-io)
+- 加入 [KLTS Slack 聊天频道](https://join.slack.com/t/klts/shared_invite/zt-wutp4tk7-ITXZc8EUUiuxbM_5mh1qXA)
+
 ## Kubernetes 版本发行周期 {#release-cycle}
 Kubernetes 社区最近十多个版本的发布时间统计如下：  
 
