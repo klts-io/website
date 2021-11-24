@@ -1,4 +1,30 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KLTS.io – KLTS.io</title><link>/zh/</link><description>Recent content on KLTS.io</description><generator>Hugo -- gohugo.io</generator><atom:link href="/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 欢迎来到 KLTS 的博客</title><link>/zh/blog/2021/10/15/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-klts-%E7%9A%84%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate><guid>/zh/blog/2021/10/15/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-klts-%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KLTS.io – KLTS.io</title><link>/zh/</link><description>Recent content on KLTS.io</description><generator>Hugo -- gohugo.io</generator><atom:link href="/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: KLTS 正式发布</title><link>/zh/blog/2021/11/17/klts-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>/zh/blog/2021/11/17/klts-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+&lt;p>我们很高兴宣布 KLTS 开源项目正式上线了。KLTS 适用于企业用户，可以直接用于生产环境。
+在 Kubernetes 社区停止维护某个版本后，KLTS 将继续提供两年以上的维护，主要包括修补 CVE 漏洞和较为严重的 bug。&lt;/p>
+&lt;p>KLTS 从提出思路、代码整理、构建加速通道、建设网站，到最后发布上线，共用了 2 个多月时间。我们的目的是分享和交流，分享使人快乐，交流让人进步。&lt;/p>
+&lt;p>为什么会有 KLTS 这个开源项目呢？是因为 Kubernetes 官方社区仅维护最新的 3-4 个版本，而许多实际生产环境采用了以前的旧版本，如果贸然升级到新版本，容易引发生产故障。&lt;/p>
+&lt;p>我们就遇到过这样一个案例。&lt;/p>
+&lt;h2 id="升级难题">升级难题&lt;/h2>
+&lt;p>2021 年 7 月份，某个银行客户将 Kubernetes 1.11 直接升级到 1.18，升级后进行业务系统压力测试时，生产环境出现严重故障。&lt;/p>
+&lt;p>该银行客户管理层和我们公司领导都非常重视，立即组织专家们加班加点复现问题，对两个跨省的大生产集群逐节点排查，反复进行三次尝试，终于找对了问题的方向，成功复现故障发生的临界点。&lt;/p>
+&lt;p>多番测试后，最终确定是新老集群节点迁移期间因更换 Master 节点导致新集群网络出现大规模故障，旧 Master 支持的某些功能在升级后没有得到很好地支持。&lt;/p>
+&lt;p>事后银行高管反馈说：“之所以需要升级旧系统，是因为 Kubernetes 1.11 的某个安全漏洞，但是万万没想到升级后会出现这种大范围的故障。”&lt;/p>
+&lt;h2 id="内部反思">内部反思&lt;/h2>
+&lt;p>发生这样的问题，往往会影响实际的生产业务，引发一系列严重后果。所以这次事件之后，我们内部进行了详细的思考讨论。意识到生产环境中运行的许多旧版本 Kubernetes 并不能贸然升级到新版本，这很容易引发各种各样无法预料的问题，客户也可能因此陷于进退两难的境地。&lt;/p>
+&lt;p>为了提高客户满意度，我们这两年来持续维护 Kubernetes 1.10 起的各个版本，解决各种各样的故障问题。经常有同事深夜接到 on-call 售后服务电话，用冷水洗一把脸，就立即开始远程排查，再抬头时天都快亮了。&lt;/p>
+&lt;p>两年多的日夜奋战，我们修复了许多 bug，解决了数不清的故障。这次事件之后，大家意识到这些维护过的 Kubernetes 版本是很多客户求而不得的数字资产。&lt;/p>
+&lt;p>我们内部提出一个大胆的建议：“这些版本是否能分享到社区，让更多用户受益？而不仅仅是局限于公司范围的客户，这样也能为社区的发展略尽绵薄之力。”&lt;/p>
+&lt;p>正逢 Kubernetes Community Day (KCD) 大会如火如荼地展开，这一提议得到了团队成员的积极响应。&lt;/p>
+&lt;h2 id="项目构建">项目构建&lt;/h2>
+&lt;p>说干就干，首先是从公司代码仓库上扒出历年修复的补丁，依托于 Github 的 CI, 恢复测试, 构建软件源(YUM/DEB) 和镜像 ，建设网站，编写文档。&lt;/p>
+&lt;p>现已经在 CentOS7 经过较为充分的测试&lt;/p>
+&lt;h2 id="正式发布">正式发布&lt;/h2>
+&lt;p>2021 年 11 月，金秋送爽，一切准备就绪，&lt;a href="https://klts.io/zh/">KLTS&lt;/a>正式对外发布。我们不求这个开源项目多么大红大紫，只求同事们几年来积累的经验能够为您带来一些帮助，让您少走弯路。&lt;/p>
+&lt;p>从 1.10 起所有内核都是久经金融政企生产验证的软件，您可以放心下载，经过测试验证后就能直接投入生产环境。&lt;/p>
+&lt;p>如您有任何意见或疑问，请立即联系我们。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://join.slack.com/t/klts/shared_invite/zt-wutp4tk7-ITXZc8EUUiuxbM_5mh1qXA">加入 KLTS&amp;rsquo;s Slack&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Blog: 欢迎来到 KLTS 的博客</title><link>/zh/blog/2021/10/15/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-klts-%E7%9A%84%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate><guid>/zh/blog/2021/10/15/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-klts-%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid><description>
 &lt;p>欢迎来到 KLTS 的专属博客空间。&lt;/p>
 &lt;p>您可以在这里了解 KLTS 开源项目的进展和最近的热议话题。&lt;/p>
 &lt;p>我们还计划在这里列出主要版本的发布说明、指导文章、社区有关事件，可能还会有一些开发的心得体会和团队内部的有趣话题。&lt;/p>

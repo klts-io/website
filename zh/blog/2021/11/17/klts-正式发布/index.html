@@ -1,0 +1,238 @@
+<!doctype html><html lang=zh class=no-js>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.87.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<link rel="shortcut icon" href=/favicons/favicon.ico>
+<link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
+<link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36>
+<link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48>
+<link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72>
+<link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
+<link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
+<link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
+<title>KLTS 正式发布 | KLTS.io</title>
+<meta name=description content="KLTS 的官网"><meta property="og:title" content="KLTS 正式发布">
+<meta property="og:description" content="我们很高兴宣布 KLTS 开源项目正式上线了。KLTS 适用于企业用户，可以直接用于生产环境。 在 Kubernetes 社区停止维护某个版本后，KLTS 将继续提供两年以上的维护，主要包括修补 CVE 漏洞和较为严重的 bug。
+KLTS 从提出思路、代码整理、构建加速通道、建设网站，到最后发布上线，共用了 2 个多月时间。我们的目的是分享和交流，分享使人快乐，交流让人进步。
+为什么会有 KLTS 这个开源项目呢？是因为 Kubernetes 官方社区仅维护最新的 3-4 个版本，而许多实际生产环境采用了以前的旧版本，如果贸然升级到新版本，容易引发生产故障。
+我们就遇到过这样一个案例。
+升级难题 2021 年 7 月份，某个银行客户将 Kubernetes 1.11 直接升级到 1.18，升级后进行业务系统压力测试时，生产环境出现严重故障。
+该银行客户管理层和我们公司领导都非常重视，立即组织专家们加班加点复现问题，对两个跨省的大生产集群逐节点排查，反复进行三次尝试，终于找对了问题的方向，成功复现故障发生的临界点。
+多番测试后，最终确定是新老集群节点迁移期间因更换 Master 节点导致新集群网络出现大规模故障，旧 Master 支持的某些功能在升级后没有得到很好地支持。
+事后银行高管反馈说：“之所以需要升级旧系统，是因为 Kubernetes 1.11 的某个安全漏洞，但是万万没想到升级后会出现这种大范围的故障。”
+内部反思 发生这样的问题，往往会影响实际的生产业务，引发一系列严重后果。所以这次事件之后，我们内部进行了详细的思考讨论。意识到生产环境中运行的许多旧版本 Kubernetes 并不能贸然升级到新版本，这很容易引发各种各样无法预料的问题，客户也可能因此陷于进退两难的境地。
+为了提高客户满意度，我们这两年来持续维护 Kubernetes 1.10 起的各个版本，解决各种各样的故障问题。经常有同事深夜接到 on-call 售后服务电话，用冷水洗一把脸，就立即开始远程排查，再抬头时天都快亮了。
+两年多的日夜奋战，我们修复了许多 bug，解决了数不清的故障。这次事件之后，大家意识到这些维护过的 Kubernetes 版本是很多客户求而不得的数字资产。
+我们内部提出一个大胆的建议：“这些版本是否能分享到社区，让更多用户受益？而不仅仅是局限于公司范围的客户，这样也能为社区的发展略尽绵薄之力。”
+正逢 Kubernetes Community Day (KCD) 大会如火如荼地展开，这一提议得到了团队成员的积极响应。
+项目构建 说干就干，首先是从公司代码仓库上扒出历年修复的补丁，依托于 Github 的 CI, 恢复测试, 构建软件源(YUM/DEB) 和镜像 ，建设网站，编写文档。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/zh/blog/2021/11/17/klts-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/"><meta property="article:section" content="blog">
+<meta property="article:published_time" content="2021-11-17T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-11-04T18:01:54+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="KLTS 正式发布">
+<meta itemprop=description content="我们很高兴宣布 KLTS 开源项目正式上线了。KLTS 适用于企业用户，可以直接用于生产环境。 在 Kubernetes 社区停止维护某个版本后，KLTS 将继续提供两年以上的维护，主要包括修补 CVE 漏洞和较为严重的 bug。
+KLTS 从提出思路、代码整理、构建加速通道、建设网站，到最后发布上线，共用了 2 个多月时间。我们的目的是分享和交流，分享使人快乐，交流让人进步。
+为什么会有 KLTS 这个开源项目呢？是因为 Kubernetes 官方社区仅维护最新的 3-4 个版本，而许多实际生产环境采用了以前的旧版本，如果贸然升级到新版本，容易引发生产故障。
+我们就遇到过这样一个案例。
+升级难题 2021 年 7 月份，某个银行客户将 Kubernetes 1.11 直接升级到 1.18，升级后进行业务系统压力测试时，生产环境出现严重故障。
+该银行客户管理层和我们公司领导都非常重视，立即组织专家们加班加点复现问题，对两个跨省的大生产集群逐节点排查，反复进行三次尝试，终于找对了问题的方向，成功复现故障发生的临界点。
+多番测试后，最终确定是新老集群节点迁移期间因更换 Master 节点导致新集群网络出现大规模故障，旧 Master 支持的某些功能在升级后没有得到很好地支持。
+事后银行高管反馈说：“之所以需要升级旧系统，是因为 Kubernetes 1.11 的某个安全漏洞，但是万万没想到升级后会出现这种大范围的故障。”
+内部反思 发生这样的问题，往往会影响实际的生产业务，引发一系列严重后果。所以这次事件之后，我们内部进行了详细的思考讨论。意识到生产环境中运行的许多旧版本 Kubernetes 并不能贸然升级到新版本，这很容易引发各种各样无法预料的问题，客户也可能因此陷于进退两难的境地。
+为了提高客户满意度，我们这两年来持续维护 Kubernetes 1.10 起的各个版本，解决各种各样的故障问题。经常有同事深夜接到 on-call 售后服务电话，用冷水洗一把脸，就立即开始远程排查，再抬头时天都快亮了。
+两年多的日夜奋战，我们修复了许多 bug，解决了数不清的故障。这次事件之后，大家意识到这些维护过的 Kubernetes 版本是很多客户求而不得的数字资产。
+我们内部提出一个大胆的建议：“这些版本是否能分享到社区，让更多用户受益？而不仅仅是局限于公司范围的客户，这样也能为社区的发展略尽绵薄之力。”
+正逢 Kubernetes Community Day (KCD) 大会如火如荼地展开，这一提议得到了团队成员的积极响应。
+项目构建 说干就干，首先是从公司代码仓库上扒出历年修复的补丁，依托于 Github 的 CI, 恢复测试, 构建软件源(YUM/DEB) 和镜像 ，建设网站，编写文档。"><meta itemprop=datePublished content="2021-11-17T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-11-04T18:01:54+08:00">
+<meta itemprop=wordCount content="87">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="KLTS 正式发布">
+<meta name=twitter:description content="我们很高兴宣布 KLTS 开源项目正式上线了。KLTS 适用于企业用户，可以直接用于生产环境。 在 Kubernetes 社区停止维护某个版本后，KLTS 将继续提供两年以上的维护，主要包括修补 CVE 漏洞和较为严重的 bug。
+KLTS 从提出思路、代码整理、构建加速通道、建设网站，到最后发布上线，共用了 2 个多月时间。我们的目的是分享和交流，分享使人快乐，交流让人进步。
+为什么会有 KLTS 这个开源项目呢？是因为 Kubernetes 官方社区仅维护最新的 3-4 个版本，而许多实际生产环境采用了以前的旧版本，如果贸然升级到新版本，容易引发生产故障。
+我们就遇到过这样一个案例。
+升级难题 2021 年 7 月份，某个银行客户将 Kubernetes 1.11 直接升级到 1.18，升级后进行业务系统压力测试时，生产环境出现严重故障。
+该银行客户管理层和我们公司领导都非常重视，立即组织专家们加班加点复现问题，对两个跨省的大生产集群逐节点排查，反复进行三次尝试，终于找对了问题的方向，成功复现故障发生的临界点。
+多番测试后，最终确定是新老集群节点迁移期间因更换 Master 节点导致新集群网络出现大规模故障，旧 Master 支持的某些功能在升级后没有得到很好地支持。
+事后银行高管反馈说：“之所以需要升级旧系统，是因为 Kubernetes 1.11 的某个安全漏洞，但是万万没想到升级后会出现这种大范围的故障。”
+内部反思 发生这样的问题，往往会影响实际的生产业务，引发一系列严重后果。所以这次事件之后，我们内部进行了详细的思考讨论。意识到生产环境中运行的许多旧版本 Kubernetes 并不能贸然升级到新版本，这很容易引发各种各样无法预料的问题，客户也可能因此陷于进退两难的境地。
+为了提高客户满意度，我们这两年来持续维护 Kubernetes 1.10 起的各个版本，解决各种各样的故障问题。经常有同事深夜接到 on-call 售后服务电话，用冷水洗一把脸，就立即开始远程排查，再抬头时天都快亮了。
+两年多的日夜奋战，我们修复了许多 bug，解决了数不清的故障。这次事件之后，大家意识到这些维护过的 Kubernetes 版本是很多客户求而不得的数字资产。
+我们内部提出一个大胆的建议：“这些版本是否能分享到社区，让更多用户受益？而不仅仅是局限于公司范围的客户，这样也能为社区的发展略尽绵薄之力。”
+正逢 Kubernetes Community Day (KCD) 大会如火如荼地展开，这一提议得到了团队成员的积极响应。
+项目构建 说干就干，首先是从公司代码仓库上扒出历年修复的补丁，依托于 Github 的 CI, 恢复测试, 构建软件源(YUM/DEB) 和镜像 ，建设网站，编写文档。">
+<link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
+<link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
+<script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://unpkg.com/lunr@2.3.8/lunr.min.js integrity=sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY crossorigin=anonymous></script>
+</head>
+<body class="td-page td-blog">
+<header>
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+<a class=navbar-brand href=/zh/>
+<span class=navbar-logo><svg id="Graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g id="KLTS_-_Graph_-_Light" data-name="KLTS - Graph - Light"><path id="Secondary" d="M174.54 276.539c-23.254 5.244-46.3 13.984-70.386 26.563V249.768A322.072 322.072.0 01153.4 232.2q11.784-3.111 23.743-5.193a84.322 84.322.0 00-2.6 49.53zm54.832-100.2c-18.627-17.387-38.964-31.808-61.2-44.965L119.7 159.357c29.816 15.76 52.067 30.719 69.575 45.639a84.135 84.135.0 0140.097-28.661zm20.63-4.1c1.983-.14 3.979-.237 6-.237a83.588 83.588.0 0141.393 10.916 251.959 251.959.0 00.78-28.448 297.8 297.8.0 00-6.564-53.245L256 80.664l-16.489 9.52c6.65 24.114 10.095 45.37 10.682 65.672Q250.433 164.112 250 172.237zm-64.76 129.007q-4.648 8.227-8.758 16.752a324.529 324.529.0 00-20.49 55.6l43.21 24.947c5.824-24.5 13.469-45.93 23.455-65.437A84.3 84.3.0 01185.242 301.244zM374.19 148.9c-19 18.863-37.743 34.831-58.691 47.809a83.826 83.826.0 0122.786 42.325c25.366-15.381 47.642-34.187 69.561-55.9v-14.8zM298.741 328.308A83.582 83.582.0 01256 340q-2.149.0-4.272-.108c1.842 4.863 3.807 9.68 5.93 14.446 8.355 18.751 19.118 37.369 33 56.991l41.757-24.108c-13.306-18.382-23.351-35.46-30.908-52.419C300.542 332.644 299.63 330.478 298.741 328.308zm40.874-64.358a83.578 83.578.0 01-18.131 44.635c26.246 8.936 54.539 14.141 86.362 16.028v-48.08a284.525 284.525.0 01-57.161-9.231Q345.087 265.763 339.615 263.95z" fill="#fff" opacity=".66"/><path id="Primary" d="M256 71.426l159.846 92.287V348.287L256 440.574 96.154 348.287V163.713L256 71.426M256 16 48.154 136V376L256 496 463.846 376V136L256 16zm0 204a36 36 0 11-25.456 10.544A35.767 35.767.0 01256 220m0-48a84 84 0 1059.4 24.6A83.738 83.738.0 00256 172z" fill="#fff"/><rect id="Frame" width="512" height="512" fill="none"/></g></svg></span><span class="text-uppercase font-weight-bold">KLTS.io</span>
+</a>
+<div class="td-navbar-nav-scroll ml-md-auto" id=main_navbar>
+<ul class="navbar-nav mt-2 mt-lg-0">
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/zh/about/><span>关于</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class="nav-link active" href=/zh/blog/><span class=active>博客</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/zh/docs/><span>文档</span></a>
+</li>
+<li class="nav-item dropdown mr-4 d-none d-lg-block">
+<a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+中文 Chinese
+</a>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/>English</a>
+</div>
+</li>
+</ul>
+</div>
+<div class="navbar-nav d-none d-lg-block">
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4c4c7dd3d82268205c467b17decc4ddb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+</div>
+</nav>
+</header>
+<div class="container-fluid td-outer">
+<div class=td-main>
+<div class="row flex-xl-nowrap">
+<aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<div id=td-sidebar-menu class=td-sidebar__inner>
+<form class="td-sidebar__search d-flex align-items-center">
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4c4c7dd3d82268205c467b17decc4ddb.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
+</button>
+</form>
+<nav class="collapse td-sidebar-nav" id=td-section-nav>
+<div class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+中文 Chinese
+</a>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/>English</a>
+</div>
+</div>
+<ul class="td-sidebar-nav__section pr-md-3 ul-0">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-zhblog-li>
+<a href=/zh/blog/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-zhblog><span>博客</span></a>
+<ul class=ul-1>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-zhblog20211117klts-e6ada3e5bc8fe58f91e5b883-li>
+<a href=/zh/blog/2021/11/17/klts-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-zhblog20211117klts-e6ada3e5bc8fe58f91e5b883><span class=td-sidebar-nav-active-item>KLTS 正式发布</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhblog20211015e6aca2e8bf8ee69da5e588b0-klts-e79a84e58d9ae5aea2-li>
+<a href=/zh/blog/2021/10/15/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-klts-%E7%9A%84%E5%8D%9A%E5%AE%A2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhblog20211015e6aca2e8bf8ee69da5e588b0-klts-e79a84e58d9ae5aea2><span>欢迎来到 KLTS 的博客</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href=https://github.com/klts-io/website/edit/main/content/zh/blog/_posts/2021-11-17-first-release/index.md target=_blank><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/klts-io/website/new/main/content/zh/blog/_posts/2021-11-17-first-release/index.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
+<a href="https://github.com/klts-io/website/issues/new?title=KLTS%20%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83" target=_blank><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
+<a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> 提交项目问题</a>
+<a id=print href=/zh/blog/_print/><i class="fa fa-print fa-fw"></i> 整节打印</a>
+</div>
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li><a href=#升级难题>升级难题</a></li>
+<li><a href=#内部反思>内部反思</a></li>
+<li><a href=#项目构建>项目构建</a></li>
+<li><a href=#正式发布>正式发布</a></li>
+</ul>
+</nav></div>
+</aside>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
+<div class=td-content>
+<h1>KLTS 正式发布</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-11-17 class=text-muted>2021.11.17</time>
+</div>
+<header class=article-meta>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 分钟 阅读时间</p>
+</header>
+<p>我们很高兴宣布 KLTS 开源项目正式上线了。KLTS 适用于企业用户，可以直接用于生产环境。
+在 Kubernetes 社区停止维护某个版本后，KLTS 将继续提供两年以上的维护，主要包括修补 CVE 漏洞和较为严重的 bug。</p>
+<p>KLTS 从提出思路、代码整理、构建加速通道、建设网站，到最后发布上线，共用了 2 个多月时间。我们的目的是分享和交流，分享使人快乐，交流让人进步。</p>
+<p>为什么会有 KLTS 这个开源项目呢？是因为 Kubernetes 官方社区仅维护最新的 3-4 个版本，而许多实际生产环境采用了以前的旧版本，如果贸然升级到新版本，容易引发生产故障。</p>
+<p>我们就遇到过这样一个案例。</p>
+<h2 id=升级难题>升级难题</h2>
+<p>2021 年 7 月份，某个银行客户将 Kubernetes 1.11 直接升级到 1.18，升级后进行业务系统压力测试时，生产环境出现严重故障。</p>
+<p>该银行客户管理层和我们公司领导都非常重视，立即组织专家们加班加点复现问题，对两个跨省的大生产集群逐节点排查，反复进行三次尝试，终于找对了问题的方向，成功复现故障发生的临界点。</p>
+<p>多番测试后，最终确定是新老集群节点迁移期间因更换 Master 节点导致新集群网络出现大规模故障，旧 Master 支持的某些功能在升级后没有得到很好地支持。</p>
+<p>事后银行高管反馈说：“之所以需要升级旧系统，是因为 Kubernetes 1.11 的某个安全漏洞，但是万万没想到升级后会出现这种大范围的故障。”</p>
+<h2 id=内部反思>内部反思</h2>
+<p>发生这样的问题，往往会影响实际的生产业务，引发一系列严重后果。所以这次事件之后，我们内部进行了详细的思考讨论。意识到生产环境中运行的许多旧版本 Kubernetes 并不能贸然升级到新版本，这很容易引发各种各样无法预料的问题，客户也可能因此陷于进退两难的境地。</p>
+<p>为了提高客户满意度，我们这两年来持续维护 Kubernetes 1.10 起的各个版本，解决各种各样的故障问题。经常有同事深夜接到 on-call 售后服务电话，用冷水洗一把脸，就立即开始远程排查，再抬头时天都快亮了。</p>
+<p>两年多的日夜奋战，我们修复了许多 bug，解决了数不清的故障。这次事件之后，大家意识到这些维护过的 Kubernetes 版本是很多客户求而不得的数字资产。</p>
+<p>我们内部提出一个大胆的建议：“这些版本是否能分享到社区，让更多用户受益？而不仅仅是局限于公司范围的客户，这样也能为社区的发展略尽绵薄之力。”</p>
+<p>正逢 Kubernetes Community Day (KCD) 大会如火如荼地展开，这一提议得到了团队成员的积极响应。</p>
+<h2 id=项目构建>项目构建</h2>
+<p>说干就干，首先是从公司代码仓库上扒出历年修复的补丁，依托于 Github 的 CI, 恢复测试, 构建软件源(YUM/DEB) 和镜像 ，建设网站，编写文档。</p>
+<p>现已经在 CentOS7 经过较为充分的测试</p>
+<h2 id=正式发布>正式发布</h2>
+<p>2021 年 11 月，金秋送爽，一切准备就绪，<a href=https://klts.io/zh/>KLTS</a>正式对外发布。我们不求这个开源项目多么大红大紫，只求同事们几年来积累的经验能够为您带来一些帮助，让您少走弯路。</p>
+<p>从 1.10 起所有内核都是久经金融政企生产验证的软件，您可以放心下载，经过测试验证后就能直接投入生产环境。</p>
+<p>如您有任何意见或疑问，请立即联系我们。</p>
+<ul>
+<li><a href=https://join.slack.com/t/klts/shared_invite/zt-wutp4tk7-ITXZc8EUUiuxbM_5mh1qXA>加入 KLTS&rsquo;s Slack</a></li>
+</ul>
+<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+<li>
+<a href=/zh/blog/2021/10/15/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-klts-%E7%9A%84%E5%8D%9A%E5%AE%A2/ aria-label="上一页 - 欢迎来到 KLTS 的博客" class="btn btn-primary"><span class=mr-1>←</span> 上一页</a>
+</li>
+<a class="btn btn-primary disabled">下一页 <span class=ml-1>→</span></a>
+</li>
+</ul>
+</div>
+</main>
+</div>
+</div>
+<footer class="bg-dark py-5 row d-print-none">
+<div class="container-fluid mx-sm-5">
+<div class=row>
+<div class="col-6 col-sm-4 text-xs-center order-sm-2">
+</div>
+<div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+<ul class="list-inline mb-0">
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub>
+<a class=text-white target=_blank rel=noopener href=https://github.com/klts-io aria-label=GitHub>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Slack aria-label=Slack>
+<a class=text-white target=_blank rel=noopener href=https://klts.slack.com aria-label=Slack>
+<i class="fab fa-slack"></i>
+</a>
+</li>
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Developer mailing list" aria-label="Developer mailing list">
+<a class=text-white target=_blank rel=noopener href=mailto:klts-io@googlegroups.com aria-label="Developer mailing list">
+<i class="fa fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+<small class=text-white>&copy; 2021 The KLTS.io Authors 版权所有</small>
+<p class=mt-2><a href=/zh/about/>关于 KLTS</a></p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js integrity=sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF crossorigin=anonymous></script>
+<script src=/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js integrity="sha256-OxcsE7YsK+qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin=anonymous></script>
+</body>
+</html>
