@@ -25,7 +25,7 @@ KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号
 假设社区发布的最新 Kubernetes 版本为 x.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/intro/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-11-24T16:04:48+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-11-24T16:14:25+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="简介">
 <meta itemprop=description content="KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
 之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 社区版本的维护周期只有一年左右，请参阅 Kubernetes 版本发行周期。在社区停止维护后，KLTS 在接下来的三年内提供免费维护服务。
@@ -36,8 +36,8 @@ KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号
   所以大多数企业的选择是沿用早期版本，不会贸然升级。但 Kubernetes 社区只维护最新的 3 到 4 个版本，如何才能保证这些早期版本免受社区不定时发现的 CVE 漏洞和 bug 的袭扰呢？这就是 KLTS 的价值所在！我们对早期版本提供长达 3 年的免费维护支持，积极修复早期版本的 CVE 安全漏洞和重大 bug。
 KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号，y 是小版本号，z 是补丁版本，KLTS 提供的补丁版本号通常以 lts1、lts2 … ltsn 表示。为了方便表述，本节用前两位 x.y 描述 Kubernetes 版本号。
 假设社区发布的最新 Kubernetes 版本为 x.">
-<meta itemprop=dateModified content="2021-11-24T16:04:48+08:00">
-<meta itemprop=wordCount content="232">
+<meta itemprop=dateModified content="2021-11-24T16:14:25+08:00">
+<meta itemprop=wordCount content="226">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="简介">
 <meta name=twitter:description content="KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
@@ -82,7 +82,7 @@ KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.e08ee97b59606ea340841690f4a4cff0.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.33e7cfa6b0e14b4a651f8624e219b4e0.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -92,7 +92,7 @@ KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.e08ee97b59606ea340841690f4a4cff0.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.33e7cfa6b0e14b4a651f8624e219b4e0.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -310,17 +310,23 @@ KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号
 <p>如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 <a href=https://github.com/klts-io>KLTS 社区</a>交流并做出贡献。</p>
 <h2 id=klts-benefits>欢迎携手培育硕果</h2>
 <p>辛勤的耕耘，最终收获的是美丽花朵和累累硕果。经过开发者精心的维护支持，KLTS 为这些早期版本带来了以下成果：</p>
-<p><strong>三年维护期</strong></p>
-<p>Kubernetes 社区对每个版本提供一年左右的维护，而 KLTS 接下来会为该版本提供长达三年的持续维护。</p>
-<p><strong>安全稳定</strong></p>
-<p>小版本升级更安全，兼容性高。</p>
-<p>渐进式升级稳定性更好。譬如最新版本的新功能也许很有吸引力，但是不一定能达到生产可用的标准，需要较长时间的积累。</p>
-<p><strong>易于安装</strong></p>
-<p>结合国内镜像加速，原生支持 Kubeadm，支持 CentOS、Ubuntu、openSUSE，还提供了一键安装脚本。</p>
-<p><strong>公开透明</strong></p>
-<p>在 GitHub 托管的开源项目，全流程公开。</p>
-<p><strong>全链路规划</strong></p>
-<p>后续会添加 Containerd 及其他组件的长期维护。</p>
+<ul>
+<li>
+<p><strong>三年维护期</strong>：Kubernetes 社区对每个版本提供一年左右的维护，而 KLTS 接下来会为该版本提供长达三年的持续维护。</p>
+</li>
+<li>
+<p><strong>安全稳定</strong>：小版本升级更安全，兼容性高。渐进式升级稳定性更好。譬如最新版本的新功能也许很有吸引力，但是不一定能达到生产可用的标准，需要较长时间的积累。</p>
+</li>
+<li>
+<p><strong>易于安装</strong>：结合国内镜像加速，原生支持 Kubeadm，支持 CentOS、Ubuntu、openSUSE，还提供了一键安装脚本。</p>
+</li>
+<li>
+<p><strong>公开透明</strong>：在 GitHub 托管的开源项目，全流程公开。</p>
+</li>
+<li>
+<p><strong>全链路规划</strong>：后续会添加 Containerd 及其他组件的长期维护。</p>
+</li>
+</ul>
 <p>在此也向广大的开发者，再次发出邀请，如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 KLTS 社区交流并贡献，期待您的任何意见、建议或解决方案。</p>
 <ul>
 <li>加入 <a href=https://github.com/klts-io>KLTS 社区</a></li>
@@ -409,7 +415,7 @@ KLTS 维护周期 Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2021.11.24
-: <a href=https://github.com/klts-io/website/commit/58664de4b81de98c047c763b81d1defca6dafb38>minor text changes (58664de4)</a>
+: <a href=https://github.com/klts-io/website/commit/031644e4671033bdfbe941e237cb862b6909ae36>minor text changes (031644e4)</a>
 </div>
 </div>
 </main>
