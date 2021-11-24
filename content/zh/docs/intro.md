@@ -4,7 +4,7 @@ weight: 10
 ---
 KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。
 
-之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 社区版本的维护周期只有一年左右，请参阅 [Kubernetes 版本发行周期](#release-cycle)。在社区停止维护后，KLTS 在接下来的三年来提供免费维护服务。  
+之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 社区版本的维护周期只有一年左右，请参阅 [Kubernetes 版本发行周期](#release-cycle)。在社区停止维护后，KLTS 在接下来的三年内提供免费维护服务。  
 
 在实际生产中，为什么大多数企业选择采用早期的 Kubernetes 版本管控集群呢？  
 
@@ -22,7 +22,7 @@ Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号，y 是小版本�
 
 <img src="../klts_job.png" width="750">  
 
-如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这些早期版本的维护周期如下：  
+当 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，受到影响的可能不止是社区正在维护的版本，还有之前已经停止维护、但企业仍在使用、且不能贸然升级的版本，KLTS 团队维护的正是这些社区放弃维护的版本。目前 KLTS 的版本维护周期如下：  
 
 ![KLTS 维护版本](../images/whatKLTSdoes.png)
 
