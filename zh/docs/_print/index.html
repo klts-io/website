@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.96efa51cd3d22f0f15c955897fb5e450.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.2b0f91b982725474cde9d47f271d6425.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -149,7 +149,7 @@
 <div class=td-content>
 <h1 id=pg-18d58d2666f9af2b2086e0baa55f315d>1 - 简介</h1>
 <p>KLTS 全称为 Kubernetes Long Term Support，主要使命是为 Kubernetes 早期版本提供长期免费的维护支持。</p>
-<p>之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 社区版本的维护周期只有一年左右，请参阅 <a href=#release-cycle>Kubernetes 版本发行周期</a>。在社区停止维护后，KLTS 在接下来的三年来提供免费维护服务。</p>
+<p>之所以需要维护早期版本，是因为在实际生产环境中，最新版本不一定是最好的，也不是最稳定的。正常而言，Kubernetes 社区版本的维护周期只有一年左右，请参阅 <a href=#release-cycle>Kubernetes 版本发行周期</a>。在社区停止维护后，KLTS 在接下来的三年内提供免费维护服务。</p>
 <p>在实际生产中，为什么大多数企业选择采用早期的 Kubernetes 版本管控集群呢？</p>
 <ul>
 <li>
@@ -167,7 +167,7 @@
 <p>Kubernetes 版本号表示为 x.y.z，其中 x 是大版本号，y 是小版本号，z 是补丁版本，KLTS 提供的补丁版本号通常以 lts0、lts1…ltsn 表示。为了方便表述，本节用前两位 x.y 描述 Kubernetes 版本号。</p>
 <p>假设社区发布的最新 Kubernetes 版本为 x.y，根据<a href=https://kubernetes.io/releases/version-skew-policy/#supported-versions>社区版本维护声明</a>，社区仅维护最近的三个版本，而 KLTS 目前维护从 1.10 起的近十个早期版本，如下图所示。</p>
 <img src=../klts_job.png width=750>
-<p>如果 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，KLTS 团队将接手社区放弃维护的这些版本，使其处于持续维护状态。目前这些早期版本的维护周期如下：</p>
+<p>当 Kubernetes 社区发现可能影响生产的 CVE 新漏洞或 bug，受到影响的可能不止是社区正在维护的版本，还有之前已经停止维护、但企业仍在使用、且不能贸然升级的版本，KLTS 团队维护的正是这些社区放弃维护的版本。目前 KLTS 的版本维护周期如下：</p>
 <p><img src=../images/whatKLTSdoes.png alt="KLTS 维护版本"></p>
 <p>从上图可看出，Kubernetes 社区对某个版本的维护周期通常在一年左右，而 KLTS 可以在接下来的三年内提供长期维护，直至代码无法兼容，才会将相应版本淘汰。</p>
 <h2 id=bug-fix>KLTS 修复范围</h2>
