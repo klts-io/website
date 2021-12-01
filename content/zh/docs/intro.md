@@ -66,7 +66,7 @@ KLTS 针对这一现状，默默修复了深受 [CVE-2021-3121](https://www.cved
 在此也向广大的开发者，再次发出邀请，如果您觉得 KLTS 团队的付出有价值，让您值得信赖，欢迎任何开发者加入 KLTS 社区交流并贡献，期待您的任何意见、建议或解决方案。  
 
 - 加入 [KLTS 社区](https://github.com/klts-io)
-- 加入 [KLTS Slack 聊天频道](https://join.slack.com/t/klts/shared_invite/zt-wutp4tk7-ITXZc8EUUiuxbM_5mh1qXA)
+- 加入 [KLTS Slack 聊天频道](https://klts.slack.com/archives/C02H8DMB6SZ)
 
 ## Kubernetes 版本发行周期 {#release-cycle}
 Kubernetes 社区最近十多个版本的发布时间统计如下：  
