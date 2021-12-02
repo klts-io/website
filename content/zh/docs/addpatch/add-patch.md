@@ -3,7 +3,7 @@ title: 添加 CVE 补丁到 klts
 weight: 90
 ---
 
-CVE 在 kubernetes 社区不断的进行更新的，我们将要在维护的所有版本中修复这个 CVE 漏洞。基于源 patch 文件在低于此 patch 的版本更新出各个版本对应的 patch 文件。`klts` 有自动更新 patch 的功能，我们只需要解决冲突，保证代码的有效性和可用性。
+CVE 在 kubernetes 社区是持续更新的，我们需要在维护的所有版本中修复更新的 CVE 漏洞。基于源 patch 文件在低于此 patch 的版本更新出各个版本对应的 patch 文件。`klts` 有自动更新 patch 的功能，我们只需要解决冲突，保证代码的有效性和可用性。
 
 下面将介绍如何把在 `klts` 中添加一个 CVE 补丁。
 
