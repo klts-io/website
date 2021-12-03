@@ -55,7 +55,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.808a41daa700b6f033f20fa26afa3464.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.64785b52f56027a7a0acf0c99fa66038.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -78,12 +78,15 @@ This the multi-page printable view of this section.
 </div>
 <h1 class=title>Document</h1>
 <ul>
-<li>1: <a href=#pg-678704d1c81cba20ab7f9af62e484052>CVE-2019-11245</a></li>
-<li>2: <a href=#pg-583fb1d89ccf082c48164b7b3e179cf3>Overview</a></li>
-<li>3: <a href=#pg-50ddcb3cdb08fbe2ad5d04311c273b4c>Preparation</a></li>
-<li>4: <a href=#pg-c170895d2a643e556fcae1338dee8dce>Instal with script</a></li>
-<li>5: <a href=#pg-64407d3e6d5ef382426bdfbcae040c6a>Install</a></li>
-<li>6: <a href=#pg-c258a50dfe331dfdf852330040bd8f14>Post Install</a></li>
+<li>1: <a href=#pg-583fb1d89ccf082c48164b7b3e179cf3>Overview</a></li>
+<li>2: <a href=#pg-50ddcb3cdb08fbe2ad5d04311c273b4c>Preparation</a></li>
+<li>3: <a href=#pg-c170895d2a643e556fcae1338dee8dce>Instal with script</a></li>
+<li>4: <a href=#pg-64407d3e6d5ef382426bdfbcae040c6a>Install</a></li>
+<li>5: <a href=#pg-c258a50dfe331dfdf852330040bd8f14>Post Install</a></li>
+<li>6: <a href=#pg-cf1a7e96c5bc452942429f7b1a8d0306>Fixed CVEs</a></li>
+<ul>
+<li>6.1: <a href=#pg-678704d1c81cba20ab7f9af62e484052>CVE-2019-11245</a></li>
+</ul>
 <li>7: <a href=#pg-a7c9e10a31abdecaec5a338462a220a8>Developer Guide</a></li>
 <ul>
 <li>7.1: <a href=#pg-79fcc7e024580df9da30cdb10805eada>Clone</a></li>
@@ -94,27 +97,7 @@ This the multi-page printable view of this section.
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-678704d1c81cba20ab7f9af62e484052>1 - CVE-2019-11245</h1>
-<a href=https://www.cvedetails.com/cve/CVE-2019-11245 target=_blank>Vulnerability details</a>
-<p>Containers for pods that do not specify an explicit runAsUser attempt to run as <code>uid 0</code> (root) on container restart, or if the image was previously pulled to the node. If the pod specified <code>mustRunAsNonRoot: true</code>, the kubelet will refuse to start the container as root. If the pod did not specify <code>mustRunAsNonRoot: true</code>, the kubelet will run the container as <code>uid 0</code>.</p>
-<h2 id=scope>Scope</h2>
-<p>If a pod specifies <code>mustRunAsNonRoot: true</code>, the pod will run as <code>uid 0</code> when it restarts or the image is pulled on to a node.</p>
-<h2 id=prevention>Prevention</h2>
-<p>Specify <code>mustRunAsNonRoot: true</code> for pods.</p>
-<h2 id=official-fixed>Official fixed</h2>
-<ul>
-<li>v1.14.3</li>
-<li>v1.13.7</li>
-</ul>
-<h2 id=klts-fixed>Fixed by KLTS</h2>
-<ul>
-<li><a href=/docs/releases/v1.12.10/v1.12.10-lts.1 target>/docs/releases/v1.12.10/v1.12.10-lts.1/</a> <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
-<li><a href=/docs/releases/v1.11.10/v1.11.10-lts.1 target>/docs/releases/v1.11.10/v1.11.10-lts.1/</a> <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
-<li><a href=/docs/releases/v1.10.13/v1.10.13-lts.1 target>/docs/releases/v1.10.13/v1.10.13-lts.1/</a> <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
-</ul>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-583fb1d89ccf082c48164b7b3e179cf3>2 - Overview</h1>
+<h1 id=pg-583fb1d89ccf082c48164b7b3e179cf3>1 - Overview</h1>
 <p>KLTS, known as Kubernetes Long Term Support, has a primary mission to provide free long-term maintenance support for earlier versions of Kubernetes.</p>
 <p>Kubernetes versions are expressed as <strong>x.y.z</strong>, where <strong>x</strong> is the major version, <strong>y</strong> is the minor version, and <strong>z</strong> is the patch version. For the versions maintained by KLTS, it is followed by a string beginning with <strong>lts</strong>.</p>
 <p>One of the reasons to maintain earlier versions is the fact that in a real production environment, the latest release is not the best or the most stable. In a normal case, As shown in the table below, a stable release of Kubernetes is not available until one year after the initial release of a particular version. For details see <a href=#release-cycle>Kubernetes release cycle</a>.</p>
@@ -228,7 +211,7 @@ This the multi-page printable view of this section.
 <p>A stable release is usually the final bug-fix release about one year after the initial release. It refers to the release of End Of Life (EOL), i.e., the community will not maintain this version from then on.</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>3 - Preparation</h1>
+<h1 id=pg-50ddcb3cdb08fbe2ad5d04311c273b4c>2 - Preparation</h1>
 <p><img src=https://raw.githubusercontent.com/kubernetes/kubeadm/master/logos/stacked/color/kubeadm-stacked-color.png align=right width=150px>This page introduces some preparations before installation. For example, it is required to install the <code>kubeadm</code> toolbox to get started. For information on how to create a cluster with kubeadm, see the <a href=/docs/install target>Install</a> page.</p>
 <h2 id=before-you-start>Before you start</h2>
 <p>You should prepare or perform the following actions:</p>
@@ -423,7 +406,7 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <p>See <a href=https://kubernetes.io/docs/setup/production-environment/container-runtimes/ target=_blank>container runtimes</a> for more information.</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c170895d2a643e556fcae1338dee8dce>4 - Instal with script</h1>
+<h1 id=pg-c170895d2a643e556fcae1338dee8dce>3 - Instal with script</h1>
 <p>KLTS provides a script that automates the installation process</p>
 <h2 id=install>Install</h2>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>wget https://github.com/klts-io/klts/raw/main/install.sh
@@ -448,7 +431,7 @@ chmod +x install.sh
 </code></pre>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>5 - Install</h1>
+<h1 id=pg-64407d3e6d5ef382426bdfbcae040c6a>4 - Install</h1>
 <p>KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.</p>
 <p>Before installation, ensure that your <a href=/docs/pre-install target>Preparation</a> is good enough.</p>
 <h2 id=set-the-klts-source-package>Set the KLTS source package</h2>
@@ -530,8 +513,31 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 </code></pre></div><p>For details see <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Create a cluster with kubeadm</a>.</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c258a50dfe331dfdf852330040bd8f14>6 - Post Install</h1>
+<h1 id=pg-c258a50dfe331dfdf852330040bd8f14>5 - Post Install</h1>
 <p>TODO</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-cf1a7e96c5bc452942429f7b1a8d0306>6 - Fixed CVEs</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-678704d1c81cba20ab7f9af62e484052>6.1 - CVE-2019-11245</h1>
+<a href=https://www.cvedetails.com/cve/CVE-2019-11245 target=_blank>Vulnerability details</a>
+<p>Containers for pods that do not specify an explicit runAsUser attempt to run as <code>uid 0</code> (root) on container restart, or if the image was previously pulled to the node. If the pod specified <code>mustRunAsNonRoot: true</code>, the kubelet will refuse to start the container as root. If the pod did not specify <code>mustRunAsNonRoot: true</code>, the kubelet will run the container as <code>uid 0</code>.</p>
+<h2 id=scope>Scope</h2>
+<p>If a pod specifies <code>mustRunAsNonRoot: true</code>, the pod will run as <code>uid 0</code> when it restarts or the image is pulled on to a node.</p>
+<h2 id=prevention>Prevention</h2>
+<p>Specify <code>mustRunAsNonRoot: true</code> for pods.</p>
+<h2 id=official-fixed>Official fixed</h2>
+<ul>
+<li>v1.14.3</li>
+<li>v1.13.7</li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/releases/v1.12.10/v1.12.10-lts.1 target>/docs/releases/v1.12.10/v1.12.10-lts.1/</a> <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
+<li><a href=/docs/releases/v1.11.10/v1.11.10-lts.1 target>/docs/releases/v1.11.10/v1.11.10-lts.1/</a> <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
+<li><a href=/docs/releases/v1.10.13/v1.10.13-lts.1 target>/docs/releases/v1.10.13/v1.10.13-lts.1/</a> <a href=https://github.com/kubernetes/kubernetes/pull/78320.patch target=_blank>kubernetes/kubernetes#78320</a></li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-a7c9e10a31abdecaec5a338462a220a8>7 - Developer Guide</h1>
