@@ -42,5 +42,5 @@ KLTS 从提出思路、代码整理、构建加速通道、建设网站，到最
 从 1.10 起所有内核都是久经金融政企生产验证的软件，您可以放心下载，经过测试验证后就能直接投入生产环境。
 
 如您有任何意见或疑问，请立即联系我们。
-  * [加入 KLTS's Slack](https://join.slack.com/t/klts/shared_invite/zt-wutp4tk7-ITXZc8EUUiuxbM_5mh1qXA)
+  * [加入 KLTS's Slack](https://klts.slack.com/archives/C02H8DMB6SZ)
   * [加入 KLTS 社区](https://github.com/klts-io)

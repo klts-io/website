@@ -2,35 +2,35 @@
 title: nokmem
 weight: -100
 short_description: |
-  节点磁盘充足但是一直报磁盘不足无法创建 `Pod`。
+  The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.
 ---
 
-{{< link text="Bug 详情" url="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" >}}
+{{< link text="Bug details" url="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" >}}
 
-节点磁盘充足但是一直报磁盘不足无法创建 `Pod`。
+The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.
 
-## Bug 影响 {#scope}
+## Scope {#scope}
 
-节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：
+When the node is used for a long time, it prompts an error that the remaining space is insufficient. The error message is as follows:
 
 ```
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
 ```
 
-节点磁盘充足但是一直报和这个错误, 并且创建 `Pod` 总是失败，这是一个潜在的“定时炸弹”。
+The node disk is sufficient but reports this error, and the creation of `Pod` always fails. This is a potential "time bomb".
 
-所有使用低版本内核的环境以及 Kubernetes 1.22 之前的版本都会受到影响，在 runc 1.0.0-rc94 ({{< link text="opencontainers/runc#2840" url="https://github.com/opencontainers/runc/pull/2840" >}}) 进行了修复(被直接移除)。
+All environments that use early-version kernels and Kubernetes versions before 1.22 will be affected. In runc 1.0.0-rc94 ({{< link text="opencontainers/runc#2840" url="https://github.com/opencontainers /runc/pull/2840" >}}) it has been fixed (removed directly).
 
-## 防范措施 {#prevention}
+## Prevention {#prevention}
 
-- 升级系统内核
-- Kubernetes 1.14 及以上
-  - 重新构建 Kubelet 带上 `-tags=nokmem`
-- Kubernetes 1.14 以下
-  - 有关硬编码，请参考 {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
+- Upgrade the system kernel
+- Kubernetes 1.14 or higher
+  - Rebuild Kubelet with `-tags=nokmem`
+- Kubernetes 1.14 or earlier
+  - For hard coding, refer to {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
 
 
-## KLTS 修复的版本 {#klts-fixed}
+## Fixed by KLTS {#klts-fixed}
 
 - {{< link url="/docs/releases/v1.18.20/v1.18.20-lts.1/" >}} {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch" >}}
 - {{< link url="/docs/releases/v1.17.17/v1.17.17-lts.1/" >}} {{< link text="nokmem.1.18.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch" >}}
