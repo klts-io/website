@@ -1,9 +1,9 @@
 ---
-title: "Instal with script"
+title: "Install with script"
 weight: 30
 ---
 
-KLTS provides a script that automates the installation process
+KLTS provides a script that automates the installation process.
 
 ## Install
 
