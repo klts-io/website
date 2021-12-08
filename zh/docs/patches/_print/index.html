@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.64785b52f56027a7a0acf0c99fa66038.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.0fa8c4d06a236e33a4e5956386cc436c.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -136,7 +136,7 @@
 <h2 id=scope>漏洞影响</h2>
 <p><code>Kubernetes</code> 系统组件由于自身有应对崩溃的恢复机制，当遇到恶意提交的 <code>Protobuf</code> 消息时不会中断服务，所以不在该漏洞的影响范围内。</p>
 <p>在应用系统中程序接收处理 <code>Protobuf</code> 消息时，如果组件没有应对崩溃的恢复机制，那么这类程序都在该漏洞影响范围内，且被恶意攻击时服务可能会中断。</p>
-<p><code>Kubernetes</code> 社区经过测试验证 <code>API Server</code> 不受该漏洞的影响，但为了避免您受到该安全漏洞隐患的影响，社区对相关 <code>Protobuf</code> 文件进行了升级，具体修复版本如下:</p>
+<p><code>Kubernetes</code> 社区经过测试验证 <code>API Server</code> 不受该漏洞的影响，但为了避免您受到该安全漏洞隐患的影响，社区对相关 <code>Protobuf</code> 文件进行了升级。</p>
 <h2 id=prevention>防范措施</h2>
 <p>如果在您的应用系统代码中使用了自动生成的 <code>Protobuf</code> 消息，并且发现相关组件因为以下异常退出，则可能存在该漏洞。</p>
 <pre><code>panic: runtime error: index out of range [-9223372036854775804]
@@ -399,7 +399,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <p>节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：</p>
 <pre><code>mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
 </code></pre><p>节点磁盘充足但是一直报和这个错误, 并且创建 <code>Pod</code> 总是失败，这是一个潜在的“定时炸弹”。</p>
-<p>所有使用低版本内核的环境，Kubernetes 1.22 之前的版本都会受到影响, 在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) 修复(直接移除了)</p>
+<p>所有使用低版本内核的环境以及 Kubernetes 1.22 之前的版本都会受到影响，在 runc 1.0.0-rc94 (<a href=https://github.com/opencontainers/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) 进行了修复(被直接移除)。</p>
 <h2 id=prevention>防范措施</h2>
 <ul>
 <li>升级系统内核</li>
@@ -410,7 +410,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </li>
 <li>Kubernetes 1.14 以下
 <ul>
-<li>硬编码, 请参考 <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+<li>有关硬编码，请参考 <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 </ul>
 </li>
 </ul>
