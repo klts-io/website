@@ -1,5 +1,5 @@
 ---
-title: Install
+title: Step-By-Step Install
 weight: 30
 ---
 
