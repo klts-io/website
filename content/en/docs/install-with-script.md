@@ -1,5 +1,5 @@
 ---
-title: "Install with script"
+title: "Install with Script"
 weight: 30
 ---
 
