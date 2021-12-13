@@ -2,8 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.87.0"><link rel=canonical type=text/html href=/blog/>
-<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<meta name=generator content="Hugo 0.87.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
 <link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32>
@@ -13,21 +12,29 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Blog | KLTS.io</title>
-<meta name=description content="KLTS.io website"><meta property="og:title" content="Blog">
-<meta property="og:description" content="KLTS.io website">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/blog/"><meta property="og:site_name" content="KLTS.io">
-<meta itemprop=name content="Blog">
-<meta itemprop=description content="KLTS.io website"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Blog">
-<meta name=twitter:description content="KLTS.io website">
+<title>Official release of KLTS | KLTS.io</title>
+<meta name=description content="KLTS.io website"><meta property="og:title" content="Official release of KLTS">
+<meta property="og:description" content="We are happy to announce that the KLTS project is officially launched. KLTS is suitable for enterprise users and can be directly used in a production environment. After the Kubernetes community stops maintaining a certain version, KLTS will continue to provide maintenance for two to three years, mainly including patching CVE vulnerabilities and fixing serious bugs.
+KLTS team took more than 2 months from proposing ideas, organizing code, building acceleration channels and websites, and finally launching it online.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/blog/2021/11/17/official-release-of-klts/"><meta property="article:section" content="blog">
+<meta property="article:published_time" content="2021-11-17T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-12-10T11:16:38+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="Official release of KLTS">
+<meta itemprop=description content="We are happy to announce that the KLTS project is officially launched. KLTS is suitable for enterprise users and can be directly used in a production environment. After the Kubernetes community stops maintaining a certain version, KLTS will continue to provide maintenance for two to three years, mainly including patching CVE vulnerabilities and fixing serious bugs.
+KLTS team took more than 2 months from proposing ideas, organizing code, building acceleration channels and websites, and finally launching it online."><meta itemprop=datePublished content="2021-11-17T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-12-10T11:16:38+08:00">
+<meta itemprop=wordCount content="697">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Official release of KLTS">
+<meta name=twitter:description content="We are happy to announce that the KLTS project is officially launched. KLTS is suitable for enterprise users and can be directly used in a production environment. After the Kubernetes community stops maintaining a certain version, KLTS will continue to provide maintenance for two to three years, mainly including patching CVE vulnerabilities and fixing serious bugs.
+KLTS team took more than 2 months from proposing ideas, organizing code, building acceleration channels and websites, and finally launching it online.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script src=https://unpkg.com/lunr@2.3.8/lunr.min.js integrity=sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY crossorigin=anonymous></script>
 </head>
-<body class="td-section td-blog">
+<body class="td-page td-blog">
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -49,7 +56,7 @@
 English
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/zh/blog/>中文 Chinese</a>
+<a class=dropdown-item href=/zh/>中文 Chinese</a>
 </div>
 </li>
 </ul>
@@ -62,34 +69,63 @@ English
 <div class="container-fluid td-outer">
 <div class=td-main>
 <div class="row flex-xl-nowrap">
-<div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<div id=td-sidebar-menu class=td-sidebar__inner>
+<form class="td-sidebar__search d-flex align-items-center">
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.48619b0c4f7836abdde8eb3f0e18016d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
+</button>
+</form>
+<nav class="collapse td-sidebar-nav" id=td-section-nav>
+<div class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+English
+</a>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/zh/>中文 Chinese</a>
 </div>
-<div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
 </div>
+<ul class="td-sidebar-nav__section pr-md-3 ul-0">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-blog-li>
+<a href=/blog/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-blog><span>Blog</span></a>
+<ul class=ul-1>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-blog20211117official-release-of-klts-li>
+<a href=/blog/2021/11/17/official-release-of-klts/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-blog20211117official-release-of-klts><span class=td-sidebar-nav-active-item>Official release of KLTS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-blog20211015welcome-to-the-klts-blog-li>
+<a href=/blog/2021/10/15/welcome-to-the-klts-blog/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-blog20211015welcome-to-the-klts-blog><span>Welcome to the KLTS Blog!</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href=https://github.com/klts-io/website/edit/main/content/en/blog/2021-11-17-first-release/index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/klts-io/website/new/main/content/en/blog/2021-11-17-first-release/index.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/klts-io/website/issues/new?title=Official%20release%20of%20KLTS" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<a id=print href=/blog/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+</div>
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li><a href=#upgrade-issues>Upgrade issues</a></li>
+<li><a href=#internal-discussion>Internal discussion</a></li>
+<li><a href=#build>Build</a></li>
+<li><a href=#official-release>Official release</a></li>
+</ul>
+</nav></div>
+</aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
 <div class=td-content>
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.
-</p><p>
-<a href=/blog/>Return to the regular view of this page</a>.
-</p>
-</div>
-<h1 class=title>Blog</h1>
-<ul>
-<li><a href=#pg-17a5b97d3f04ae81d07f8cb25aeb1614>Official release of KLTS</a></li>
-<li><a href=#pg-fb0bc4e947bbf31606fbab67bf182e66>Welcome to the KLTS Blog!</a></li>
-</ul>
-<div class=content>
-<p>This is the exclusive blog space for KLTS.</p>
-</div>
-</div>
-<div class=td-content>
-<h1 id=pg-17a5b97d3f04ae81d07f8cb25aeb1614>Official release of KLTS</h1>
+<h1>Official release of KLTS</h1>
 <div class="td-byline mb-4">
 <time datetime=2021-11-17 class=text-muted>Wednesday, November 17, 2021</time>
 </div>
+<header class=article-meta>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 4 minute read</p>
+</header>
 <p>We are happy to announce that the KLTS project is officially launched. KLTS is suitable for enterprise users and can be directly used in a production environment. After the Kubernetes community stops maintaining a certain version, KLTS will continue to provide maintenance for two to three years, mainly including patching CVE vulnerabilities and fixing serious bugs.</p>
 <p>KLTS team took more than 2 months from proposing ideas, organizing code, building acceleration channels and websites, and finally launching it online. Our purpose is to share and communicate, sharing makes people happy, and communication makes progress.</p>
 <p>Why do we need the KLTS project? The reason is that the official Kubernetes community only maintains the latest 3 - 4 versions, but those earlier versions are still used in many actual production environments. If you rashly upgrade to a new version, it is easy to cause production failures.</p>
@@ -116,16 +152,13 @@ This the multi-page printable view of this section.
 <li><a href=https://klts.slack.com/archives/C02H8DMB6SZ>Slack</a></li>
 <li><a href=https://github.com/klts-io>KLTS community</a></li>
 </ul>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-fb0bc4e947bbf31606fbab67bf182e66>Welcome to the KLTS Blog!</h1>
-<div class="td-byline mb-4">
-<time datetime=2021-10-15 class=text-muted>Friday, October 15, 2021</time>
-</div>
-<p>Welcome to the new KLTS blog space.</p>
-<p>Here you can keep up with the progress of the KLTS open source project and recent hot topics.</p>
-<p>We also plan to include release notes for major releases, guidance articles, community-related events, and possibly some development tips, and interesting topics within the team.</p>
-<p>If you are using a version of k8s provided by KLTS or are interested in contributing to this open source project and would like to join the discussion or make some guest blog posts, please contact us.</p>
+<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+<li>
+<a href=/blog/2021/10/15/welcome-to-the-klts-blog/ aria-label="Previous - Welcome to the KLTS Blog!" class="btn btn-primary"><span class=mr-1>←</span> Previous</a>
+</li>
+<a class="btn btn-primary disabled">Next <span class=ml-1>→</span></a>
+</li>
+</ul>
 </div>
 </main>
 </div>

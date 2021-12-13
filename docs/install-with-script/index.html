@@ -12,20 +12,20 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Install with script | KLTS.io</title>
-<meta name=description content="KLTS.io website"><meta property="og:title" content="Install with script">
+<title>Install with Script | KLTS.io</title>
+<meta name=description content="KLTS.io website"><meta property="og:title" content="Install with Script">
 <meta property="og:description" content="KLTS provides a script that automates the installation process.
 Install wget https://github.com/klts-io/klts/raw/main/install.sh chmod +x install.sh ./install.sh Usage: ./install.sh [OPTIONS] -h, --help : Display this help and exit --kubernetes-container-registry=ghcr.io/klts-io/kubernetes-lts : Kubernetes container registry --kubernetes-version=1.18.20-lts.1 : Kubernetes version to install --containerd-version=1.3.10-lts.0 : Containerd version to install --runc-version=1.0.2-lts.0 : Runc version to install --kubernetes-rpm-source=https://github.com/klts-io/kubernetes-lts/raw/rpm-v1.18.20-lts.0 : Kubernetes RPM source --containerd-rpm-source=https://github.com/klts-io/containerd-lts/raw/rpm-v1.3.10-lts.0 : Containerd RPM source --runc-rpm-source=https://github.com/klts-io/runc-lts/raw/rpm-v1.0.2-lts.0 : Runc RPM source --others-rpm-source=https://github.com/klts-io/others/raw/rpm : Other RPM source --kubernetes-deb-source=https://github.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install-with-script/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-12-08T11:22:54+08:00"><meta property="og:site_name" content="KLTS.io">
-<meta itemprop=name content="Install with script">
+<meta property="article:modified_time" content="2021-12-10T11:16:38+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="Install with Script">
 <meta itemprop=description content="KLTS provides a script that automates the installation process.
 Install wget https://github.com/klts-io/klts/raw/main/install.sh chmod +x install.sh ./install.sh Usage: ./install.sh [OPTIONS] -h, --help : Display this help and exit --kubernetes-container-registry=ghcr.io/klts-io/kubernetes-lts : Kubernetes container registry --kubernetes-version=1.18.20-lts.1 : Kubernetes version to install --containerd-version=1.3.10-lts.0 : Containerd version to install --runc-version=1.0.2-lts.0 : Runc version to install --kubernetes-rpm-source=https://github.com/klts-io/kubernetes-lts/raw/rpm-v1.18.20-lts.0 : Kubernetes RPM source --containerd-rpm-source=https://github.com/klts-io/containerd-lts/raw/rpm-v1.3.10-lts.0 : Containerd RPM source --runc-rpm-source=https://github.com/klts-io/runc-lts/raw/rpm-v1.0.2-lts.0 : Runc RPM source --others-rpm-source=https://github.com/klts-io/others/raw/rpm : Other RPM source --kubernetes-deb-source=https://github.">
-<meta itemprop=dateModified content="2021-12-08T11:22:54+08:00">
+<meta itemprop=dateModified content="2021-12-10T11:16:38+08:00">
 <meta itemprop=wordCount content="102">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Install with script">
+<meta name=twitter:title content="Install with Script">
 <meta name=twitter:description content="KLTS provides a script that automates the installation process.
 Install wget https://github.com/klts-io/klts/raw/main/install.sh chmod +x install.sh ./install.sh Usage: ./install.sh [OPTIONS] -h, --help : Display this help and exit --kubernetes-container-registry=ghcr.io/klts-io/kubernetes-lts : Kubernetes container registry --kubernetes-version=1.18.20-lts.1 : Kubernetes version to install --containerd-version=1.3.10-lts.0 : Containerd version to install --runc-version=1.0.2-lts.0 : Runc version to install --kubernetes-rpm-source=https://github.com/klts-io/kubernetes-lts/raw/rpm-v1.18.20-lts.0 : Kubernetes RPM source --containerd-rpm-source=https://github.com/klts-io/containerd-lts/raw/rpm-v1.3.10-lts.0 : Containerd RPM source --runc-rpm-source=https://github.com/klts-io/runc-lts/raw/rpm-v1.0.2-lts.0 : Runc RPM source --others-rpm-source=https://github.com/klts-io/others/raw/rpm : Other RPM source --kubernetes-deb-source=https://github.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
@@ -61,7 +61,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.0fa8c4d06a236e33a4e5956386cc436c.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.48619b0c4f7836abdde8eb3f0e18016d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -71,7 +71,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.0fa8c4d06a236e33a4e5956386cc436c.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.48619b0c4f7836abdde8eb3f0e18016d.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -92,12 +92,10 @@ English
 <a href=/docs/intro/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsintro><span>Overview</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docspre-install-li>
 <a href=/docs/pre-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docspre-install><span>Preparation</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstall-li>
-<a href=/docs/install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstall><span>Install</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsinstall-with-script-li>
-<a href=/docs/install-with-script/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsinstall-with-script><span class=td-sidebar-nav-active-item>Install with script</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docspost-install-li>
-<a href=/docs/post-install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docspost-install><span>Post Install</span></a>
+<a href=/docs/install-with-script/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsinstall-with-script><span class=td-sidebar-nav-active-item>Install with Script</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstall-li>
+<a href=/docs/install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstall><span>Step-By-Step Install</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docspatches-li>
 <a href=/docs/patches/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docspatches><span>Fixed CVEs</span></a>
 <ul class="ul-2 foldable">
@@ -217,7 +215,7 @@ English
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
 <a href=https://github.com/klts-io/website/edit/main/content/en/docs/install-with-script.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
 <a href="https://github.com/klts-io/website/new/main/content/en/docs/install-with-script.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
-<a href="https://github.com/klts-io/website/issues/new?title=Install%20with%20script" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/klts-io/website/issues/new?title=Install%20with%20Script" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 <a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
 <a id=print href=/docs/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
@@ -229,12 +227,12 @@ English
 <a href=/docs/>Document</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/docs/install-with-script/>Install with script</a>
+<a href=/docs/install-with-script/>Install with Script</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>Install with script</h1>
+<h1>Install with Script</h1>
 <header class=article-meta>
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 minute read</p>
 </header>
@@ -262,8 +260,8 @@ chmod +x install.sh
 </code></pre>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-December 8, 2021
-: <a href=https://github.com/klts-io/website/commit/261df585facb0e831421e4d493bb7193b4f7da1a>minor text changes (261df585)</a>
+December 10, 2021
+: <a href=https://github.com/klts-io/website/commit/71dbde712035208b2dc0ad78a26a6c2466b7ac55>new translations (71dbde71)</a>
 </div>
 </div>
 </main>
