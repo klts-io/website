@@ -4,7 +4,7 @@ weight: 10
 ---
 KLTS, known as Kubernetes Long Term Support, has a primary mission to provide free long-term maintenance support for early versions of Kubernetes.  
 
-One of the reasons to maintain early versions is the fact that in a real production environment, the latest release is not the best or the most stable. In a normal case, a stable release of Kubernetes is not available until one year after the initial release of a particular version. For details see [Kubernetes release cycle](#release-cycle). After the community aborts maintenance, KLTS will continue to maintain it in the next three years.  
+One of the reasons to maintain early versions is the fact that in a real production environment, the latest release is not the best or the most stable. In a normal case, a of Kubernetes is not available until one year after the initial release of a particular version. For details see [Kubernetes release cycle](#release-cycle). After the community aborts maintenance, KLTS will continue to maintain it in the next three years.  
 
 Why is the choice of most enterprises today to stay with early versions and not rush to upgrade?  
 
@@ -68,7 +68,7 @@ Here is a sincere invitation to developers. If you feel that the KLTS team’s c
 ## Kubernetes release cycle {#release-cycle}
 The release cycle of recent ten versions by the Kubernetes community are as follows:
 
-| **Ver.** | **Initial release** | **Stable release** |
+| **Ver.** | **Initial date** | **EOL date** |
 | :----------- | :--------------- | :------------------- |
 | 1.10         | 2018-03-27       | 2019-02-13           |
 | 1.11         | 2018-07-28       | 2019-05-01           |
@@ -84,6 +84,6 @@ The release cycle of recent ten versions by the Kubernetes community are as foll
 | 1.21         | 2021-04-08       | 2022-06-28           |
 | 1.22         | 2021-08-04       | 2022-10-28           |
 
-An initial release refers to the first official release of a minor version such as 1.10.0, 1.11.0 … 1.22.0, etc.  
+An initial date refers to the date of first official release of a minor version such as 1.10.0, 1.11.0 … 1.22.0, etc.  
 
-A stable release is usually the final bug-fix release about one year after the initial release. It refers to the release of End Of Life (EOL), i.e., the community will not maintain this version from then on.
+An EOL date refers to the date of End Of Life (EOL) release, i.e., the community will not maintain this version from then on. This is the final bug-fix release about one year after the initial release.
