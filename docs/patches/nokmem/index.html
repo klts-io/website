@@ -19,13 +19,13 @@ Scope When the node is used for a long time, it prompts an error that the remain
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device The node disk is sufficient but reports this error, and the creation of Pod always fails.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/patches/nokmem/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-12-08T17:23:39+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2021-12-29T14:51:57+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="nokmem">
 <meta itemprop=description content="Bug details The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.
 Scope When the node is used for a long time, it prompts an error that the remaining space is insufficient. The error message is as follows:
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device The node disk is sufficient but reports this error, and the creation of Pod always fails.">
-<meta itemprop=dateModified content="2021-12-08T17:23:39+08:00">
-<meta itemprop=wordCount content="146">
+<meta itemprop=dateModified content="2021-12-29T14:51:57+08:00">
+<meta itemprop=wordCount content="148">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="nokmem">
 <meta name=twitter:description content="Bug details The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.
@@ -64,7 +64,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.a08e17b1bed1077c099ec30c68f7c5d6.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.23c1682af10ab0db7f267236b6b8802e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -74,7 +74,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.a08e17b1bed1077c099ec30c68f7c5d6.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.23c1682af10ab0db7f267236b6b8802e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -133,7 +133,14 @@ English
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleases-li>
 <a href=/docs/releases/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleases><span>Release log</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11820-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11916-li>
+<a href=/docs/releases/v1.19.16/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11916><span>v1.19.16</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11916v11916-lts1-li>
+<a href=/docs/releases/v1.19.16/v1.19.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11916v11916-lts1><span>v1.19.16-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11820-li>
 <a href=/docs/releases/v1.18.20/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11820><span>v1.18.20</span></a>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11820v11820-lts1-li>
@@ -265,11 +272,12 @@ English
 </ul>
 <h2 id=klts-fixed>Fixed by KLTS</h2>
 <ul>
-<li><a href=/docs/releases/v1.18.20/v1.18.20-lts.1 title="This is the first fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li><a href=/docs/releases/v1.17.17/v1.17.17-lts.1 title="This is the first fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li><a href=/docs/releases/v1.16.15/v1.16.15-lts.1 title="This is the first fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li><a href=/docs/releases/v1.15.12/v1.15.12-lts.1 title="This is the first fixed release by KLTS for v1.15.12." data-toggle=tooltip data-placement=top target>v1.15.12-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
-<li><a href=/docs/releases/v1.14.10/v1.14.10-lts.1 title="This is the first fixed release by KLTS for v1.14.10." data-toggle=tooltip data-placement=top target>v1.14.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.18.patch target=_blank>nokmem.1.18.patch</a></li>
+<li><a href=/docs/releases/v1.19.16/v1.19.16-lts.1 title="This is the first fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
+<li><a href=/docs/releases/v1.18.20/v1.18.20-lts.1 title="This is the first fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
+<li><a href=/docs/releases/v1.17.17/v1.17.17-lts.1 title="This is the first fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
+<li><a href=/docs/releases/v1.16.15/v1.16.15-lts.1 title="This is the first fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
+<li><a href=/docs/releases/v1.15.12/v1.15.12-lts.1 title="This is the first fixed release by KLTS for v1.15.12." data-toggle=tooltip data-placement=top target>v1.15.12-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
+<li><a href=/docs/releases/v1.14.10/v1.14.10-lts.1 title="This is the first fixed release by KLTS for v1.14.10." data-toggle=tooltip data-placement=top target>v1.14.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
 <li><a href=/docs/releases/v1.13.12/v1.13.12-lts.1 title="This is the first fixed release by KLTS for v1.13.12." data-toggle=tooltip data-placement=top target>v1.13.12-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 <li><a href=/docs/releases/v1.12.10/v1.12.10-lts.1 title="This is the first fixed release by KLTS for v1.12.10." data-toggle=tooltip data-placement=top target>v1.12.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 <li><a href=/docs/releases/v1.11.10/v1.11.10-lts.1 title="This is the first fixed release by KLTS for v1.11.10." data-toggle=tooltip data-placement=top target>v1.11.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
@@ -277,8 +285,8 @@ English
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-December 8, 2021
-: <a href=https://github.com/klts-io/website/commit/fb2d6612885bade7cf1227cad173a704cc110fd7>new translations (fb2d6612)</a>
+December 29, 2021
+: <a href=https://github.com/klts-io/website/commit/b39d31ab8a5557ccb13435ec7724b2f72ae901b5>Add release 1.19 (b39d31ab)</a>
 </div>
 </div>
 </main>
