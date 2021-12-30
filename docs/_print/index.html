@@ -55,7 +55,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.23c1682af10ab0db7f267236b6b8802e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.8eced72649b9740386d4b08301a16b6a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -141,10 +141,24 @@ This the multi-page printable view of this section.
 <li>6.10.1: <a href=#pg-11f4f5c9a4be3821c253586ecc555cbb>v1.10.13-lts.1</a></li>
 </ul>
 </ul>
-<li>7: <a href=#pg-a7c9e10a31abdecaec5a338462a220a8>Developer Guide</a></li>
+<li>7: <a href=#pg-4ea5ec9f40d271955e679919836ca15a>Containerd</a></li>
 <ul>
-<li>7.1: <a href=#pg-79fcc7e024580df9da30cdb10805eada>Clone</a></li>
-<li>7.2: <a href=#pg-8da562538e76378aaf2ff1c50166f299>Dependencies</a></li>
+<li>7.1: <a href=#pg-dfed8f673232f42492878a06c4fd00a2>Fixed CVEs</a></li>
+<ul>
+<li>7.1.1: <a href=#pg-e9361514b1c4a6b356b66541847b30b2>CVE-2021-41103</a></li>
+</ul>
+<li>7.2: <a href=#pg-3e836e30cf6d82e7ba52f18ff1014469>Release log</a></li>
+<ul>
+<li>7.2.1: <a href=#pg-76e8223b4f091d4c1cd5a722d63e2101>v1.3.10</a></li>
+<ul>
+<li>7.2.1.1: <a href=#pg-273c262c63b2a67fab4478f1c1bb2bc3>v1.3.10-lts.1</a></li>
+</ul>
+</ul>
+</ul>
+<li>8: <a href=#pg-a7c9e10a31abdecaec5a338462a220a8>Developer Guide</a></li>
+<ul>
+<li>8.1: <a href=#pg-79fcc7e024580df9da30cdb10805eada>Clone</a></li>
+<li>8.2: <a href=#pg-8da562538e76378aaf2ff1c50166f299>Dependencies</a></li>
 </ul>
 </ul>
 <div class=content>
@@ -1083,10 +1097,52 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-a7c9e10a31abdecaec5a338462a220a8>7 - Developer Guide</h1>
+<h1 id=pg-4ea5ec9f40d271955e679919836ca15a>7 - Containerd</h1>
 </div>
 <div class=td-content>
-<h1 id=pg-79fcc7e024580df9da30cdb10805eada>7.1 - Clone</h1>
+<h1 id=pg-dfed8f673232f42492878a06c4fd00a2>7.1 - Fixed CVEs</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-e9361514b1c4a6b356b66541847b30b2>7.1.1 - CVE-2021-41103</h1>
+<p><a href=https://www.cvedetails.com/cve/CVE-2021-41103 target=_blank>Vulnerability details</a>
+<a href="https://github.com/containerd/containerd/security/advisories/GHSA-c2h3-6mxw-7mvq?spm=a2c4g.11186623.0.0.392834c1nttyAo" target=_blank>Vulnerability details(official)</a></p>
+<p>allowing otherwise unprivileged Linux users to traverse directory contents and execute programs.</p>
+<h2 id=scope>Scope</h2>
+<p>When containers included executable programs with extended permission bits (such as setuid), unprivileged Linux users could discover and execute those programs. When the UID of an unprivileged Linux user on the host collided with the file owner or group inside a container, the unprivileged Linux user on the host could discover, read, and modify those files.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as high-risk with a <code>CVSS</code> score of 7.2.</p>
+<h2 id=prevention>Prevention</h2>
+<p>Ensure that the login users of the cluster nodes are all trusted users, and restrict the access rights of untrusted users to the cluster nodes.
+Remove unnecessary extended permissions in the container bundles directory.</p>
+<h2 id=official-fixed>Fixed by Official</h2>
+<ul>
+<li>v1.14.11</li>
+<li>v1.5.7</li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/containerd/releases/v1.3.10/v1.3.10-lts.1 title="This is the first fixed release by KLTS Containerd for v1.3.10." data-toggle=tooltip data-placement=top target>v1.3.10-lts.1</a> <a href=https://github.com/klts-io/containerd-lts/raw/main/patches/CVE-2021-41103.1.3.patch target=_blank>CVE-2021-41103.1.3.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-3e836e30cf6d82e7ba52f18ff1014469>7.2 - Release log</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-76e8223b4f091d4c1cd5a722d63e2101>7.2.1 - v1.3.10</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-273c262c63b2a67fab4478f1c1bb2bc3>7.2.1.1 - v1.3.10-lts.1</h1>
+<p>This is the first fixed release by KLTS Containerd for v1.3.10.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/containerd/patches/cve-2021-41103 title="Where container root directories and some plugins had insufficiently restricted permissions, allowing otherwise unprivileged Linux users to traverse directory contents and execute programs." data-toggle=tooltip data-placement=top target>CVE-2021-41103</a><p>Where container root directories and some plugins had insufficiently restricted permissions, allowing otherwise unprivileged Linux users to traverse directory contents and execute programs.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-a7c9e10a31abdecaec5a338462a220a8>8 - Developer Guide</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-79fcc7e024580df9da30cdb10805eada>8.1 - Clone</h1>
 <p>This page describes how you can clone a Kubernetes master branch to your local computer.</p>
 <h2 id=clone-single-branch>Clone single branch</h2>
 <p>Since the <code>repos</code> branch is used as a source package for RPM and DEB, it will be very large to directly clon it, so you shall try to only clone the master branch.</p>
@@ -1094,7 +1150,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-8da562538e76378aaf2ff1c50166f299>7.2 - Dependencies</h1>
+<h1 id=pg-8da562538e76378aaf2ff1c50166f299>8.2 - Dependencies</h1>
 <p>This page describes how you can install dependencies on different operating systems.</p>
 <h2 id=install-dependencies>Install dependencies</h2>
 <ul class="nav nav-tabs" id=tabset-docsdeveloper-guidedependent-1 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsdeveloper-guidedependent-1-0 role=tab aria-controls=tabset-docsdeveloper-guidedependent-1-0 aria-selected=true>MacOS</a></li>
