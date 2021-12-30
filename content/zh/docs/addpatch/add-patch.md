@@ -209,12 +209,12 @@ nothing to commit, working tree clean
 
 在 `github` 查看测试情况：
 
-![actions](./actions.png)
+![actions](../actions.png)
 
 查看提交的所有 job 信息，下面说明 `1.15.12` 版本测试将不通过：
 
-![actions](./actions01.png)
+![actions](../actions01.png)
 
 查看报错信息详情，将错误解决完后重新提交，直到通过所有的测试。
 
-![actions](./actions02.png)
+![actions](../actions02.png)
