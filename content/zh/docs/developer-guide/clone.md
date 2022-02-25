@@ -9,5 +9,5 @@ weight: 20
 可执行以下命令克隆主分支：
 
 ``` bash
-git clone --single-branch -b master https://github.com/klts-io/kubernetes-lts
+git clone --single-branch -b main https://github.com/klts-io/kubernetes-lts
 ```
