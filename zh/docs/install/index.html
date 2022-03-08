@@ -21,14 +21,14 @@ cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klt
 cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ 执行以下代码设置下载 KLTS 的软件源： /etc/hosts hub.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-11-23T14:49:58+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2022-03-08T11:55:22+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="正常安装">
 <meta itemprop=description content="KLTS 提供了基于 deb 和 rpm 软件源的安装方式，您可以选择适合的安装方式。
 安装前请确认已经完成了准备工作。
 设置 KLTS 软件源 基于 Red Hat 的发行版 基于 Debian 的发行版 基于 Red Hat 的发行版, 国内加速 🚀 基于 Debian 的发行版, 国内加速 🚀 执行以下代码设置下载 KLTS 的软件源：
 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  执行以下代码设置下载 KLTS 的软件源：
 cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts.io/deb stable main EOF apt-get update   说明：以下加速均来自第三方, 安全和稳定性不做保障, 仅建议测试环境使用 ❗️❗️❗️ 执行以下代码设置下载 KLTS 的软件源： /etc/hosts hub.">
-<meta itemprop=dateModified content="2021-11-23T14:49:58+08:00">
+<meta itemprop=dateModified content="2022-03-08T11:55:22+08:00">
 <meta itemprop=wordCount content="364">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="正常安装">
@@ -70,7 +70,7 @@ cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.2e99b4fde096e252567888e43f4edf60.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4eaaec5c88b21a84a59499f5f1359751.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -80,7 +80,7 @@ cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.2e99b4fde096e252567888e43f4edf60.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.4eaaec5c88b21a84a59499f5f1359751.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -141,74 +141,106 @@ cat << EOF > /etc/apt/sources.list.d/klts.list deb [trusted=yes] https://dl.klts
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleases-li>
 <a href=/zh/docs/releases/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleases><span>版本日志</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11916-li>
-<a href=/zh/docs/releases/v1.19.16/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11916><span>v1.19.16</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv123-li>
+<a href=/zh/docs/releases/v1.23/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv123><span>v1.23</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11916v11916-lts1-li>
-<a href=/zh/docs/releases/v1.19.16/v1.19.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11916v11916-lts1><span>v1.19.16-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv123v1234-lts1-li>
+<a href=/zh/docs/releases/v1.23/v1.23.4-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv123v1234-lts1><span>v1.23.4-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11820-li>
-<a href=/zh/docs/releases/v1.18.20/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11820><span>v1.18.20</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv122-li>
+<a href=/zh/docs/releases/v1.22/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv122><span>v1.22</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11820v11820-lts1-li>
-<a href=/zh/docs/releases/v1.18.20/v1.18.20-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11820v11820-lts1><span>v1.18.20-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv122v1227-lts1-li>
+<a href=/zh/docs/releases/v1.22/v1.22.7-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv122v1227-lts1><span>v1.22.7-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11717-li>
-<a href=/zh/docs/releases/v1.17.17/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11717><span>v1.17.17</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv121-li>
+<a href=/zh/docs/releases/v1.21/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv121><span>v1.21</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11717v11717-lts1-li>
-<a href=/zh/docs/releases/v1.17.17/v1.17.17-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11717v11717-lts1><span>v1.17.17-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv121v12110-lts1-li>
+<a href=/zh/docs/releases/v1.21/v1.21.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv121v12110-lts1><span>v1.21.10-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11615-li>
-<a href=/zh/docs/releases/v1.16.15/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11615><span>v1.16.15</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv120-li>
+<a href=/zh/docs/releases/v1.20/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv120><span>v1.20</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11615v11615-lts1-li>
-<a href=/zh/docs/releases/v1.16.15/v1.16.15-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11615v11615-lts1><span>v1.16.15-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv120v12016-lts1-li>
+<a href=/zh/docs/releases/v1.20/v1.20.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv120v12016-lts1><span>v1.20.16-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11512-li>
-<a href=/zh/docs/releases/v1.15.12/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11512><span>v1.15.12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv119-li>
+<a href=/zh/docs/releases/v1.19/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv119><span>v1.19</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11512v11512-lts1-li>
-<a href=/zh/docs/releases/v1.15.12/v1.15.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11512v11512-lts1><span>v1.15.12-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv119v11916-lts1-li>
+<a href=/zh/docs/releases/v1.19/v1.19.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv119v11916-lts1><span>v1.19.16-lts.1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv119v11916-lts2-li>
+<a href=/zh/docs/releases/v1.19/v1.19.16-lts.2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv119v11916-lts2><span>v1.19.16-lts.2</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11410-li>
-<a href=/zh/docs/releases/v1.14.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11410><span>v1.14.10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv118-li>
+<a href=/zh/docs/releases/v1.18/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv118><span>v1.18</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11410v11410-lts1-li>
-<a href=/zh/docs/releases/v1.14.10/v1.14.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11410v11410-lts1><span>v1.14.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv118v11820-lts1-li>
+<a href=/zh/docs/releases/v1.18/v1.18.20-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv118v11820-lts1><span>v1.18.20-lts.1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv118v11820-lts2-li>
+<a href=/zh/docs/releases/v1.18/v1.18.20-lts.2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv118v11820-lts2><span>v1.18.20-lts.2</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11312-li>
-<a href=/zh/docs/releases/v1.13.12/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11312><span>v1.13.12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv117-li>
+<a href=/zh/docs/releases/v1.17/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv117><span>v1.17</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11312v11312-lts1-li>
-<a href=/zh/docs/releases/v1.13.12/v1.13.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11312v11312-lts1><span>v1.13.12-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv117v11717-lts1-li>
+<a href=/zh/docs/releases/v1.17/v1.17.17-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv117v11717-lts1><span>v1.17.17-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11210-li>
-<a href=/zh/docs/releases/v1.12.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11210><span>v1.12.10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv116-li>
+<a href=/zh/docs/releases/v1.16/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv116><span>v1.16</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11210v11210-lts1-li>
-<a href=/zh/docs/releases/v1.12.10/v1.12.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11210v11210-lts1><span>v1.12.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv116v11615-lts1-li>
+<a href=/zh/docs/releases/v1.16/v1.16.15-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv116v11615-lts1><span>v1.16.15-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11110-li>
-<a href=/zh/docs/releases/v1.11.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11110><span>v1.11.10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv115-li>
+<a href=/zh/docs/releases/v1.15/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv115><span>v1.15</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11110v11110-lts1-li>
-<a href=/zh/docs/releases/v1.11.10/v1.11.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11110v11110-lts1><span>v1.11.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv115v11512-lts1-li>
+<a href=/zh/docs/releases/v1.15/v1.15.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv115v11512-lts1><span>v1.15.12-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv11013-li>
-<a href=/zh/docs/releases/v1.10.13/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv11013><span>v1.10.13</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv114-li>
+<a href=/zh/docs/releases/v1.14/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv114><span>v1.14</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv11013v11013-lts1-li>
-<a href=/zh/docs/releases/v1.10.13/v1.10.13-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv11013v11013-lts1><span>v1.10.13-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv114v11410-lts1-li>
+<a href=/zh/docs/releases/v1.14/v1.14.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv114v11410-lts1><span>v1.14.10-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv113-li>
+<a href=/zh/docs/releases/v1.13/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv113><span>v1.13</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv113v11312-lts1-li>
+<a href=/zh/docs/releases/v1.13/v1.13.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv113v11312-lts1><span>v1.13.12-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv112-li>
+<a href=/zh/docs/releases/v1.12/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv112><span>v1.12</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv112v11210-lts1-li>
+<a href=/zh/docs/releases/v1.12/v1.12.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv112v11210-lts1><span>v1.12.10-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv111-li>
+<a href=/zh/docs/releases/v1.11/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv111><span>v1.11</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv111v11110-lts1-li>
+<a href=/zh/docs/releases/v1.11/v1.11.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv111v11110-lts1><span>v1.11.10-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocsreleasesv110-li>
+<a href=/zh/docs/releases/v1.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocsreleasesv110><span>v1.10</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocsreleasesv110v11013-lts1-li>
+<a href=/zh/docs/releases/v1.10/v1.10.13-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocsreleasesv110v11013-lts1><span>v1.10.13-lts.1</span></a>
 </li>
 </ul>
 </li>
@@ -455,7 +487,7 @@ apt-get update
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
 <span style=color:#8f5902;font-style:italic># 安装</span>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-5-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-5-1>
@@ -464,7 +496,7 @@ yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>V
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
 <span style=color:#8f5902;font-style:italic># 安装</span>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubelet</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubectl</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
 </div></div>
@@ -476,13 +508,13 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-7-1 role=tab aria-controls=tabset-zhdocsinstall-7-1>国内加速 🚀</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-7><div id=tabset-zhdocsinstall-7-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-7-0>
 <p><p>执行以下命令 pull 依赖的镜像：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-7-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-7-1>
 <p><p>执行以下命令 pull 依赖的镜像：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.m.daocloud.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
@@ -492,21 +524,21 @@ kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-8-1 role=tab aria-controls=tabset-zhdocsinstall-8-1>国内加速 🚀</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-8><div id=tabset-zhdocsinstall-8-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-8-0>
 <p><p>执行以下命令初始化控制面的节点：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-8-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-8-1>
 <p><p>执行以下命令初始化控制面的节点：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.m.daocloud.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
 <p>有关更多安装说明，请参阅 <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Kubernetes 操作指南</a>。</p>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.11.23
-: <a href=https://github.com/klts-io/website/commit/1879eac56a017800d4299ea4c75a5f085cd213ba>title changed (1879eac5)</a>
+2022.03.08
+: <a href=https://github.com/klts-io/website/commit/985d34ebbc1c0c526b1a0b2462eb66c31c8b9f76>Update v1.2x and 1.19/1.18 lts 2 (#41) (985d34eb)</a>
 </div>
 </div>
 </main>

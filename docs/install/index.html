@@ -20,13 +20,13 @@ Set the KLTS source package Red Hat-based distributions Debian-based distributio
 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-12-10T11:16:38+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2022-03-08T11:55:22+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Step-By-Step Install">
 <meta itemprop=description content="KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
 Before installation, ensure that your Preparation is good enough.
 Set the KLTS source package Red Hat-based distributions Debian-based distributions Run the following code to set the source of downloading a proper distribution:
 cat << \EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://dl.klts.io/rpm/$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
-<meta itemprop=dateModified content="2021-12-10T11:16:38+08:00">
+<meta itemprop=dateModified content="2022-03-08T11:55:22+08:00">
 <meta itemprop=wordCount content="281">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Step-By-Step Install">
@@ -67,7 +67,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.2e99b4fde096e252567888e43f4edf60.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.4eaaec5c88b21a84a59499f5f1359751.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -77,7 +77,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.2e99b4fde096e252567888e43f4edf60.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.4eaaec5c88b21a84a59499f5f1359751.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -136,74 +136,106 @@ English
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleases-li>
 <a href=/docs/releases/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleases><span>Release log</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11916-li>
-<a href=/docs/releases/v1.19.16/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11916><span>v1.19.16</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv123-li>
+<a href=/docs/releases/v1.23/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv123><span>v1.23</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11916v11916-lts1-li>
-<a href=/docs/releases/v1.19.16/v1.19.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11916v11916-lts1><span>v1.19.16-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv123v1234-lts1-li>
+<a href=/docs/releases/v1.23/v1.23.4-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv123v1234-lts1><span>v1.23.4-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11820-li>
-<a href=/docs/releases/v1.18.20/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11820><span>v1.18.20</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv122-li>
+<a href=/docs/releases/v1.22/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv122><span>v1.22</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11820v11820-lts1-li>
-<a href=/docs/releases/v1.18.20/v1.18.20-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11820v11820-lts1><span>v1.18.20-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv122v1227-lts1-li>
+<a href=/docs/releases/v1.22/v1.22.7-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv122v1227-lts1><span>v1.22.7-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11717-li>
-<a href=/docs/releases/v1.17.17/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11717><span>v1.17.17</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv121-li>
+<a href=/docs/releases/v1.21/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv121><span>v1.21</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11717v11717-lts1-li>
-<a href=/docs/releases/v1.17.17/v1.17.17-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11717v11717-lts1><span>v1.17.17-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv121v12110-lts1-li>
+<a href=/docs/releases/v1.21/v1.21.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv121v12110-lts1><span>v1.21.10-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11615-li>
-<a href=/docs/releases/v1.16.15/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11615><span>v1.16.15</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv120-li>
+<a href=/docs/releases/v1.20/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv120><span>v1.20</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11615v11615-lts1-li>
-<a href=/docs/releases/v1.16.15/v1.16.15-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11615v11615-lts1><span>v1.16.15-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv120v12016-lts1-li>
+<a href=/docs/releases/v1.20/v1.20.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv120v12016-lts1><span>v1.20.16-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11512-li>
-<a href=/docs/releases/v1.15.12/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11512><span>v1.15.12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv119-li>
+<a href=/docs/releases/v1.19/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv119><span>v1.19</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11512v11512-lts1-li>
-<a href=/docs/releases/v1.15.12/v1.15.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11512v11512-lts1><span>v1.15.12-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv119v11916-lts1-li>
+<a href=/docs/releases/v1.19/v1.19.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv119v11916-lts1><span>v1.19.16-lts.1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv119v11916-lts2-li>
+<a href=/docs/releases/v1.19/v1.19.16-lts.2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv119v11916-lts2><span>v1.19.16-lts.2</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11410-li>
-<a href=/docs/releases/v1.14.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11410><span>v1.14.10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv118-li>
+<a href=/docs/releases/v1.18/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv118><span>v1.18</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11410v11410-lts1-li>
-<a href=/docs/releases/v1.14.10/v1.14.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11410v11410-lts1><span>v1.14.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv118v11820-lts1-li>
+<a href=/docs/releases/v1.18/v1.18.20-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv118v11820-lts1><span>v1.18.20-lts.1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv118v11820-lts2-li>
+<a href=/docs/releases/v1.18/v1.18.20-lts.2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv118v11820-lts2><span>v1.18.20-lts.2</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11312-li>
-<a href=/docs/releases/v1.13.12/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11312><span>v1.13.12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv117-li>
+<a href=/docs/releases/v1.17/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv117><span>v1.17</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11312v11312-lts1-li>
-<a href=/docs/releases/v1.13.12/v1.13.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11312v11312-lts1><span>v1.13.12-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv117v11717-lts1-li>
+<a href=/docs/releases/v1.17/v1.17.17-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv117v11717-lts1><span>v1.17.17-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11210-li>
-<a href=/docs/releases/v1.12.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11210><span>v1.12.10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv116-li>
+<a href=/docs/releases/v1.16/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv116><span>v1.16</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11210v11210-lts1-li>
-<a href=/docs/releases/v1.12.10/v1.12.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11210v11210-lts1><span>v1.12.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv116v11615-lts1-li>
+<a href=/docs/releases/v1.16/v1.16.15-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv116v11615-lts1><span>v1.16.15-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11110-li>
-<a href=/docs/releases/v1.11.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11110><span>v1.11.10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv115-li>
+<a href=/docs/releases/v1.15/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv115><span>v1.15</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11110v11110-lts1-li>
-<a href=/docs/releases/v1.11.10/v1.11.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11110v11110-lts1><span>v1.11.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv115v11512-lts1-li>
+<a href=/docs/releases/v1.15/v1.15.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv115v11512-lts1><span>v1.15.12-lts.1</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv11013-li>
-<a href=/docs/releases/v1.10.13/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv11013><span>v1.10.13</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv114-li>
+<a href=/docs/releases/v1.14/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv114><span>v1.14</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv11013v11013-lts1-li>
-<a href=/docs/releases/v1.10.13/v1.10.13-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv11013v11013-lts1><span>v1.10.13-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv114v11410-lts1-li>
+<a href=/docs/releases/v1.14/v1.14.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv114v11410-lts1><span>v1.14.10-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv113-li>
+<a href=/docs/releases/v1.13/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv113><span>v1.13</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv113v11312-lts1-li>
+<a href=/docs/releases/v1.13/v1.13.12-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv113v11312-lts1><span>v1.13.12-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv112-li>
+<a href=/docs/releases/v1.12/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv112><span>v1.12</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv112v11210-lts1-li>
+<a href=/docs/releases/v1.12/v1.12.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv112v11210-lts1><span>v1.12.10-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv111-li>
+<a href=/docs/releases/v1.11/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv111><span>v1.11</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv111v11110-lts1-li>
+<a href=/docs/releases/v1.11/v1.11.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv111v11110-lts1><span>v1.11.10-lts.1</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreleasesv110-li>
+<a href=/docs/releases/v1.10/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreleasesv110><span>v1.10</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsreleasesv110v11013-lts1-li>
+<a href=/docs/releases/v1.10/v1.10.13-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreleasesv110v11013-lts1><span>v1.10.13-lts.1</span></a>
 </li>
 </ul>
 </li>
@@ -333,7 +365,7 @@ apt-get update
 yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
 
 <span style=color:#8f5902;font-style:italic># Install</span>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div>
 <div id=tabset-docsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-3-1>
@@ -342,7 +374,7 @@ yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>V
 apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
 
 <span style=color:#8f5902;font-style:italic># Install</span>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubelet</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubectl</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div></div></div>
 </div></div>
@@ -351,20 +383,20 @@ apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;f
 <pre><code>systemctl enable kubelet
 </code></pre><h2 id=pull-the-dependency-image>Pull the dependency image</h2>
 <p>Run the following code to pull the dependency image:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div><p>All subsequent operations on Kubeadm need to include <code>--image-repository</code> and <code>--kubernetes-version</code> to actively specify the image.</p>
 <h2 id=initialize-the-control-plane-node>Initialize the control plane node</h2>
 <p>Run the following code to initialize the control plane node:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.0
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 <span style=color:#000>REPOS</span><span style=color:#ce5c00;font-weight:700>=</span>ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=color:#000>REPOS</span><span style=color:#4e9a06>}</span> --kubernetes-version v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
 </code></pre></div><p>For details see <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Create a cluster with kubeadm</a>.</p>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-December 10, 2021
-: <a href=https://github.com/klts-io/website/commit/71dbde712035208b2dc0ad78a26a6c2466b7ac55>new translations (71dbde71)</a>
+March 8, 2022
+: <a href=https://github.com/klts-io/website/commit/985d34ebbc1c0c526b1a0b2462eb66c31c8b9f76>Update v1.2x and 1.19/1.18 lts 2 (#41) (985d34eb)</a>
 </div>
 </div>
 </main>
