@@ -1,6 +1,6 @@
 ---
-title: v1.20.16
-weight: -12016
+title: v1.20
+weight: -120
 ---
 
 <!--add blocks of content here to add more sections to the community page -->
