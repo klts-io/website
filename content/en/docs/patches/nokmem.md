@@ -32,13 +32,17 @@ All environments that use early-version kernels and Kubernetes versions before 1
 
 ## Fixed by KLTS {#klts-fixed}
 
-- {{< link url="/docs/releases/v1.19.16/v1.19.16-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
-- {{< link url="/docs/releases/v1.18.20/v1.18.20-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
-- {{< link url="/docs/releases/v1.17.17/v1.17.17-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
-- {{< link url="/docs/releases/v1.16.15/v1.16.15-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
-- {{< link url="/docs/releases/v1.15.12/v1.15.12-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
-- {{< link url="/docs/releases/v1.14.10/v1.14.10-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
-- {{< link url="/docs/releases/v1.13.12/v1.13.12-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
-- {{< link url="/docs/releases/v1.12.10/v1.12.10-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
-- {{< link url="/docs/releases/v1.11.10/v1.11.10-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
-- {{< link url="/docs/releases/v1.10.13/v1.10.13-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
+- {{< link url="/docs/releases/v1.23/v1.23.4-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.22/v1.22.7-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.21/v1.21.10-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.20/v1.20.16-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.19/v1.19.16-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.18/v1.18.20-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.17/v1.17.17-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.16/v1.16.15-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.15/v1.15.12-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.14/v1.14.10-lts.1/" >}} {{< link text="nokmem.1.19.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch" >}}
+- {{< link url="/docs/releases/v1.13/v1.13.12-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
+- {{< link url="/docs/releases/v1.12/v1.12.10-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
+- {{< link url="/docs/releases/v1.11/v1.11.10-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
+- {{< link url="/docs/releases/v1.10/v1.10.13-lts.1/" >}} {{< link text="nokmem.1.13.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch" >}}
