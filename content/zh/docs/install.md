@@ -225,7 +225,7 @@ apt-get install kubeadm kubelet kubectl
 yum search kubeadm --showduplicates | grep kubeadm-
 
 # 安装
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 yum install kubeadm-v${VERSION} kubelet-v${VERSION} kubectl-v${VERSION}
 ```
 {{% /tab %}}}
@@ -237,7 +237,7 @@ yum install kubeadm-v${VERSION} kubelet-v${VERSION} kubectl-v${VERSION}
 apt-cache show kubeadm | grep Version
 
 # 安装
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
 ```
 {{% /tab %}}
@@ -256,7 +256,7 @@ systemctl enable kubelet
 {{% tab name="默认" %}}
 执行以下命令 pull 依赖的镜像：
 ``` bash
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
@@ -264,7 +264,7 @@ kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${V
 {{% tab name="国内加速 🚀" %}}
 执行以下命令 pull 依赖的镜像：
 ``` bash
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 REPOS=ghcr.m.daocloud.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
@@ -278,7 +278,7 @@ kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${V
 {{% tab name="默认" %}}
 执行以下命令初始化控制面的节点：
 ``` bash
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
@@ -286,7 +286,7 @@ kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 {{% tab name="国内加速 🚀" %}}
 执行以下命令初始化控制面的节点：
 ``` bash
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 REPOS=ghcr.m.daocloud.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```

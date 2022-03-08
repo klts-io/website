@@ -71,7 +71,7 @@ Run the following code to install a proper distribution:
 yum search kubeadm --showduplicates | grep kubeadm-
 
 # Install
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 yum install kubeadm-v${VERSION} kubelet-v${VERSION} kubectl-v${VERSION}
 ```
 {{% /tab %}}}
@@ -83,7 +83,7 @@ Run the following code to install a proper distribution:
 apt-cache show kubeadm | grep Version
 
 # Install
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
 ```
 {{% /tab %}}
@@ -99,7 +99,7 @@ systemctl enable kubelet
 ## Pull the dependency image
 Run the following code to pull the dependency image:
 ``` bash
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm config images pull --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```
@@ -107,7 +107,7 @@ All subsequent operations on Kubeadm need to include `--image-repository` and `-
 ## Initialize the control plane node
 Run the following code to initialize the control plane node:
 ``` bash
-VERSION=1.18.20-lts.0
+VERSION=1.18.20-lts.2
 REPOS=ghcr.io/klts-io/kubernetes-lts
 kubeadm init --image-repository ${REPOS} --kubernetes-version v${VERSION}
 ```

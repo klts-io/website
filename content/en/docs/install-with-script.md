@@ -21,11 +21,11 @@ Usage: ./install.sh [OPTIONS]
   --kubernetes-version=1.18.20-lts.1 : Kubernetes version to install
   --containerd-version=1.3.10-lts.0 : Containerd version to install
   --runc-version=1.0.2-lts.0 : Runc version to install
-  --kubernetes-rpm-source=https://github.com/klts-io/kubernetes-lts/raw/rpm-v1.18.20-lts.0 : Kubernetes RPM source
+  --kubernetes-rpm-source=https://github.com/klts-io/kubernetes-lts/raw/rpm-v1.18.20-lts.2 : Kubernetes RPM source
   --containerd-rpm-source=https://github.com/klts-io/containerd-lts/raw/rpm-v1.3.10-lts.0 : Containerd RPM source
   --runc-rpm-source=https://github.com/klts-io/runc-lts/raw/rpm-v1.0.2-lts.0 : Runc RPM source
   --others-rpm-source=https://github.com/klts-io/others/raw/rpm : Other RPM source
-  --kubernetes-deb-source=https://github.com/klts-io/kubernetes-lts/raw/deb-v1.18.20-lts.0 : Kubernetes DEB source
+  --kubernetes-deb-source=https://github.com/klts-io/kubernetes-lts/raw/deb-v1.18.20-lts.2 : Kubernetes DEB source
   --containerd-deb-source=https://github.com/klts-io/containerd-lts/raw/deb-v1.3.10-lts.0 : Containerd DEB source
   --runc-deb-source=https://github.com/klts-io/runc-lts/raw/deb-v1.0.2-lts.0 : Runc DEB source
   --others-deb-source=https://github.com/klts-io/others/raw/deb : Other DEB source
