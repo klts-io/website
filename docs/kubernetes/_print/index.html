@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.87.0"><link rel=canonical type=text/html href=/docs/kubernetes/patches/>
+<meta name=generator content="Hugo 0.87.0"><link rel=canonical type=text/html href=/docs/kubernetes/>
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -13,14 +13,14 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Fixed CVEs | KLTS.io</title>
-<meta name=description content="KLTS.io website"><meta property="og:title" content="Fixed CVEs">
+<title>Kubernetes | KLTS.io</title>
+<meta name=description content="KLTS.io website"><meta property="og:title" content="Kubernetes">
 <meta property="og:description" content="KLTS.io website">
 <meta property="og:type" content="website">
-<meta property="og:url" content="/docs/kubernetes/patches/"><meta property="og:site_name" content="KLTS.io">
-<meta itemprop=name content="Fixed CVEs">
+<meta property="og:url" content="/docs/kubernetes/"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="Kubernetes">
 <meta itemprop=description content="KLTS.io website"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Fixed CVEs">
+<meta name=twitter:title content="Kubernetes">
 <meta name=twitter:description content="KLTS.io website">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
@@ -49,7 +49,7 @@
 English
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/zh/docs/kubernetes/patches/>中文 Chinese</a>
+<a class=dropdown-item href=/zh/docs/kubernetes/>中文 Chinese</a>
 </div>
 </li>
 </ul>
@@ -73,30 +73,97 @@ English
 This the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.
 </p><p>
-<a href=/docs/kubernetes/patches/>Return to the regular view of this page</a>.
+<a href=/docs/kubernetes/>Return to the regular view of this page</a>.
 </p>
 </div>
-<h1 class=title>Fixed CVEs</h1>
+<h1 class=title>Kubernetes</h1>
 <ul>
-<li>1: <a href=#pg-294c70c354dae27293c279fc977b1a25>CVE-2021-25741</a></li>
-<li>2: <a href=#pg-5b5a4ae7470b9a65c7ac18cd9f04a167>CVE-2021-3121</a></li>
-<li>3: <a href=#pg-f68019fa72f4f2fd3120706e7a0c1c09>CVE-2020-8559</a></li>
-<li>4: <a href=#pg-802e53465c7b793307b369865fc69095>CVE-2020-8558</a></li>
-<li>5: <a href=#pg-7d9bf1ccf4dc285017bf81cba9beb8b7>CVE-2020-8552</a></li>
-<li>6: <a href=#pg-8a05d128bf99881563298b28760ed6d2>CVE-2019-1002101</a></li>
-<li>7: <a href=#pg-c1b22d6e35188bda7571c1171365da7c>CVE-2019-11251</a></li>
-<li>8: <a href=#pg-643877725a4c60ab60b307fb5a9c7f4b>CVE-2019-11248</a></li>
-<li>9: <a href=#pg-bfbd4c580b204464d71e67e333445b66>CVE-2019-11247</a></li>
-<li>10: <a href=#pg-2fd6a05bfd32be3de89ff9f0fa5659b3>CVE-2019-11246</a></li>
-<li>11: <a href=#pg-dcd6bb9fdd05c8bcf79f828875ae1de2>CVE-2019-11245</a></li>
-<li>12: <a href=#pg-aa6b47382c5273dcef56641d01dc478d>CVE-2019-11249</a></li>
-<li>13: <a href=#pg-62eb1ee519ce30e3d64f4f1dd506f8c1>nokmem</a></li>
+<li>1: <a href=#pg-183fc12b2072b453f0fe7991a3721ca1>Fixed CVEs</a></li>
+<ul>
+<li>1.1: <a href=#pg-294c70c354dae27293c279fc977b1a25>CVE-2021-25741</a></li>
+<li>1.2: <a href=#pg-5b5a4ae7470b9a65c7ac18cd9f04a167>CVE-2021-3121</a></li>
+<li>1.3: <a href=#pg-f68019fa72f4f2fd3120706e7a0c1c09>CVE-2020-8559</a></li>
+<li>1.4: <a href=#pg-802e53465c7b793307b369865fc69095>CVE-2020-8558</a></li>
+<li>1.5: <a href=#pg-7d9bf1ccf4dc285017bf81cba9beb8b7>CVE-2020-8552</a></li>
+<li>1.6: <a href=#pg-8a05d128bf99881563298b28760ed6d2>CVE-2019-1002101</a></li>
+<li>1.7: <a href=#pg-c1b22d6e35188bda7571c1171365da7c>CVE-2019-11251</a></li>
+<li>1.8: <a href=#pg-643877725a4c60ab60b307fb5a9c7f4b>CVE-2019-11248</a></li>
+<li>1.9: <a href=#pg-bfbd4c580b204464d71e67e333445b66>CVE-2019-11247</a></li>
+<li>1.10: <a href=#pg-2fd6a05bfd32be3de89ff9f0fa5659b3>CVE-2019-11246</a></li>
+<li>1.11: <a href=#pg-dcd6bb9fdd05c8bcf79f828875ae1de2>CVE-2019-11245</a></li>
+<li>1.12: <a href=#pg-aa6b47382c5273dcef56641d01dc478d>CVE-2019-11249</a></li>
+<li>1.13: <a href=#pg-62eb1ee519ce30e3d64f4f1dd506f8c1>nokmem</a></li>
+</ul>
+<li>2: <a href=#pg-47fd6c8a74cf9d1a995d7e361989501b>Release log</a></li>
+<ul>
+<li>2.1: <a href=#pg-caf8d56460c7071d4f8f932bcfe53af9>v1.23</a></li>
+<ul>
+<li>2.1.1: <a href=#pg-e61097f21601936b5827a30e16c1c6bc>v1.23.4-lts.1</a></li>
+</ul>
+<li>2.2: <a href=#pg-438640263b055dd3b8ba2dd0405999ac>v1.22</a></li>
+<ul>
+<li>2.2.1: <a href=#pg-8ebda6e4bab769f89e799d976dabba4a>v1.22.7-lts.1</a></li>
+</ul>
+<li>2.3: <a href=#pg-22d4264ec0ce1544513dda5258e80e79>v1.21</a></li>
+<ul>
+<li>2.3.1: <a href=#pg-6d7cac9601c59797f0229943755b8074>v1.21.10-lts.1</a></li>
+</ul>
+<li>2.4: <a href=#pg-1e965e5d0ca021a3a5a36c3be8f513f8>v1.20</a></li>
+<ul>
+<li>2.4.1: <a href=#pg-46d782b6b9393c6597cf20581a80061a>v1.20.16-lts.1</a></li>
+</ul>
+<li>2.5: <a href=#pg-a52f45c727784e778de68ac928801052>v1.19</a></li>
+<ul>
+<li>2.5.1: <a href=#pg-daacbf641259a498041dea6bb6ac36ff>v1.19.16-lts.1</a></li>
+<li>2.5.2: <a href=#pg-07c28fb38ae06d39cef935a5f07bca61>v1.19.16-lts.2</a></li>
+</ul>
+<li>2.6: <a href=#pg-5f76bae3acab74e52fc6cf0c877ef895>v1.18</a></li>
+<ul>
+<li>2.6.1: <a href=#pg-27466f7c0b6341998f8093209410a2ec>v1.18.20-lts.1</a></li>
+<li>2.6.2: <a href=#pg-ac2ddb380c8818e1bd74006225b2304f>v1.18.20-lts.2</a></li>
+</ul>
+<li>2.7: <a href=#pg-de187724df678eaac953f00668b44795>v1.17</a></li>
+<ul>
+<li>2.7.1: <a href=#pg-56c43b56ac02c308708e139faf7f71d9>v1.17.17-lts.1</a></li>
+</ul>
+<li>2.8: <a href=#pg-326a1b7db2e296bc3e0bfb6dfb1c67b3>v1.16</a></li>
+<ul>
+<li>2.8.1: <a href=#pg-c6fac4541d2a814c52a2eddb8f29e4be>v1.16.15-lts.1</a></li>
+</ul>
+<li>2.9: <a href=#pg-e55495ef2c641ec0b1a2e34eb9f5dc18>v1.15</a></li>
+<ul>
+<li>2.9.1: <a href=#pg-fdf0a02c504410d669e32dd902a990d8>v1.15.12-lts.1</a></li>
+</ul>
+<li>2.10: <a href=#pg-f007a7c674953644fb4009ab518c9be2>v1.14</a></li>
+<ul>
+<li>2.10.1: <a href=#pg-8d554c74f571cbb71ac837a37a524a8c>v1.14.10-lts.1</a></li>
+</ul>
+<li>2.11: <a href=#pg-eae34034c4f85145866a0a71431eca2e>v1.13</a></li>
+<ul>
+<li>2.11.1: <a href=#pg-6b84ed564b21ec5b59b7de3959be3770>v1.13.12-lts.1</a></li>
+</ul>
+<li>2.12: <a href=#pg-2677eb33259852b40cca462929288024>v1.12</a></li>
+<ul>
+<li>2.12.1: <a href=#pg-b500348ca53a1ba1e57acc0308f3fffc>v1.12.10-lts.1</a></li>
+</ul>
+<li>2.13: <a href=#pg-f18aef56ed735d388e75ef35eb00f570>v1.11</a></li>
+<ul>
+<li>2.13.1: <a href=#pg-ac77db7d8b8beff8ec2bb6de8a0037c0>v1.11.10-lts.1</a></li>
+</ul>
+<li>2.14: <a href=#pg-4278ac8691e5595a58b6f319ca3ec9bc>v1.10</a></li>
+<ul>
+<li>2.14.1: <a href=#pg-a90883c2da00b1de562b23d74158b4ce>v1.10.13-lts.1</a></li>
+</ul>
+</ul>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-294c70c354dae27293c279fc977b1a25>1 - CVE-2021-25741</h1>
+<h1 id=pg-183fc12b2072b453f0fe7991a3721ca1>1 - Fixed CVEs</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-294c70c354dae27293c279fc977b1a25>1.1 - CVE-2021-25741</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2021-25741/ target=_blank>Vulnerability details</a>
 <p>This is a volume security issue related to permission access. A user can access files and directories outside the volume mounting directory, including the host&rsquo;s file system, through the volume mounting method of <code>subpath</code> in the created container.</p>
 <h2 id=scope>Scope</h2>
@@ -130,7 +197,7 @@ This the multi-page printable view of this section.
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-5b5a4ae7470b9a65c7ac18cd9f04a167>2 - CVE-2021-3121</h1>
+<h1 id=pg-5b5a4ae7470b9a65c7ac18cd9f04a167>1.2 - CVE-2021-3121</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2021-3121 target=_blank>Vulnerability details</a>
 <p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p>
 <h2 id=scope>Scope</h2>
@@ -167,7 +234,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-f68019fa72f4f2fd3120706e7a0c1c09>3 - CVE-2020-8559</h1>
+<h1 id=pg-f68019fa72f4f2fd3120706e7a0c1c09>1.3 - CVE-2020-8559</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8559 target=_blank>Vulnerability details</a>
 <p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p>
 <h2 id=scope>Scope</h2>
@@ -196,7 +263,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-802e53465c7b793307b369865fc69095>4 - CVE-2020-8558</h1>
+<h1 id=pg-802e53465c7b793307b369865fc69095>1.4 - CVE-2020-8558</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8558 target=_blank>Vulnerability details</a>
 <p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p>
 <h2 id=scope>Scope</h2>
@@ -235,7 +302,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-7d9bf1ccf4dc285017bf81cba9beb8b7>5 - CVE-2020-8552</h1>
+<h1 id=pg-7d9bf1ccf4dc285017bf81cba9beb8b7>1.5 - CVE-2020-8552</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8552 target=_blank>Vulnerability details</a>
 <p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p>
 <h2 id=scope>Scope</h2>
@@ -256,7 +323,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-8a05d128bf99881563298b28760ed6d2>6 - CVE-2019-1002101</h1>
+<h1 id=pg-8a05d128bf99881563298b28760ed6d2>1.6 - CVE-2019-1002101</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-1002101 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to modify or monitor any file in the directory with the same name in the symbolic link header during the unpacking process of the <code>kubectl cp</code> command, thereby causing damage.</p>
 <h2 id=scope>Scope</h2>
@@ -274,7 +341,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c1b22d6e35188bda7571c1171365da7c>7 - CVE-2019-11251</h1>
+<h1 id=pg-c1b22d6e35188bda7571c1171365da7c>1.7 - CVE-2019-11251</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11251 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -295,7 +362,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-643877725a4c60ab60b307fb5a9c7f4b>8 - CVE-2019-11248</h1>
+<h1 id=pg-643877725a4c60ab60b307fb5a9c7f4b>1.8 - CVE-2019-11248</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11248 target=_blank>Vulnerability details</a>
 <p>The debugging endpoint <code>/debug/pprof</code> is exposed over the unauthenticated Kubelet healthz port.</p>
 <h2 id=scope>Scope</h2>
@@ -313,7 +380,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-bfbd4c580b204464d71e67e333445b66>9 - CVE-2019-11247</h1>
+<h1 id=pg-bfbd4c580b204464d71e67e333445b66>1.9 - CVE-2019-11247</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11247 target=_blank>Vulnerability details</a>
 <p><code>API Server</code> mistakenly allows access to a cluster-scoped custom resource.</p>
 <h2 id=scope>Scope</h2>
@@ -330,7 +397,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-2fd6a05bfd32be3de89ff9f0fa5659b3>10 - CVE-2019-11246</h1>
+<h1 id=pg-2fd6a05bfd32be3de89ff9f0fa5659b3>1.10 - CVE-2019-11246</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11246 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -350,7 +417,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-dcd6bb9fdd05c8bcf79f828875ae1de2>11 - CVE-2019-11245</h1>
+<h1 id=pg-dcd6bb9fdd05c8bcf79f828875ae1de2>1.11 - CVE-2019-11245</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11245 target=_blank>Vulnerability details</a>
 <p>Containers for pods that do not specify an explicit runAsUser attempt to run as <code>uid 0</code> (root) on container restart, or if the image was previously pulled to the node. If the pod specified <code>mustRunAsNonRoot: true</code>, the kubelet will refuse to start the container as root. If the pod did not specify <code>mustRunAsNonRoot: true</code>, the kubelet will run the container as <code>uid 0</code>.</p>
 <h2 id=scope>Scope</h2>
@@ -370,7 +437,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-aa6b47382c5273dcef56641d01dc478d>12 - CVE-2019-11249</h1>
+<h1 id=pg-aa6b47382c5273dcef56641d01dc478d>1.12 - CVE-2019-11249</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11249 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -391,7 +458,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-62eb1ee519ce30e3d64f4f1dd506f8c1>13 - nokmem</h1>
+<h1 id=pg-62eb1ee519ce30e3d64f4f1dd506f8c1>1.13 - nokmem</h1>
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" target=_blank>Bug details</a>
 <p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p>
 <h2 id=scope>Scope</h2>
@@ -429,6 +496,221 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 <li><a href=/docs/kubernetes/releases/v1.12/v1.12.10-lts.1 title="This is the first fixed release by KLTS for v1.12.10." data-toggle=tooltip data-placement=top target>v1.12.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 <li><a href=/docs/kubernetes/releases/v1.11/v1.11.10-lts.1 title="This is the first fixed release by KLTS for v1.11.10." data-toggle=tooltip data-placement=top target>v1.11.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 <li><a href=/docs/kubernetes/releases/v1.10/v1.10.13-lts.1 title="This is the first fixed release by KLTS for v1.10.13." data-toggle=tooltip data-placement=top target>v1.10.13-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-47fd6c8a74cf9d1a995d7e361989501b>2 - Release log</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-caf8d56460c7071d4f8f932bcfe53af9>2.1 - v1.23</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-e61097f21601936b5827a30e16c1c6bc>2.1.1 - v1.23.4-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.23.4.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-438640263b055dd3b8ba2dd0405999ac>2.2 - v1.22</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-8ebda6e4bab769f89e799d976dabba4a>2.2.1 - v1.22.7-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.22.7.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-22d4264ec0ce1544513dda5258e80e79>2.3 - v1.21</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-6d7cac9601c59797f0229943755b8074>2.3.1 - v1.21.10-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.21.10.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-1e965e5d0ca021a3a5a36c3be8f513f8>2.4 - v1.20</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-46d782b6b9393c6597cf20581a80061a>2.4.1 - v1.20.16-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.20.16.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-a52f45c727784e778de68ac928801052>2.5 - v1.19</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-daacbf641259a498041dea6bb6ac36ff>2.5.1 - v1.19.16-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.19.16.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-07c28fb38ae06d39cef935a5f07bca61>2.5.2 - v1.19.16-lts.2</h1>
+<p>This is the second fixed release by KLTS for v1.19.16.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2020-8554 target>/docs/kubernetes/patches/cve-2020-8554/</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-5f76bae3acab74e52fc6cf0c877ef895>2.6 - v1.18</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-27466f7c0b6341998f8093209410a2ec>2.6.1 - v1.18.20-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.18.20.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-25741 title="This is a volume security issue related to permission access. A user can access files and directories outside the volume mounting directory, including the host&rsquo;s file system, through the volume mounting method of subpath in the created container." data-toggle=tooltip data-placement=top target>CVE-2021-25741</a><p>This is a volume security issue related to permission access. A user can access files and directories outside the volume mounting directory, including the host&rsquo;s file system, through the volume mounting method of <code>subpath</code> in the created container.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-ac2ddb380c8818e1bd74006225b2304f>2.6.2 - v1.18.20-lts.2</h1>
+<p>This is the second fixed release by KLTS for v1.18.20.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li>Bugfix: reducing race risk in kubelet for missing KUBERNETES_SERVICE_HOST</li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-de187724df678eaac953f00668b44795>2.7 - v1.17</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-56c43b56ac02c308708e139faf7f71d9>2.7.1 - v1.17.17-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.17.17.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-326a1b7db2e296bc3e0bfb6dfb1c67b3>2.8 - v1.16</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-c6fac4541d2a814c52a2eddb8f29e4be>2.8.1 - v1.16.15-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.16.15.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-e55495ef2c641ec0b1a2e34eb9f5dc18>2.9 - v1.15</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-fdf0a02c504410d669e32dd902a990d8>2.9.1 - v1.15.12-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.15.12.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-f007a7c674953644fb4009ab518c9be2>2.10 - v1.14</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-8d554c74f571cbb71ac837a37a524a8c>2.10.1 - v1.14.10-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.14.10.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2020-8552 title="This vulnerability may make the API Server vulnerable to a DoS (Denial of Service) attack caused by successful API requests." data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8559 title="This is a security vulnerability of the kube-apiserver component. An attacker can intercept certain upgrade requests sent to the node kubelet, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise." data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-eae34034c4f85145866a0a71431eca2e>2.11 - v1.13</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-6b84ed564b21ec5b59b7de3959be3770>2.11.1 - v1.13.12-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.13.12.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2020-8552 title="This vulnerability may make the API Server vulnerable to a DoS (Denial of Service) attack caused by successful API requests." data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
+<li>TODO <a href=/docs/kubernetes/patches/cve-2020-8559 title="This is a security vulnerability of the kube-apiserver component. An attacker can intercept certain upgrade requests sent to the node kubelet, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise." data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-2677eb33259852b40cca462929288024>2.12 - v1.12</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-b500348ca53a1ba1e57acc0308f3fffc>2.12.1 - v1.12.10-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.12.10.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2019-11245 title="Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node." data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11247 title="API Server mistakenly allows access to a cluster-scoped custom resource." data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> mistakenly allows access to a cluster-scoped custom resource.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11249 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11249</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11251 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11251</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8552 title="This vulnerability may make the API Server vulnerable to a DoS (Denial of Service) attack caused by successful API requests." data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
+<li>TODO <a href=/docs/kubernetes/patches/cve-2020-8559 title="This is a security vulnerability of the kube-apiserver component. An attacker can intercept certain upgrade requests sent to the node kubelet, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise." data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-f18aef56ed735d388e75ef35eb00f570>2.13 - v1.11</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-ac77db7d8b8beff8ec2bb6de8a0037c0>2.13.1 - v1.11.10-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.11.10.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2019-11245 title="Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node." data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11246 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11247 title="API Server mistakenly allows access to a cluster-scoped custom resource." data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> mistakenly allows access to a cluster-scoped custom resource.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11248 title="The debugging endpoint /debug/pprof is exposed over the unauthenticated Kubelet healthz port." data-toggle=tooltip data-placement=top target>CVE-2019-11248</a><p>The debugging endpoint <code>/debug/pprof</code> is exposed over the unauthenticated Kubelet healthz port.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11249 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11249</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11251 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11251</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8552 title="This vulnerability may make the API Server vulnerable to a DoS (Denial of Service) attack caused by successful API requests." data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
+<li>TODO <a href=/docs/kubernetes/patches/cve-2020-8559 title="This is a security vulnerability of the kube-apiserver component. An attacker can intercept certain upgrade requests sent to the node kubelet, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise." data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-4278ac8691e5595a58b6f319ca3ec9bc>2.14 - v1.10</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-a90883c2da00b1de562b23d74158b4ce>2.14.1 - v1.10.13-lts.1</h1>
+<p>This is the first fixed release by KLTS for v1.10.13.</p>
+<h2 id=patches>Patches</h2>
+<ul>
+<li><a href=/docs/kubernetes/patches/cve-2019-11245 title="Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node." data-toggle=tooltip data-placement=top target>CVE-2019-11245</a><p>Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-1002101 title="This vulnerability may allow an attacker to modify or monitor any file in the directory with the same name in the symbolic link header during the unpacking process of the kubectl cp command, thereby causing damage." data-toggle=tooltip data-placement=top target>CVE-2019-1002101</a><p>This vulnerability may allow an attacker to modify or monitor any file in the directory with the same name in the symbolic link header during the unpacking process of the <code>kubectl cp</code> command, thereby causing damage.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11246 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11246</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li>TODO <a href=/docs/kubernetes/patches/cve-2019-11247 title="API Server mistakenly allows access to a cluster-scoped custom resource." data-toggle=tooltip data-placement=top target>CVE-2019-11247</a><p><code>API Server</code> mistakenly allows access to a cluster-scoped custom resource.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11248 title="The debugging endpoint /debug/pprof is exposed over the unauthenticated Kubelet healthz port." data-toggle=tooltip data-placement=top target>CVE-2019-11248</a><p>The debugging endpoint <code>/debug/pprof</code> is exposed over the unauthenticated Kubelet healthz port.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11249 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11249</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2019-11251 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11251</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2020-8552 title="This vulnerability may make the API Server vulnerable to a DoS (Denial of Service) attack caused by successful API requests." data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p></li>
+<li>TODO <a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
+<li>TODO <a href=/docs/kubernetes/patches/cve-2020-8559 title="This is a security vulnerability of the kube-apiserver component. An attacker can intercept certain upgrade requests sent to the node kubelet, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise." data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p></li>
+<li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
+<li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
 </ul>
 </div>
 </main>

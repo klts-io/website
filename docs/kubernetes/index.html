@@ -2,7 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.87.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<meta name=generator content="Hugo 0.87.0"><link rel=alternate type=text/html href=/docs/kubernetes/_print/>
+<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
 <link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32>
@@ -12,31 +13,21 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>CVE-2019-11248 | KLTS.io</title>
-<meta name=description content="KLTS.io website"><meta property="og:title" content="CVE-2019-11248">
-<meta property="og:description" content="Vulnerability details The debugging endpoint /debug/pprof is exposed over the unauthenticated Kubelet healthz port.
-Scope The go pprof endpoint is exposed over the Kubelet&rsquo;s healthz port. This debugging endpoint can potentially leak sensitive information such as internal Kubelet memory addresses and configuration, or for limited denial of service. The issue is of medium severity, but not exposed by the default configuration.
-Fixed by Official  v1.14.4 v1.13.8 v1.12.10  Fixed by KLTS  v1.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="/docs/kubernetes/patches/cve-2019-11248/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-03-08T14:24:18+08:00"><meta property="og:site_name" content="KLTS.io">
-<meta itemprop=name content="CVE-2019-11248">
-<meta itemprop=description content="Vulnerability details The debugging endpoint /debug/pprof is exposed over the unauthenticated Kubelet healthz port.
-Scope The go pprof endpoint is exposed over the Kubelet&rsquo;s healthz port. This debugging endpoint can potentially leak sensitive information such as internal Kubelet memory addresses and configuration, or for limited denial of service. The issue is of medium severity, but not exposed by the default configuration.
-Fixed by Official  v1.14.4 v1.13.8 v1.12.10  Fixed by KLTS  v1.">
-<meta itemprop=dateModified content="2022-03-08T14:24:18+08:00">
-<meta itemprop=wordCount content="74">
-<meta itemprop=keywords content><meta name=twitter:card content="summary">
-<meta name=twitter:title content="CVE-2019-11248">
-<meta name=twitter:description content="Vulnerability details The debugging endpoint /debug/pprof is exposed over the unauthenticated Kubelet healthz port.
-Scope The go pprof endpoint is exposed over the Kubelet&rsquo;s healthz port. This debugging endpoint can potentially leak sensitive information such as internal Kubelet memory addresses and configuration, or for limited denial of service. The issue is of medium severity, but not exposed by the default configuration.
-Fixed by Official  v1.14.4 v1.13.8 v1.12.10  Fixed by KLTS  v1.">
+<title>Kubernetes | KLTS.io</title>
+<meta name=description content="KLTS.io website"><meta property="og:title" content="Kubernetes">
+<meta property="og:description" content="KLTS.io website">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/docs/kubernetes/"><meta property="og:site_name" content="KLTS.io">
+<meta itemprop=name content="Kubernetes">
+<meta itemprop=description content="KLTS.io website"><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Kubernetes">
+<meta name=twitter:description content="KLTS.io website">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script src=https://unpkg.com/lunr@2.3.8/lunr.min.js integrity=sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY crossorigin=anonymous></script>
 </head>
-<body class=td-page>
+<body class=td-section>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -58,7 +49,7 @@ Fixed by Official  v1.14.4 v1.13.8 v1.12.10  Fixed by KLTS  v1.">
 English
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/zh/docs/kubernetes/patches/cve-2019-11248/>中文 Chinese</a>
+<a class=dropdown-item href=/zh/docs/kubernetes/>中文 Chinese</a>
 </div>
 </li>
 </ul>
@@ -84,7 +75,7 @@ English
 English
 </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=/zh/docs/kubernetes/patches/cve-2019-11248/>中文 Chinese</a>
+<a class=dropdown-item href=/zh/docs/kubernetes/>中文 Chinese</a>
 </div>
 </div>
 <ul class="td-sidebar-nav__section pr-md-3 ul-0">
@@ -100,9 +91,9 @@ English
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstall-li>
 <a href=/docs/install/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstall><span>Step-By-Step Install</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docskubernetes-li>
-<a href=/docs/kubernetes/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docskubernetes><span>Kubernetes</span></a>
+<a href=/docs/kubernetes/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-docskubernetes><span class=td-sidebar-nav-active-item>Kubernetes</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docskubernetespatches-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docskubernetespatches-li>
 <a href=/docs/kubernetes/patches/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docskubernetespatches><span>Fixed CVEs</span></a>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docskubernetespatchescve-2021-25741-li>
@@ -119,8 +110,8 @@ English
 <a href=/docs/kubernetes/patches/cve-2019-1002101/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docskubernetespatchescve-2019-1002101><span>CVE-2019-1002101</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docskubernetespatchescve-2019-11251-li>
 <a href=/docs/kubernetes/patches/cve-2019-11251/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docskubernetespatchescve-2019-11251><span>CVE-2019-11251</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docskubernetespatchescve-2019-11248-li>
-<a href=/docs/kubernetes/patches/cve-2019-11248/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docskubernetespatchescve-2019-11248><span class=td-sidebar-nav-active-item>CVE-2019-11248</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docskubernetespatchescve-2019-11248-li>
+<a href=/docs/kubernetes/patches/cve-2019-11248/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docskubernetespatchescve-2019-11248><span>CVE-2019-11248</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docskubernetespatchescve-2019-11247-li>
 <a href=/docs/kubernetes/patches/cve-2019-11247/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docskubernetespatchescve-2019-11247><span>CVE-2019-11247</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docskubernetespatchescve-2019-11246-li>
@@ -284,19 +275,12 @@ English
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/klts-io/website/edit/main/content/en/docs/kubernetes/patches/cve-2019-11248.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/klts-io/website/new/main/content/en/docs/kubernetes/patches/cve-2019-11248.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
-<a href="https://github.com/klts-io/website/issues/new?title=CVE-2019-11248" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href=https://github.com/klts-io/website/edit/main/content/en/docs/kubernetes/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/klts-io/website/new/main/content/en/docs/kubernetes/_index.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/klts-io/website/issues/new?title=Kubernetes" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 <a href=https://github.com/klts-io/website/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
-<a id=print href=/docs/kubernetes/patches/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+<a id=print href=/docs/kubernetes/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
-<div class=td-toc><nav id=TableOfContents>
-<ul>
-<li><a href=#scope>Scope</a></li>
-<li><a href=#official-fixed>Fixed by Official</a></li>
-<li><a href=#klts-fixed>Fixed by KLTS</a></li>
-</ul>
-</nav></div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
@@ -304,41 +288,35 @@ English
 <li class=breadcrumb-item>
 <a href=/docs/>Document</a>
 </li>
-<li class=breadcrumb-item>
-<a href=/docs/kubernetes/>Kubernetes</a>
-</li>
-<li class=breadcrumb-item>
-<a href=/docs/kubernetes/patches/>Fixed CVEs</a>
-</li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/docs/kubernetes/patches/cve-2019-11248/>CVE-2019-11248</a>
+<a href=/docs/kubernetes/>Kubernetes</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>CVE-2019-11248</h1>
+<h1>Kubernetes</h1>
 <header class=article-meta>
-<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 minute read</p>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 0 minute read</p>
 </header>
-<a href=https://www.cvedetails.com/cve/CVE-2019-11248 target=_blank>Vulnerability details</a>
-<p>The debugging endpoint <code>/debug/pprof</code> is exposed over the unauthenticated Kubelet healthz port.</p>
-<h2 id=scope>Scope</h2>
-<p>The <code>go pprof</code> endpoint is exposed over the <code>Kubelet</code>&rsquo;s healthz port. This debugging endpoint can potentially leak sensitive information such as internal <code>Kubelet</code> memory addresses and configuration, or for limited denial of service. The issue is of medium severity, but not exposed by the default configuration.</p>
-<h2 id=official-fixed>Fixed by Official</h2>
-<ul>
-<li>v1.14.4</li>
-<li>v1.13.8</li>
-<li>v1.12.10</li>
-</ul>
-<h2 id=klts-fixed>Fixed by KLTS</h2>
-<ul>
-<li><a href=/docs/kubernetes/releases/v1.11/v1.11.10-lts.1 title="This is the first fixed release by KLTS for v1.11.10." data-toggle=tooltip data-placement=top target>v1.11.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2019-11248.1.11.patch target=_blank>CVE-2019-11248.1.11.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.10/v1.10.13-lts.1 title="This is the first fixed release by KLTS for v1.10.13." data-toggle=tooltip data-placement=top target>v1.10.13-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2019-11248.1.11.patch target=_blank>CVE-2019-11248.1.11.patch</a></li>
-</ul>
+<div class=section-index>
+<hr class=panel-line>
+<div class=entry>
+<h5>
+<a href=/docs/kubernetes/patches/>Fixed CVEs</a>
+</h5>
+<p></p>
+</div>
+<div class=entry>
+<h5>
+<a href=/docs/kubernetes/releases/>Release log</a>
+</h5>
+<p></p>
+</div>
+</div>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 March 8, 2022
-: <a href=https://github.com/klts-io/website/commit/95aa90d4d2345f82d5ff7df3c9cb34de91aeac10>mv en to kuberentes/ (95aa90d4)</a>
+: <a href=https://github.com/klts-io/website/commit/888881d24bd27bd8572c0b8fed8831fced0c8d41>Add missing index (888881d2)</a>
 </div>
 </div>
 </main>
