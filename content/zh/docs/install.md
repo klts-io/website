@@ -18,7 +18,7 @@ VERSION=1.18.20-lts.2
 cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
+baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -32,7 +32,7 @@ yum makecache
 ``` bash
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
 EOF
 
 apt-get update
@@ -56,7 +56,7 @@ VERSION=1.18.20-lts.2
 cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
+baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -72,7 +72,7 @@ VERSION=1.18.20-lts.2
 cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/rpm-${VERSION}/\$basearch/
+baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -88,7 +88,7 @@ VERSION=1.18.20-lts.2
 cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
+baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -104,7 +104,7 @@ VERSION=1.18.20-lts.2
 cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
+baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -120,7 +120,7 @@ VERSION=1.18.20-lts.2
 cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
+baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -145,7 +145,7 @@ curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts >>/et
 
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
 EOF
 
 apt-get update
@@ -156,7 +156,7 @@ apt-get update
 ``` bash
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/deb-${VERSION} stable main
+deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/deb-v${VERSION} stable main
 EOF
 
 apt-get update
@@ -167,7 +167,7 @@ apt-get update
 ``` bash
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
+deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
 EOF
 
 apt-get update
@@ -178,7 +178,7 @@ apt-get update
 ``` bash
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
+deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
 EOF
 
 apt-get update
@@ -189,7 +189,7 @@ apt-get update
 ``` bash
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/deb-${VERSION} stable main
+deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/deb-v${VERSION} stable main
 EOF
 
 apt-get update
