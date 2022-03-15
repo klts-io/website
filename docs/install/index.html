@@ -17,23 +17,23 @@
 <meta property="og:description" content="KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
 Before installation, ensure that your Preparation is good enough.
 Set the KLTS source package Red Hat-based distributions Debian-based distributions Run the following code to set the source of downloading a proper distribution:
-VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
+VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-03-15T15:15:28+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2022-03-15T15:31:11+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Step-By-Step Install">
 <meta itemprop=description content="KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
 Before installation, ensure that your Preparation is good enough.
 Set the KLTS source package Red Hat-based distributions Debian-based distributions Run the following code to set the source of downloading a proper distribution:
-VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
-<meta itemprop=dateModified content="2022-03-15T15:15:28+08:00">
+VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
+<meta itemprop=dateModified content="2022-03-15T15:31:11+08:00">
 <meta itemprop=wordCount content="283">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Step-By-Step Install">
 <meta name=twitter:description content="KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
 Before installation, ensure that your Preparation is good enough.
 Set the KLTS source package Red Hat-based distributions Debian-based distributions Run the following code to set the source of downloading a proper distribution:
-VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
+VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -67,7 +67,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.ce6882c4d12336732161ac1b4cd2b769.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.cda80c07656b97803dcd6a71a101dbe8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -77,7 +77,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.ce6882c4d12336732161ac1b4cd2b769.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.cda80c07656b97803dcd6a71a101dbe8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -330,7 +330,7 @@ English
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -341,7 +341,7 @@ yum makecache
 <p><p>Run the following code to set the source of downloading a proper distribution:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -403,7 +403,7 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 March 15, 2022
-: <a href=https://github.com/klts-io/website/commit/dc4c85fe7b2ad41d855f96fd43a652f82b82e6c9>Update install source (#47) (dc4c85fe)</a>
+: <a href=https://github.com/klts-io/website/commit/f9c5d2d76bec4634473af0d201c6b3224d5236a4>Fix version (#48) (f9c5d2d7)</a>
 </div>
 </div>
 </main>
