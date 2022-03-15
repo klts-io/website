@@ -13,10 +13,11 @@ Before installation, ensure that your {{< link url="/docs/pre-install" >}} is go
 {{% tab name="Red Hat-based distributions" %}}
 Run the following code to set the source of downloading a proper distribution:
 ``` bash
-cat << \EOF > /etc/yum.repos.d/klts.repo
+VERSION=1.18.20-lts.2
+cat << EOF > /etc/yum.repos.d/klts.repo
 [klts]
 name=klts
-baseurl=https://dl.klts.io/rpm/$basearch/
+baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
@@ -28,8 +29,9 @@ yum makecache
 {{% tab name="Debian-based distributions" %}}
 Run the following code to set the source of downloading a proper distribution:
 ``` bash
+VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
-deb [trusted=yes] https://dl.klts.io/deb stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
 EOF
 
 apt-get update
