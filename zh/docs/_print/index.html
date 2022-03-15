@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.493277438ad08b925ac6beeca2160158.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.ce6882c4d12336732161ac1b4cd2b769.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -549,10 +549,11 @@ systemctl start containerd <span style=color:#ce5c00;font-weight:700>&amp;&amp;<
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-zhdocsinstall-3-3 role=tab aria-controls=tabset-zhdocsinstall-3-3>基于 Debian 的发行版, 国内加速 🚀</a></li></ul>
 <div class=tab-content id=tabset-zhdocsinstall-3><div id=tabset-zhdocsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-0>
 <p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://dl.klts.io/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -561,8 +562,9 @@ yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-3-1>
 <p><p>执行以下代码设置下载 KLTS 的软件源：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://dl.klts.io/deb stable main
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -579,10 +581,11 @@ apt-get update
 <div class=tab-content id=tabset-zhdocsinstall-1><div id=tabset-zhdocsinstall-1-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
 
-cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://dl.klts.io/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -590,10 +593,11 @@ cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/rpm-${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -601,10 +605,11 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-2>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -612,10 +617,11 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-3>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -623,10 +629,11 @@ yum makecache
 yum makecache
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-1-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-1-4>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; \EOF &gt; /etc/yum.repos.d/klts.repo
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
-</span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/repos/rpm/$basearch/
+</span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/rpm-${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -646,36 +653,41 @@ yum makecache
 <div class=tab-content id=tabset-zhdocsinstall-2><div id=tabset-zhdocsinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-0>
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://raw.githubusercontent.com/wzshiming/github-hosts/master/hosts &gt;&gt;/etc/hosts
 
+<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://dl.klts.io/deb stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-1>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/repos/deb stable main
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/deb-${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-2 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-2>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/repos/deb stable main
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-3 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-3>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/repos/deb stable main
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/deb-${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
 </code></pre></div></div>
 <div id=tabset-zhdocsinstall-2-4 class=tab-pane role=tabpanel aria-labelledby=tabset-zhdocsinstall-2-4>
-<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
-</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/repos/deb stable main
+<p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
+cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/deb-${VERSION} stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
