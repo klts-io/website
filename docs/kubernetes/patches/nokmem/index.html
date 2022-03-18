@@ -19,12 +19,12 @@ Scope When the node is used for a long time, it prompts an error that the remain
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device The node disk is sufficient but reports this error, and the creation of Pod always fails.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/kubernetes/patches/nokmem/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-03-08T14:24:18+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2022-03-18T14:49:00+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="nokmem">
 <meta itemprop=description content="Bug details The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.
 Scope When the node is used for a long time, it prompts an error that the remaining space is insufficient. The error message is as follows:
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device The node disk is sufficient but reports this error, and the creation of Pod always fails.">
-<meta itemprop=dateModified content="2022-03-08T14:24:18+08:00">
+<meta itemprop=dateModified content="2022-03-18T14:49:00+08:00">
 <meta itemprop=wordCount content="156">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="nokmem">
@@ -64,7 +64,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.cda80c07656b97803dcd6a71a101dbe8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.84225cba094b8aeddc53494dae20778f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -74,7 +74,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.cda80c07656b97803dcd6a71a101dbe8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.84225cba094b8aeddc53494dae20778f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -319,11 +319,11 @@ English
 <p>When the node is used for a long time, it prompts an error that the remaining space is insufficient. The error message is as follows:</p>
 <pre><code>mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device
 </code></pre><p>The node disk is sufficient but reports this error, and the creation of <code>Pod</code> always fails. This is a potential &ldquo;time bomb&rdquo;.</p>
-<p>All environments that use early-version kernels and Kubernetes versions before 1.22 will be affected. In runc 1.0.0-rc94 (<a href=https://github.com/opencontainers%20/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) it has been fixed (removed directly).</p>
+<p>All environments that use early-version kernels and Kubernetes versions before 1.21 will be affected. In runc 1.0.0-rc94 (<a href=https://github.com/opencontainers%20/runc/pull/2840 target=_blank>opencontainers/runc#2840</a>) it has been fixed (removed directly).</p>
 <h2 id=prevention>Prevention</h2>
 <ul>
 <li>Upgrade the system kernel</li>
-<li>Kubernetes 1.14 or higher
+<li>Kubernetes 1.14 to 1.20
 <ul>
 <li>Rebuild Kubelet with <code>-tags=nokmem</code></li>
 </ul>
@@ -333,19 +333,21 @@ English
 <li>For hard coding, refer to <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 </ul>
 </li>
+<li>Kubernetes 1.21 or higher
+<ul>
+<li>not affected</li>
+</ul>
+</li>
 </ul>
 <h2 id=klts-fixed>Fixed by KLTS</h2>
 <ul>
-<li><a href=/docs/kubernetes/releases/v1.23/v1.23.4-lts.1 title="This is the first fixed release by KLTS for v1.23.4." data-toggle=tooltip data-placement=top target>v1.23.4-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.22/v1.22.7-lts.1 title="This is the first fixed release by KLTS for v1.22.7." data-toggle=tooltip data-placement=top target>v1.22.7-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.21/v1.21.10-lts.1 title="This is the first fixed release by KLTS for v1.21.10." data-toggle=tooltip data-placement=top target>v1.21.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.20/v1.20.16-lts.1 title="This is the first fixed release by KLTS for v1.20.16." data-toggle=tooltip data-placement=top target>v1.20.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.1 title="This is the first fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.1 title="This is the first fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.17/v1.17.17-lts.1 title="This is the first fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.16/v1.16.15-lts.1 title="This is the first fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.15/v1.15.12-lts.1 title="This is the first fixed release by KLTS for v1.15.12." data-toggle=tooltip data-placement=top target>v1.15.12-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
-<li><a href=/docs/kubernetes/releases/v1.14/v1.14.10-lts.1 title="This is the first fixed release by KLTS for v1.14.10." data-toggle=tooltip data-placement=top target>v1.14.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.19.patch target=_blank>nokmem.1.19.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.20/v1.20.16-lts.1 title="This is the first fixed release by KLTS for v1.20.16." data-toggle=tooltip data-placement=top target>v1.20.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.1 title="This is the first fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.1 title="This is the first fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.17/v1.17.17-lts.1 title="This is the first fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.16/v1.16.15-lts.1 title="This is the first fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.15/v1.15.12-lts.1 title="This is the first fixed release by KLTS for v1.15.12." data-toggle=tooltip data-placement=top target>v1.15.12-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.14/v1.14.10-lts.1 title="This is the first fixed release by KLTS for v1.14.10." data-toggle=tooltip data-placement=top target>v1.14.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
 <li><a href=/docs/kubernetes/releases/v1.13/v1.13.12-lts.1 title="This is the first fixed release by KLTS for v1.13.12." data-toggle=tooltip data-placement=top target>v1.13.12-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 <li><a href=/docs/kubernetes/releases/v1.12/v1.12.10-lts.1 title="This is the first fixed release by KLTS for v1.12.10." data-toggle=tooltip data-placement=top target>v1.12.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
 <li><a href=/docs/kubernetes/releases/v1.11/v1.11.10-lts.1 title="This is the first fixed release by KLTS for v1.11.10." data-toggle=tooltip data-placement=top target>v1.11.10-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.13.patch target=_blank>nokmem.1.13.patch</a></li>
@@ -353,8 +355,8 @@ English
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-March 8, 2022
-: <a href=https://github.com/klts-io/website/commit/95aa90d4d2345f82d5ff7df3c9cb34de91aeac10>mv en to kuberentes/ (95aa90d4)</a>
+March 18, 2022
+: <a href=https://github.com/klts-io/website/commit/57e72ffdbfb58edcaee65d77d12dfc743058b72d>fix nokmem link (57e72ffd)</a>
 </div>
 </div>
 </main>
