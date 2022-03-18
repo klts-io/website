@@ -33,7 +33,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 
 ## KLTS 修复的版本 {#klts-fixed}
 
-- {{< link url="/docs/kubernetes/releases/v1.20/v1.20.16-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
+- {{< link url="/docs/kubernetes/releases/v1.20/v1.20.15-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
 - {{< link url="/docs/kubernetes/releases/v1.19/v1.19.16-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
 - {{< link url="/docs/kubernetes/releases/v1.18/v1.18.20-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
 - {{< link url="/docs/kubernetes/releases/v1.17/v1.17.17-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
