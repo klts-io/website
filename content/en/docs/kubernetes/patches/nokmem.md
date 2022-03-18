@@ -33,7 +33,7 @@ All environments that use early-version kernels and Kubernetes versions before 1
 
 ## Fixed by KLTS {#klts-fixed}
 
-- {{< link url="/docs/kubernetes/releases/v1.20/v1.20.16-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
+- {{< link url="/docs/kubernetes/releases/v1.20/v1.20.15-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
 - {{< link url="/docs/kubernetes/releases/v1.19/v1.19.16-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
 - {{< link url="/docs/kubernetes/releases/v1.18/v1.18.20-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
 - {{< link url="/docs/kubernetes/releases/v1.17/v1.17.17-lts.1/" >}} {{< link text="nokmem.1.20.patch" url="https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch" >}}
