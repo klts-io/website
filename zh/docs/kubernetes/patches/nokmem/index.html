@@ -18,7 +18,7 @@
 Bug 影响 节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device 节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
 所有使用低版本内核的环境以及 Kubernetes 1.21 之前的版本都会受到影响，在 runc 1.0.0-rc94 (opencontainers/runc#2840) 进行了修复(被直接移除)。
-防范措施  升级系统内核 Kubernetes 1.14 到 1.20  重新构建 Kubelet 带上 -tags=nokmem   Kubernetes 1.14 以下  有关硬编码，请参考 nokmem.1.13.patch   Kubernetes 1.21 及以上  不受影响    KLTS 修复的版本  v1.20.15-lts.1 nokmem.1.20.patch v1.19.16-lts.1 nokmem.1.20.patch v1.18.20-lts.1 nokmem.1.20.patch v1.17.17-lts.1 nokmem.1.20.patch v1.">
+防范措施  升级系统内核 Kubernetes 1.14 到 1.20  重新构建 Kubelet 带上 -tags=nokmem   Kubernetes 1.14 以下  有关硬编码，请参考 nokmem.1.13.patch   Kubernetes 1.21 及以上  不受影响    KLTS 修复的版本  v1.20.15-lts.1 nokmem.1.20.patch /docs/kubernetes/releases/v1.19/v1.19.16-lts.1/ nokmem.1.20.patch v1.18.20-lts.1 nokmem.1.20.patch v1.17.17-lts.1 nokmem.1.20.patch v1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/zh/docs/kubernetes/patches/nokmem/"><meta property="article:section" content="docs">
 <meta property="article:modified_time" content="2022-03-18T15:01:12+08:00"><meta property="og:site_name" content="KLTS.io">
@@ -27,7 +27,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 Bug 影响 节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device 节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
 所有使用低版本内核的环境以及 Kubernetes 1.21 之前的版本都会受到影响，在 runc 1.0.0-rc94 (opencontainers/runc#2840) 进行了修复(被直接移除)。
-防范措施  升级系统内核 Kubernetes 1.14 到 1.20  重新构建 Kubelet 带上 -tags=nokmem   Kubernetes 1.14 以下  有关硬编码，请参考 nokmem.1.13.patch   Kubernetes 1.21 及以上  不受影响    KLTS 修复的版本  v1.20.15-lts.1 nokmem.1.20.patch v1.19.16-lts.1 nokmem.1.20.patch v1.18.20-lts.1 nokmem.1.20.patch v1.17.17-lts.1 nokmem.1.20.patch v1.">
+防范措施  升级系统内核 Kubernetes 1.14 到 1.20  重新构建 Kubelet 带上 -tags=nokmem   Kubernetes 1.14 以下  有关硬编码，请参考 nokmem.1.13.patch   Kubernetes 1.21 及以上  不受影响    KLTS 修复的版本  v1.20.15-lts.1 nokmem.1.20.patch /docs/kubernetes/releases/v1.19/v1.19.16-lts.1/ nokmem.1.20.patch v1.18.20-lts.1 nokmem.1.20.patch v1.17.17-lts.1 nokmem.1.20.patch v1.">
 <meta itemprop=dateModified content="2022-03-18T15:01:12+08:00">
 <meta itemprop=wordCount content="72">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
@@ -36,7 +36,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 Bug 影响 节点长期使用的时候提示剩余空间不足的错误，报错信息如下所示：
 mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on device 节点磁盘充足但是一直报和这个错误, 并且创建 Pod 总是失败，这是一个潜在的“定时炸弹”。
 所有使用低版本内核的环境以及 Kubernetes 1.21 之前的版本都会受到影响，在 runc 1.0.0-rc94 (opencontainers/runc#2840) 进行了修复(被直接移除)。
-防范措施  升级系统内核 Kubernetes 1.14 到 1.20  重新构建 Kubelet 带上 -tags=nokmem   Kubernetes 1.14 以下  有关硬编码，请参考 nokmem.1.13.patch   Kubernetes 1.21 及以上  不受影响    KLTS 修复的版本  v1.20.15-lts.1 nokmem.1.20.patch v1.19.16-lts.1 nokmem.1.20.patch v1.18.20-lts.1 nokmem.1.20.patch v1.17.17-lts.1 nokmem.1.20.patch v1.">
+防范措施  升级系统内核 Kubernetes 1.14 到 1.20  重新构建 Kubelet 带上 -tags=nokmem   Kubernetes 1.14 以下  有关硬编码，请参考 nokmem.1.13.patch   Kubernetes 1.21 及以上  不受影响    KLTS 修复的版本  v1.20.15-lts.1 nokmem.1.20.patch /docs/kubernetes/releases/v1.19/v1.19.16-lts.1/ nokmem.1.20.patch v1.18.20-lts.1 nokmem.1.20.patch v1.17.17-lts.1 nokmem.1.20.patch v1.">
 <link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
 <link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -70,7 +70,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.ca4e1b7a1a944bf96c9f5cf11f0a64e8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.586a10fa74f7f5979c99c48dd49955f4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -80,7 +80,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.ca4e1b7a1a944bf96c9f5cf11f0a64e8.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.586a10fa74f7f5979c99c48dd49955f4.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -145,22 +145,22 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocskubernetesreleasesv123-li>
 <a href=/zh/docs/kubernetes/releases/v1.23/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocskubernetesreleasesv123><span>v1.23</span></a>
 <ul class="ul-4 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv123v1234-lts1-li>
-<a href=/zh/docs/kubernetes/releases/v1.23/v1.23.4-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv123v1234-lts1><span>v1.23.4-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv123v1235-lts1-li>
+<a href=/zh/docs/kubernetes/releases/v1.23/v1.23.5-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv123v1235-lts1><span>v1.23.4-lts.1</span></a>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocskubernetesreleasesv122-li>
 <a href=/zh/docs/kubernetes/releases/v1.22/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocskubernetesreleasesv122><span>v1.22</span></a>
 <ul class="ul-4 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv122v1227-lts1-li>
-<a href=/zh/docs/kubernetes/releases/v1.22/v1.22.7-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv122v1227-lts1><span>v1.22.7-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv122v1228-lts1-li>
+<a href=/zh/docs/kubernetes/releases/v1.22/v1.22.8-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv122v1228-lts1><span>v1.22.8-lts.1</span></a>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocskubernetesreleasesv121-li>
 <a href=/zh/docs/kubernetes/releases/v1.21/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocskubernetesreleasesv121><span>v1.21</span></a>
 <ul class="ul-4 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv121v12110-lts1-li>
-<a href=/zh/docs/kubernetes/releases/v1.21/v1.21.10-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv121v12110-lts1><span>v1.21.10-lts.1</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv121v12111-lts1-li>
+<a href=/zh/docs/kubernetes/releases/v1.21/v1.21.11-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv121v12111-lts1><span>v1.21.11-lts.1</span></a>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocskubernetesreleasesv120-li>
@@ -173,10 +173,8 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocskubernetesreleasesv119-li>
 <a href=/zh/docs/kubernetes/releases/v1.19/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zhdocskubernetesreleasesv119><span>v1.19</span></a>
 <ul class="ul-4 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv119v11916-lts1-li>
-<a href=/zh/docs/kubernetes/releases/v1.19/v1.19.16-lts.1/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv119v11916-lts1><span>v1.19.16-lts.1</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv119v11916-lts2-li>
-<a href=/zh/docs/kubernetes/releases/v1.19/v1.19.16-lts.2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv119v11916-lts2><span>v1.19.16-lts.2</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zhdocskubernetesreleasesv119v11916-lts3-li>
+<a href=/zh/docs/kubernetes/releases/v1.19/v1.19.16-lts.3/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zhdocskubernetesreleasesv119v11916-lts3><span>v1.19.16-lts.3</span></a>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zhdocskubernetesreleasesv118-li>
@@ -357,7 +355,7 @@ mkdir: cannot create directory '/sys/fs/cgroup/memory/8': No space left on devic
 <h2 id=klts-fixed>KLTS 修复的版本</h2>
 <ul>
 <li><a href=/zh/docs/kubernetes/releases/v1.20/v1.20.15-lts.1 title="这是 KLTS 发布的第一个 v1.20.15 修复版本。" data-toggle=tooltip data-placement=top target>v1.20.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
-<li><a href=/zh/docs/kubernetes/releases/v1.19/v1.19.16-lts.1 title="这是 KLTS 发布的第一个 v1.19.16 修复版本。" data-toggle=tooltip data-placement=top target>v1.19.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
+<li><a href=/zh/docs/kubernetes/releases/v1.19/v1.19.16-lts.1 target>/docs/kubernetes/releases/v1.19/v1.19.16-lts.1/</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
 <li><a href=/zh/docs/kubernetes/releases/v1.18/v1.18.20-lts.1 title="这是 KLTS 发布的第一个 v1.18.20 修复版本。" data-toggle=tooltip data-placement=top target>v1.18.20-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
 <li><a href=/zh/docs/kubernetes/releases/v1.17/v1.17.17-lts.1 title="这是 KLTS 发布的第一个 v1.17.17 修复版本。" data-toggle=tooltip data-placement=top target>v1.17.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
 <li><a href=/zh/docs/kubernetes/releases/v1.16/v1.16.15-lts.1 title="这是 KLTS 发布的第一个 v1.16.15 修复版本。" data-toggle=tooltip data-placement=top target>v1.16.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/nokmem.1.20.patch target=_blank>nokmem.1.20.patch</a></li>
