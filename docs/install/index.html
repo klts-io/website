@@ -20,14 +20,14 @@ Set the KLTS source package Red Hat-based distributions Debian-based distributio
 VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/install/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-03-15T15:31:11+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2022-03-22T12:02:39+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="Step-By-Step Install">
 <meta itemprop=description content="KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
 Before installation, ensure that your Preparation is good enough.
 Set the KLTS source package Red Hat-based distributions Debian-based distributions Run the following code to set the source of downloading a proper distribution:
 VERSION=1.18.20-lts.2 cat << EOF > /etc/yum.repos.d/klts.repo [klts] name=klts baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/ enabled=1 gpgcheck=0 EOF yum makecache  Run the following code to set the source of downloading a proper distribution:">
-<meta itemprop=dateModified content="2022-03-15T15:31:11+08:00">
-<meta itemprop=wordCount content="283">
+<meta itemprop=dateModified content="2022-03-22T12:02:39+08:00">
+<meta itemprop=wordCount content="214">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Step-By-Step Install">
 <meta name=twitter:description content="KLTS provides a way to install source packages based on Deb and RPM. You can choose the installation method that suits your system.
@@ -67,7 +67,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.e42d010249278c6fdbf43935daf5c11a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.15b6b170033d99f0bffab82cde7d45e5.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -77,7 +77,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.e42d010249278c6fdbf43935daf5c11a.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.15b6b170033d99f0bffab82cde7d45e5.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -345,44 +345,16 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.lis
 apt-get update
 </code></pre></div></div></div>
 <h2 id=install>Install</h2>
-<ul class="nav nav-tabs" id=tabset-docsinstall-4 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-4-0 role=tab aria-controls=tabset-docsinstall-4-0 aria-selected=true>Install</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-4-1 role=tab aria-controls=tabset-docsinstall-4-1>Install the specified releases</a></li></ul>
-<div class=tab-content id=tabset-docsinstall-4><div id=tabset-docsinstall-4-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-4-0>
-<p>
 <ul class="nav nav-tabs" id=tabset-docsinstall-2 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-2-0 role=tab aria-controls=tabset-docsinstall-2-0 aria-selected=true>Red Hat-based distributions</a></li>
 <li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-2-1 role=tab aria-controls=tabset-docsinstall-2-1>Debian-based distributions</a></li></ul>
 <div class=tab-content id=tabset-docsinstall-2><div id=tabset-docsinstall-2-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-2-0>
-<p><p>Run the following code to install a proper distribution:</p>
+<p><p>Run the following code to install a distribution:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum install kubeadm kubelet kubectl
 </code></pre></div></div>
 <div id=tabset-docsinstall-2-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-2-1>
-<p><p>Run the following code to install a proper distribution:</p>
+<p><p>Run the following code to install a distribution:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt-get install kubeadm kubelet kubectl
 </code></pre></div></div></div>
-</div>
-<div id=tabset-docsinstall-4-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-4-1>
-<p>
-<ul class="nav nav-tabs" id=tabset-docsinstall-3 role=tablist><li class=nav-item><a data-toggle=tab class="nav-link active" href=#tabset-docsinstall-3-0 role=tab aria-controls=tabset-docsinstall-3-0 aria-selected=true>Red Hat-based distributions</a></li>
-<li class=nav-item><a data-toggle=tab class=nav-link href=#tabset-docsinstall-3-1 role=tab aria-controls=tabset-docsinstall-3-1>Debian-based distributions</a></li></ul>
-<div class=tab-content id=tabset-docsinstall-3><div id=tabset-docsinstall-3-0 class="tab-pane show active" role=tabpanel aria-labelledby=tabset-docsinstall-3-0>
-<p><p>Run the following code to install a proper distribution:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># Search for supported releases</span>
-yum search kubeadm --showduplicates <span style=color:#000;font-weight:700>|</span> grep kubeadm-
-
-<span style=color:#8f5902;font-style:italic># Install</span>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
-yum install kubeadm-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubelet-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> kubectl-v<span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div></div>
-<div id=tabset-docsinstall-3-1 class=tab-pane role=tabpanel aria-labelledby=tabset-docsinstall-3-1>
-<p><p>Run the following code to install a proper distribution:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># Search for supported releases</span>
-apt-cache show kubeadm <span style=color:#000;font-weight:700>|</span> grep Version
-
-<span style=color:#8f5902;font-style:italic># Install</span>
-<span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
-apt-get install <span style=color:#000>kubeadm</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubelet</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span> <span style=color:#000>kubectl</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>${</span><span style=color:#000>VERSION</span><span style=color:#4e9a06>}</span>
-</code></pre></div></div></div>
-</div></div>
 <h2 id=auto-start-kubelet-on-boot>Auto-start Kubelet on boot</h2>
 <p>Run the following code to start Kubelet on boot:</p>
 <pre><code>systemctl enable kubelet
@@ -400,8 +372,8 @@ kubeadm init --image-repository <span style=color:#4e9a06>${</span><span style=c
 </code></pre></div><p>For details see <a href=https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/ target=_blank>Create a cluster with kubeadm</a>.</p>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-March 15, 2022
-: <a href=https://github.com/klts-io/website/commit/f9c5d2d76bec4634473af0d201c6b3224d5236a4>Fix version (#48) (f9c5d2d7)</a>
+March 22, 2022
+: <a href=https://github.com/klts-io/website/commit/1da5526741735455a3ec9a268e3f7a3d77d8bcfc>Clear install step (1da55267)</a>
 </div>
 </div>
 </main>
