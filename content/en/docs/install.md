@@ -43,54 +43,19 @@ apt-get update
 ## Install
 
 {{< tabs >}}
-    {{< tab name="Install" >}}
-        {{< tabs >}}
-
 {{% tab name="Red Hat-based distributions" %}}
-Run the following code to install a proper distribution:
+Run the following code to install a distribution:
 ``` bash
 yum install kubeadm kubelet kubectl
 ```
 {{% /tab %}}}
 
 {{% tab name="Debian-based distributions" %}}
-Run the following code to install a proper distribution:
+Run the following code to install a distribution:
 ``` bash
 apt-get install kubeadm kubelet kubectl
 ```
 {{% /tab %}}
-        {{< /tabs >}}
-    {{< /tab >}}
-
-    {{< tab name="Install the specified releases" >}}
-        {{< tabs >}}
-
-> View the supported releases
-{{% tab name="Red Hat-based distributions" %}}
-Run the following code to install a proper distribution:
-``` bash
-# Search for supported releases
-yum search kubeadm --showduplicates | grep kubeadm-
-
-# Install
-VERSION=1.18.20-lts.2
-yum install kubeadm-v${VERSION} kubelet-v${VERSION} kubectl-v${VERSION}
-```
-{{% /tab %}}}
-
-{{% tab name="Debian-based distributions" %}}
-Run the following code to install a proper distribution:
-``` bash
-# Search for supported releases
-apt-cache show kubeadm | grep Version
-
-# Install
-VERSION=1.18.20-lts.2
-apt-get install kubeadm=${VERSION} kubelet=${VERSION} kubectl=${VERSION}
-```
-{{% /tab %}}
-        {{< /tabs >}}
-    {{< /tab >}}
 {{< /tabs >}}
 
 ## Auto-start Kubelet on boot
