@@ -20,6 +20,11 @@ name=klts
 baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 enabled=1
 gpgcheck=0
+[klts-others]
+name=klts-others
+baseurl=https://raw.githubusercontent.com/klts-io/others/rpm/\$basearch/
+enabled=1
+gpgcheck=0
 EOF
 
 yum makecache
@@ -32,6 +37,7 @@ Run the following code to set the source of downloading a proper distribution:
 VERSION=1.18.20-lts.2
 cat << EOF > /etc/apt/sources.list.d/klts.list
 deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
+deb [trusted=yes] https://raw.githubusercontent.com/klts-io/others/deb stable main
 EOF
 
 apt-get update
