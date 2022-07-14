@@ -353,6 +353,21 @@
 <li><a href=/zh/docs/kubernetes/patches/cve-2021-3121 title="存在该漏洞的程序可能会因为处理了包含恶意 Protobuf 消息而崩溃。如果您使用的 Gogo Protobuf 版本过低，可能存在该漏洞。" data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>存在该漏洞的程序可能会因为处理了包含恶意 <code>Protobuf</code> 消息而崩溃。如果您使用的 <code>Gogo Protobuf</code> 版本过低，可能存在该漏洞。</p></li>
 <li><a href=/zh/docs/kubernetes/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 Pod。" data-toggle=tooltip data-placement=top target>nokmem</a><p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code>。</p></li>
 </ul>
+<style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
+<div class=d-print-none>
+<h2 class=feedback--title>Feedback</h2>
+<p class=feedback--question>Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+Glad to hear it! Please <a href=https://github.com/USERNAME/REPOSITORY/issues/new>tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues/new>tell us how we can improve</a>.
+</p>
+</div>
+<script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
+<br>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
 2022.03.08

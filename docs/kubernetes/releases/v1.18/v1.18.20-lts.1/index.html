@@ -323,6 +323,21 @@ English
 <li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
 <li><a href=/docs/kubernetes/patches/cve-2021-25741 title="This is a volume security issue related to permission access. A user can access files and directories outside the volume mounting directory, including the host&rsquo;s file system, through the volume mounting method of subpath in the created container." data-toggle=tooltip data-placement=top target>CVE-2021-25741</a><p>This is a volume security issue related to permission access. A user can access files and directories outside the volume mounting directory, including the host&rsquo;s file system, through the volume mounting method of <code>subpath</code> in the created container.</p></li>
 </ul>
+<style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
+<div class=d-print-none>
+<h2 class=feedback--title>Feedback</h2>
+<p class=feedback--question>Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+Glad to hear it! Please <a href=https://github.com/USERNAME/REPOSITORY/issues/new>tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues/new>tell us how we can improve</a>.
+</p>
+</div>
+<script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
+<br>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 March 8, 2022
