@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.15b6b170033d99f0bffab82cde7d45e5.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.653c6f5d24e0a39e53c18ab458a1f82e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -555,6 +555,11 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>[klts-other]
+</span><span style=color:#4e9a06>name=klts-others
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/others/rpm/\$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
 
 yum makecache
@@ -564,6 +569,7 @@ yum makecache
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/others/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -587,6 +593,11 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>[klts-other]
+</span><span style=color:#4e9a06>name=klts-others
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontent.com/klts-io/others/rpm/\$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
 
 yum makecache
@@ -597,6 +608,11 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/kubernetes-lts/raw/rpm-v${VERSION}/\$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>[klts-other]
+</span><span style=color:#4e9a06>name=klts-others
+</span><span style=color:#4e9a06>baseurl=https://hub.fastgit.org/klts-io/others/raw/rpm/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -611,6 +627,11 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>[klts-other]
+</span><span style=color:#4e9a06>name=klts-others
+</span><span style=color:#4e9a06>baseurl=https://ghproxy.com/https://raw.githubusercontent.com/klts-io/others/rpm/\$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
 
 yum makecache
@@ -623,6 +644,11 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>[klts-other]
+</span><span style=color:#4e9a06>name=klts-others
+</span><span style=color:#4e9a06>baseurl=https://raw.githubusercontents.com/klts-io/others/rpm/\$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
 
 yum makecache
@@ -633,6 +659,11 @@ cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/yum.repos.d/klts.repo
 </span><span style=color:#4e9a06>[klts]
 </span><span style=color:#4e9a06>name=klts
 </span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/kubernetes-lts/rpm-v${VERSION}/\$basearch/
+</span><span style=color:#4e9a06>enabled=1
+</span><span style=color:#4e9a06>gpgcheck=0
+</span><span style=color:#4e9a06>[klts-other]
+</span><span style=color:#4e9a06>name=klts-others
+</span><span style=color:#4e9a06>baseurl=https://raw.staticdn.net/klts-io/others/rpm/\$basearch/
 </span><span style=color:#4e9a06>enabled=1
 </span><span style=color:#4e9a06>gpgcheck=0
 </span><span style=color:#4e9a06>EOF</span>
@@ -655,6 +686,7 @@ yum makecache
 <span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontent.com/klts-io/others/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -663,6 +695,7 @@ apt-get update
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/kubernetes-lts/raw/deb-v${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://hub.fastgit.org/klts-io/others/raw/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -671,6 +704,7 @@ apt-get update
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://ghproxy.com/https://raw.githubusercontent.com/klts-io/others/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -679,6 +713,7 @@ apt-get update
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/kubernetes-lts/deb-v${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.githubusercontents.com/klts-io/others/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
@@ -687,6 +722,7 @@ apt-get update
 <p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#000>VERSION</span><span style=color:#ce5c00;font-weight:700>=</span>1.18.20-lts.2
 cat <span style=color:#4e9a06>&lt;&lt; EOF &gt; /etc/apt/sources.list.d/klts.list
 </span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/deb-v${VERSION} stable main
+</span><span style=color:#4e9a06>deb [trusted=yes] https://raw.staticdn.net/klts-io/kubernetes-lts/deb stable main
 </span><span style=color:#4e9a06>EOF</span>
 
 apt-get update
