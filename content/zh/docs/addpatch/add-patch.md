@@ -19,7 +19,7 @@ CVE 在 kubernetes 社区是持续更新的，我们需要在维护的所有版�
           - CVE-2019-11253
 
      # CVSS Score 5.0, < k8s1.13, https://www.cvedetails.com/cve/CVE-2019-11253/
-     # TODO
+     # 添加 CVE 定义
      - name: CVE-2019-11253
        patch:
           - https://github.com/kubernetes/kubernetes/pull/83436.patch
@@ -116,7 +116,7 @@ cp /path/to/kubernetes-lts/tmp/83436.patch patches/CVE-2019-11253.1.12.patch
       - CVE-2019-11253.1.12
 
 # CVSS Score 5.0, < k8s1.13, https://www.cvedetails.com/cve/CVE-2019-11253/
-     # TODO
+     # 添加 CVE 定义
      - name: CVE-2019-11253
        patch:
           - https://github.com/kubernetes/kubernetes/pull/83436.patch
@@ -191,7 +191,7 @@ nothing to commit, working tree clean
       - CVE-2019-11253.1.11
 
 # CVSS Score 5.0, < k8s1.13, https://www.cvedetails.com/cve/CVE-2019-11253/
-     # TODO
+     # 添加 CVE 定义
      - name: CVE-2019-11253
        patch:
           - https://github.com/kubernetes/kubernetes/pull/83436.patch
