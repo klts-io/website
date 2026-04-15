@@ -28,6 +28,13 @@ date: 2026-04-15
 | v1.17 | [v1.17.17-lts.3](/docs/kubernetes/releases/v1.17/v1.17.17-lts.3/) |
 | v1.16 | [v1.16.15-lts.3](/docs/kubernetes/releases/v1.16/v1.16.15-lts.3/) |
 
+## Kubernetes 社区更新（WG-LTS）
+
+Kubernetes 社区已于 **2026 年 3 月 26 日** 合并 [kubernetes/community#8889](https://github.com/kubernetes/community/pull/8889)，并正式将 WG-LTS 进入 spindown（停止运作）状态。
+
+- WG-LTS 已从社区工作组列表及 `sigs.yaml` 中移除。
+- 2025 年度报告中记录了 spindown 状态，并引用了公开公告/提案链接：[WG-LTS 停止运作公告](https://groups.google.com/a/kubernetes.io/g/wg-lts/c/e4XyeS19BsU)。
+
 ## 相关安全更新
 
 同时已同步以下 CVE 文档：
