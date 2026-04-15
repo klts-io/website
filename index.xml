@@ -1,4 +1,99 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KLTS.io – KLTS.io</title><link>/</link><description>Recent content on KLTS.io</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Official release of KLTS</title><link>/blog/2021/11/17/official-release-of-klts/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>/blog/2021/11/17/official-release-of-klts/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KLTS.io – KLTS.io</title><link>/</link><description>Recent content on KLTS.io</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Latest KLTS Kubernetes LTS Releases (April 2026)</title><link>/blog/2026/04/15/latest-klts-kubernetes-lts-releases-april-2026/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>/blog/2026/04/15/latest-klts-kubernetes-lts-releases-april-2026/</guid><description>
+&lt;p>We have synced the latest Kubernetes LTS release information to the KLTS website.&lt;/p>
+&lt;h2 id="latest-releases">Latest releases&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Kubernetes minor&lt;/th>
+&lt;th>Latest KLTS release&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>v1.32&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.32/v1.32.13-lts.1/">v1.32.13-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.31&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.31/v1.31.14-lts.1/">v1.31.14-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.30&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.30/v1.30.14-lts.1/">v1.30.14-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.29&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.29/v1.29.15-lts.1/">v1.29.15-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.28&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.28/v1.28.15-lts.2/">v1.28.15-lts.2&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.27&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.27/v1.27.16-lts.1/">v1.27.16-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.26&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.26/v1.26.15-lts.1/">v1.26.15-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.25&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.25/v1.25.16-lts.1/">v1.25.16-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.24&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.24/v1.24.17-lts.1/">v1.24.17-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.23&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.23/v1.23.17-lts.1/">v1.23.17-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.22&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.22/v1.22.17-lts.1/">v1.22.17-lts.1&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.21&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.21/v1.21.14-lts.2/">v1.21.14-lts.2&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.20&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.20/v1.20.15-lts.3/">v1.20.15-lts.3&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.19&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.19/v1.19.16-lts.4/">v1.19.16-lts.4&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.18&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.18/v1.18.20-lts.3/">v1.18.20-lts.3&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.17&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.17/v1.17.17-lts.3/">v1.17.17-lts.3&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>v1.16&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.16/v1.16.15-lts.3/">v1.16.15-lts.3&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="related-security-updates">Related security updates&lt;/h2>
+&lt;p>Recent CVE entries were also synced in docs:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="/docs/kubernetes/patches/cve-2024-10220/">CVE-2024-10220&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/kubernetes/patches/cve-2024-9042/">CVE-2024-9042&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/kubernetes/patches/cve-2025-0426/">CVE-2025-0426&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/kubernetes/patches/cve-2025-13281/">CVE-2025-13281&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/kubernetes/patches/cve-2025-1767/">CVE-2025-1767&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/kubernetes/patches/cve-2025-5187/">CVE-2025-5187&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>For all updates, visit:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="/docs/kubernetes/releases/">/docs/kubernetes/releases/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/kubernetes/patches/">/docs/kubernetes/patches/&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Blog: Official release of KLTS</title><link>/blog/2021/11/17/official-release-of-klts/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>/blog/2021/11/17/official-release-of-klts/</guid><description>
 &lt;p>We are happy to announce that the KLTS project is officially launched. KLTS is suitable for enterprise users and can be directly used in a production environment. After the Kubernetes community stops maintaining a certain version, KLTS will continue to provide maintenance for two to three years, mainly including patching CVE vulnerabilities and fixing serious bugs.&lt;/p>
 &lt;p>KLTS team took more than 2 months from proposing ideas, organizing code, building acceleration channels and websites, and finally launching it online. Our purpose is to share and communicate, sharing makes people happy, and communication makes progress.&lt;/p>
 &lt;p>Why do we need the KLTS project? The reason is that the official Kubernetes community only maintains the latest 3 - 4 versions, but those earlier versions are still used in many actual production environments. If you rashly upgrade to a new version, it is easy to cause production failures.&lt;/p>

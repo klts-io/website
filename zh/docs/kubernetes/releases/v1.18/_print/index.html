@@ -57,7 +57,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.b1dea485d3ac5358aa7b09c64c558195.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.ac41099bbd623ff3cdd11e9ba2c6571f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -82,6 +82,7 @@
 <ul>
 <li>1: <a href=#pg-27466f7c0b6341998f8093209410a2ec>v1.18.20-lts.1</a></li>
 <li>2: <a href=#pg-ac2ddb380c8818e1bd74006225b2304f>v1.18.20-lts.2</a></li>
+<li>3: <a href=#pg-ecb9988f3759f65d851dbebffda47339>v1.18.20-lts.3</a></li>
 </ul>
 <div class=content>
 </div>
@@ -101,6 +102,18 @@
 <h2 id=补丁>补丁</h2>
 <ul>
 <li>修复问题: kubelet 重启后创建的新 pod 缺少环境变量 KUBERNETES_SERVICE_HOST</li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-ecb9988f3759f65d851dbebffda47339>3 - v1.18.20-lts.3</h1>
+<p>这是 KLTS 发布的 v1.18.20 修复版本。</p>
+<h2 id=补丁>补丁</h2>
+<ul>
+<li>包含基线版本 <code>v1.18.20-ci</code> 的累计安全修复。</li>
+<li><a href=/zh/docs/kubernetes/patches/cve-2021-25741 title="这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 subpath 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。" data-toggle=tooltip data-placement=top target>CVE-2021-25741</a><p>这是一个权限访问相关的卷安全性问题。用户可以在创建的容器中通过 <code>subpath</code> 的卷挂载方式访问到该卷挂载目录之外的文件和目录，包括主机的文件系统。</p></li>
+<li><a href=/zh/docs/kubernetes/patches/nokmem title="节点磁盘充足但是一直报磁盘不足无法创建 Pod。" data-toggle=tooltip data-placement=top target>nokmem</a><p>节点磁盘充足但是一直报磁盘不足无法创建 <code>Pod</code>。</p></li>
+<li>安全修复：<a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2020-8554.1.18.patch target=_blank>CVE-2020-8554.1.18.patch</a></li>
+<li>Bugfix：<a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/fix-missing-env-91500.1.18.patch target=_blank>fix-missing-env-91500.1.18.patch</a></li>
 </ul>
 </div>
 </main>
@@ -131,7 +144,7 @@
 </ul>
 </div>
 <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-<small class=text-white>&copy; 2024 The KLTS.io Authors 版权所有</small>
+<small class=text-white>&copy; 2026 The KLTS.io Authors 版权所有</small>
 <p class=mt-2><a href=/zh/about/>关于 KLTS</a></p>
 </div>
 </div>

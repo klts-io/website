@@ -57,7 +57,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.b1dea485d3ac5358aa7b09c64c558195.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.ac41099bbd623ff3cdd11e9ba2c6571f.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -80,25 +80,196 @@ This the multi-page printable view of this section.
 </div>
 <h1 class=title>Fixed CVEs</h1>
 <ul>
-<li>1: <a href=#pg-294c70c354dae27293c279fc977b1a25>CVE-2021-25741</a></li>
-<li>2: <a href=#pg-5b5a4ae7470b9a65c7ac18cd9f04a167>CVE-2021-3121</a></li>
-<li>3: <a href=#pg-f68019fa72f4f2fd3120706e7a0c1c09>CVE-2020-8559</a></li>
-<li>4: <a href=#pg-802e53465c7b793307b369865fc69095>CVE-2020-8558</a></li>
-<li>5: <a href=#pg-7d9bf1ccf4dc285017bf81cba9beb8b7>CVE-2020-8552</a></li>
-<li>6: <a href=#pg-8a05d128bf99881563298b28760ed6d2>CVE-2019-1002101</a></li>
-<li>7: <a href=#pg-c1b22d6e35188bda7571c1171365da7c>CVE-2019-11251</a></li>
-<li>8: <a href=#pg-643877725a4c60ab60b307fb5a9c7f4b>CVE-2019-11248</a></li>
-<li>9: <a href=#pg-bfbd4c580b204464d71e67e333445b66>CVE-2019-11247</a></li>
-<li>10: <a href=#pg-2fd6a05bfd32be3de89ff9f0fa5659b3>CVE-2019-11246</a></li>
-<li>11: <a href=#pg-dcd6bb9fdd05c8bcf79f828875ae1de2>CVE-2019-11245</a></li>
-<li>12: <a href=#pg-aa6b47382c5273dcef56641d01dc478d>CVE-2019-11249</a></li>
-<li>13: <a href=#pg-62eb1ee519ce30e3d64f4f1dd506f8c1>nokmem</a></li>
+<li>1: <a href=#pg-ce5620f62b88fd7a4cb1bf20c159a780>CVE-2025-13281</a></li>
+<li>2: <a href=#pg-fff1a0abfd97f77e3476381786bd138c>CVE-2025-5187</a></li>
+<li>3: <a href=#pg-c44fc819324361290d46f0489a336efe>CVE-2025-1767</a></li>
+<li>4: <a href=#pg-5fe0d03efc27cee4560d09642a5f8998>CVE-2025-0426</a></li>
+<li>5: <a href=#pg-6bd13f9f732932081d6d8f642662cd56>CVE-2024-10220</a></li>
+<li>6: <a href=#pg-517baa2e86ed9442156bcfb29b7faf8f>CVE-2024-9042</a></li>
+<li>7: <a href=#pg-294c70c354dae27293c279fc977b1a25>CVE-2021-25741</a></li>
+<li>8: <a href=#pg-5b5a4ae7470b9a65c7ac18cd9f04a167>CVE-2021-3121</a></li>
+<li>9: <a href=#pg-f68019fa72f4f2fd3120706e7a0c1c09>CVE-2020-8559</a></li>
+<li>10: <a href=#pg-802e53465c7b793307b369865fc69095>CVE-2020-8558</a></li>
+<li>11: <a href=#pg-7d9bf1ccf4dc285017bf81cba9beb8b7>CVE-2020-8552</a></li>
+<li>12: <a href=#pg-8a05d128bf99881563298b28760ed6d2>CVE-2019-1002101</a></li>
+<li>13: <a href=#pg-c1b22d6e35188bda7571c1171365da7c>CVE-2019-11251</a></li>
+<li>14: <a href=#pg-643877725a4c60ab60b307fb5a9c7f4b>CVE-2019-11248</a></li>
+<li>15: <a href=#pg-bfbd4c580b204464d71e67e333445b66>CVE-2019-11247</a></li>
+<li>16: <a href=#pg-2fd6a05bfd32be3de89ff9f0fa5659b3>CVE-2019-11246</a></li>
+<li>17: <a href=#pg-dcd6bb9fdd05c8bcf79f828875ae1de2>CVE-2019-11245</a></li>
+<li>18: <a href=#pg-aa6b47382c5273dcef56641d01dc478d>CVE-2019-11249</a></li>
+<li>19: <a href=#pg-62eb1ee519ce30e3d64f4f1dd506f8c1>nokmem</a></li>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-294c70c354dae27293c279fc977b1a25>1 - CVE-2021-25741</h1>
+<h1 id=pg-ce5620f62b88fd7a4cb1bf20c159a780>1 - CVE-2025-13281</h1>
+<a href=https://github.com/kubernetes/kubernetes/issues/135525 target=_blank>Upstream issue</a>
+<p>This vulnerability is related to Portworx volume error handling. KLTS backport masks backend/internal error details in events and keeps details in controller logs only.</p>
+<h2 id=scope>Scope</h2>
+<p>Affected range in upstream metadata: <code>&lt;= k8s1.31.14</code> on supported lines.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as medium-risk with a <code>CVSS</code> score of 5.8.</p>
+<h2 id=official-fixed>Fixed by official</h2>
+<ul>
+<li><a href=https://github.com/kubernetes/kubernetes/issues/135525 target=_blank>kubernetes/kubernetes#135525</a></li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.31/v1.31.14-lts.1 title="This is the fixed release by KLTS for v1.31.14." data-toggle=tooltip data-placement=top target>v1.31.14-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.30/v1.30.14-lts.1 title="This is the fixed release by KLTS for v1.30.14." data-toggle=tooltip data-placement=top target>v1.30.14-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.29/v1.29.15-lts.1 title="This is the fixed release by KLTS for v1.29.15." data-toggle=tooltip data-placement=top target>v1.29.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.28/v1.28.15-lts.2 title="This is the fixed release by KLTS for v1.28.15." data-toggle=tooltip data-placement=top target>v1.28.15-lts.2</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.27/v1.27.16-lts.1 title="This is the fixed release by KLTS for v1.27.16." data-toggle=tooltip data-placement=top target>v1.27.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.26/v1.26.15-lts.1 title="This is the fixed release by KLTS for v1.26.15." data-toggle=tooltip data-placement=top target>v1.26.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.25/v1.25.16-lts.1 title="This is the fixed release by KLTS for v1.25.16." data-toggle=tooltip data-placement=top target>v1.25.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.24/v1.24.17-lts.1 title="This is the fixed release by KLTS for v1.24.17." data-toggle=tooltip data-placement=top target>v1.24.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.23/v1.23.17-lts.1 title="This is the fixed release by KLTS for v1.23.17." data-toggle=tooltip data-placement=top target>v1.23.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.22/v1.22.17-lts.1 title="This is the fixed release by KLTS for v1.22.17." data-toggle=tooltip data-placement=top target>v1.22.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.21/v1.21.14-lts.2 title="This is the fixed release by KLTS for v1.21.14." data-toggle=tooltip data-placement=top target>v1.21.14-lts.2</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.20/v1.20.15-lts.3 title="This is the fixed release by KLTS for v1.20.15." data-toggle=tooltip data-placement=top target>v1.20.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.4 title="This is the fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.4</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.3 title="This is the fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.17/v1.17.17-lts.3 title="This is the fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.16/v1.16.15-lts.3 title="This is the fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-13281.patch target=_blank>CVE-2025-13281.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-fff1a0abfd97f77e3476381786bd138c>2 - CVE-2025-5187</h1>
+<a href=https://github.com/kubernetes/kubernetes/issues/133471 target=_blank>Upstream issue</a>
+<p>This vulnerability is related to node permission boundaries. KLTS backports a restriction to block <code>ownerReferences</code> updates by node users.</p>
+<h2 id=scope>Scope</h2>
+<p>Affected range in upstream metadata: <code>&lt;= k8s1.31.11</code> on supported lines.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as medium-risk with a <code>CVSS</code> score of 6.7.</p>
+<h2 id=official-fixed>Fixed by official</h2>
+<ul>
+<li><a href=https://github.com/kubernetes/kubernetes/issues/133471 target=_blank>kubernetes/kubernetes#133471</a></li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.30/v1.30.14-lts.1 title="This is the fixed release by KLTS for v1.30.14." data-toggle=tooltip data-placement=top target>v1.30.14-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.29/v1.29.15-lts.1 title="This is the fixed release by KLTS for v1.29.15." data-toggle=tooltip data-placement=top target>v1.29.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.28/v1.28.15-lts.2 title="This is the fixed release by KLTS for v1.28.15." data-toggle=tooltip data-placement=top target>v1.28.15-lts.2</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.27/v1.27.16-lts.1 title="This is the fixed release by KLTS for v1.27.16." data-toggle=tooltip data-placement=top target>v1.27.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.26/v1.26.15-lts.1 title="This is the fixed release by KLTS for v1.26.15." data-toggle=tooltip data-placement=top target>v1.26.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.25/v1.25.16-lts.1 title="This is the fixed release by KLTS for v1.25.16." data-toggle=tooltip data-placement=top target>v1.25.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.24/v1.24.17-lts.1 title="This is the fixed release by KLTS for v1.24.17." data-toggle=tooltip data-placement=top target>v1.24.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.23/v1.23.17-lts.1 title="This is the fixed release by KLTS for v1.23.17." data-toggle=tooltip data-placement=top target>v1.23.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.22/v1.22.17-lts.1 title="This is the fixed release by KLTS for v1.22.17." data-toggle=tooltip data-placement=top target>v1.22.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.21/v1.21.14-lts.2 title="This is the fixed release by KLTS for v1.21.14." data-toggle=tooltip data-placement=top target>v1.21.14-lts.2</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.20/v1.20.15-lts.3 title="This is the fixed release by KLTS for v1.20.15." data-toggle=tooltip data-placement=top target>v1.20.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.4 title="This is the fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.4</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.3 title="This is the fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.17/v1.17.17-lts.3 title="This is the fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.16/v1.16.15-lts.3 title="This is the fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-5187.patch target=_blank>CVE-2025-5187.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-c44fc819324361290d46f0489a336efe>3 - CVE-2025-1767</h1>
+<a href=https://github.com/kubernetes/kubernetes/issues/130786 target=_blank>Upstream issue</a>
+<p>This vulnerability allows unsafe local repository paths in <code>gitRepo</code> volume configuration. KLTS backports the validation that rejects local/absolute repository paths.</p>
+<h2 id=scope>Scope</h2>
+<p>Affected range in upstream metadata: all Kubernetes versions.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as medium-risk with a <code>CVSS</code> score of 6.5.</p>
+<h2 id=official-fixed>Fixed by official</h2>
+<ul>
+<li><a href=https://github.com/kubernetes/kubernetes/issues/130786 target=_blank>kubernetes/kubernetes#130786</a></li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.32/v1.32.13-lts.1 title="This is the fixed release by KLTS for v1.32.13." data-toggle=tooltip data-placement=top target>v1.32.13-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.31/v1.31.14-lts.1 title="This is the fixed release by KLTS for v1.31.14." data-toggle=tooltip data-placement=top target>v1.31.14-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.30/v1.30.14-lts.1 title="This is the fixed release by KLTS for v1.30.14." data-toggle=tooltip data-placement=top target>v1.30.14-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.29/v1.29.15-lts.1 title="This is the fixed release by KLTS for v1.29.15." data-toggle=tooltip data-placement=top target>v1.29.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.28/v1.28.15-lts.2 title="This is the fixed release by KLTS for v1.28.15." data-toggle=tooltip data-placement=top target>v1.28.15-lts.2</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.27/v1.27.16-lts.1 title="This is the fixed release by KLTS for v1.27.16." data-toggle=tooltip data-placement=top target>v1.27.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.26/v1.26.15-lts.1 title="This is the fixed release by KLTS for v1.26.15." data-toggle=tooltip data-placement=top target>v1.26.15-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.25/v1.25.16-lts.1 title="This is the fixed release by KLTS for v1.25.16." data-toggle=tooltip data-placement=top target>v1.25.16-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.24/v1.24.17-lts.1 title="This is the fixed release by KLTS for v1.24.17." data-toggle=tooltip data-placement=top target>v1.24.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.23/v1.23.17-lts.1 title="This is the fixed release by KLTS for v1.23.17." data-toggle=tooltip data-placement=top target>v1.23.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.22/v1.22.17-lts.1 title="This is the fixed release by KLTS for v1.22.17." data-toggle=tooltip data-placement=top target>v1.22.17-lts.1</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.21/v1.21.14-lts.2 title="This is the fixed release by KLTS for v1.21.14." data-toggle=tooltip data-placement=top target>v1.21.14-lts.2</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.20/v1.20.15-lts.3 title="This is the fixed release by KLTS for v1.20.15." data-toggle=tooltip data-placement=top target>v1.20.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.4 title="This is the fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.4</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.3 title="This is the fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.17/v1.17.17-lts.3 title="This is the fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.16/v1.16.15-lts.3 title="This is the fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2025-1767.patch target=_blank>CVE-2025-1767.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-5fe0d03efc27cee4560d09642a5f8998>4 - CVE-2025-0426</h1>
+<p><a href=https://github.com/kubernetes/kubernetes/issues/130016 target=_blank>Upstream issue</a>
+<a href=https://github.com/kubernetes/kubernetes/pull/130014 target=_blank>Upstream patch</a></p>
+<p>This vulnerability is addressed by kubelet server handler cleanup and related hardening. KLTS backports the required fixes for maintained branches.</p>
+<h2 id=scope>Scope</h2>
+<p>Affected range in upstream metadata: <code>&lt;= k8s1.29.13</code> on supported lines.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as medium-risk with a <code>CVSS</code> score of 6.2.</p>
+<h2 id=official-fixed>Fixed by official</h2>
+<ul>
+<li><a href=https://github.com/kubernetes/kubernetes/pull/130014 target=_blank>kubernetes/kubernetes#130014</a></li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.28/v1.28.15-lts.2 title="This is the fixed release by KLTS for v1.28.15." data-toggle=tooltip data-placement=top target>v1.28.15-lts.2</a> <a href=https://github.com/kubernetes/kubernetes/pull/130014.patch target=_blank>kubernetes/kubernetes#130014</a></li>
+<li><a href=/docs/kubernetes/releases/v1.27/v1.27.16-lts.1 title="This is the fixed release by KLTS for v1.27.16." data-toggle=tooltip data-placement=top target>v1.27.16-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/130014.patch target=_blank>kubernetes/kubernetes#130014</a></li>
+<li><a href=/docs/kubernetes/releases/v1.26/v1.26.15-lts.1 title="This is the fixed release by KLTS for v1.26.15." data-toggle=tooltip data-placement=top target>v1.26.15-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/130014.patch target=_blank>kubernetes/kubernetes#130014</a></li>
+<li><a href=/docs/kubernetes/releases/v1.25/v1.25.16-lts.1 title="This is the fixed release by KLTS for v1.25.16." data-toggle=tooltip data-placement=top target>v1.25.16-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/130014.patch target=_blank>kubernetes/kubernetes#130014</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-6bd13f9f732932081d6d8f642662cd56>5 - CVE-2024-10220</h1>
+<p><a href=https://www.cvedetails.com/cve/CVE-2024-10220/ target=_blank>Vulnerability details</a>
+<a href=https://github.com/kubernetes/kubernetes/pull/124531 target=_blank>Upstream patch</a></p>
+<p>This vulnerability is related to validation of <code>gitRepo</code> volume input. Upstream tightened validation (for example, limiting unsafe directory patterns), and KLTS backported the required fixes for maintained branches.</p>
+<h2 id=scope>Scope</h2>
+<p>Affected range in upstream metadata: <code>&lt;= k8s1.28.11</code>.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as high-risk with a <code>CVSS</code> score of 8.1.</p>
+<h2 id=official-fixed>Fixed by official</h2>
+<ul>
+<li><a href=https://github.com/kubernetes/kubernetes/pull/124531 target=_blank>kubernetes/kubernetes#124531</a></li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.27/v1.27.16-lts.1 title="This is the fixed release by KLTS for v1.27.16." data-toggle=tooltip data-placement=top target>v1.27.16-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.26/v1.26.15-lts.1 title="This is the fixed release by KLTS for v1.26.15." data-toggle=tooltip data-placement=top target>v1.26.15-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.25/v1.25.16-lts.1 title="This is the fixed release by KLTS for v1.25.16." data-toggle=tooltip data-placement=top target>v1.25.16-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.24/v1.24.17-lts.1 title="This is the fixed release by KLTS for v1.24.17." data-toggle=tooltip data-placement=top target>v1.24.17-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.23/v1.23.17-lts.1 title="This is the fixed release by KLTS for v1.23.17." data-toggle=tooltip data-placement=top target>v1.23.17-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.22/v1.22.17-lts.1 title="This is the fixed release by KLTS for v1.22.17." data-toggle=tooltip data-placement=top target>v1.22.17-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.21/v1.21.14-lts.2 title="This is the fixed release by KLTS for v1.21.14." data-toggle=tooltip data-placement=top target>v1.21.14-lts.2</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.20/v1.20.15-lts.3 title="This is the fixed release by KLTS for v1.20.15." data-toggle=tooltip data-placement=top target>v1.20.15-lts.3</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.4 title="This is the fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.4</a> <a href=https://github.com/kubernetes/kubernetes/pull/124531.patch target=_blank>kubernetes/kubernetes#124531</a></li>
+<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.3 title="This is the fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2024-10220.1.18.patch target=_blank>CVE-2024-10220.1.18.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.17/v1.17.17-lts.3 title="This is the fixed release by KLTS for v1.17.17." data-toggle=tooltip data-placement=top target>v1.17.17-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2024-10220.1.18.patch target=_blank>CVE-2024-10220.1.18.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.16/v1.16.15-lts.3 title="This is the fixed release by KLTS for v1.16.15." data-toggle=tooltip data-placement=top target>v1.16.15-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2024-10220.1.18.patch target=_blank>CVE-2024-10220.1.18.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-517baa2e86ed9442156bcfb29b7faf8f>6 - CVE-2024-9042</h1>
+<p><a href=https://github.com/kubernetes/kubernetes/issues/129654 target=_blank>Upstream issue</a>
+<a href=https://github.com/kubernetes/kubernetes/pull/129603 target=_blank>Upstream patch</a></p>
+<p>This vulnerability is related to kubelet node log query processing. KLTS backports the upstream hardening changes for maintained branches.</p>
+<h2 id=scope>Scope</h2>
+<p>Affected range in upstream metadata: <code>&lt;= k8s1.29.12</code> on supported lines.</p>
+<h3 id=cvss>CVSS scores</h3>
+<p>This vulnerability is rated as medium-risk with a <code>CVSS</code> score of 5.9.</p>
+<h2 id=official-fixed>Fixed by official</h2>
+<ul>
+<li><a href=https://github.com/kubernetes/kubernetes/pull/129603 target=_blank>kubernetes/kubernetes#129603</a></li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.28/v1.28.15-lts.2 title="This is the fixed release by KLTS for v1.28.15." data-toggle=tooltip data-placement=top target>v1.28.15-lts.2</a> <a href=https://github.com/kubernetes/kubernetes/pull/129603.patch target=_blank>kubernetes/kubernetes#129603</a></li>
+<li><a href=/docs/kubernetes/releases/v1.27/v1.27.16-lts.1 title="This is the fixed release by KLTS for v1.27.16." data-toggle=tooltip data-placement=top target>v1.27.16-lts.1</a> <a href=https://github.com/kubernetes/kubernetes/pull/129603.patch target=_blank>kubernetes/kubernetes#129603</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-294c70c354dae27293c279fc977b1a25>7 - CVE-2021-25741</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2021-25741/ target=_blank>Vulnerability details</a>
 <p>This is a volume security issue related to permission access. A user can access files and directories outside the volume mounting directory, including the host&rsquo;s file system, through the volume mounting method of <code>subpath</code> in the created container.</p>
 <h2 id=scope>Scope</h2>
@@ -132,7 +303,7 @@ This the multi-page printable view of this section.
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-5b5a4ae7470b9a65c7ac18cd9f04a167>2 - CVE-2021-3121</h1>
+<h1 id=pg-5b5a4ae7470b9a65c7ac18cd9f04a167>8 - CVE-2021-3121</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2021-3121 target=_blank>Vulnerability details</a>
 <p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p>
 <h2 id=scope>Scope</h2>
@@ -169,7 +340,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-f68019fa72f4f2fd3120706e7a0c1c09>3 - CVE-2020-8559</h1>
+<h1 id=pg-f68019fa72f4f2fd3120706e7a0c1c09>9 - CVE-2020-8559</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8559 target=_blank>Vulnerability details</a>
 <p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p>
 <h2 id=scope>Scope</h2>
@@ -198,7 +369,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-802e53465c7b793307b369865fc69095>4 - CVE-2020-8558</h1>
+<h1 id=pg-802e53465c7b793307b369865fc69095>10 - CVE-2020-8558</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8558 target=_blank>Vulnerability details</a>
 <p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p>
 <h2 id=scope>Scope</h2>
@@ -237,7 +408,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-7d9bf1ccf4dc285017bf81cba9beb8b7>5 - CVE-2020-8552</h1>
+<h1 id=pg-7d9bf1ccf4dc285017bf81cba9beb8b7>11 - CVE-2020-8552</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8552 target=_blank>Vulnerability details</a>
 <p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p>
 <h2 id=scope>Scope</h2>
@@ -258,7 +429,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-8a05d128bf99881563298b28760ed6d2>6 - CVE-2019-1002101</h1>
+<h1 id=pg-8a05d128bf99881563298b28760ed6d2>12 - CVE-2019-1002101</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-1002101 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to modify or monitor any file in the directory with the same name in the symbolic link header during the unpacking process of the <code>kubectl cp</code> command, thereby causing damage.</p>
 <h2 id=scope>Scope</h2>
@@ -276,7 +447,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c1b22d6e35188bda7571c1171365da7c>7 - CVE-2019-11251</h1>
+<h1 id=pg-c1b22d6e35188bda7571c1171365da7c>13 - CVE-2019-11251</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11251 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -297,7 +468,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-643877725a4c60ab60b307fb5a9c7f4b>8 - CVE-2019-11248</h1>
+<h1 id=pg-643877725a4c60ab60b307fb5a9c7f4b>14 - CVE-2019-11248</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11248 target=_blank>Vulnerability details</a>
 <p>The debugging endpoint <code>/debug/pprof</code> is exposed over the unauthenticated Kubelet healthz port.</p>
 <h2 id=scope>Scope</h2>
@@ -315,7 +486,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-bfbd4c580b204464d71e67e333445b66>9 - CVE-2019-11247</h1>
+<h1 id=pg-bfbd4c580b204464d71e67e333445b66>15 - CVE-2019-11247</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11247 target=_blank>Vulnerability details</a>
 <p><code>API Server</code> mistakenly allows access to a cluster-scoped custom resource.</p>
 <h2 id=scope>Scope</h2>
@@ -332,7 +503,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-2fd6a05bfd32be3de89ff9f0fa5659b3>10 - CVE-2019-11246</h1>
+<h1 id=pg-2fd6a05bfd32be3de89ff9f0fa5659b3>16 - CVE-2019-11246</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11246 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -352,7 +523,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-dcd6bb9fdd05c8bcf79f828875ae1de2>11 - CVE-2019-11245</h1>
+<h1 id=pg-dcd6bb9fdd05c8bcf79f828875ae1de2>17 - CVE-2019-11245</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11245 target=_blank>Vulnerability details</a>
 <p>Containers for pods that do not specify an explicit runAsUser attempt to run as <code>uid 0</code> (root) on container restart, or if the image was previously pulled to the node. If the pod specified <code>mustRunAsNonRoot: true</code>, the kubelet will refuse to start the container as root. If the pod did not specify <code>mustRunAsNonRoot: true</code>, the kubelet will run the container as <code>uid 0</code>.</p>
 <h2 id=scope>Scope</h2>
@@ -372,7 +543,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-aa6b47382c5273dcef56641d01dc478d>12 - CVE-2019-11249</h1>
+<h1 id=pg-aa6b47382c5273dcef56641d01dc478d>18 - CVE-2019-11249</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11249 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -393,7 +564,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-62eb1ee519ce30e3d64f4f1dd506f8c1>13 - nokmem</h1>
+<h1 id=pg-62eb1ee519ce30e3d64f4f1dd506f8c1>19 - nokmem</h1>
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" target=_blank>Bug details</a>
 <p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p>
 <h2 id=scope>Scope</h2>
@@ -463,7 +634,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-<small class=text-white>&copy; 2024 The KLTS.io Authors All Rights Reserved</small>
+<small class=text-white>&copy; 2026 The KLTS.io Authors All Rights Reserved</small>
 <p class=mt-2><a href=/about/>About KLTS</a></p>
 </div>
 </div>
