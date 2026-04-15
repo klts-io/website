@@ -57,7 +57,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f8696c4b8db1a46375ea3dd81d58b9b1.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f63db377107d62cd5b0138343a1af206.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -90,15 +90,16 @@ This the multi-page printable view of this section.
 <li>8: <a href=#pg-5b5a4ae7470b9a65c7ac18cd9f04a167>CVE-2021-3121</a></li>
 <li>9: <a href=#pg-f68019fa72f4f2fd3120706e7a0c1c09>CVE-2020-8559</a></li>
 <li>10: <a href=#pg-802e53465c7b793307b369865fc69095>CVE-2020-8558</a></li>
-<li>11: <a href=#pg-7d9bf1ccf4dc285017bf81cba9beb8b7>CVE-2020-8552</a></li>
-<li>12: <a href=#pg-8a05d128bf99881563298b28760ed6d2>CVE-2019-1002101</a></li>
-<li>13: <a href=#pg-c1b22d6e35188bda7571c1171365da7c>CVE-2019-11251</a></li>
-<li>14: <a href=#pg-643877725a4c60ab60b307fb5a9c7f4b>CVE-2019-11248</a></li>
-<li>15: <a href=#pg-bfbd4c580b204464d71e67e333445b66>CVE-2019-11247</a></li>
-<li>16: <a href=#pg-2fd6a05bfd32be3de89ff9f0fa5659b3>CVE-2019-11246</a></li>
-<li>17: <a href=#pg-dcd6bb9fdd05c8bcf79f828875ae1de2>CVE-2019-11245</a></li>
-<li>18: <a href=#pg-aa6b47382c5273dcef56641d01dc478d>CVE-2019-11249</a></li>
-<li>19: <a href=#pg-62eb1ee519ce30e3d64f4f1dd506f8c1>nokmem</a></li>
+<li>11: <a href=#pg-924041ee3aa7ae47422995fc785f7b14>CVE-2020-8554</a></li>
+<li>12: <a href=#pg-7d9bf1ccf4dc285017bf81cba9beb8b7>CVE-2020-8552</a></li>
+<li>13: <a href=#pg-8a05d128bf99881563298b28760ed6d2>CVE-2019-1002101</a></li>
+<li>14: <a href=#pg-c1b22d6e35188bda7571c1171365da7c>CVE-2019-11251</a></li>
+<li>15: <a href=#pg-643877725a4c60ab60b307fb5a9c7f4b>CVE-2019-11248</a></li>
+<li>16: <a href=#pg-bfbd4c580b204464d71e67e333445b66>CVE-2019-11247</a></li>
+<li>17: <a href=#pg-2fd6a05bfd32be3de89ff9f0fa5659b3>CVE-2019-11246</a></li>
+<li>18: <a href=#pg-dcd6bb9fdd05c8bcf79f828875ae1de2>CVE-2019-11245</a></li>
+<li>19: <a href=#pg-aa6b47382c5273dcef56641d01dc478d>CVE-2019-11249</a></li>
+<li>20: <a href=#pg-62eb1ee519ce30e3d64f4f1dd506f8c1>nokmem</a></li>
 </ul>
 <div class=content>
 </div>
@@ -408,7 +409,26 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-7d9bf1ccf4dc285017bf81cba9beb8b7>11 - CVE-2020-8552</h1>
+<h1 id=pg-924041ee3aa7ae47422995fc785f7b14>11 - CVE-2020-8554</h1>
+<p><a href=https://www.cvedetails.com/cve/CVE-2020-8554 target=_blank>Vulnerability details</a>
+<a href=https://github.com/kubernetes/kubernetes/issues/97076 target=_blank>Upstream issue</a></p>
+<p>CVE-2020-8554 describes a traffic interception risk in Kubernetes service handling. An actor with permissions to create or update <code>Service</code> resources can abuse <code>spec.externalIPs</code> or <code>status.loadBalancer.ingress.ip</code> to redirect traffic.</p>
+<h2 id=scope>Scope</h2>
+<p>Clusters that allow untrusted tenants to create or update <code>Service</code> objects are affected.</p>
+<h2 id=prevention>Prevention</h2>
+<ul>
+<li>Restrict who can create or update <code>Service</code> resources.</li>
+<li>Restrict or deny untrusted <code>ExternalIPs</code> usage through admission policy.</li>
+<li>Audit and monitor changes to <code>Service</code> status updates, especially <code>LoadBalancer</code> ingress IP updates.</li>
+</ul>
+<h2 id=klts-fixed>Fixed by KLTS</h2>
+<ul>
+<li><a href=/docs/kubernetes/releases/v1.19/v1.19.16-lts.3 title="This is the third fixed release by KLTS for v1.19.16." data-toggle=tooltip data-placement=top target>v1.19.16-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2020-8554.1.19.patch target=_blank>CVE-2020-8554.1.19.patch</a></li>
+<li><a href=/docs/kubernetes/releases/v1.18/v1.18.20-lts.3 title="This is the fixed release by KLTS for v1.18.20." data-toggle=tooltip data-placement=top target>v1.18.20-lts.3</a> <a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/CVE-2020-8554.1.18.patch target=_blank>CVE-2020-8554.1.18.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-7d9bf1ccf4dc285017bf81cba9beb8b7>12 - CVE-2020-8552</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2020-8552 target=_blank>Vulnerability details</a>
 <p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p>
 <h2 id=scope>Scope</h2>
@@ -429,7 +449,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-8a05d128bf99881563298b28760ed6d2>12 - CVE-2019-1002101</h1>
+<h1 id=pg-8a05d128bf99881563298b28760ed6d2>13 - CVE-2019-1002101</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-1002101 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to modify or monitor any file in the directory with the same name in the symbolic link header during the unpacking process of the <code>kubectl cp</code> command, thereby causing damage.</p>
 <h2 id=scope>Scope</h2>
@@ -447,7 +467,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c1b22d6e35188bda7571c1171365da7c>13 - CVE-2019-11251</h1>
+<h1 id=pg-c1b22d6e35188bda7571c1171365da7c>14 - CVE-2019-11251</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11251 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -468,7 +488,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-643877725a4c60ab60b307fb5a9c7f4b>14 - CVE-2019-11248</h1>
+<h1 id=pg-643877725a4c60ab60b307fb5a9c7f4b>15 - CVE-2019-11248</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11248 target=_blank>Vulnerability details</a>
 <p>The debugging endpoint <code>/debug/pprof</code> is exposed over the unauthenticated Kubelet healthz port.</p>
 <h2 id=scope>Scope</h2>
@@ -486,7 +506,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-bfbd4c580b204464d71e67e333445b66>15 - CVE-2019-11247</h1>
+<h1 id=pg-bfbd4c580b204464d71e67e333445b66>16 - CVE-2019-11247</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11247 target=_blank>Vulnerability details</a>
 <p><code>API Server</code> mistakenly allows access to a cluster-scoped custom resource.</p>
 <h2 id=scope>Scope</h2>
@@ -503,7 +523,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-2fd6a05bfd32be3de89ff9f0fa5659b3>16 - CVE-2019-11246</h1>
+<h1 id=pg-2fd6a05bfd32be3de89ff9f0fa5659b3>17 - CVE-2019-11246</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11246 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -523,7 +543,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-dcd6bb9fdd05c8bcf79f828875ae1de2>17 - CVE-2019-11245</h1>
+<h1 id=pg-dcd6bb9fdd05c8bcf79f828875ae1de2>18 - CVE-2019-11245</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11245 target=_blank>Vulnerability details</a>
 <p>Containers for pods that do not specify an explicit runAsUser attempt to run as <code>uid 0</code> (root) on container restart, or if the image was previously pulled to the node. If the pod specified <code>mustRunAsNonRoot: true</code>, the kubelet will refuse to start the container as root. If the pod did not specify <code>mustRunAsNonRoot: true</code>, the kubelet will run the container as <code>uid 0</code>.</p>
 <h2 id=scope>Scope</h2>
@@ -543,7 +563,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-aa6b47382c5273dcef56641d01dc478d>18 - CVE-2019-11249</h1>
+<h1 id=pg-aa6b47382c5273dcef56641d01dc478d>19 - CVE-2019-11249</h1>
 <a href=https://www.cvedetails.com/cve/CVE-2019-11249 target=_blank>Vulnerability details</a>
 <p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p>
 <h2 id=scope>Scope</h2>
@@ -564,7 +584,7 @@ v1.(*MessageName).Unmarshal(0xc00006f1e8, 0xc0000281a8, 0xa, 0x10, 0xc00006f1b8,
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-62eb1ee519ce30e3d64f4f1dd506f8c1>19 - nokmem</h1>
+<h1 id=pg-62eb1ee519ce30e3d64f4f1dd506f8c1>20 - nokmem</h1>
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1507149" target=_blank>Bug details</a>
 <p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p>
 <h2 id=scope>Scope</h2>
