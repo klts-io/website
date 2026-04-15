@@ -28,6 +28,13 @@ We have synced the latest Kubernetes LTS release information to the KLTS website
 | v1.17 | [v1.17.17-lts.3](/docs/kubernetes/releases/v1.17/v1.17.17-lts.3/) |
 | v1.16 | [v1.16.15-lts.3](/docs/kubernetes/releases/v1.16/v1.16.15-lts.3/) |
 
+## Kubernetes community update (WG-LTS)
+
+On March 26, 2026, Kubernetes community merged [kubernetes/community#8889](https://github.com/kubernetes/community/pull/8889), which spins down WG-LTS.
+
+- WG-LTS was removed from community working-group listings and `sigs.yaml`.
+- The annual report records the spindown status and references the public announcement/proposal: [WG-LTS spindown notice](https://groups.google.com/a/kubernetes.io/g/wg-lts/c/e4XyeS19BsU).
+
 ## Related security updates
 
 Recent CVE entries were also synced in docs:
