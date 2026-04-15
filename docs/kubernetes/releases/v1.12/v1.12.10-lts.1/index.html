@@ -20,14 +20,14 @@ Patches  CVE-2019-11245Containers for pods that do not specify an explicit runAs
  CVE-2019-11249This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/kubernetes/releases/v1.12/v1.12.10-lts.1/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-03-08T14:24:18+08:00"><meta property="og:site_name" content="KLTS.io">
+<meta property="article:modified_time" content="2026-04-15T18:18:37+08:00"><meta property="og:site_name" content="KLTS.io">
 <meta itemprop=name content="v1.12.10-lts.1">
 <meta itemprop=description content="This is the first fixed release by KLTS for v1.12.10.
 Patches  CVE-2019-11245Containers for pods that do not specify an explicit runAsUser attempt to run as uid 0 (root) on container restart, or if the image was previously pulled to the node.
  CVE-2019-11247API Server mistakenly allows access to a cluster-scoped custom resource.
  CVE-2019-11249This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal.">
-<meta itemprop=dateModified content="2022-03-08T14:24:18+08:00">
-<meta itemprop=wordCount content="345">
+<meta itemprop=dateModified content="2026-04-15T18:18:37+08:00">
+<meta itemprop=wordCount content="290">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="v1.12.10-lts.1">
 <meta name=twitter:description content="This is the first fixed release by KLTS for v1.12.10.
@@ -69,7 +69,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.74fe8a3b7087663074e6d0cef68746b5.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f8e791be07175fe8352b4e3dbbdabc02.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -79,7 +79,7 @@ English
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
 <div id=td-sidebar-menu class=td-sidebar__inner>
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.74fe8a3b7087663074e6d0cef68746b5.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f8e791be07175fe8352b4e3dbbdabc02.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -435,7 +435,6 @@ English
 <li><a href=/docs/kubernetes/patches/cve-2019-11251 title="This vulnerability may allow an attacker to use the kubectl cp command to write malicious files in the container tar package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user." data-toggle=tooltip data-placement=top target>CVE-2019-11251</a><p>This vulnerability may allow an attacker to use the <code>kubectl cp</code> command to write malicious files in the container <code>tar</code> package to any path on the host using Path Traversal. This process is limited only by the system permissions of the local user.</p></li>
 <li><a href=/docs/kubernetes/patches/cve-2020-8552 title="This vulnerability may make the API Server vulnerable to a DoS (Denial of Service) attack caused by successful API requests." data-toggle=tooltip data-placement=top target>CVE-2020-8552</a><p>This vulnerability may make the <code>API Server</code> vulnerable to a <code>DoS</code> (Denial of Service) attack caused by successful <code>API</code> requests.</p></li>
 <li><a href=/docs/kubernetes/patches/cve-2020-8558 title="The kube-proxy component was found to set the kernel parameter net.ipv4.conf.all.route_localnet=1 in both iptables and ipvs modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local 127.0.0.1 on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage." data-toggle=tooltip data-placement=top target>CVE-2020-8558</a><p>The <code>kube-proxy</code> component was found to set the kernel parameter <code>net.ipv4.conf.all.route_localnet=1</code> in both <code>iptables</code> and <code>ipvs</code> modes to allow local loopback access. An attacker may use the container sharing the host network, or bind and listen to the TCP/UDP service of the local <code>127.0.0.1</code> on the cluster node to access the same LAN or adjacent node under the second layer network to obtain interface information. If your service does not set the necessary security certification, it may cause the risk of information leakage.</p></li>
-<li>TODO <a href=/docs/kubernetes/patches/cve-2020-8559 title="This is a security vulnerability of the kube-apiserver component. An attacker can intercept certain upgrade requests sent to the node kubelet, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise." data-toggle=tooltip data-placement=top target>CVE-2020-8559</a><p>This is a security vulnerability of the <code>kube-apiserver</code> component. An attacker can intercept certain upgrade requests sent to the node <code>kubelet</code>, and forward the request to other target nodes through the original access credentials in the request that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.</p></li>
 <li><a href=/docs/kubernetes/patches/cve-2021-3121 title="A program with this vulnerability may crash because of processing some messages that contain malicious Protobuf. If the version of Gogo Protobuf you are using is too low, this vulnerability may exist." data-toggle=tooltip data-placement=top target>CVE-2021-3121</a><p>A program with this vulnerability may crash because of processing some messages that contain malicious <code>Protobuf</code>. If the version of <code>Gogo Protobuf</code> you are using is too low, this vulnerability may exist.</p></li>
 <li><a href=/docs/kubernetes/patches/nokmem title="The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod." data-toggle=tooltip data-placement=top target>nokmem</a><p>The node has sufficient disks, but it keeps reporting that the disk is insufficient to create a Pod.</p></li>
 </ul>
@@ -456,8 +455,8 @@ Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-March 8, 2022
-: <a href=https://github.com/klts-io/website/commit/95aa90d4d2345f82d5ff7df3c9cb34de91aeac10>mv en to kuberentes/ (95aa90d4)</a>
+April 15, 2026
+: <a href=https://github.com/klts-io/website/commit/057f8ffbe9dc26cde2ca7ea47fbc05deea291bd0>Remove CVE-2020-8559 patch link from release notes (057f8ffb)</a>
 </div>
 </div>
 </main>
