@@ -57,7 +57,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f63db377107d62cd5b0138343a1af206.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f2de7c993605a795bf9f60f734290d6e.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -93,9 +93,48 @@
 </ul>
 </ul>
 <div class=content>
+<h2 id=kubernetes-与-containerd-兼容性>Kubernetes 与 Containerd 兼容性</h2>
+<p>下表整理了 containerd 社区最新发布策略中给出的 Kubernetes 与
+containerd 推荐组合。</p>
+<table>
+<thead>
+<tr>
+<th>Kubernetes 版本</th>
+<th>推荐的 containerd 版本</th>
+<th>CRI 版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.32</td>
+<td>2.1.0+, 2.0.1+, 1.7.24+, 1.6.36+</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>1.33</td>
+<td>2.1.0+, 2.0.4+, 1.7.24+, 1.6.36+</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>1.34</td>
+<td>2.1.3+, 2.0.6+, 1.7.28+, 1.6.39+</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>1.35</td>
+<td>2.2.0+, 2.1.5+, 1.7.28+</td>
+<td>v1</td>
+</tr>
+</tbody>
+</table>
+<h2 id=参考资料>参考资料</h2>
+<ul>
+<li><a href=https://github.com/klts-io/containerd-lts/blob/main/README.md target=_blank>KLTS containerd-lts 维护状态</a></li>
+<li><a href=https://github.com/containerd/containerd/blob/main/RELEASES.md target=_blank>containerd 社区发布与兼容性策略</a></li>
+</ul>
 </div>
 </div>
-<div class=td-content>
+<div class=td-content style=page-break-before:always>
 <h1 id=pg-dfed8f673232f42492878a06c4fd00a2>1 - 修复的漏洞</h1>
 </div>
 <div class=td-content>
