@@ -79,6 +79,12 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h2 id="kubernetes-社区更新wg-lts">Kubernetes 社区更新（WG-LTS）&lt;/h2>
+&lt;p>Kubernetes 社区已于 &lt;strong>2026 年 3 月 26 日&lt;/strong> 合并 &lt;a href="https://github.com/kubernetes/community/pull/8889">kubernetes/community#8889&lt;/a>，并正式将 WG-LTS 进入 spindown（停止运作）状态。&lt;/p>
+&lt;ul>
+&lt;li>WG-LTS 已从社区工作组列表及 &lt;code>sigs.yaml&lt;/code> 中移除。&lt;/li>
+&lt;li>2025 年度报告中记录了 spindown 状态，并引用了公开公告/提案链接：&lt;a href="https://groups.google.com/a/kubernetes.io/g/wg-lts/c/e4XyeS19BsU">WG-LTS 停止运作公告&lt;/a>。&lt;/li>
+&lt;/ul>
 &lt;h2 id="相关安全更新">相关安全更新&lt;/h2>
 &lt;p>同时已同步以下 CVE 文档：&lt;/p>
 &lt;ul>
