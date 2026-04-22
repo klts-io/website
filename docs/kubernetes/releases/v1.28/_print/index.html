@@ -57,7 +57,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f8e791be07175fe8352b4e3dbbdabc02.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.34ca9c1451b5f9ba57d38c4c32670a79.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -82,6 +82,7 @@ This the multi-page printable view of this section.
 <ul>
 <li>1: <a href=#pg-619eb5d53b917f0779a3bedcd166f4d1>v1.28.15-lts.0</a></li>
 <li>2: <a href=#pg-42e37c1ea4292a40ad9f030d2a560aab>v1.28.15-lts.2</a></li>
+<li>3: <a href=#pg-4443246ef033f7a668f1a96c7d410eb1>v1.28.15-lts.3</a></li>
 </ul>
 <div class=content>
 </div>
@@ -102,6 +103,23 @@ This the multi-page printable view of this section.
 <li>Includes cumulative security fixes from base release <code>v1.28.15-ci</code>.</li>
 <li>Bugfix: revert scheduler <code>VolumeBinding</code> behavior for this branch.</li>
 <li><a href=https://github.com/klts-io/kubernetes-lts/raw/main/patches/fix-scheduler-volumebinding.1.28.patch target=_blank>fix-scheduler-volumebinding.1.28.patch</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-4443246ef033f7a668f1a96c7d410eb1>3 - v1.28.15-lts.3</h1>
+<p>This is the KLTS release for Kubernetes v1.28.15.</p>
+<h2 id=highlights>Highlights</h2>
+<ul>
+<li>Rebuilds the v1.28 LTS line with Go 1.25.9.</li>
+<li>Keeps the scheduler volume binding fix from the previous KLTS release.</li>
+<li>Includes current KLTS security backports for this line: CVE-2024-9042, CVE-2025-0426, CVE-2025-13281, CVE-2025-1767, and CVE-2025-5187.</li>
+</ul>
+<h2 id=patch-chain>Patch chain</h2>
+<ul>
+<li>Base: <code>v1.28.15</code></li>
+<li>CI chain: <code>v1.28.15-ci</code></li>
+<li>LTS wrapper patch: <code>fix-scheduler-volumebinding.1.28</code></li>
+<li>Patches: <code>no-delete-images.1.24</code>, <code>fix-etcd-put-key.1.24</code>, <code>bump-go-1-25-9.1.28</code>, <code>CVE-2024-9042</code>, <code>CVE-2025-0426</code>, <code>CVE-2025-13281</code>, <code>CVE-2025-1767</code>, <code>CVE-2025-5187</code></li>
 </ul>
 </div>
 </main>

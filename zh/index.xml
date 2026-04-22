@@ -1,5 +1,5 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KLTS.io – KLTS.io</title><link>/zh/</link><description>Recent content on KLTS.io</description><generator>Hugo -- gohugo.io</generator><atom:link href="/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: KLTS 最新 Kubernetes LTS 版本更新（2026 年 4 月）</title><link>/zh/blog/2026/04/15/klts-%E6%9C%80%E6%96%B0-kubernetes-lts-%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B02026-%E5%B9%B4-4-%E6%9C%88/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>/zh/blog/2026/04/15/klts-%E6%9C%80%E6%96%B0-kubernetes-lts-%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B02026-%E5%B9%B4-4-%E6%9C%88/</guid><description>
-&lt;p>我们已将最新的 Kubernetes LTS 版本信息同步到 KLTS 网站。&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KLTS.io – KLTS.io</title><link>/zh/</link><description>Recent content on KLTS.io</description><generator>Hugo -- gohugo.io</generator><atom:link href="/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: KLTS 最新 Kubernetes LTS 版本更新（2026 年 4 月 22 日）</title><link>/zh/blog/2026/04/22/klts-%E6%9C%80%E6%96%B0-kubernetes-lts-%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B02026-%E5%B9%B4-4-%E6%9C%88-22-%E6%97%A5/</link><pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate><guid>/zh/blog/2026/04/22/klts-%E6%9C%80%E6%96%B0-kubernetes-lts-%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B02026-%E5%B9%B4-4-%E6%9C%88-22-%E6%97%A5/</guid><description>
+&lt;p>我们已将最新的 Kubernetes LTS 版本信息同步到 KLTS 网站。本次更新对应 2026 年 4 月 22 日发布的一批 KLTS release。&lt;/p>
 &lt;h2 id="最新版本">最新版本&lt;/h2>
 &lt;table>
 &lt;thead>
@@ -11,55 +11,55 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>v1.32&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.32/v1.32.13-lts.1/">v1.32.13-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.32/v1.32.13-lts.2/">v1.32.13-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.31&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.31/v1.31.14-lts.1/">v1.31.14-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.31/v1.31.14-lts.2/">v1.31.14-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.30&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.30/v1.30.14-lts.1/">v1.30.14-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.30/v1.30.14-lts.2/">v1.30.14-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.29&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.29/v1.29.15-lts.1/">v1.29.15-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.29/v1.29.15-lts.2/">v1.29.15-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.28&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.28/v1.28.15-lts.2/">v1.28.15-lts.2&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.28/v1.28.15-lts.3/">v1.28.15-lts.3&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.27&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.27/v1.27.16-lts.1/">v1.27.16-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.27/v1.27.16-lts.2/">v1.27.16-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.26&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.26/v1.26.15-lts.1/">v1.26.15-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.26/v1.26.15-lts.2/">v1.26.15-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.25&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.25/v1.25.16-lts.1/">v1.25.16-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.25/v1.25.16-lts.2/">v1.25.16-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.24&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.24/v1.24.17-lts.1/">v1.24.17-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.24/v1.24.17-lts.2/">v1.24.17-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.23&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.23/v1.23.17-lts.1/">v1.23.17-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.23/v1.23.17-lts.2/">v1.23.17-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.22&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.22/v1.22.17-lts.1/">v1.22.17-lts.1&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.22/v1.22.17-lts.2/">v1.22.17-lts.2&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.21&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.21/v1.21.14-lts.2/">v1.21.14-lts.2&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.21/v1.21.14-lts.3/">v1.21.14-lts.3&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.20&lt;/td>
-&lt;td>&lt;a href="/docs/kubernetes/releases/v1.20/v1.20.15-lts.3/">v1.20.15-lts.3&lt;/a>&lt;/td>
+&lt;td>&lt;a href="/docs/kubernetes/releases/v1.20/v1.20.16-lts.1/">v1.20.16-lts.1&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>v1.19&lt;/td>
@@ -79,6 +79,12 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h2 id="4-月-22-日发布重点">4 月 22 日发布重点&lt;/h2>
+&lt;ul>
+&lt;li>v1.21 到 v1.32 分支已更新为 Go 1.25.9 构建。&lt;/li>
+&lt;li>较新的发布线按分支继承当前 KLTS 镜像、registry、代码生成和 etcd 维护补丁链。&lt;/li>
+&lt;li>当前安全回补继续在 Kubernetes 补丁文档中维护，并已在更新后的 release 页面中体现。&lt;/li>
+&lt;/ul>
 &lt;h2 id="kubernetes-社区更新wg-lts">Kubernetes 社区更新（WG-LTS）&lt;/h2>
 &lt;p>Kubernetes 社区已于 &lt;strong>2026 年 3 月 26 日&lt;/strong> 合并 &lt;a href="https://github.com/kubernetes/community/pull/8889">kubernetes/community#8889&lt;/a>，并正式将 WG-LTS 进入 spindown（停止运作）状态。&lt;/p>
 &lt;ul>

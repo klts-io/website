@@ -57,7 +57,7 @@
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.f8e791be07175fe8352b4e3dbbdabc02.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.34ca9c1451b5f9ba57d38c4c32670a79.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -82,7 +82,8 @@
 <ul>
 <li>1: <a href=#pg-f49f6c342928a1d504f0fe7fe9356f0e>v1.22.17-lts.0</a></li>
 <li>2: <a href=#pg-f8df7fe8c67eb66bc3914d5a57722e7e>v1.22.17-lts.1</a></li>
-<li>3: <a href=#pg-783754395f044cef11e45985e0dbb609>v1.22.8-lts.1</a></li>
+<li>3: <a href=#pg-1331be6c28823f0c846bd401dd7f5c60>v1.22.17-lts.2</a></li>
+<li>4: <a href=#pg-783754395f044cef11e45985e0dbb609>v1.22.8-lts.1</a></li>
 </ul>
 <div class=content>
 </div>
@@ -104,7 +105,23 @@
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-783754395f044cef11e45985e0dbb609>3 - v1.22.8-lts.1</h1>
+<h1 id=pg-1331be6c28823f0c846bd401dd7f5c60>3 - v1.22.17-lts.2</h1>
+<p>这是 KLTS 发布的 Kubernetes v1.22.17 修复版本。</p>
+<h2 id=重点更新>重点更新</h2>
+<ul>
+<li>使用 Go 1.25.9 重新构建 v1.22 LTS 分支。</li>
+<li>继承当前 KLTS 镜像、registry 和 etcd 维护补丁链。</li>
+<li>包含当前 KLTS 安全回补：CVE-2024-10220、CVE-2025-13281、CVE-2025-1767 和 CVE-2025-5187。</li>
+</ul>
+<h2 id=补丁链>补丁链</h2>
+<ul>
+<li>基线版本：<code>v1.22.17</code></li>
+<li>CI 链：<code>v1.22.17-ci</code></li>
+<li>补丁：<code>fix-run-docker.1.24</code>、<code>no-delete-images.1.24</code>、<code>fix-etcd-put-key.1.23</code>、<code>bump-go-1-25-9.1.22</code>、<code>CVE-2024-10220</code>、<code>CVE-2025-13281</code>、<code>CVE-2025-1767</code>、<code>CVE-2025-5187</code></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-783754395f044cef11e45985e0dbb609>4 - v1.22.8-lts.1</h1>
 <p>这是 KLTS 发布的第一个 v1.22.8 修复版本。</p>
 <h2 id=补丁>补丁</h2>
 <ul>

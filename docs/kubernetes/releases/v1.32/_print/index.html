@@ -57,7 +57,7 @@ English
 </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.f8e791be07175fe8352b4e3dbbdabc02.json data-offline-search-base-href=/ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.34ca9c1451b5f9ba57d38c4c32670a79.json data-offline-search-base-href=/ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -81,6 +81,7 @@ This the multi-page printable view of this section.
 <h1 class=title>v1.32</h1>
 <ul>
 <li>1: <a href=#pg-38da0dd33d30028e5063139bd284172a>v1.32.13-lts.1</a></li>
+<li>2: <a href=#pg-e879ed5ec0b5f0058aa1edab2732364f>v1.32.13-lts.2</a></li>
 </ul>
 <div class=content>
 </div>
@@ -91,6 +92,22 @@ This the multi-page printable view of this section.
 <h2 id=patches>Patches</h2>
 <ul>
 <li>Includes cumulative security fixes from base release <code>v1.32.13-ci</code> (including recently synced CVE fixes in <code>/docs/kubernetes/patches/</code>); this tag has no additional patch commits.</li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-e879ed5ec0b5f0058aa1edab2732364f>2 - v1.32.13-lts.2</h1>
+<p>This is the KLTS release for Kubernetes v1.32.13.</p>
+<h2 id=highlights>Highlights</h2>
+<ul>
+<li>Rebuilds the v1.32 LTS line with Go 1.25.9.</li>
+<li>Carries the current KLTS image and etcd maintenance patch chain.</li>
+<li>Includes the v1.32 KLTS backports for allocation test compatibility and CVE-2025-1767.</li>
+</ul>
+<h2 id=patch-chain>Patch chain</h2>
+<ul>
+<li>Base: <code>v1.32.13</code></li>
+<li>CI chain: <code>v1.32.13-ci</code></li>
+<li>Patches: <code>no-delete-images.1.24</code>, <code>fix-etcd-put-key.1.24</code>, <code>bump-go-1-25-9.1.32</code>, <code>fix-allocsperrun-parallel</code>, <code>CVE-2025-1767</code></li>
 </ul>
 </div>
 </main>
